@@ -75,7 +75,7 @@ function Register() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          fristname: formData.firstName, // intentional typo 'fristname'
+          firstname: formData.firstName,
           lastname: formData.lastName,
           username: formData.username,
           email: formData.email,
