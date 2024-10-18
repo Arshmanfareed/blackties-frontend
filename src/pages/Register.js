@@ -41,7 +41,7 @@ function Register() {
     if (!formData.phoneNo.trim()) {
       errors.phoneNo = 'Phone number is required';
     } else if (!/^\+?[0-9]{10,15}$/.test(formData.phoneNo)) {
-      errors.phoneNo = 'Phone number is invalid. Include country code, e.g., +44';
+      errors.phoneNo = 'Phone number is invalid. It should contain 10 to 15 digits and may include a country code starting with +';
     }
     
     if (!formData.password.trim()) {

@@ -41,7 +41,7 @@ function WelcomePage() {
                                         <h3>Welcome</h3>
                                         <h4>It’s your first time!</h4>
                                         <p>Please to finish to submit applicant to rent a car.</p>
-                                        <Link to="javascript:void(0);" className="theme-btn6 wlcm-satrted-btn">Get Started</Link>
+                                        <Link to="#" className="theme-btn6 wlcm-satrted-btn">Get Started</Link>
                                     </div>
                                 </div>
                             </div>

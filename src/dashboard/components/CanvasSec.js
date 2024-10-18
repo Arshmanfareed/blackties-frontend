@@ -4,29 +4,45 @@ const SignatureUpload = () => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [lastEvent, setLastEvent] = useState(null);
-  const [color, setColor] = useState('#000'); // Default color for drawing
+  const [color, setColor] = useState('#fff'); // Default color for drawing
   const [weight, setWeight] = useState(3);
   const [fileInputs, setFileInputs] = useState([true]); // Track which file inputs are enabled
   const [disablePen, setDisablePen] = useState(false); // State to manage pen disable
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return; // Ensure canvas is available
     const context = canvas.getContext('2d');
-
-    // Resize the canvas
+  
+    // Resize the canvas properly based on its parent's size
     const resizeCanvas = () => {
       canvas.width = canvas.clientWidth;
       canvas.height = canvas.clientHeight;
       context.clearRect(0, 0, canvas.width, canvas.height); // Clear on resize
     };
-
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas(); // Initial resize on mount
-
+  
+    // Create a ResizeObserver to detect changes in canvas parent size
+    const observer = new ResizeObserver(() => {
+      resizeCanvas();
+    });
+  
+    // Observe the canvas parent element for size changes
+    const parent = canvas.parentElement;
+    if (parent) {
+      observer.observe(parent);
+    }
+  
+    // Call resize initially to ensure correct canvas size
+    resizeCanvas();
+  
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      if (parent) {
+        observer.unobserve(parent);
+      }
     };
-  }, []);
+  }, [canvasRef]);
+  
+  
 
   const getMousePos = (event) => {
     const rect = canvasRef.current.getBoundingClientRect();
@@ -73,6 +89,23 @@ const SignatureUpload = () => {
     console.log('Mouse Leave'); // Debug log
   };
 
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    handleMouseDown({ clientX: touch.clientX, clientY: touch.clientY });
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    handleMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
+  };
+
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
+    handleMouseUp();
+  };
+
   const setIsDrawingCanv = (event) => {
     event.preventDefault();
     setDisablePen((prev) => {
@@ -81,7 +114,8 @@ const SignatureUpload = () => {
     });
   };
 
-  const clearSignature = () => {
+  const clearSignature = (event) => {
+     event.preventDefault();
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -96,7 +130,9 @@ const SignatureUpload = () => {
       reader.onload = (event) => {
         const imgPreview = document.createElement('div');
         imgPreview.className = 'upload_data-wrap';
-        imgPreview.innerHTML = `<img src="${event.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;">`;
+        imgPreview.innerHTML = `<img src="${event.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;">  `;
+        // <button class="remover" onClick="deleteUploadedPic(this)" id="delete_pic">Delete</button>`;
+        // imgPreview.innerHTML = ``;
         e.target.closest('.upload-file-group').appendChild(imgPreview);
       };
       reader.readAsDataURL(file);
@@ -108,6 +144,14 @@ const SignatureUpload = () => {
       });
     }
   };
+// const deleteUploadedPic = (e, event) => {
+//     event.preventDefault(); // Prevent default button behavior
+//     const uploadDataWrap = e.target.closest('.upload_data-wrap'); // Find the closest wrapper
+//     if (uploadDataWrap) {
+//         uploadDataWrap.remove(); // Remove the wrapper if it exists
+//     }
+// };
+
 
   return (
     <div className="Canvassec">
@@ -132,26 +176,29 @@ const SignatureUpload = () => {
         <div className="signature-wrapper">
           <label htmlFor="label-control">Signature</label>
           <div id="signature">
-            <canvas
-              ref={canvasRef}
-              width={680}
-              height={285}
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseLeave}
-              style={{ border: '1px solid black', cursor: 'crosshair' }}
-            ></canvas>
+          <canvas
+  ref={canvasRef}
+  onMouseDown={handleMouseDown}
+  onMouseMove={handleMouseMove}
+  onMouseUp={handleMouseUp}
+  onMouseLeave={handleMouseLeave}
+  onTouchStart={handleTouchStart}
+  onTouchMove={handleTouchMove}
+  onTouchEnd={handleTouchEnd}
+  style={{ border: '1px solid black', cursor: 'crosshair' }}
+></canvas>
+
             <div className="controls">
               <button className="remover" onClick={clearSignature} id="clearSig">
                 <img src="./assets/images/dashboard/ph_eraser-fill.png" alt="" />
               </button>
               <button
                 className="pen"
+                id='disable_pen'
                 onClick={setIsDrawingCanv}
               >
                 <img src="./assets/images/dashboard/mingcute_signature-line.svg" alt="" />
-                {disablePen ? 'Enable Drawing' : 'Disable Drawing'}
+                {/* {disablePen ? 'Enable Drawing' : 'Disable Drawing'} */}
               </button>
             </div>
           </div>
