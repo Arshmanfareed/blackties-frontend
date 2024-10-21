@@ -19,7 +19,7 @@ function HomePage() {
               </p>
             </div>
             <div className="bnr-btn-wrapper">
-              <Link to="javascript:void(0);">Check Availability Now <ion-icon name="arrow-forward-outline"></ion-icon></Link>
+              <Link to="#">Check Availability Now <ion-icon name="arrow-forward-outline"></ion-icon></Link>
             </div>
           </div>
           <div className="bnr-dec-wrapper">

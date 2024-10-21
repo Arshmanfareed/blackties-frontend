@@ -20,6 +20,15 @@ import Create_password from './pages/Create_password';
 import Applicant from './dashboard/pages/applicant';
 import WelcomePage from './dashboard/pages/WelcomePage';
 import RentCar from './dashboard/pages/RentCar';
+import Overview from './dashboard/pages/overview';
+import Vehicledocument from './dashboard/pages/Vehicledocument';
+import Palentychargenotice from './dashboard/pages/palentychargenotice';
+import Driverscore from './dashboard/pages/Driverscore';
+import Maintainance from './dashboard/pages/Maintainance';
+import Invoice from './dashboard/pages/Invoice';
+import InvoiceView from './dashboard/pages/InvoiceView';
+import Notifications from './dashboard/pages/Notifications';
+import SingleNotification from './dashboard/pages/SingleNotification';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -40,6 +49,15 @@ root.render(
     <Route path="/applicant" element={<><Applicant /></>} />
     <Route path="/welcome" element={<><WelcomePage /></>} />
     <Route path="/rent-car" element={<><RentCar /></>} />
+    <Route path="/overview" element={<><Overview /></>} />
+    <Route path="/vehicle-document" element={<><Vehicledocument /></>} />
+    <Route path="/palenty-charge-notice" element={<><Palentychargenotice /></>} />
+    <Route path="/driver-score" element={<><Driverscore /></>} />
+    <Route path="/maintenance" element={<><Maintainance /></>} />
+    <Route path="/invoice" element={<><Invoice /></>} />
+    <Route path="/invoice-view" element={<><InvoiceView /></>} />
+    <Route path="/notifications" element={<><Notifications /></>} />
+    <Route path="/single-notification" element={<><SingleNotification /></>} />
 
   </Routes>
 </Router>

@@ -64,11 +64,16 @@ function Login() {
       console.log('API Response:', response);
       console.log('API Data:', data);
 
-      if (response.ok) {
+      if (response.ok === true) {
         // Successful login
-        localStorage.setItem('token', data.token);
+         // Use optional chaining or fallback to ensure values are not undefined
+      const token = data.data.authToken  || 'No token';
+      const username = data.data.username || data.data.first_name || 'No username';
+      console.log('token*****************************', token);
+      localStorage.setItem('token', token);
+      localStorage.setItem('user_name', username);
 
-        console.log('token*****************************', data.token);
+        
         console.log('Login successful', data);
         setLoading(false);
         setError('');

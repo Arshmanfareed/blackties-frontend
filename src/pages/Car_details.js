@@ -51,7 +51,7 @@ function Car_details() {
                     </div>
                 </div>
                 <div className="rent-now-btn">
-                    <Link to="javascript:void(0);" className="theme-btn5">Rent Now</Link>
+                    <Link to="#" className="theme-btn5">Rent Now</Link>
                 </div>
             </div>
         </Col>

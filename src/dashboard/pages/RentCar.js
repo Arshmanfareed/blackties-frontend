@@ -4,6 +4,8 @@ import { Form } from "react-bootstrap";
 import CanvasSection from "../components/CanvasSec";
 import DocumentSignatureForm from "../components/CanvasSec";
 import SignatureUpload from "../components/CanvasSec";
+import { Link } from "react-router-dom";
+import DetailCarSlider from "../components/DashboardDetailCarSlider";
 
 function RentCar() {
     const [isActive, setIsActive] = useState(false);
@@ -38,13 +40,14 @@ function RentCar() {
                           <div className="col-lg-6 col-md-6">
                             <div className="row back-to-sec">
                               <div className="col-lg-12 col-md-12">
-                                <a href="javascript" className="back-to">
+                                <Link to="#" onClick={(e) => e.preventDefault()} className="back-to">
                                   <ion-icon name="chevron-back-outline"></ion-icon>{" "}
                                   Back to Our Vehicles
-                                </a>
+                                </Link>
                               </div>
                             </div>
-                            <div className="row">
+                            {/* <DetailCarSlider/> */}
+                            {/* <div className="row">
                               <div className="col-lg-12 col-md-12">
                                 <div className="detailCar-slider owl-carousel owl-theme">
                                   <div data-item="item1" className="item">
@@ -115,7 +118,7 @@ function RentCar() {
                                   </ul>
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
                             <div className="row">
                               <div className="col-lg-12 col-md-12">
                                 <div className="detail-car-ptag">
@@ -581,12 +584,12 @@ function RentCar() {
                                         services that are designed to meet your
                                         needs.
                                       </p>
-                                      <a
-                                        href="javascrip:;"
+                                      <Link
+to="#" onClick={(e) => e.preventDefault()}
                                         className="theme-btn3"
                                       >
                                         Download
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
                                   <div className="file-download-boxes">
@@ -603,17 +606,17 @@ function RentCar() {
                                         services that are designed to meet your
                                         needs.
                                       </p>
-                                      <a
-                                        href="javascrip:;"
+                                      <Link
+to="#" onClick={(e) => e.preventDefault()}
                                         className="theme-btn3"
                                       >
                                         Download
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
                                 </div>
                                 <SignatureUpload/>
-                                <div className="col-lg-12 col-md-12">
+                                {/* <div className="col-lg-12 col-md-12">
                                   <label htmlFor="label-control">
                                     Upload Document
                                   </label>
@@ -745,31 +748,29 @@ function RentCar() {
                                     <div id="signature">
                                       <canvas width="680" height="285"></canvas>
                                       <div className="controls">
-                                        <a
-                                          className="remover"
-                                          href="javascript:;"
+                                        <Link
+to="#" onClick={(e) => e.preventDefault()}
                                           id="clearSig"
                                         >
                                           <img
                                             src="./assets/images/dashboard/ph_eraser-fill.png"
                                             alt=""
                                           />
-                                        </a>
-                                        <a
-                                          className="pen"
+                                        </Link>
+                                        <Link
+to="#" onClick={(e) => e.preventDefault()}
                                           id="disable_pen"
                                           data-disable="true"
-                                          href="javascript:;"
                                         >
                                           <img
                                             src="./assets/images/dashboard/mingcute_signature-line.svg"
                                             alt=""
                                           />
-                                        </a>
+                                        </Link>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
+                                </div> */}
                                 <div className="col-lg-12 col-md-12">
                                   <div className="NextPrev-btn-wrap sign-btn-wrap">
                                     <button
