@@ -67,11 +67,10 @@ function Login() {
       if (response.ok === true) {
         // Successful login
          // Use optional chaining or fallback to ensure values are not undefined
-      const token = data.data.authToken  || 'No token';
-      const username = data.data.username || data.data.first_name || 'No username';
-      console.log('token*****************************', token);
-      localStorage.setItem('token', token);
-      localStorage.setItem('user_name', username);
+        const token = data.data.authToken  || 'No token';
+        const username = data.data.username || data.data.first_name || 'No username';
+        localStorage.setItem('token', token);
+        localStorage.setItem('user_name', username);
 
         
         console.log('Login successful', data);
@@ -80,13 +79,25 @@ function Login() {
         navigate('/welcome'); // Redirect after login success
       } else {
         // Handle different error messages returned from the API
-        if (response.status === 404 || data.message === 'User not found') {
-          setError('User not found. Please register.');
-        } else if (response.status === 401 || data.message === 'Incorrect password') {
-          setError('Password is incorrect. Please try again.');
-        } else {
-          setError('Invalid login credentials. Please try again.');
-        }
+        // if (response.status === 404 || data.message === 'User not found') {
+        //   setError('User not found. Please register.');
+        // } else if (response.status === 401 || data.message === 'Incorrect password') {
+        //   setError('Password is incorrect. Please try again.');
+        // } else {
+        //   setError('Invalid login credentials. Please try again.');
+        // }
+
+        // Handle different error messages returned from the API
+      if (data.error && data.error.message) {
+        setError(data.error.message); // Set error based on API response
+      } else if (response.status === 404) {
+        setError('User not found. Please register.');
+      } else if (response.status === 401) {
+        setError('Password is incorrect. Please try again.');
+      } else {
+        setError('Invalid login credentials. Please try again.');
+      }
+
         setLoading(false);
       }
     } catch (err) {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -15,6 +15,7 @@ function Register() {
 
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   // Handle input change
   const handleChange = (e) => {
@@ -87,6 +88,7 @@ function Register() {
 
       if (response.ok) {
         const data = await response.json();
+        navigate('/verification');
         console.log('Registration successful', data);
         setSuccess(true);
         setErrors({});
