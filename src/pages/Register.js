@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -15,6 +15,7 @@ function Register() {
 
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   // Handle input change
   const handleChange = (e) => {
@@ -86,11 +87,23 @@ function Register() {
       });
 
       if (response.ok) {
-        const data = await response.json();
+        const data = await response.json();  // Ensure 'data' contains the parsed JSON response
+        navigate('/verification');
         console.log('Registration successful', data);
+    
+        // Extract userId from the parsed 'data' object
+        const createdUserId = data.data.userCreated.id;  // Correctly access 'data' after parsing       
+    
+        // Save the user ID to localStorage
+        localStorage.setItem('user_id', createdUserId);
+    
+        // Verify that the user ID is saved properly by retrieving it
+        const storedUserId = localStorage.getItem('user_id');
+        console.log('Stored User ID:', storedUserId);  // This will show in the console if everything is correct
+    
         setSuccess(true);
         setErrors({});
-      } else {
+    } else {
         const errorData = await response.json();
         setErrors({ general: errorData.message || 'Registration failed' });
       }
