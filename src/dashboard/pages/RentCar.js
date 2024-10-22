@@ -5,7 +5,6 @@ import CanvasSection from "../components/CanvasSec";
 import DocumentSignatureForm from "../components/CanvasSec";
 import SignatureUpload from "../components/CanvasSec";
 import { Link } from "react-router-dom";
-import DetailCarSlider from "../components/DashboardDetailCarSlider";
 
 function RentCar() {
     const [isActive, setIsActive] = useState(false);
@@ -46,8 +45,7 @@ function RentCar() {
                                 </Link>
                               </div>
                             </div>
-                            {/* <DetailCarSlider/> */}
-                            {/* <div className="row">
+                            <div className="row">
                               <div className="col-lg-12 col-md-12">
                                 <div className="detailCar-slider owl-carousel owl-theme">
                                   <div data-item="item1" className="item">
@@ -118,7 +116,7 @@ function RentCar() {
                                   </ul>
                                 </div>
                               </div>
-                            </div> */}
+                            </div>
                             <div className="row">
                               <div className="col-lg-12 col-md-12">
                                 <div className="detail-car-ptag">
