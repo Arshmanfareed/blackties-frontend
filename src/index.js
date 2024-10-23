@@ -29,6 +29,7 @@ import Invoice from './dashboard/pages/Invoice';
 import InvoiceView from './dashboard/pages/InvoiceView';
 import Notifications from './dashboard/pages/Notifications';
 import SingleNotification from './dashboard/pages/SingleNotification';
+import Profile from './dashboard/pages/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -58,6 +59,7 @@ root.render(
     <Route path="/invoice-view" element={<><InvoiceView /></>} />
     <Route path="/notifications" element={<><Notifications /></>} />
     <Route path="/single-notification" element={<><SingleNotification /></>} />
+    <Route path="/settings" element={<><Profile /></>} />
 
   </Routes>
 </Router>

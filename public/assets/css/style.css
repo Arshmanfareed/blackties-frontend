@@ -1755,3 +1755,8 @@ p.sendTo-verific-otp {
 .mobile-dash-topbar-wrap {
   display: none;
 }
+.verific-otp input[type="number"] {
+  color: #fff;
+}.verific-otp input:focus {
+  color: #fff;
+}
