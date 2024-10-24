@@ -3,8 +3,22 @@ import DashboardSidebar from "../partials/dashboard-sidebar";
 import DashboardPanelTopbar from "../components/DashboardPanelTopbar";
 import { Tab, Nav, Row, Col, Form, Button, Container } from "react-bootstrap";
 import { IonIcon } from '@ionic/react';
+import { useState } from "react";
 
 function Profile() {
+
+  const [isPasswordVisible, setIsPasswordVisible] = useState(true);
+  const [isPasswordVisibleCurrent, setIsPasswordVisibleCurrent] = useState(true);
+  const [isPasswordVisibleNew, setIsPasswordVisibleNew] = useState(true);
+  const togglePassword = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
+  const togglePasswordcurrent = () => {
+    setIsPasswordVisibleCurrent(!isPasswordVisibleCurrent);
+  };
+  const togglePasswordnew = () => {
+    setIsPasswordVisibleNew(!isPasswordVisibleNew);
+  };
   return (
     <>
       <section className="user-dashboard">
@@ -112,7 +126,7 @@ function Profile() {
                                               <Form>
                                                 <Row>
                                                   <Col lg={6} md={6}>
-                                                    <Form.Group>
+                                                    <Form.Group className="form-group">
                                                       <Form.Label>
                                                         First Name
                                                       </Form.Label>
@@ -123,7 +137,7 @@ function Profile() {
                                                     </Form.Group>
                                                   </Col>
                                                   <Col lg={6} md={6}>
-                                                    <Form.Group>
+                                                   <Form.Group className="form-group">
                                                       <Form.Label>
                                                         Last Name
                                                       </Form.Label>
@@ -134,7 +148,7 @@ function Profile() {
                                                     </Form.Group>
                                                   </Col>
                                                   <Col lg={6} md={6}>
-                                                    <Form.Group>
+                                                   <Form.Group className="form-group">
                                                       <Form.Label>
                                                         Email Address
                                                       </Form.Label>
@@ -145,15 +159,16 @@ function Profile() {
                                                     </Form.Group>
                                                   </Col>
                                                   <Col lg={6} md={6}>
-                                                    <Form.Group>
+                                                   <Form.Group className="form-group">
                                                       <Form.Label>
                                                         Phone Number
                                                       </Form.Label>
+                                                      <div className="t-flag">
                                                       <Form.Control
                                                         type="tel"
                                                         name="phone"
                                                         placeholder="+44"
-                                                      />
+                                                      /></div>
                                                     </Form.Group>
                                                   </Col>
                                                 </Row>
@@ -192,39 +207,54 @@ function Profile() {
                                               <Form>
                                                 <Row>
                                                   <Col lg={6} md={6}>
-                                                    <Form.Group>
+                                                   <Form.Group className="form-group">
                                                       <Form.Label>
                                                         Current Password
                                                       </Form.Label>
                                                       <Form.Control
-                                                        type="password"
+                                                         type={isPasswordVisibleCurrent ?  "password" : "text" }
                                                         name="current_password"
                                                       />
-                                                       <ion-icon className="toggle-password" name="eye-outline"></ion-icon>
+                                                       <button 
+                                                       type="button"
+                                                        className="toggle-password"
+                                                        onClick={togglePasswordcurrent} >
+                                                          <i class="fa-regular fa-eye "></i>
+                                                          </button>
                                                     </Form.Group>
                                                   </Col>
                                                   <Col lg={6} md={6}>
-                                                    <Form.Group>
+                                                   <Form.Group className="form-group">
                                                       <Form.Label>
                                                         New Password
                                                       </Form.Label>
                                                       <Form.Control
-                                                        type="password"
+                                                         type={isPasswordVisibleNew ?  "password" : "text" }
                                                         name="new_password"
                                                       />
-                                                      <ion-icon className="toggle-password" name="eye-outline"></ion-icon>
+                                                          <button 
+                                                       type="button"
+                                                        className="toggle-password"
+                                                        onClick={togglePasswordnew} >
+                                                          <i class="fa-regular fa-eye "></i>
+                                                          </button>
                                                     </Form.Group>
                                                   </Col>
                                                   <Col lg={6} md={6}>
-                                                    <Form.Group>
+                                                   <Form.Group className="form-group">
                                                       <Form.Label>
                                                         Confirm Password
                                                       </Form.Label>
                                                       <Form.Control
-                                                        type="password"
+                                                           type={isPasswordVisible ?  "password" : "text" }
                                                         name="confirm_password"
                                                       />
-                                                        <ion-icon className="toggle-password" name="eye-outline"></ion-icon>
+                                                           <button 
+                                                       type="button"
+                                                        className="toggle-password"
+                                                        onClick={togglePassword} >
+                                                          <i class="fa-regular fa-eye "></i>
+                                                          </button>
                                                     </Form.Group>
                                                   </Col>
                                                 </Row>

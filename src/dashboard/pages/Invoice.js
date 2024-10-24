@@ -120,7 +120,7 @@ function Invoice() {
                                           to="#"
                                           onClick={(event) => toggleMenu(index, event)}
                                         >
-                                          <ion-icon name="ellipsis-vertical"></ion-icon>
+                                          <i class="fa-solid fa-ellipsis-vertical"></i>
                                         </Link>
                                         <div
                                           className="invoice-options invoice-option-menu"

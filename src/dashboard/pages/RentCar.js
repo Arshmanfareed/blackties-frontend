@@ -40,7 +40,7 @@ function RentCar() {
                             <div className="row back-to-sec">
                               <div className="col-lg-12 col-md-12">
                                 <Link to="#" onClick={(e) => e.preventDefault()} className="back-to">
-                                  <ion-icon name="chevron-back-outline"></ion-icon>{" "}
+                                <i class="fa-solid fa-angle-left"></i>{" "}
                                   Back to Our Vehicles
                                 </Link>
                               </div>

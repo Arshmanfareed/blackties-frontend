@@ -29,7 +29,7 @@ function InvoiceView() {
                                     <Row>
                                         <Col lg={12} md={12} >
                                             <div className="invoice-view-topbar">
-                                                <Link to="/invoice"className="back-to"><ion-icon name="chevron-back-outline" role="img" className="md hydrated"></ion-icon> Back to Invoice</Link>
+                                                <Link to="/invoice"className="back-to"><i class="fa-solid fa-angle-left"></i><ion-icon name="chevron-back-outline" role="img" className="md hydrated"></ion-icon> Back to Invoice</Link>
                                                     <div className="doc-prints-wrap">
                                                         <Link to="javascript:;"><img src="./assets/images/dashboard/huge-icon.svg" alt="PDF"/></Link>
                                                         <Link to="javascript:;"><img src="./assets/images/dashboard/Mail.svg" alt="Mail"/></Link>

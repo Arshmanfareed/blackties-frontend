@@ -30,6 +30,10 @@ import InvoiceView from './dashboard/pages/InvoiceView';
 import Notifications from './dashboard/pages/Notifications';
 import SingleNotification from './dashboard/pages/SingleNotification';
 import Profile from './dashboard/pages/Profile';
+import Cancellation from './dashboard/pages/Cancellation';
+import Payment from './dashboard/pages/Payment';
+import PaymentProcess from './dashboard/pages/PaymentProcess';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -60,6 +64,9 @@ root.render(
     <Route path="/notifications" element={<><Notifications /></>} />
     <Route path="/single-notification" element={<><SingleNotification /></>} />
     <Route path="/settings" element={<><Profile /></>} />
+    <Route path="/cancellation" element={<><Cancellation /></>} />
+    <Route path="/payment" element={<><Payment/></>} />
+    <Route path="/payment-process" element={<><PaymentProcess/></>} />
 
   </Routes>
 </Router>
