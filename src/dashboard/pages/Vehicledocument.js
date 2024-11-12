@@ -43,7 +43,7 @@ function Vehicledocument() {
                         <Col lg={12} md={12}>
                           <div className="search-bar-wrapper">
                             <h5 className="theme-h5">Vehicle Document</h5>
-                            <div>
+                            {/* <div>
                               <div className="search-bar-v1">
                                 <InputGroup>
                                   <Button type="submit"><i className="fa fa-search"></i></Button>
@@ -51,7 +51,7 @@ function Vehicledocument() {
                                 </InputGroup>
                               </div>
                               <a href="javascript:;" className="filter-v1">Filter <img src="./assets/images/Tuning.svg" alt="" /></a>
-                            </div>
+                            </div> */}
                           </div>
                         </Col>
                       </Row>
@@ -103,7 +103,7 @@ function Vehicledocument() {
                               <img src="./assets/images/dashboard/image 69.png" alt="" />
                             </div>
                             <div className="docs-dics">
-                              <h6>Contract</h6>
+                              <h6>Permission Letter</h6>
                               <p>Lorem ipsum dolor sit amet consectetur. Lectus erat amet at libero eget tincidunt lectus in velit.</p>
                               <p className="docs-size">3.6 MB</p>
                               <a href="javascript:;">Download</a>
@@ -116,7 +116,7 @@ function Vehicledocument() {
                               <img src="./assets/images/dashboard/image 70.png" alt="" />
                             </div>
                             <div className="docs-dics">
-                              <h6>Damage Report</h6>
+                              <h6>V5C Document</h6>
                               <p>Lorem ipsum dolor sit amet consectetur. Lectus erat amet at libero eget tincidunt lectus in velit.</p>
                               <p className="docs-size">3.6 MB</p>
                               <a href="javascript:;">Download</a>
@@ -133,7 +133,7 @@ function Vehicledocument() {
                         <Col lg={12} md={12}>
                           <div className="search-bar-wrapper">
                             <h5 className="theme-h5">Personal Document</h5>
-                            <div>
+                            {/* <div>
                               <div className="search-bar-v1">
                                 <InputGroup>
                                   <Button type="submit"><i className="fa fa-search"></i></Button>
@@ -141,7 +141,7 @@ function Vehicledocument() {
                                 </InputGroup>
                               </div>
                               <a href="javascript:;" className="filter-v1">Filter <img src="./assets/images/Tuning.svg" alt="" /></a>
-                            </div>
+                            </div> */}
                           </div>
                         </Col>
                       </Row>
@@ -152,7 +152,7 @@ function Vehicledocument() {
                               <img src="./assets/images/dashboard/image 69.png" alt="" />
                             </div>
                             <div className="docs-dics">
-                              <h6>Permission Letter</h6>
+                              <h6>Contract</h6>
                               <p>Lorem ipsum dolor sit amet consectetur. Lectus erat amet at libero eget tincidunt lectus in velit.</p>
                               <p className="docs-size">3.6 MB</p>
                               <a href="javascript:;">Download</a>
@@ -165,7 +165,7 @@ function Vehicledocument() {
                               <img src="./assets/images/dashboard/image 70.png" alt="" />
                             </div>
                             <div className="docs-dics">
-                              <h6>V5C Document</h6>
+                              <h6>Damage Report</h6>
                               <p>Lorem ipsum dolor sit amet consectetur. Lectus erat amet at libero eget tincidunt lectus in velit.</p>
                               <p className="docs-size">3.6 MB</p>
                               <a href="javascript:;">Download</a>

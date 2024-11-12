@@ -18,6 +18,12 @@ function Header() {
    // Redirect or handle after logout action
    window.location.href = '/login'; // Redirect to login page after logout
  };
+
+ const [isActive, setIsActive] = useState(false);
+
+ const toggleNavbar = () => {
+   setIsActive(!isActive);
+ };
   return (
     <nav className="container main-nav navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
@@ -27,15 +33,17 @@ function Header() {
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
+        onClick={toggleNavbar}
         aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
+        aria-expanded={isActive}
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="main-nav-items collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div
+        className={`main-nav-items collapse navbar-collapse ${isActive ? 'active' : ''}`}
+        id="navbarNavAltMarkup"
+      >
         <div className="navbar-nav">
           <NavLink exact className="nav-item nav-link" activeClassName="active" to="/">
             Home
@@ -50,8 +58,7 @@ function Header() {
             Driver Benefits
           </NavLink>
         </div>
-      </div>
-      <div className="nav-btn-wrapper">
+        <div className="nav-btn-wrapper">
       {token ? (
   <div className="profile-section">
     {/* Profile image and name */}
@@ -75,11 +82,21 @@ function Header() {
       {/* Dropdown menu */}
       {dropdownVisible && (
         <div className="dropdown-menu" style={{ position: 'absolute', top: '40px', right: '0px', display:'block' }}>
+          <div className='prof_info'>
+          <img
+      src='/assets/images/Avatar.png' // Replace with actual image path
+      alt="Profile"
+      className="profile-image"
+      style={{  borderRadius: '50%',marginRight:'12px' }}
+    />
+    <span className="profile-name">{user_name}<div className='accept'>Accepted</div></span> {/* Replace with dynamic username */}
+            </div>
           <Link to="/welcome" className="dropdown-item">
+          <img src='assets/images/Category.png'/>
             Dashboard
           </Link>
           <button onClick={handleLogout} className="dropdown-item">
-            Logout
+          <img src='assets/images/logout.svg'/>Logout
           </button>
         </div>
       )}
@@ -94,10 +111,14 @@ function Header() {
       Register
     </Link>
   </>
+
 )}
 
       </div>
+      </div>
+      
     </nav>
+    
   );
 }
 

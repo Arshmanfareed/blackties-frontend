@@ -126,7 +126,9 @@ function Register() {
           <Col lg={6} md={6}>
             <div className="LR-Hero-wrapper">
               <h2 className="theme-h8">Welcome to our community</h2>
-              <p>Are you a skilled and reliable driver looking to elevate your career?...submit your application along with the required documents.</p>
+              <p>Are you a skilled and reliable driver looking to elevate your career? Join our prestigious team and drive for our esteemed clients, known for their professionalism and courtesy. We are seeking top-notch drivers who meet our high standards.</p>
+              <br/>
+              <p>To apply, please review the qualifications listed and submit your application along with the required documents. If you qualify, a member of our team will contact you.</p>
             </div>
           </Col>
           <Col lg={6} md={6}>
@@ -226,7 +228,7 @@ function Register() {
                     <div className="agreeTC-tab">
                       <label className="checkbox style-a">
                         <Form.Control type="checkbox" name="agreeTC" id="agreeTC" />
-                        <label htmlFor="agreeTC">Agree to Terms & Conditions</label>
+                        <label htmlFor="agreeTC">Agree to Terms & Conditions & Privacy Policy</label>
                         <div className="checkbox__checkmark"></div>
                       </label>
                     </div>

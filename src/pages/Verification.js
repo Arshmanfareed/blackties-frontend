@@ -68,7 +68,7 @@ function Verification() {
         navigate("/login");
       } else {
         setErrorMessage(
-          data.message || "Verification failed. Please try again."
+          data.message || "The verification code is incorrect. Please try again or try a different email address."
         );
       }
     } catch (error) {
@@ -123,10 +123,10 @@ function Verification() {
           <Col lg={6} md={6}>
             <div className="LR-Form-wrapper verification-frame">
               <h3>Verification</h3>
-              <p>
+              {/* <p>
                 Lorem ipsum dolor sit amet consectetur. Lectus erat amet at
                 libero eget tincidunt lectus in velit.
-              </p>
+              </p> */}
 
               <Form onSubmit={handleSubmit}>
                 <Row>
@@ -166,11 +166,12 @@ function Verification() {
                   </Col>
                 </Row>
                 {errorMessage && (
-                  <p className="error-message">{errorMessage}</p>
+                  <p className="error-message"><i class="fa-solid fa-circle-exclamation"></i>{errorMessage}</p>
                 )}
                 {successMessage && (
                   <p className="success-message">{successMessage}</p>
                 )}
+                <p className="not_rcv_cd">Haven’t received the code? <b><Link>Resend Now</Link></b></p>
                 <Row>
                   <Col lg={6} md={6}>
                     <Link to="/" className="theme-btn7">

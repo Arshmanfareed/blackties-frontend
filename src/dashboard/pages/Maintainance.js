@@ -156,12 +156,12 @@ function Maintainance() {
                                                                         <td>09:00</td>
                                                                         <td className="tb-btn2">
                                                                             <a href="javascript:;" className="BD-option-toggle" onClick={toggleMenu}>
-                                                                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                                                                                <i class="fa-solid fa-ellipsis-vertical"></i><ion-icon name="ellipsis-vertical"></ion-icon>
                                                                             </a>
                                                                             <div className="booking-detail-options BD-option-menu" style={{ display: isMenuVisible ? 'block' : 'none' }}>
                                                                                 <ul>
-                                                                                    <li><a href="javascript:;" className="view" id="BD_view" onClick={toggleAppointmentBody}><ion-icon name="eye-outline"></ion-icon>View</a></li>
-                                                                                    <li><a href="javascript:;" className="cancel"><ion-icon name="close-outline"></ion-icon>Cancel</a></li>
+                                                                                    <li><a href="javascript:;" className="view" id="BD_view" onClick={toggleAppointmentBody}><i class="fa-regular fa-eye"></i>View</a></li>
+                                                                                    <li><a href="javascript:;" className="cancel"><i class="fa-solid fa-xmark"></i>Cancel</a></li>
                                                                                 </ul>
                                                                             </div>
                                                                         </td>
@@ -173,7 +173,7 @@ function Maintainance() {
                                                                         <td>July 21, 2024</td>
                                                                         <td>09:00</td>
                                                                         <td className="tb-btn2">
-                                                                            <a href="javascript:;"><ion-icon name="ellipsis-vertical"></ion-icon></a>
+                                                                            <a href="javascript:;"><i class="fa-solid fa-ellipsis-vertical"></i><ion-icon name="ellipsis-vertical"></ion-icon></a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>

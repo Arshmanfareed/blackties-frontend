@@ -19,7 +19,7 @@ function HomePage() {
               </p>
             </div>
             <div className="bnr-btn-wrapper">
-              <Link to="#">Check Availability Now <ion-icon name="arrow-forward-outline"></ion-icon></Link>
+              <Link to="/our-vehicle">Check Availability Now <i class="fa-solid fa-arrow-right"></i></Link>
             </div>
           </div>
           <div className="bnr-dec-wrapper">
@@ -39,10 +39,10 @@ function HomePage() {
                 <img src="./assets/images/image 77.png" alt="" />
             </div>
         </Col>
-        <Col ld={6} md={6} >
+        <Col lg={6} md={6} >
             <h2 className="theme-h2">Exclusive Driver Benefits</h2>
             <Row className="bnf-row">
-                <Col lg={6} md={6}  >
+                <Col lg={6} md={6} >
                     <div className="bnf-col-wrapper">
                         <img src="./assets/images/clipboard546.png" alt="" />
                         <h3 className="theme-h4">Fully Comprehensive Insurance</h3>
@@ -54,41 +54,38 @@ function HomePage() {
                 </Col>
                 <Col lg={6} md={6} >
                     <div className="bnf-col-wrapper">
-                        <img src="./assets/images/clipboard546.png" alt="" />
-                        <h3 className="theme-h4">Fully Comprehensive Insurance</h3>
+                        <img src="./assets/images/car345.png" alt="" />
+                        <h3 className="theme-h4">Maintenance and Servicing Included</h3>
                         <p className="theme-p2">
-                        Drive with peace of mind, knowing that you’re fully covered with
-                        comprehensive insurance for every journey.
+                        All maintenance and servicing are covered, so you can focus on driving while we take care of keeping your vehicle in top condition
                         </p>
                     </div>
                 </Col>
             </Row>
-            <Row className="bnf-row">
+            <Row className=" bnf-row">
                 <Col lg={6} md={6} >
                     <div className="bnf-col-wrapper">
-                        <img src="./assets/images/clipboard546.png" alt="" />
-                        <h3 className="theme-h4">Fully Comprehensive Insurance</h3>
+                        <img src="./assets/images/24-7-5464.png" alt="" />
+                        <h3 className="theme-h4">24/7 RAC Breakdown Cover</h3>
                         <p className="theme-p2">
-                        Drive with peace of mind, knowing that you’re fully covered with
-                        comprehensive insurance for every journey.
+                        24/7 roadside assistance ensures you're never stranded, keeping you on the road when it matters most.
                         </p>
                     </div>
                 </Col>
                 <Col lg={6} md={6} >
                     <div className="bnf-col-wrapper">
-                        <img src="./assets/images/clipboard546.png" alt="" />
-                        <h3 className="theme-h4">Fully Comprehensive Insurance</h3>
+                        <img src="./assets/images/speedometer.png" alt="" />
+                        <h3 className="theme-h4">Generous Mileage Allowance</h3>
                         <p className="theme-p2">
-                        Drive with peace of mind, knowing that you’re fully covered with
-                        comprehensive insurance for every journey.
+                        Generous mileage allowances with transparent pricing for extra miles, so you can drive without worry.
                         </p>
                     </div>
                 </Col>
             </Row>
             <Row >
-                <Col lg={12} md={12} >
+                <Col lg={12} md={12}>
                     <div className="bnf-btn-wrapper">
-                        <Link to="/driver-benefits">Read More <ion-icon name="arrow-forward-outline"></ion-icon></Link>
+                        <Link to="/driver-benefits">Read More <i class="fa-solid fa-arrow-right"></i></Link>
                     </div>
                 </Col>
             </Row>
@@ -121,7 +118,7 @@ function HomePage() {
                         <span className="able"><ion-icon name="ellipse"></ion-icon> Available Now</span>
                     </div>
                     <h4 className="theme-h5 product-title">
-                         Mercedes-Benz E ClassNameclassName
+                         Mercedes-Benz E Class
                     </h4>
                     <span className="product-type">E 300de</span>
                     <div className="product-act">
@@ -141,7 +138,7 @@ function HomePage() {
                         <span className="able"><ion-icon name="ellipse"></ion-icon> Available Now</span>
                     </div>
                     <h4 className="theme-h5 product-title">
-                         Mercedes-Benz E ClassNameclassName
+                         Mercedes-Benz E Class
                     </h4>
                     <span className="product-type">E 300de</span>
                     <div className="product-act">
@@ -161,7 +158,7 @@ function HomePage() {
                         <span className="able"><ion-icon name="ellipse"></ion-icon> Available Now</span>
                     </div>
                     <h4 className="theme-h5 product-title">
-                         Mercedes-Benz E ClassNameclassName
+                         Mercedes-Benz E Class
                     </h4>
                     <span className="product-type">E 300de</span>
                     <div className="product-act">
@@ -183,7 +180,7 @@ function HomePage() {
                         <span className="able"><ion-icon name="ellipse"></ion-icon> Available Now</span>
                     </div>
                     <h4 className="theme-h5 product-title">
-                         Mercedes-Benz E ClassNameclassName
+                         Mercedes-Benz E Class
                     </h4>
                     <span className="product-type">E 300de</span>
                     <div className="product-act">
@@ -203,7 +200,7 @@ function HomePage() {
                         <span className="abl-on"><ion-icon name="ellipse"></ion-icon> Available on 28/09</span>
                     </div>
                     <h4 className="theme-h5 product-title">
-                         Mercedes-Benz E ClassNameclassName
+                         Mercedes-Benz E Class
                     </h4>
                     <span className="product-type">E 300de</span>
                     <div className="product-act">
@@ -223,7 +220,7 @@ function HomePage() {
                         <span className="unable"><ion-icon name="ellipse"></ion-icon> Unavailable</span>
                     </div>
                     <h4 className="theme-h5 product-title">
-                         Mercedes-Benz E ClassNameclassName
+                         Mercedes-Benz E Class
                     </h4>
                     <span className="product-type">E 300de</span>
                     <div className="product-act">

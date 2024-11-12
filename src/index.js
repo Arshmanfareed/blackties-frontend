@@ -33,6 +33,9 @@ import Profile from './dashboard/pages/Profile';
 import Cancellation from './dashboard/pages/Cancellation';
 import Payment from './dashboard/pages/Payment';
 import PaymentProcess from './dashboard/pages/PaymentProcess';
+import Message from './dashboard/pages/Message';
+import Settingprofile from './dashboard/pages/Settingprofile';
+import Calenderall from './dashboard/pages/Calenderall';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -67,6 +70,9 @@ root.render(
     <Route path="/cancellation" element={<><Cancellation /></>} />
     <Route path="/payment" element={<><Payment/></>} />
     <Route path="/payment-process" element={<><PaymentProcess/></>} />
+    <Route path="/message" element={<><Message/></>} />
+    <Route path="/setting-profile" element={<><Settingprofile/></>} />
+    <Route path="/calender-all" element={<><Calenderall/></>} />
 
   </Routes>
 </Router>

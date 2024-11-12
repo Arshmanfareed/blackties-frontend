@@ -1,0 +1,1655 @@
+/*------ Responsive -----*/
+
+@media only screen and (max-width: 1660px) {
+    .ds-table th {
+      padding: 12px 10px;
+    }
+    .ds-table td {
+      padding: 26px 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 1440px) {
+    table.cancellation-disc-table {
+      width: 660px;
+    }
+    .notification-inBody .notfic-main-img img {
+      height: 352px;
+    }
+  }
+  
+  @media only screen and (max-width: 1366px) {
+    .theme-h1 {
+      font-size: 70px;
+      line-height: 80px;
+    }
+  
+    .bnr-cnt-wrapper h1 {
+      padding-bottom: 42px;
+    }
+  
+    .bnr-dec-wrapper img:first-child {
+      width: 580px;
+    }
+  
+    .bnr-dec-wrapper img:last-child {
+      width: 504px;
+    }
+    .theme-h2 {
+      font-size: 42px;
+      line-height: 62px;
+    }
+  
+    .home-sec1 .col-lg-6 h2 {
+      padding-bottom: 8px;
+      margin-bottom: 30px;
+    }
+  
+    .theme-h3 {
+      font-size: 44px;
+      line-height: 56.48px;
+    }
+    .bnr-main-wrapper {
+      padding-bottom: 200px;
+    }
+  
+    /*----- Driver Benefits page -----*/
+  
+    .theme-h7 {
+      font-size: 54px;
+    }
+  
+    /*----- Register/Login Form Inner page -----*/
+  
+    .LR-Hero-wrapper h2 {
+      font-size: 52px;
+      line-height: 62px;
+    }
+  
+    .LR-Form-wrapper h3 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+  
+    /* User Dashboard Main SideBar */
+  
+    span#notific {
+      font-size: 14px;
+      right: 2%;
+      padding: 2px 10px;
+    }
+  
+    .dash-brand-wrapper a {
+      font-size: 30px;
+    }
+  
+    /* User Dashboard */
+  
+    .application-wrapper .application-content h3 {
+      font-size: 34px;
+      line-height: 50.4px;
+    }
+    .DVLA-wrap {
+      gap: 26.5px;
+    }
+  
+    .stepwizard-step .btn-circle {
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .bnr-dec-wrapper:before {
+      content: "";
+      width: 629px;
+      height: 697px;
+      z-index: -99;
+      top: -255px;
+      right: 0px;
+    }
+    .bnr-dec-wrapper img:last-child {
+      width: 437px;
+      left: 22px;
+      top: 60px;
+    }
+    .bnr-dec-wrapper img:first-child {
+      left: -172px;
+      width: 516px;
+      top: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    nav.container.main-nav {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+  
+    nav.container.main-nav button.navbar-toggler {
+      margin-right: 20px;
+    }
+  
+    nav.container.main-nav a.navbar-brand {
+      padding-left: 20px;
+    }
+  
+    .main-nav-items.active {
+      display: block !important;
+      background: #1b1f24;
+      padding-bottom: 50px !important;
+      border-top: 1px solid #667085;
+    }
+    .bnr-cnt-wrapper h1 {
+      padding-bottom: 36px;
+    }
+  
+    .nav-btn-wrapper {
+      padding: 0px 30%;
+      flex-direction: column;
+    }
+  
+    .nav-btn-wrapper a:first-child {
+      margin-right: 0px;
+      margin-bottom: 16px;
+    }
+  
+    .main-nav-items.active {
+      padding: 0px;
+    }
+  
+    span.navbar-toggler-icon {
+      filter: invert(100%) sepia(85%) saturate(0%) hue-rotate(288deg)
+        brightness(107%) contrast(101%);
+    }
+  
+    .navbar-light .navbar-toggler {
+      outline: none;
+      padding: 0px;
+    }
+  
+    .main-nav a.nav-item.nav-link {
+      transform: translate(-0%, 0%);
+      margin: 20px 0px !important;
+    }
+  
+    .theme-h1 {
+      font-size: 64px;
+      line-height: 76px;
+    }
+    .bnr-dec-wrapper img:first-child {
+      width: 420px;
+      left: -78px;
+    }
+  
+    .bnr-dec-wrapper img:last-child {
+      width: 314px;
+      left: 92px;
+    }
+    .bnr-dec-wrapper:before {
+      width: 526px;
+      height: 612px;
+      top: -200px;
+    }
+  
+    .theme-h2 {
+      font-size: 36px;
+      line-height: 58px;
+    }
+  
+    .theme-h3 {
+      font-size: 40px;
+      line-height: 52.48px;
+    }
+  
+    .theme-btn3 {
+      padding: 8px 10px 8px 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    ul.ft-cnd li {
+      margin-right: 104px;
+    }
+    .bnr-main-wrapper {
+      padding-bottom: 150px;
+    }
+  
+    /*----- How it Work page -----*/
+  
+    .hw-steps ol li h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .hw-steps ol li p {
+      font-size: 14px;
+    }
+  
+    .hw-steps ol li:first-child:before {
+      font-size: 15px;
+      height: 34px;
+      width: 34px;
+    }
+  
+    .hw-steps ol li:nth-child(2):before {
+      font-size: 15px;
+      height: 34px;
+      width: 34px;
+    }
+  
+    .hw-steps ol li:last-child:before {
+      font-size: 15px;
+      height: 34px;
+      width: 34px;
+    }
+  
+    .hw-steps ol li p:before {
+      height: 92px;
+      left: -47px;
+    }
+  
+    .hw-steps ol li:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  
+    .hw-steps ol li p:before {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 100%;
+    }
+  
+    /* User Dashboard Main SideBar */
+  
+    .dashboard-panel-topbar .mobile-dash-topbar-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .dashboard-panel-topbar .mobile-dash-topbar-wrap button.dash-mobileNav-btn {
+      background: transparent;
+      border: none;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      margin: 0px;
+      margin-right: 20px;
+    }
+  
+    .dashboard-panel-topbar
+      .mobile-dash-topbar-wrap
+      button.dash-mobileNav-btn
+      ion-icon {
+      font-size: 40px;
+      color: #fff;
+    }
+  
+    .dashboard-panel-topbar .mobile-dash-topbar-wrap .dash-brand-wrapper {
+      margin-left: 20px;
+    }
+  
+    .dashboard-sidebar {
+      width: 34%;
+      position: fixed;
+      top: 0;
+      left: -4px;
+      height: 100%;
+      z-index: 9999;
+      transform: translateX(-100%);
+      transition: 0.5s all ease-in-out;
+      overflow-y: scroll;
+    }
+  
+    .dashboard-sidebar.active {
+      transform: translateX(0%);
+    }
+  
+    .col-lg-9.panel-col {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  
+    .col-lg-3.sidebar-col {
+      flex: 0 0 auto;
+      width: 0%;
+    }
+  
+    .dashNav-close-btn {
+      display: unset;
+    }
+  
+    /* User Dashboard */
+  
+    .penalty-panel .maintenance-table {
+      width: 1050px;
+    }
+  
+    .overview-vehicle-title,
+    .cancellation-vehicle-title {
+      display: none;
+    }
+  
+    .Book-Appointment-form {
+      width: 60%;
+    }
+  
+    .invoice-view-subscription {
+      padding: 24px 16px;
+    }
+  
+    .invoice-view-details {
+      padding: 24px 16px;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .main-nav a.navbar-brand {
+      font-size: 30px;
+    }
+    .theme-h1 {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  
+    .bnr-cnt-wrapper h1 {
+      padding-bottom: 30px;
+    }
+  
+    .bnr-btn-wrapper a {
+      font-size: 15px;
+      line-height: 18.16px;
+    }
+  
+    .bnr-btn-wrapper a ion-icon {
+      font-size: 20px;
+      top: 4px;
+    }
+    .home-sec1 .col-lg-6 h2 {
+      padding-bottom: 6px;
+      margin-bottom: 22px;
+    }
+  
+    .theme-h2 {
+      font-size: 32px;
+      line-height: 54px;
+      letter-spacing: -1px;
+    }
+  
+    .theme-h4 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  
+    .bnf-btn-wrapper a {
+      font-size: 15px;
+      line-height: 18.36px;
+    }
+  
+    .home-sec1 {
+      padding-bottom: 100px;
+    }
+  
+    .theme-h3 {
+      font-size: 34px;
+      line-height: 44.48px;
+    }
+  
+    .product-img-wrap {
+      height: 200px;
+    }
+  
+    .theme-h5 {
+      font-size: 18px;
+      line-height: 23.2px;
+    }
+  
+    .price {
+      font-size: 18px;
+      line-height: 23.2px;
+    }
+  
+    .theme-btn3 {
+      padding: 8px 10px 8px 10px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  
+    .proBtn-wrap {
+      margin-top: 26px;
+    }
+  
+    .proBtn-wrap a {
+      font-size: 14px;
+      line-height: 16.16px;
+    }
+  
+    ul.ft-address li h6 {
+      font-size: 17px;
+      line-height: 18px;
+    }
+  
+    ul.ft-address li {
+      display: block;
+    }
+  
+    ul.ft-address li:first-child:before {
+      height: 20px;
+      width: 20px;
+    }
+  
+    ul.ft-address li:last-child:before {
+      height: 20px;
+      width: 20px;
+    }
+  
+    ul.ft-cnd {
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      text-align: right;
+    }
+  
+    ul.ft-cnd li {
+      margin-right: 0px;
+      margin-bottom: 10px;
+    }
+  
+    ul.ft-cnd li h6 {
+      margin: 0px;
+    }
+  
+    .footer-brand a {
+      font-size: 20px;
+      line-height: 18.16px;
+    }
+  
+    ul.ft-social-links li a {
+      font-size: 17px;
+    }
+  
+    ul.ft-social-links li {
+      padding-right: 30px;
+    }
+    ul.ft-address li {
+      padding-left: 34px;
+    }
+  
+    /*----- Driver Benefits page -----*/
+  
+    .theme-h7 {
+      line-height: 52px;
+      font-size: 46px;
+    }
+  
+    /*----- detail-car -----*/
+  
+    .car-features-boxes h6 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  
+    /*----- Register/Login Form Inner page -----*/
+  
+    .LR-Hero-wrapper h2 {
+      font-size: 44px;
+      line-height: 54px;
+    }
+  
+    .LR-Hero-wrapper h2 {
+      padding-bottom: 30px;
+    }
+  
+    .LR-Form-wrapper h3 {
+      font-size: 34px;
+      line-height: 44px;
+    }
+  
+    .theme-btn6 {
+      line-height: 26px !important;
+      padding: 10.5px !important;
+    }
+  
+    .login-frame {
+      padding-left: 0px;
+    }
+  
+    .LR-Hero-wrapper p {
+      font-size: 15px;
+      line-height: 28px;
+    }
+  
+    .register-frame {
+      padding-left: 0px;
+    }
+  
+    .LR-Form-wrapper span {
+      font-size: 16px;
+    }
+  
+    .verification-frame {
+      padding-left: 0px;
+    }
+  
+    .verific-otp input {
+      font-size: 20px !important;
+    }
+  
+    .forget-password-frame {
+      padding-left: 0px;
+    }
+  
+    .create-password-frame {
+      padding-left: 0px;
+    }
+  
+    /* User Dashboard */
+  
+    .application-content {
+      padding-right: 12px;
+    }
+  
+    .application-wrapper .application-content h3 {
+      font-size: 32px;
+      line-height: 44.4px;
+    }
+  
+    .driver-score-panel .maintenance-table {
+      width: 876px;
+    }
+  
+    .cancelAppoit-btn {
+      padding: 10px 12px !important;
+      line-height: normal !important;
+    }
+  
+    .invoice-view-details h2 {
+      font-size: 24px;
+    }
+  
+    .invoice-view-details h3 {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .theme-h1 {
+      font-size: 42px;
+      line-height: 52px;
+    }
+  
+    .bnr-cnt-wrapper h1 {
+      padding-bottom: 24px;
+    }
+    section.home-sec1 > .row > .col-lg-6 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  
+    .home-sec1-img-wrap img {
+      width: 45%;
+      margin-bottom: 32px;
+    }
+    .theme-h5 {
+      font-size: 17px;
+      line-height: 22.2px;
+    }
+  
+    span.product-type {
+      font-size: 13px;
+      line-height: 16.64px;
+    }
+  
+    .price {
+      font-size: 15px;
+      line-height: 20.2px;
+    }
+  
+    .price > span.limits {
+      font-size: 13px;
+      line-height: 25.2px;
+      line-height: 23.2px;
+    }
+  
+    .theme-btn3 {
+      padding: 6px 8px 6px 8px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  
+    .product-act .price {
+      width: 82px;
+    }
+  
+    .product-img-wrap {
+      height: 158px;
+    }
+  
+    .bnr-main-wrapper {
+      flex-direction: column;
+      padding-top: 100px;
+    }
+  
+    .bnr-cnt-wrapper {
+      width: 100%;
+    }
+  
+    .bnr-dec-wrapper {
+      width: 100%;
+      height: 270px;
+    }
+  
+    .bnr-dec-wrapper img:first-child {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  
+    .bnr-dec-wrapper img:last-child {
+      right: -250px !important;
+      left: 0 !important;
+      margin: 0 auto !important;
+      position: absolute;
+    }
+  
+    .bnr-dec-wrapper:before {
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+  
+    .bnr-para {
+      width: 100%;
+    }
+  
+    /*----- Driver Benefits page -----*/
+  
+    .theme-h7 {
+      line-height: 46px;
+      font-size: 40px;
+    }
+    .driver-benefits-sec .main-title h2 {
+      padding-bottom: 24px;
+    }
+  
+    /*----- How it Work page -----*/
+  
+    .hw-steps > .row > .col-lg-6 {
+      width: 100%;
+    }
+  
+    .hw-steps {
+      margin-bottom: 365px;
+    }
+    .hw-steps ol {
+      bottom: -373px;
+      padding-left: 64px;
+    }
+  
+    .hw-steps ol li:first-child:before,
+    .hw-steps ol li:nth-child(2):before,
+    .hw-steps ol li:nth-child(3):before {
+      left: 0px;
+    }
+  
+    /*----- Register/Login Form Inner page -----*/
+  
+    .LR-Hero-wrapper:before {
+      width: 600px;
+      left: -62px;
+      top: 17px;
+      background-size: 100%;
+    }
+  
+    .LR-Hero-wrapper h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  
+    .LR-Hero-wrapper h2 {
+      padding-bottom: 24px;
+    }
+  
+    .LR-Form-wrapper h3 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  
+    /* User Dashboard */
+  
+    .application-content {
+      padding-right: 0px;
+    }
+  
+    .application-form {
+      padding: 42px 0px 42px 24px;
+    }
+  
+    .application-wrapper,
+    .db-default-wrapper {
+      padding: 24px 24px;
+    }
+  
+    span.file_cont span {
+      width: 60%;
+    }
+  
+    .DVLA-wrap .verific-DVLA {
+      gap: 8px;
+    }
+  
+    .dash-brand-wrapper a {
+      font-size: 26px;
+    }
+  
+    .search-bar-v1 {
+      width: 220px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .home-sec1-img-wrap img {
+      width: 100%;
+    }
+    .prd-title-wrap .col-lg-6 {
+      width: 50%;
+    }
+    .main-nav a.navbar-brand {
+      font-size: 26px;
+    }
+    .ft-r1 .col-lg-6 {
+      width: 50%;
+    }
+    .ft-r2 .col-lg-8 {
+      width: 70%;
+    }
+  
+    .ft-r2 .col-lg-4 {
+      width: 30%;
+    }
+    .theme-h3 {
+      font-size: 30px;
+      line-height: 40.48px;
+    }
+    .product-img-wrap {
+      height: auto;
+    }
+  
+    /*----- Driver Benefits page -----*/
+  
+    .theme-h7 {
+      line-height: 44px;
+      font-size: 38px;
+    }
+    .driver-benefits-sec .main-title {
+      padding-bottom: 80px;
+    }
+    .driver-benefits-sec .row.car-facilities:not(:last-child) {
+      padding-bottom: 0px;
+    }
+  
+    .driver-benefits-sec .car-facilities-wrap {
+      padding-bottom: 32px;
+    }
+  
+    /*----- detail-car -----*/
+  
+    .detailCar-slide-controller ul {
+      display: flex;
+    }
+  
+    .detailCar-slide-controller {
+      height: auto !important;
+      overflow-y: hidden !important;
+      overflow-x: scroll !important;
+      margin-top: 20px;
+    }
+  
+    .detailCar-slide-controller ul li img {
+      height: 120px;
+      width: 168px;
+    }
+  
+    .detailCar-slide-controller::-webkit-scrollbar {
+      height: 4px;
+    }
+  
+    .detailCar-slider.owl-carousel .owl-item img {
+      height: 450px;
+    }
+  
+    span.product-type {
+      font-size: 14px;
+      line-height: 17.64px;
+    }
+  
+    .price {
+      font-size: 20px;
+      line-height: 25.2px;
+    }
+  
+    .product-act .price {
+      width: 143px;
+    }
+  
+    .price > span.limits {
+      font-size: 14px;
+    }
+  
+    .theme-h5 {
+      font-size: 20px;
+      line-height: 25.2px;
+    }
+  
+    .theme-btn3 {
+      padding: 10px 16px 10px 16px;
+      font-size: 14px;
+    }
+    .other-car-sec .other-car-wrap {
+      flex-direction: column;
+      align-items: baseline;
+    }
+  
+    .other-car-sec .other-car-wrap a {
+      padding-top: 18px;
+    }
+  
+    .detail-car-sec1 .car-facilities-wrap {
+      padding-bottom: 44px;
+    }
+  
+    .detail-car-sec1 .row.car-facilities:not(:last-child) {
+      padding-bottom: 0px;
+    }
+  
+    /*----- Register/Login Form Inner page -----*/
+  
+    .LR-Hero-wrapper {
+      min-height: 422px;
+      padding-bottom: 60px;
+    }
+  
+    .LR-Hero-wrapper:before {
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      background-size: 65%;
+    }
+  
+    .LR-Hero-wrapper p {
+      color: #d9d9d9;
+    }
+  
+    ul.ft-address li p {
+      width: 100%;
+    }
+  
+    .LR-Form-wrapper input.theme-btn6 {
+      margin-top: 20px;
+    }
+  
+    /* User Dashboard Main SideBar */
+  
+    .dashboard-sidebar {
+      width: 44%;
+    }
+  
+    /* User Dashboard */
+  
+    /* .welcome-card > .wrapper h3 {
+      font-size: 30px;
+      padding-bottom: 20px;
+    } */
+  
+    .welcome-card > .wrapper h4 {
+      font-size: 20px;
+    }
+  
+    .application-form {
+      padding: 42px 0px 42px 0px;
+    }
+  
+    .application-content:after {
+      display: none;
+    }
+  
+    .rent-car-info-col {
+      padding-bottom: 0px;
+    }
+  
+    .penalty-panel .maintenance-table {
+      width: 655px;
+    }
+  
+    .search-bar-wrapper {
+      flex-direction: column;
+    }
+  
+    .search-bar-wrapper > div {
+      /* flex-direction: column; */
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .search-bar-v1 {
+      width: 100%;
+    }
+  
+    .maintenance-panel .maintenance-table {
+      width: 655px;
+    }
+  
+    .NextPrev-btn-wrap {
+      flex-direction: column;
+      gap: 0px;
+    }
+  
+    .application-form button {
+      margin-top: 20px;
+    }
+  
+    .rent-car-sec .NextPrev-btn-wrap {
+      gap: 20px;
+    }
+  
+    .vehicle-average-row .col-lg-4:not(:last-child) {
+      padding-bottom: 24px !important;
+    }
+    .vehicle-average-wrap {
+      border-right: none;
+      border-bottom: 1px solid #464849;
+      padding: 12px 0px;
+    }
+  
+    .cancellation-disc-table td {
+      padding: 20px 12px;
+    }
+    table.cancellation-disc-table {
+      margin-top: 32px;
+    }
+    .cancellation-alert {
+      width: 90%;
+      height: auto !important;
+    }
+  
+    .vehicle-document-tabs-v1,
+    .Profile-password-tabs-v1 {
+      flex-direction: column;
+    }
+  
+    .vehicle-document-tabs-v1 .nav {
+      width: 100%;
+      margin-right: 0px !important;
+      flex-direction: row !important;
+      justify-content: space-around;
+      margin-bottom: 32px;
+    }
+  
+    .vehicle-document-tabs-v1 .tab-content {
+      width: 100%;
+    }
+    .vehicle-document-tabs-v1 .nav button,
+    .Profile-password-tabs-v .nav button {
+      margin-bottom: 0px !important;
+    }
+    .vehicle-document-tabs-v1 .nav .nav-link {
+      padding: 14px 10px;
+      font-size: 13px;
+    }
+    .maintenance-table td {
+      padding: 22px 12px;
+    }
+  
+    .Book-Appointment-form {
+      width: 90%;
+    }
+  
+    .invoice-view-details {
+      padding: 24px 16px;
+    }
+  
+    .invoice-view-details .col-lg-6:nth-child(2) {
+      padding-left: 15px;
+      padding-top: 32px;
+    }
+  
+    .invoice-view-subscription {
+      padding: 24px 16px;
+    }
+  
+    .invoice-view-subscription .col-lg-6:nth-child(2) {
+      padding-left: 15px;
+      padding-top: 18px;
+    }
+  
+    .invoice-view-details h2 {
+      font-size: 20px;
+      padding-bottom: 32px;
+    }
+  
+    .invoice-view-details h3 {
+      font-size: 20px;
+    }
+  
+    .payment-card .balance-wrapper {
+      flex-direction: column;
+      justify-content: left;
+      align-items: self-start;
+    }
+  
+    .payment-card .balance-wrapper div {
+      width: 100%;
+    }
+  
+    .payment-card .balance-wrapper div a.payNow-btn {
+      width: 100%;
+      margin-top: 24px;
+    }
+  
+    .payment-method-row {
+      padding: 0px;
+    }
+  
+    .payment-options-list {
+      padding: 12px 0px;
+    }
+  
+    .payment-method-head {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .payment-method-head h6 {
+      text-align: center;
+      width: 100%;
+      background: #4c008b;
+      padding: 12px;
+      margin-top: 10px;
+    }
+  
+    .payment-method-head h5 {
+      width: 100%;
+    }
+  
+    .payment-history-row {
+      padding: 24px 0px;
+    }
+  
+    .payment-process-card .payment-process-top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .payment-process-card .payment-process-top-bar .payment-process-btn-wrap {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .payment-process-card .payment-process-top-bar div {
+      width: 100%;
+    }
+  
+    .payment-process-card .payment-process-top-bar .payment-process-btn-wrap a {
+      width: 100%;
+    }
+  
+    .notifications-card .search-bar-wrapper div {
+      flex-direction: column;
+    }
+  
+    .notifications-card .search-bar-wrapper div a.nofitic-markRead-btn {
+      width: 100%;
+    }
+  
+    .notifications-card .search-bar-wrapper div .search-bar-v1 {
+      flex-direction: row !important;
+    }
+  
+    .notification-inBody {
+      padding: 0px;
+    }
+    .notification-inBody .notfic-main-img img {
+      height: auto;
+    }
+  
+    .profile-top-bar {
+      flex-direction: column;
+    }
+  
+    .profile-top-bar .profile-btn-wrap {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 14px;
+    }
+  
+    .profile-top-bar .profile-btn-wrap a {
+      width: 100%;
+    }
+  
+    .Profile-password-tabs-v1 .nav {
+      width: 100%;
+      padding-right: 0px;
+      border-right: none;
+      flex-direction: row !important;
+    }
+  
+    .Profile-password-tabs-v1 .tab-content {
+      width: 100%;
+    }
+  
+    .Profile-password-tabs-v1 .nav button {
+      width: 46%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      text-align: center !important;
+    }
+  
+    .Profile-password-tabs-v1 .nav .profileAccount-delete {
+      width: 100%;
+    }
+  
+    .welcome-sec:after {
+      width: 127%;
+      height: 100%;
+      right: 0;
+      left: -14%;
+      top: 0px;
+      margin: 0 auto;
+  }
+  }
+  
+  @media only screen and (max-width: 670px) {
+    /*----- How it Work page -----*/
+  
+    .how-it-work-sec .main-title {
+      padding-bottom: 0px;
+    }
+  
+    /*----- detail-car -----*/
+  
+    .car-features .col-lg-2:first-child,
+    .car-features .col-lg-2:nth-child(2),
+    .car-features .col-lg-2:nth-child(3) {
+      flex: 0 0 auto;
+      width: 33.333%;
+    }
+  
+    .car-features .col-lg-2:nth-child(4),
+    .car-features .col-lg-2:last-child {
+      flex: 0 0 auto;
+      width: 50%;
+      padding-top: 32px;
+    }
+  
+    .detail-car-ptag {
+      flex-direction: column;
+    }
+  
+    .detail-car-sec1 .detail-car-ptag .product-act .price {
+      width: 100%;
+      font-size: 24px;
+    }
+  
+    .detail-car-sec1 .detail-car-ptag .product-act .price > span.limits {
+      font-size: 16px;
+    }
+  
+    .detail-car-sec1 .detail-car-ptag {
+      gap: 24px;
+    }
+  
+    .detail-car-sec1 .detail-car-ptag .rent-now-btn {
+      margin-top: 16px;
+      margin-bottom: 12px;
+      width: 100% !important;
+    }
+  
+    .detail-car-sec1 .detail-car-ptag .product-act {
+      margin-top: 12px;
+    }
+  
+    .detail-car-sec1 .detail-car-ptag .rent-now-btn a.theme-btn5 {
+      width: 100%;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    /*----- Register/Login Form Inner page -----*/
+  
+    .LR-Hero-wrapper:before {
+      background-size: 84%;
+    }
+  }
+  
+  @media only screen and (max-width: 667px) {
+    /* User Dashboard Main SideBar */
+  
+    .dashboard-sidebar {
+      width: 50%;
+    }
+  
+    /* User Dashboard */
+  
+    .welcome-card > .wrapper {
+      width: 100%;
+      min-height: 100% !important;
+      padding: 42px 60px;
+    }
+  }
+  
+  @media only screen and (max-width: 568px) {
+    /* User Dashboard Main SideBar */
+  
+    .dashboard-sidebar {
+      width: 83%;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .nav-btn-wrapper {
+      padding: 0px 15%;
+      flex-direction: column;
+    }
+  
+    .container {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .main-nav a.navbar-brand {
+      font-size: 22px;
+    }
+    .bnr-dec-wrapper img:first-child {
+      width: 360px;
+      right: 80px;
+    }
+  
+    .bnr-dec-wrapper img:last-child {
+      width: 260px;
+      right: -150px !important;
+    }
+  
+    .bnr-dec-wrapper:before {
+      width: 566px;
+      height: 600px;
+      top: -220px;
+      left: -75px;
+    }
+  
+    .prd-title-wrap .col-lg-6 {
+      width: 100%;
+    }
+  
+    .filter-wrap .filter {
+      float: left;
+      margin-top: 16px;
+    }
+    .ft-r2 .col-lg-8 {
+      width: 100%;
+    }
+  
+    .ft-r2 .col-lg-4 {
+      width: 100%;
+    }
+  
+    ul.ft-cnd {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      margin-top: 24px;
+    }
+  
+    footer {
+      padding: 24px 0px 20px;
+    }
+    .theme-h1 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+    .theme-p1 {
+      font-size: 16px;
+    }
+    .bnr-main-wrapper {
+      padding-top: 63px;
+    }
+  
+    /*----- How it Work page -----*/
+  
+    .hw-steps > .row > .col-lg-6 {
+      height: 100px;
+    }
+  
+    .hw-steps ol {
+      bottom: -140px;
+    }
+  
+    .hw-steps {
+      margin-bottom: 474px;
+    }
+  
+    /*----- detail-car -----*/
+  
+    .detailCar-slide-controller ul li img {
+      height: 80px;
+      width: 101px;
+    }
+  
+    .detailCar-slider.owl-carousel .owl-item img {
+      height: 330px;
+    }
+  
+    /*----- Register/Login Form Inner page -----*/
+  
+    .LR-Hero-wrapper:before {
+      background-size: 130%;
+    }
+  
+    .LR-Form-wrapper h3 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  
+    .LR-Hero-wrapper p {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  
+    .LR-Form-wrapper p {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  
+    .LR-Hero-wrapper p {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  
+    .LR-Hero-wrapper p:not(:last-child) {
+      padding-bottom: 24px;
+    }
+  
+    .verific-otp input {
+      font-size: 16px !important;
+    }
+  
+    /* User Dashboard */
+  
+    .welcome-card > .wrapper {
+      padding: 18px 24px;
+    }
+  
+    /* .welcome-card > .wrapper h3 {
+      font-size: 28px;
+      padding-bottom: 16px;
+    } */
+  
+    .welcome-card > .wrapper h4 {
+      font-size: 18px;
+    }
+  
+    .welcome-card {
+      padding: 20px 20px;
+    }
+  
+    .application-wrapper .application-content h3 {
+      font-size: 28px;
+      line-height: 42.4px;
+    }
+  
+    .application-form {
+      padding: 42px 0px 42px 0px;
+    }
+  
+    .DVLA-wrap {
+      gap: 16.5px;
+    }
+  
+    .application-wrapper .application-content p:not(:last-child) {
+      padding-bottom: 22px;
+    }
+  
+    .DVLA-wrap {
+      flex-direction: column;
+    }
+  
+    .stepwizard-step .btn-circle {
+      font-size: 14px;
+      width: 36px;
+      height: 36px;
+    }
+  
+    .stepwizard-step p {
+      font-size: 12px;
+    }
+  
+    .steps ul li::before,
+    .steps ul li::after {
+      top: 17px;
+      right: 77%;
+    }
+  
+    .steps ul li {
+      padding: 0 4px;
+    }
+  
+    .rent-car-sec .detailCar-slide-controller ul li img {
+      height: 58px;
+      width: 96px;
+    }
+  
+    .rent-car-sec .detailCar-slide-controller ul li {
+      padding-right: 7px;
+    }
+  
+    .welcome-sec,
+    .application-sec,
+    .db-default-sec {
+      padding: 14px 20px 24px 20px;
+    }
+  
+    .detailCar-slide-controller ul li.slide-active img {
+      border: 2px solid #4a068f;
+    }
+  
+    .rent-car-sec .detailCar-slide-controller ul {
+      padding: 6px 0px;
+    }
+  
+    .rent-car-sec .detailCar-slide-controller {
+      margin-top: 2px;
+    }
+  
+    .application-wrapper,
+    .db-default-wrapper {
+      padding: 24px 16px;
+    }
+  
+    .rent-car-card .car-discription p {
+      font-size: 14px;
+    }
+  
+    .alert-info-box p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  
+    .total-fee h5 {
+      font-size: 20px;
+    }
+  
+    .LR-Form-wrapper form input {
+      height: 56px;
+    }
+    .fdb-action-wrap p {
+      font-size: 14px;
+      line-height: normal;
+    }
+  
+    .approve-status h2 {
+      font-size: 24px;
+    }
+    .rental-vehicle-dt1 h5 {
+      font-size: 16px;
+      line-height: normal;
+    }
+  
+    .rental-vehicle-dt1 {
+      gap: 4px;
+    }
+    .rental-vehicle-price h3 {
+      font-size: 22px;
+    }
+  
+    .detail-rent-wrapper {
+      padding: 43px 12px 64px 12px;
+    }
+  
+    .rental-vehicle-docs-wrap {
+      padding: 24px 12px 32px 12px;
+    }
+  
+    .rental-vehicle-docs-wrap ul.rental-files li {
+      gap: 8px;
+    }
+  
+    .cancel-rental-detail-wrap {
+      padding: 24px 12px;
+    }
+  
+    .invoice-view-topbar {
+      padding: 20px 0px;
+    }
+  
+    .checkbox.payment-radio {
+      padding-left: 16px;
+    }
+  
+    .pay-mathod-default a {
+      font-size: 10px;
+    }
+  
+    .default-or-delete {
+      gap: 6px;
+    }
+  
+    .checkbox__body .checkbox-inbody img {
+      width: 34px;
+    }
+  
+    .user-notifications-wrapper ul li > a {
+      flex-direction: column;
+    }
+  
+    .user-notifications-wrapper ul li > a .nofitic-vehicles {
+      width: 100%;
+      text-align: end;
+      margin-top: 7px;
+      padding-left: 62px;
+    }
+  
+    .user-notifications-wrapper ul li > a .nofitic-vehicles img {
+      width: 100%;
+      height: auto !important;
+    }
+  
+    .notific-file-download {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+  
+    .notfic-main-user .notific-user {
+      display: block;
+      margin-right: 0px;
+    }
+  
+    .profile-meta-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profile-meta-wrapper .change-img-btn {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /*----- How it Work page -----*/
+  
+    .hw-steps {
+      margin-bottom: 590px;
+    }
+  
+    .hw-steps ol {
+      padding-left: 50px;
+    }
+  
+    .hw-steps ol li:first-child:before,
+    .hw-steps ol li:nth-child(2):before,
+    .hw-steps ol li:nth-child(3):before {
+      left: -14px;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    /*----- detail-car -----*/
+  
+    .detail-car-sec1 .detailCar-slide-controller ul li img {
+      height: 48.674px;
+      width: 79.713px;
+      border-radius: 1.411px;
+    }
+  
+    .detail-car-sec1 .detailCar-slide-controller ul li {
+      padding: 0px 6px 4.23px 0px;
+    }
+  
+    .detail-car-sec1 .detailCar-slide-controller {
+      margin-top: 7px;
+    }
+  
+    .detail-car-sec1 .detailCar-slide-controller ul li.slide-active img {
+      border: 2px;
+    }
+  
+    .detail-car-sec1 .detailCar-slider.owl-carousel .owl-item img {
+      height: 230px;
+    }
+  
+    .product-act .price {
+      width: 106px;
+    }
+  
+    .theme-btn3 {
+      padding: 8px 10px 8px 10px;
+      font-size: 14px;
+    }
+  
+    .price {
+      font-size: 18px;
+      line-height: 23.2px;
+    }
+  
+    /*----- Register/Login Form Inner page -----*/
+  
+    .LR-Form-wrapper h3 {
+      font-size: 24px;
+    }
+  
+    .LR-Form-wrapper form label.checkbox.style-a label {
+      font-size: 14px;
+    }
+  
+    .verific-otp input {
+      font-size: 13.263px !important;
+    }
+  }
+  

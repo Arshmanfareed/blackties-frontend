@@ -63,7 +63,7 @@ function Forget_password() {
             <Col lg={6} md={6}>
               <div className="LR-Form-wrapper forget-password-frame">
                 <h3>Forget Password</h3>
-                <p>No worries, We’ll send you instructions to reset!</p>
+                <p>Everyone forgets their password. Rest assured, enter your registered email address and we will send a verification code to prove it is you!</p>
 
                 <Form onSubmit={handleSubmit}>
                   <Row>
@@ -83,7 +83,7 @@ function Forget_password() {
                       <Form.Control
                         type="submit"
                         className="theme-btn6 sb-btn"
-                        value="Reset Password"
+                        value="Send Verification Code"
                       />
                     </Col>
                   </Row>
