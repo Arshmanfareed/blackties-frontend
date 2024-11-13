@@ -346,12 +346,12 @@ input.sb-btn {
   font-size: 16px;
 }
 .main-nav .main-nav-items .nav-btn-wrapper {
-    margin-left: 22%;
+    margin-left: 11%;
 }
 
 .main-nav .main-nav-items {
   padding-left: 40px;
-  justify-content: end;
+  justify-content: space-evenly;
 }
 
 .main-nav a.nav-item.nav-link {
