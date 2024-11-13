@@ -36,6 +36,9 @@ import PaymentProcess from './dashboard/pages/PaymentProcess';
 import Message from './dashboard/pages/Message';
 import Settingprofile from './dashboard/pages/Settingprofile';
 import Calenderall from './dashboard/pages/Calenderall';
+import Failedpay from './dashboard/pages/Failedpay';
+import Support from './dashboard/pages/Support';
+import Ourvehicle from './dashboard/pages/Ourvehicle';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -73,6 +76,9 @@ root.render(
     <Route path="/message" element={<><Message/></>} />
     <Route path="/setting-profile" element={<><Settingprofile/></>} />
     <Route path="/calender-all" element={<><Calenderall/></>} />
+    <Route path="/failed-pay" element={<><Failedpay/></>} />
+    <Route path="/support-ticket" element={<><Support/></>} />
+    <Route path="/rent-our-vehicle" element={<><Ourvehicle/></>} />
 
   </Routes>
 </Router>

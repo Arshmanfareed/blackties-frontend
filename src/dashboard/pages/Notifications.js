@@ -49,13 +49,13 @@ function Notifications() {
                                                             <div className="notific-data-box">
                                                                 <div className="noific-user-img">
                                                                     <img src="./assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <ion-icon name="ellipse"></ion-icon>
+                                                                    <i class="fa-solid fa-circle"></i>
                                                                 </div>
                                                                 <div>
                                                                     <h6 className="notific-user">Michael Dane</h6>
                                                                     <p className="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
                                                                     <span className="notific-time">10:13 AM</span>
-                                                                    <span className="notific-date"><ion-icon name="ellipse"></ion-icon> Sep 23, 2024</span>
+                                                                    <span className="notific-date"><i class="fa-solid fa-circle"></i> Sep 23, 2024</span>
                                                                 </div>
                                                             </div>
                                                             <div className="nofitic-vehicles">
@@ -68,13 +68,13 @@ function Notifications() {
                                                             <div className="notific-data-box">
                                                                 <div className="noific-user-img">
                                                                     <img src="./assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <ion-icon name="ellipse"></ion-icon>
+                                                                    <i class="fa-solid fa-circle"></i>
                                                                 </div>
                                                                 <div>
                                                                     <h6 className="notific-user">Michael Dane</h6>
                                                                     <p className="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
                                                                     <span className="notific-time">10:13 AM</span>
-                                                                    <span className="notific-date"><ion-icon name="ellipse"></ion-icon> Sep 23, 2024</span>
+                                                                    <span className="notific-date"><i class="fa-solid fa-circle"></i> Sep 23, 2024</span>
                                                                 </div>
                                                             </div>
                                                             <div className="nofitic-vehicles">
@@ -87,13 +87,13 @@ function Notifications() {
                                                             <div className="notific-data-box">
                                                                 <div className="noific-user-img">
                                                                     <img src="./assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <ion-icon name="ellipse"></ion-icon>
+                                                                    <i class="fa-solid fa-circle"></i>
                                                                 </div>
                                                                 <div>
                                                                     <h6 className="notific-user">Michael Dane</h6>
                                                                     <p className="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
                                                                     <span className="notific-time">10:13 AM</span>
-                                                                    <span className="notific-date"><ion-icon name="ellipse"></ion-icon> Sep 23, 2024</span>
+                                                                    <span className="notific-date"><i class="fa-solid fa-circle"></i> Sep 23, 2024</span>
                                                                 </div>
                                                             </div>
                                                             <div className="nofitic-vehicles">
@@ -106,13 +106,13 @@ function Notifications() {
                                                             <div className="notific-data-box">
                                                                 <div className="noific-user-img">
                                                                     <img src="./assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <ion-icon name="ellipse"></ion-icon>
+                                                                    <i class="fa-solid fa-circle"></i>
                                                                 </div>
                                                                 <div>
                                                                     <h6 className="notific-user">Michael Dane</h6>
                                                                     <p className="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
                                                                     <span className="notific-time">10:13 AM</span>
-                                                                    <span className="notific-date"><ion-icon name="ellipse"></ion-icon> Sep 23, 2024</span>
+                                                                    <span className="notific-date"><i class="fa-solid fa-circle"></i> Sep 23, 2024</span>
                                                                 </div>
                                                             </div>
                                                             <div className="nofitic-vehicles">
@@ -125,13 +125,13 @@ function Notifications() {
                                                             <div className="notific-data-box">
                                                                 <div className="noific-user-img">
                                                                     <img src="./assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <ion-icon name="ellipse"></ion-icon>
+                                                                    <i class="fa-solid fa-circle"></i>
                                                                 </div>
                                                                 <div>
                                                                     <h6 className="notific-user">Michael Dane</h6>
                                                                     <p className="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
                                                                     <span className="notific-time">10:13 AM</span>
-                                                                    <span className="notific-date"><ion-icon name="ellipse"></ion-icon> Sep 23, 2024</span>
+                                                                    <span className="notific-date"><i class="fa-solid fa-circle"></i> Sep 23, 2024</span>
                                                                 </div>
                                                             </div>
                                                             <div className="nofitic-vehicles">
@@ -140,14 +140,14 @@ function Notifications() {
                                                         </Link>
                                                         <div className="notific-file-download">
                                                             <div className="notific-file-data">
-                                                                <img src="./assets/images/dashboard/img-frame.png" alt="jpg"/>
+                                                                <img src="./assets/images/dashboard/pdf_img.png" alt="jpg"/>
                                                                 <div>
                                                                     <h6>Table Sample.jpg</h6>
                                                                     <span className="file-size">3 MB</span>
                                                                 </div>
                                                             </div>
                                                             <div>
-                                                                <Link to="javascript:;" className="notific-file-down">Download</Link>
+                                                                <Link to="javascript:;" className="notific-file-down">Udate</Link>
                                                             </div>
                                                         </div>
                                                     </li>

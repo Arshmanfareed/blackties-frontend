@@ -39,7 +39,7 @@ function RentCar() {
                           <div className="col-lg-6 col-md-6">
                             <div className="row back-to-sec">
                               <div className="col-lg-12 col-md-12">
-                                <Link to="#" onClick={(e) => e.preventDefault()} className="back-to">
+                                <Link to="/rent-our-vehicle" className="back-to">
                                 <i class="fa-solid fa-angle-left"></i>{" "}
                                   Back to Our Vehicles
                                 </Link>

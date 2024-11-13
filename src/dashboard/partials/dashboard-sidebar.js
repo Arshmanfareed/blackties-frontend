@@ -56,7 +56,7 @@ setIsVisible(!isVisible);
               </li>
               <li>
                 <NavLink
-                  to="#" 
+                  to="/rent-our-vehicle" 
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/booking.svg" alt="" />
@@ -74,10 +74,10 @@ setIsVisible(!isVisible);
               </li>
               <li>
                 <NavLink
-                  to="#" 
+                  to="/support-ticket" 
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  <img src="./assets/images/dashboard/Receipt.svg" alt="" />
+                  <img src="./assets/images/dashboard/mail.png" alt="" />
                   Support & Issues
                 </NavLink>
               </li>
@@ -103,7 +103,7 @@ setIsVisible(!isVisible);
                   to="/calender-all" 
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  <img src="./assets/images/dashboard/Receipt.svg" alt="" />
+                  <img src="./assets/images/dashboard/calendar.png" alt="" />
                   Calendar
                 </NavLink>
               </li>

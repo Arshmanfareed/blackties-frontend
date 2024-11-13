@@ -44,7 +44,7 @@ function Cancellation() {
                     </div>
                   </Col>
                 </Row>
-                <Row className="row">
+                <Row >
                   <Col lg={12} md={12}>
                     <div className="cancellation-sec db-default-sec">
                       <div className="cancellation-card db-default-wrapper">

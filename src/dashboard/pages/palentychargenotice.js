@@ -28,14 +28,15 @@ function Palentychargenotice() {
                                         <Col lg={12} md={12} >
                                             <div className="search-bar-wrapper">
                                                 <h5 className="theme-h5">Penalty Charge Notice</h5>
-                                                <div>
+                                                {/* <div>
                                                     <div className="search-bar-v1">
                                                         <button type="submit"><i className="fa fa-search"></i></button>
                                                         <input type="text" placeholder="Search here..."/>
                                                     </div>
                                                     <Link to="#" className="filter-v1">Filter <img src="./assets/images/Tuning.svg" alt=""/></Link>
-                                                </div>
+                                                </div> */}
                                             </div>
+                                            <p>You can view all of the penalty charge notices you have received here. Unfortunately, there is a lot of administrative work to forward a ticket over to yourselves, the renter, thus the fee. However, if you successfully appeal a ticket, this administrative fee is refunded.</p>
                                         </Col>
                                     </Row>
                                     <Row >
@@ -44,24 +45,81 @@ function Palentychargenotice() {
                                                 <table className="maintenance-table">
                                                     <thead>
                                                         <tr>
-                                                            <th className="first-th">Penalty Charge Notice <ion-icon name="arrow-down-outline"></ion-icon></th>
-                                                            <th>Date & Time</th>
-                                                            <th>PCN Fee</th>
-                                                            <th></th>
+                                                            <th className="first-th">Internal Number </th>
+                                                            <th>Date</th>
+                                                            <th>Time</th>
+                                                            <th>Authority</th>
+                                                            <th>Ticket Number</th>
+                                                            <th>Vehicle <i class="fa-solid fa-arrow-down"></i></th>
+                                                            <th>Admin Fee</th>
+                                                            <th>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td className="first-td">0839</td>
+                                                            <td>123</td>
                                                             <td>July 31, 2024</td>
+                                                            <td>10:43</td>
+                                                            <td>Council</td>
+                                                            <td>123</td>
+                                                            <td className="first-td">KM19 VTY</td>                                                            
                                                             <td>£10</td>
-                                                            <td className="tb-btn1"><Link to="#">Download</Link></td>
+                                                            <td className="tb-btn1">
+                                                                <Link to="#" className='m-2'>View</Link>
+                                                                <Link to="#">Download</Link>
+                                                                </td>
                                                         </tr>
                                                         <tr>
-                                                            <td className="first-td">0838</td>
-                                                            <td>July 21, 2024</td>
+                                                            <td>123</td>
+                                                            <td>July 31, 2024</td>
+                                                            <td>10:43</td>
+                                                            <td>TfL</td>
+                                                            <td>123</td>
+                                                            <td className="first-td">KM19 VTY</td>                                                            
                                                             <td>£10</td>
-                                                            <td className="tb-btn1"><Link to="#">Download</Link></td>
+                                                            <td className="tb-btn1">
+                                                                <Link to="#" className='m-2'>View</Link>
+                                                                <Link to="#">Download</Link>
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123</td>
+                                                            <td>July 31, 2024</td>
+                                                            <td>10:43</td>
+                                                            <td>Council</td>
+                                                            <td>123</td>
+                                                            <td className="first-td">KM19 VTY</td>                                                            
+                                                            <td>£10</td>
+                                                            <td className="tb-btn1">
+                                                                <Link to="#" className='m-2'>View</Link>
+                                                                <Link to="#">Download</Link>
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123</td>
+                                                            <td>July 31, 2024</td>
+                                                            <td>10:43</td>
+                                                            <td>TfL</td>
+                                                            <td>123</td>
+                                                            <td className="first-td">KM19 VTY</td>                                                            
+                                                            <td>£10</td>
+                                                            <td className="tb-btn1">
+                                                                <Link to="#" className='m-2'>View</Link>
+                                                                <Link to="#">Download</Link>
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123</td>
+                                                            <td>July 31, 2024</td>
+                                                            <td>10:43</td>
+                                                            <td>Council</td>
+                                                            <td>123</td>
+                                                            <td className="first-td">KM19 VTY</td>                                                            
+                                                            <td>£10</td>
+                                                            <td className="tb-btn1">
+                                                                <Link to="#" className='m-2'>View</Link>
+                                                                <Link to="#">Download</Link>
+                                                                </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

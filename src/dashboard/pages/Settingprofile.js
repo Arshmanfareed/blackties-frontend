@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DashboardSidebar from "../partials/dashboard-sidebar";
 import DashboardPanelTopbar from "../components/DashboardPanelTopbar";
 import { Button, Col, Modal, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Settingprofile() {
     // PAssowrd
@@ -51,6 +52,22 @@ const handleCloseemailotpsucess = () =>{
 }
 const handleShowemailotpsucess = () => setShowemailotpsucess(true);
 
+
+// Delete Account
+const [showdeleteaccount, setShowdeleteaccount] = useState(false);
+const handleClosedeleteaccount = () => setShowdeleteaccount(false);
+const handleShowdeleteaccount = () => setShowdeleteaccount(true);
+
+
+const [showdeleteaccountsucess, setShowdeleteaccountsucess] = useState(false);
+const handleClosedeleteaccountsucess = () =>{ 
+  setShowdeleteaccountsucess(false);
+  setShowdeleteaccount(false);
+
+}
+const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
+
+
   return (
     <>
       <section className="user-dashboard">
@@ -90,6 +107,7 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                   className="nav-link "
                                   id="v-pills-profile-tab"
                                   type="button"
+                                  onClick={handleShowdeleteaccount}
                                 >
                                   Deleted Account
                                 </button>
@@ -132,12 +150,12 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                               </h6>
                                             </div>
                                           </div>
-                                          <a
+                                          <Link
                                             href="javascript:;"
                                             className="change-img-btn"
                                           >
                                             Change Image
-                                          </a>
+                                          </Link>
                                         </div>
                                       </Col>
                                     </Row>
@@ -238,7 +256,7 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                                     />
                                                   </div>
                                                   <div className="chn-img">
-                                                    <a
+                                                    <Link
                                                       href="javascript:;"
                                                       onClick={
                                                         showpasswordmodal
@@ -246,7 +264,7 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                                       className="change-img-btn modal-opner"
                                                     >
                                                       Change password
-                                                    </a>
+                                                    </Link>
                                                   </div>
                                                 </div>
                                               </Col>
@@ -269,13 +287,13 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                           <div className="password-bx">
                                             <div className="chng-psd">
                                               <h4>Change Password</h4>
-                                              <a
+                                              <Link
                                                 href="#"
                                                 className="cross-icon"
                                                 onClick={closepasswordmodal}
                                               >
                                                 <i className="fas fa-times"></i>
-                                              </a>
+                                              </Link>
                                             </div>
                                             <form action="">
                                               <Row>
@@ -327,21 +345,21 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                               </Row>
                                             </form>
                                             <div className="change-pass-btn">
-                                              <a
+                                              <Link
                                                 onClick={closepasswordmodal}
                                                 href="javascript:void(0);"
                                                 onclick="popup_alrt(this)"
                                                 className="psd-cancel"
                                               >
                                                 Cancel
-                                              </a>
-                                              <a
+                                              </Link>
+                                              <Link
                                                 onClick={handleShowotp}
                                                 href="javascript:;"
                                                 className="psd-change"
                                               >
                                                 Save
-                                              </a>
+                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -361,13 +379,13 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                                 <i className="fas fa-chevron-left"></i>
                                                 Back to Change Password
                                               </h4>
-                                              <a
+                                              <Link
                                               onClick={handleCloseotp}
                                                 href="#"
                                                 className="cross-icon"
                                               >
                                                 <i className="fas fa-times"></i>
-                                              </a>
+                                              </Link>
                                             </div>
                                             <div className="chng-otp-pera">
                                               <p>
@@ -432,20 +450,20 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                               </Row>
                                             </form>
                                             <div className="chng-otp-btn">
-                                              <a
+                                              <Link
                                                 href="javascript:void(0);"
                                                 onClick={handleCloseotp}
                                                 className="chng-otp-cancel"
                                               >
                                                 Cancel
-                                              </a>
-                                              <a
+                                              </Link>
+                                              <Link
                                               onClick={handleShowsucess}
                                                 href="javascript:;"
                                                 className="chng-otp-ver modal-opner"
                                               >
                                                 Verification
-                                              </a>
+                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -471,13 +489,13 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                           </p>
                                         </div>
                                         <div className="succes-return-btn">
-                                          <a
+                                          <Link
                                             href="javascript:void(0);"
                                             onClick={handleClosesucess}
                                             className="succes-return"
                                           >
                                             Return to Profile
-                                          </a>
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
@@ -494,9 +512,9 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                       <div className="phn-bx">
                                         <div className="chng-phn">
                                           <h4>Edit Phone Number</h4>
-                                          <a href="#" className="cross-icon"  onClick={handleClosephone}>
+                                          <Link href="#" className="cross-icon"  onClick={handleClosephone}>
                                             <i className="fas fa-times"></i>
-                                          </a>
+                                          </Link>
                                         </div>
                                         <form action="">
                                           <Row>
@@ -514,8 +532,8 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                                     placeholder="+44"
                                                     className="mg0"
                                                   />
-                                                  {/* <a 
-                                                  onClick={showpasswordmodal}><img src="./assets/images/ei_check.png"/></a> */}
+                                                  {/* <Link 
+                                                  onClick={showpasswordmodal}><img src="./assets/images/ei_check.png"/></Link> */}
                                                 </div>
                                               </div>
                                             </Col>
@@ -539,20 +557,20 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                           </Row>
                                         </form>
                                         <div className="change-phn-btn">
-                                          <a
+                                          <Link
                                             href="javascript:void(0);"
                                             onClick={handleClosephone}
                                             className="phn-cancel"
                                           >
                                             Cancel
-                                          </a>
-                                          <a
+                                          </Link>
+                                          <Link
                                             href="javascript:;"
                                             onClick={handleShowphonesucess}
                                             className="phn-change"
                                           >
                                             Save
-                                          </a>
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
@@ -579,13 +597,13 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                           </p>
                                         </div>
                                         <div className="succes-return-btn">
-                                          <a
+                                          <Link
                                             href="javascript:void(0);"
                                             onClick={handleClosephonesucess}
                                             className="succes-return"
                                           >
                                             Return to Profile
-                                          </a>
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
@@ -602,9 +620,9 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                       <div className="eml-bx">
                                         <div className="chng-eml">
                                           <h4>Edit Email Address</h4>
-                                          <a href="#" className="cross-icon" onClick={handleCloseemail}>
+                                          <Link href="#" className="cross-icon" onClick={handleCloseemail}>
                                             <i className="fas fa-times"></i>
-                                          </a>
+                                          </Link>
                                         </div>
                                         <form action="">
                                           <Row>
@@ -639,20 +657,20 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                           </Row>
                                         </form>
                                         <div className="change-eml-btn">
-                                          <a
+                                          <Link
                                             href="javascript:void(0);"
                                             onClick={handleCloseemail}
                                             className="eml-cancel"
                                           >
                                             Cancel
-                                          </a>
-                                          <a
+                                          </Link>
+                                          <Link
                                             href="javascript:;"
                                             className="eml-change"
                                             onClick={handleShowemailotp}
                                           >
                                             Verification
-                                          </a>
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
@@ -673,9 +691,9 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                             <i className="fas fa-chevron-left"></i>
                                             Back to Email
                                           </h4>
-                                          <a href="#" className="cross-icon" onClick={handleCloseemailotp}>
+                                          <Link href="#" className="cross-icon" onClick={handleCloseemailotp}>
                                             <i className="fas fa-times"></i>
-                                          </a>
+                                          </Link>
                                         </div>
                                         <div className="chng-otp-pera">
                                           <p>
@@ -740,20 +758,20 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                           </Row>
                                         </form>
                                         <div className="chng-otp-btn">
-                                          <a
+                                          <Link
                                             href="javascript:void(0);"
                                             onClick={handleCloseemailotp}
                                             className="chng-otp-cancel"
                                           >
                                             Cancel
-                                          </a>
-                                          <a
+                                          </Link>
+                                          <Link
                                             href="javascript:;"
                                             className="chng-otp-ver"
                                             onClick={handleShowemailotpsucess}
                                           >
                                             Verification
-                                          </a>
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
@@ -780,13 +798,13 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                           </p>
                                         </div>
                                         <div className="succes-return-btn">
-                                          <a
+                                          <Link
                                             href="javascript:void(0);"
                                             onClick={handleCloseemailotpsucess}
                                             className="succes-return"
                                           >
                                             Return to Profile
-                                          </a>
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
@@ -794,6 +812,51 @@ const handleShowemailotpsucess = () => setShowemailotpsucess(true);
                                         </Modal.Body>
                                         </Modal>
                                     
+
+
+                                    {/* Delete Profile */}
+                                    <Modal
+                                      show={showdeleteaccount}
+                                      onHide={handleClosedeleteaccount}
+                                      className="password_modal "
+                                    >
+                                      <Modal.Body>
+                                      <div class="succes-body delete-alert">
+                                          <div class="succes-alert">
+                                              <img src="./assets/images/dashboard/danger 1.png" alt="Check"/>
+                                              <div>
+                                                  <h6>Are you sure want to Delete?</h6>
+                                                  <p>your account will be remove from database. We will email all your data before your account is deleted.</p>
+                                              </div>
+                                              <div class="succes-return-btn delete-alert-btn"> 
+                                                  <Link onClick={handleClosedeleteaccount} href="javascript:;" class="chng-otp-ver">RETURN</Link>
+                                                  <Link href="javascript:void(0);" onClick={handleShowdeleteaccountsucess} onclick="popup_alrt(this)"  class="succes-return">Delete Account</Link>
+                                              </div>
+                                          </div>
+                                      </div>
+                                        </Modal.Body>
+                                        </Modal>
+
+                                        <Modal
+                                      show={showdeleteaccountsucess}
+                                      onHide={handleClosedeleteaccountsucess}
+                                      className="password_modal "
+                                    >
+                                      <Modal.Body>
+                                      <div class="succes-body resqt-body">
+                                          <div class="succes-alert">
+                                              <img src="./assets/images/ei_check.png" alt="Check"/>
+                                              <div>
+                                                  <h6>Successful Request</h6>
+                                                  <p>Your account is in a queue to be deleted. You will receive an email confirmation with all of your data and to confirm the closure of your account. We hope to see you soon.</p>
+                                              </div>
+                                              <div class="succes-return-btn resqt-body-btn"> 
+                                                  <Link href="javascript:void(0);" onClick={handleClosedeleteaccountsucess}  class="succes-return">Return to Website</Link>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      </Modal.Body>
+                                        </Modal>
                                   </div>
                                 </div>
                               </div>
