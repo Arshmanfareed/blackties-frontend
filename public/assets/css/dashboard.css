@@ -9393,10 +9393,10 @@ background-position: center;
 
 
 /************MAIN INVOIVE SCREEN CSS*************/
-.outsatanding-main {
+/* .outsatanding-main {
   margin: 46px 214px 38px 80px;
-}
-.outstanding-bx {
+} */
+/* .outstanding-bx {
   padding: 30px 32px 24px 32px;
   background: #121418;
   position: relative;
@@ -9489,7 +9489,7 @@ background-position: center;
   font-size: 13px;
   line-height: 2;
   font-family: 'Poppins';
-}
+} */
 /* Our Vehicle Page */
 .rent-car-card .prd-title-wrap {
   margin-bottom: 30px;
@@ -9553,4 +9553,142 @@ background-position: center;
 
 .dashboard_our_Vehicle nav.navigation a.active,.dashboard_our_Vehicle nav.navigation a:hover {
   background: #4a068f;
+}
+
+/************MAIN INVOIVE SCREEN CSS*************/
+.outsatanding-main {
+  padding: 32px 32px 32px 32px;
+background: #1b1f24;
+}
+
+.outstanding-bx {
+padding: 30px 32px 24px 32px;
+background: #121418;
+position: relative;
+overflow: hidden;
+border-radius: 12px;
+}
+.outstanding-bx .outstanding-txt h4 {
+margin: 0;
+font-size: 18px;
+line-height: 24px;
+font-weight: 700;
+padding-bottom: 24px;
+}
+.outstanding-bx .outstanding-txt h3 {
+font-size: 36px;
+line-height: 48px;
+font-weight: 600;
+margin: 0;
+}
+.outstanding-tble-one {
+padding: 30px 0px 0 0px;
+background: #121418;
+position: relative;
+overflow: hidden;
+border-radius: 12px;
+margin-top: 25px;
+}
+.outstanding-tble-one .tble-one-head h5 {
+margin: 0;
+font-size: 18px;
+line-height: 24px;
+font-weight: 700;
+padding-bottom: 0;
+padding-left: 30px;
+}
+.table-main tr {
+border-bottom: none !important;
+}
+.table-main td {
+padding-bottom: 0 !important; 
+}
+
+
+.table-main td:nth-child(5) {background: #138808;font-size: 12px;line-height: 18px;width: 75px;height: 25px;border-radius: 12px;text-align: center;font-weight: 500;padding: 5px 0 0 0 !important;display: inline-block;margin-top: 25px;margin-right: 30px;}
+.table-main td:nth-child(5) a {
+color: #fff;
+text-decoration: none;
+font-weight: 500;
+}
+.table-main td:nth-child(6) {background: #1B1F24;width: 85px;height: 25px;text-align: center;border-radius: 5px;padding: 0 0 0 0 !important;display: inline-block !important;margin-top: 30px;margin-left: 20px;}
+.table-main td:nth-child(6) a {
+color: #9A75EC;
+text-decoration: none;
+font-size: 12px;
+line-height: 18px;
+font-weight: 500;
+}
+.table-main td:nth-child(7) {
+background: #1B1F24;
+width: 75px;
+height: 25px;
+text-align: center;
+border-radius: 5px;
+padding: 0 0 0 0 !important;
+display: inline-block;
+position: relative;
+left: 40px;
+top: 15px;
+}
+.table-main td:nth-child(8) {
+background: #1B1F24;
+width: 75px;
+height: 25px;
+text-align: center;
+border-radius: 5px;
+padding: 0 0 0 0 !important;
+display: inline-block;
+position: relative;
+left: 70px;
+top: 15px;
+}
+.table-main td:nth-child(8) a {
+color: #138808;
+text-decoration: none;
+font-size: 12px;
+line-height: 18px;
+font-weight: 500;
+}
+.table-main td:nth-child(7) a {
+color: #138808;
+text-decoration: none;
+font-size: 12px;
+line-height: 18px;
+font-weight: 500;
+}
+.outstanding-tble-one .invoice-order-pagination {
+padding: 0 20px 20px 20px;
+}
+.outstanding-tble-two .table-main td:nth-child(5) {
+background: #FF0000;
+}
+.tabl-four {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-right: 30px;
+} 
+.weekly-txt {
+border: 1px solid #1F2329;
+border-radius: 5px;
+}
+.weekly-txt h6 {
+font-size: 12px;
+line-height: 18px;
+color: #6E7074;
+font-weight: 400;
+width: 86px;
+height: 31px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0;
+}
+.weekly-txt h6 a {
+color: #6E7074;
+text-decoration: none;
+}
+.weekly-txt i {
+margin-left: 10px;
 }

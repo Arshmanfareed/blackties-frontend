@@ -82,7 +82,7 @@ setIsVisible(!isVisible);
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/palenty-charge-notice"
+                <NavLink to="/penalty-charge-notice"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                 <img src="./assets/images/dashboard/expense 1.svg" alt=""/>

@@ -39,6 +39,8 @@ import Calenderall from './dashboard/pages/Calenderall';
 import Failedpay from './dashboard/pages/Failedpay';
 import Support from './dashboard/pages/Support';
 import Ourvehicle from './dashboard/pages/Ourvehicle';
+import Addvehicle from './admin/Addvehicle';
+import Allvehicle from './admin/Allvehicle';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -62,7 +64,7 @@ root.render(
     <Route path="/rent-car" element={<><RentCar /></>} />
     <Route path="/overview" element={<><Overview /></>} />
     <Route path="/vehicle-document" element={<><Vehicledocument /></>} />
-    <Route path="/palenty-charge-notice" element={<><Palentychargenotice /></>} />
+    <Route path="/penalty-charge-notice" element={<><Palentychargenotice /></>} />
     <Route path="/driver-score" element={<><Driverscore /></>} />
     <Route path="/maintenance" element={<><Maintainance /></>} />
     <Route path="/invoice" element={<><Invoice /></>} />
@@ -79,6 +81,10 @@ root.render(
     <Route path="/failed-pay" element={<><Failedpay/></>} />
     <Route path="/support-ticket" element={<><Support/></>} />
     <Route path="/rent-our-vehicle" element={<><Ourvehicle/></>} />
+
+    {/* Admin Routes */}
+    <Route path="/add-vehicle" element={<><Addvehicle/></>} />
+    <Route path="/all-vehicle" element={<><Allvehicle/></>} />
 
   </Routes>
 </Router>

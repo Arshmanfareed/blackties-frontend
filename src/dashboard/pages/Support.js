@@ -194,12 +194,16 @@ function Support() {
                                                     </div>
                                                 </div>
                                                 <div className="chat-text-field">
+                                                    <div className='file_attachement'>
+                                                        <img src='./assets/images/clip.png'/>
+<input type='file' name='file_attached' id='file_attached'/>
+                                                    </div>
                                                     <div className="wrap">
                                                         <textarea name="msg" id="" placeholder="You cannot write on this support ticket since it is resolved."></textarea>
                                                         <div className="file-send-wrap">
                                                             <span className="file-send-btn">
                                                                 <label for="chat-docs"><i className="fas fa-paper-plane"></i></label>
-                                                                <input type="file" name="chat-docs" id="chat-docs"/>
+                                                                <input type="button" name="chat-docs" id="chat-docs"/>
                                                             </span>
                                                         </div>
                                                     </div>

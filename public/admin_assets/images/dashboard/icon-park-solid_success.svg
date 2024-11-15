@@ -1,0 +1,17 @@
+<svg width="63" height="62" viewBox="0 0 63 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-park-solid:success">
+<g id="Mask group">
+<mask id="mask0_5_24734" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4" y="2" width="55" height="58">
+<g id="Group">
+<g id="Group_2">
+<path id="Vector" d="M31.4985 5.16699L38.2836 10.1167L46.6833 10.1012L49.2628 18.094L56.0673 23.0178L53.4568 31.0003L56.0673 38.9828L49.2628 43.9067L46.6833 51.8995L38.2836 51.884L31.4985 56.8337L24.7134 51.884L16.3136 51.8995L13.7342 43.9067L6.92969 38.9828L9.54015 31.0003L6.92969 23.0178L13.7342 18.094L16.3136 10.1012L24.7134 10.1167L31.4985 5.16699Z" fill="white" stroke="white" stroke-width="5.16667" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M22.457 31.0003L28.9154 37.4587L41.832 24.542" stroke="black" stroke-width="5.16667" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</mask>
+<g mask="url(#mask0_5_24734)">
+<path id="Vector_3" d="M0.5 0H62.5V62H0.5V0Z" fill="white"/>
+</g>
+</g>
+</g>
+</svg>

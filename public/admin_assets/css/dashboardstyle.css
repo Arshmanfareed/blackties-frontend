@@ -1,0 +1,399 @@
+/*---- User Dashboard side bar  (& all dashboard menus) ----*/
+.vehicles-menu-new  ul.dropdown-menu {
+    display: block;
+}
+.dash-brand-wrapper a {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px !important;
+    color: #fff !important;
+    text-decoration: none;
+  }
+  
+  .dash-brand-wrapper {
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .dash-brand-wrapper a span {
+    color: #fff;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  
+  .dashNav-close-btn {
+    display: none;
+  }
+  
+  .sidebar-col {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+  
+  .panel-col {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+  
+  .dashboard-sidebar {
+    padding: 24px 24px;
+    height: 100%;
+    background: #121418;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: overlay;
+  }
+  
+  .dashboard-sidebar::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  .dashboard-sidebar::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  
+  .dashboard-sidebar::-webkit-scrollbar-thumb {
+    background: #474747;
+  }
+  
+  .dashboard-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #474747;
+  }
+  
+  .dashboard-menu {
+    padding-top: 34px;
+    padding-bottom: 24px;
+  }
+  
+  .dashboard-menu h6 {
+    color: var(--Neutral-500, #64748b);
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+  
+  .dashboard-menu ul li {
+    list-style-type: none;
+    margin-bottom: 16px;
+  }
+  
+  .dashboard-menu ul li a,
+  .vehicle-docs-menu li a {
+    text-decoration: none;
+    overflow: hidden;
+    color: #667085;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    transition: all 0.2s;
+    &:hover {
+      color: #fff;
+      background: #4a068f;
+    }
+  }
+  .vehicle-docs-menu li a,
+  .vehicles-menu .dropdown-menu li a {
+    font-size: 14px !important;
+    font-family: "Poppins" !important;
+  }
+  
+  .vehicles-menu .dropdown-menu li {
+    margin: 6px !important;
+  }
+  
+  .vehicle-docs-menu {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+  }
+  
+  .vehicle-docs-menu li {
+    padding-bottom: 12px;
+  }
+  
+  .dashboard-menu ul li a.active,
+  .vehicle-docs-menu li a.active {
+    color: #fff;
+    background: #4a068f;
+  }
+  
+  .dashboard-menu ul li a.active img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+      hue-rotate(201deg) brightness(102%) contrast(103%);
+  }
+  
+  .dashboard-menu ul li a:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+      hue-rotate(201deg) brightness(102%) contrast(103%);
+  }
+  
+  .dashboard-menu ul {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .dashboard-menu ul li a img {
+    margin-right: 8px;
+  }
+  
+  .dashboard-menu ul li:nth-child(5) {
+    margin-bottom: 24px;
+  }
+  
+  .dashboard-menu ul.setting_ul li.setting_nav,  
+  .dashboard-menu #setting_nav {
+    margin-bottom: 0px !important;
+    padding-top: 24px !important;;
+    border-top: 1px solid #d0d5dd !important;;
+  }
+  
+  .sidebar-user-profile-wrapper h6 {
+    color: var(--Neutral-500, #64748b);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+  
+  .sidebar-user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-user-profile .user-meta h4 {
+    overflow: hidden;
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+  }
+  
+  .sidebar-user-profile .user-meta .user-status {
+    border-radius: 100px;
+    background: #9b9c9c;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  
+  .sidebar-user-profile img {
+    margin-right: 12px;
+  }
+  
+  .sidebar-user-profile-wrapper .sidebar-log-btn {
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none !important;
+    color: #000 !important;
+    padding: 6px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 42px;
+  }
+  
+  .sidebar-user-profile-wrapper .sidebar-log-btn img {
+    margin-right: 8px;
+  }
+  
+  .sidebar-user-profile .user-meta .user-status ion-icon {
+    font-size: 8px;
+    margin-right: 3px;
+  }
+  
+  span#notific {
+    color: #fff;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 4px;
+    background: #4a068f;
+    padding: 2px 12px;
+    position: absolute;
+    right: 4%;
+  }
+  
+  .dashboard-menu ul li a.active span#notific {
+    background: #fff !important;
+    color: #4a068f;
+  }
+  
+  .dashboard-menu ul li a:hover span#notific {
+    background: #fff;
+    color: #4a068f;
+  }
+  
+  /*-- dashboard vehicles menu --*/
+  
+  .vehicles-menu button {
+    text-decoration: none;
+    overflow: hidden;
+    color: #667085;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background: transparent;
+    border: none !important;
+    outline: none !important;
+  }
+  
+  .vehicles-menu button img {
+    margin-right: 8px;
+  }
+  
+  .vehicles-menu {
+    margin-bottom: 16px;
+  }
+  
+  .vehicles-menu ul {
+    background: transparent;
+    position: unset;
+    padding-left: 10px;
+    margin-left: 24px;
+    border-left: 1px solid gray;
+    border-radius: 0px;
+  }
+  
+  .vehicles-menu ul li:last-child {
+    margin-bottom: 0px !important;
+    padding-top: 0px !important;
+    border-top: none !important;
+  }
+  
+  .vehicles-menu .dropdown-toggle::after {
+    display: none !important;
+  }
+  
+  /*-- dashboard vehicles menu end --*/
+  
+  /*---- User Dashboard side bar end ----*/
+  
+  
+  
+  /***************NEW VEHICLES WALE SIDEBAR CSS**************/
+  
+  .vehicles-menu-new ul {
+      border-left: 0 !important;
+      margin-left: 0;
+      padding-bottom: 15px;
+  }
+  .vehicles-menu-new ul li a {
+      text-decoration: none;
+      overflow: hidden;
+      color: #667085;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: "Manrope";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      padding: 9px 2px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 4px;
+      transition: all 0.2s;
+  }
+  .vehicles-menu-new ul li {
+      line-height: normal;
+  }
+  .vehicles-menu-new ul li a img {
+      filter: opacity(0.5);
+      width: 20px;
+      color: #667085;
+  }
+  .vehicles-menu-new ul li a:hover {
+      padding-left: 10px !important;
+  }
+  
+  
+  
+  .vehicles-menu-new ul {
+      border-left: 0 !important;
+  }
+  .vehicles-menu-new button {
+      margin-bottom: 20px;
+      margin-top: 0px;
+  }
+  .file-upload-wrap .upload-file-group input[type="file"] {
+    width: 100%;
+}
+.add_vehicle_images .upload-file-group {
+    width: 125px;
+    height: 125px;
+}
+.add_vehicle_images .upload-file-group input.upload_img_preview {
+    width: 100%;
+    height: 100%;
+}
+.add_vehicle_images .upload-file-group img {
+    width: 100%;
+    height: 100% !important;
+    /* object-fit: scale-down; */
+}
+.add_vehicle_images .upload-file-group input[type="file"]:before {
+    top: 20% !important;
+    font-size: 22px;
+}
+.upload-file-group input[type="file"]::after {
+    font-size: 13px !important;
+}
+.add_vehicle_images .upload_img_preview_wrapper {
+    margin-right: 7px;
+    width: 125px;
+    height: 125px;
+}
