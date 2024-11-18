@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Addcarimages from "./components/Addcarimages";
 import { Col, Row } from "react-bootstrap";
 function Addvehicle() {
+  
+  
   const [fileInputs, setFileInputs] = useState([true]); // Track which file inputs are enabled
 
   const [formData, setFormData] = useState({
@@ -69,8 +71,7 @@ function Addvehicle() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    localStorage.setItem("x-auth-token", 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6Imx1Y2Fzd2lsbGlzNzQxQHlvcG1haWwuY29tIiwicGhvbmVObyI6IjQ0NDU1NTIyMjQ0NTU1IiwidXNlcm5hbWUiOiJsdWNhc3dpbGxpczc0MSIsImZpcnN0bmFtZSI6IiIsImxhc3RuYW1lIjoiV2lsbGlzIiwicGxhdGZvcm0iOm51bGwsImZjbVRva2VuIjpudWxsLCJjb2RlIjpudWxsLCJvdHAiOjE5MDYzMCwib3RwRXhwaXJ5IjoiMjAyNC0xMC0xMFQxNDoxNDo0MS4wMDBaIiwic3RhdHVzIjoiQUNUSVZFIiwic29ja2V0SWQiOm51bGwsImxhbmd1YWdlIjoiZW4iLCJjdXJyZW5jeSI6InVuaXRlZF9zdGF0ZXNfZG9sbGFyIiwidGVtcEVtYWlsIjpudWxsLCJpc09ubGluZSI6ZmFsc2UsImxhc3RMb2dpbiI6IjIwMjQtMTAtMTdUMTU6MDQ6MjkuMDAwWiIsImNyZWF0ZWRBdCI6IjIwMjQtMTAtMTBUMTQ6MTQ6NDEuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjQtMTAtMTdUMTU6MDQ6MjkuMDAwWiIsImlhdCI6MTcyOTE3NzQ3N30.Ui5KAGyCw9Sdu6c07P8HTg2AKTl7-kya27xPIagcTZU');
-    const authToken = localStorage.getItem("x-auth-token");
+    const authToken = localStorage.getItem("token");
 
     // Validate formData
     if (
@@ -91,11 +92,11 @@ function Addvehicle() {
     }
   
     // Send POST request to the API
-    fetch("https://blackties-backend.staging.designinternal.com/dev/blackties/api/v1/admin/add-vehicle/", {
+    fetch("https://blackties-backend.dev.internalstaging.com/dev/blackties/api/v1/admin/add-vehicle/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${authToken}`,
+        "x-auth-token": authToken,
       },
       body: JSON.stringify({
         car_make: formData.carMake,
