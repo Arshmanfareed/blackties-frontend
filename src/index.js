@@ -41,6 +41,8 @@ import Support from './dashboard/pages/Support';
 import Ourvehicle from './dashboard/pages/Ourvehicle';
 import Addvehicle from './admin/Addvehicle';
 import Allvehicle from './admin/Allvehicle';
+import Adminlogin from './admin/Adminlogin';
+import Vehicledetails from './admin/Vehicledetails';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -85,6 +87,8 @@ root.render(
     {/* Admin Routes */}
     <Route path="/add-vehicle" element={<><Addvehicle/></>} />
     <Route path="/all-vehicle" element={<><Allvehicle/></>} />
+    <Route path="/admin-login" element={<><Adminlogin/></>} />
+    <Route path="/admin-vehicledetails" element={<><Vehicledetails/></>} />
 
   </Routes>
 </Router>

@@ -1,152 +1,261 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect,useRef, useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Addcarimages from "./components/Addcarimages";
-import { Col, Row } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
+import axios from "axios";
+
+
 function Addvehicle() {
   
-  
-  const [fileInputs, setFileInputs] = useState([true]); // Track which file inputs are enabled
-
   const [formData, setFormData] = useState({
-    carMake: "",
-    carModel: "",
-    registrationNumber: "",
-    pricePerWeek: "",
-    carDescription: "",
-    vehicleType: "Saloon",
+      car_make: "",
+    car_model: "",
+    vehicle_registration_number: "",
+    price_per_week: "",
+    car_description: "",
+    vehicle_type: "",
     transmission: "",
-    fuelType: "",
-    mpg: "",
-    people: "5 People",
-    mileageAllowance: "",
-    additionalMileageCost: "",
-    resetPeriod: "",
-    holdingDeposit: "",
-    insuranceExcess: "",
-    pcnFee: "",
-    vehicle_gallery:"",
-    mot_certificate_document:"",
-    insurance_certificate_document:"",
-    vehicle_licence_document:"",
-    permission_letter_document:"",
-    image:"",
-
+    fuel_type: "",
+    miles_per_gallon: "",
+    people: "",
+    mileage_allowance: "",
+    additional_mileage_cost: "",
+    reset_period: "",
+    holding_deposit: "",
+    insurance_excess: "",
+    pcn_fee: "",
+    vehicle_gallery: "",
+    mot_certificate_document: "",
+    insurance_certificate_document: "",
+    vehicle_licence_document: "",
+    permission_letter_document: "",
+    image: "",
   });
 
-  const [carImages, setCarImages] = useState([]); // State for uploaded images
-  const [error, setError] = useState("");
+    // State to manage response or errors
+  const [responseMessage, setResponseMessage] = useState("");
 
-  const handleFileChange = (e, index) => {
-    const files = e.target.files;
-    if (files.length > 0) {
-      const file = files[0];
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const imgPreview = document.createElement("div");
-        imgPreview.className = "upload_data-wrap";
-        imgPreview.innerHTML = `<img src="${event.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;">`;
-        e.target.closest(".upload-file-group").appendChild(imgPreview);
-      };
-      reader.readAsDataURL(file);
-      // Enable the next file input
-      setFileInputs((prev) => {
-        const newInputs = [...prev];
-        newInputs[index + 1] = true;
-        return newInputs;
-      });
-    }
-  };
+// Handle input changes
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData({ ...formData, [name]: value });
+};
+ // Handle form submission
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const authToken = localStorage.getItem("token");
 
-  const handleImagesChange = (images) => {
-    setCarImages(images); // Update the uploaded images state
-  };
+  if (!authToken) {
+    setResponseMessage("Error: No authentication token found.");
+    return;
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    const authToken = localStorage.getItem("token");
+  console.log("Form Data being submitted:", formData); // Log the form data for debugging
 
-    // Validate formData
-    if (
-      !formData.carMake || 
-      !formData.carModel || 
-      !formData.registrationNumber // Add all required fields here
-    ) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-  
-    
-
-    console.log("Auth Token:", authToken);
-    if (!authToken) {
-      alert("Authorization required");
-      return;
-    }
-  
-    // Send POST request to the API
-    fetch("https://blackties-backend.dev.internalstaging.com/dev/blackties/api/v1/admin/add-vehicle/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-auth-token": authToken,
-      },
-      body: JSON.stringify({
-        car_make: formData.carMake,
-        car_model: formData.carModel,
-        vehicle_registration_number: formData.registrationNumber,
-        price_per_week: formData.pricePerWeek,
-        car_description: formData.carDescription,
-        vehicle_type: formData.vehicleType,
-        transmission: formData.transmission,
-        fuel_type: formData.fuelType,
-        miles_per_gallon: formData.mpg,
-        people: formData.people,
-        mileage_allowance: formData.mileageAllowance,
-        additional_mileage_cost: formData.additionalMileageCost,
-        reset_period: formData.resetPeriod,
-        holding_deposit: formData.holdingDeposit,
-        insurance_excess: formData.insuranceExcess,
-        pcn_fee: formData.pcnFee,
-        vehicle_gallery: formData.vehicle_gallery,
-        mot_certificate_document: formData.mot_certificate_document,
-        insurance_certificate_document: formData.insurance_certificate_document,
-        vehicle_licence_document: formData.vehicle_licence_document,
-        permission_letter_document: formData.permission_letter_document,
-        image: formData.image,
-      }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          return response.text().then((text) => {
-            throw new Error(text || response.statusText);
-          });
+    try {
+      const response = await axios.post(
+        "https://blackties-backend.dev.internalstaging.com/dev/blackties/api/v1/admin/add-vehicle/",
+        formData,
+        {
+          headers: {
+            "x-auth-token": authToken,
+            'Content-Type': 'application/json',
+          },
         }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Successfully added vehicle:", data);
-        alert("Vehicle added successfully!");
-        setError("");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        setError("There was an error adding the vehicle. Please try again.");
-      });
-  };
+      );
+      console.log("API Response:", response); // Log the response for debugging
+
+      setResponseMessage(`Success: ${response.data.message}`);
+      // Clear the form if successful
+    } catch (error) {
+      console.error("Error details:", error);
+      setResponseMessage(`Error: ${error.response?.data?.message || "Something went wrong"}`);
+    }
+};
+
+
+
+  // const [formData, setFormData] = useState({
+  //   car_make: "",
+  //   car_model: "",
+  //   vehicle_registration_number: "",
+  //   price_per_week: "",
+  //   car_description: "",
+  //   vehicle_type: "",
+  //   transmission: "",
+  //   fuel_type: "",
+  //   miles_per_gallon: "",
+  //   people: "",
+  //   mileage_allowance: "",
+  //   additional_mileage_cost: "",
+  //   reset_period: "",
+  //   holding_deposit: "",
+  //   insurance_excess: "",
+  //   pcn_fee: "",
+  //   vehicle_gallery: "",
+  //   mot_certificate_document: "",
+  //   insurance_certificate_document: "",
+  //   vehicle_licence_document: "",
+  //   permission_letter_document: "",
+  //   image: "",
+  // });
   
+  // // // const [carImages, setCarImages] = useState([]);
+  // // const [error, setError] = useState("");
+  // // const formRef = useRef(null);
+  // const [errors, setErrors] = useState({});
+  // const [success, setSuccess] = useState(false);
+  // const navigate = useNavigate();
+
+  // const handleFileChange = (e) => {
+  //   const files = e.target.files;
+  //   if (files.length > 0) {
+  //     const file = files[0];
+  //     const reader = new FileReader();
+  //     reader.onload   
+  //  = (event) => {
+  //       setCarImages([...carImages, event.target.result]);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
+  
+  // const handleFormChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
+  // const handleFormChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
+  
+  // const handleValidation = () => {
+  //   const requiredFields = [
+  //     "car_make",
+  //     "car_model",
+  //     "vehicle_registration_number",
+  //     "price_per_week",
+  //   ];
+  
+  //   for (const field of requiredFields) {
+  //     if (!formData[field]) {
+  //       setErrors(`Please fill in the required field: ${field}`);
+  //       return false;
+  //     }
+  //   }
+  
+  //   // Add additional validation checks here
+  
+  //   return true;
+  // };
+  
+  // const ImagePreview = ({ src }) => (
+  //   <div className="upload_data-wrap">
+  //     <img src={src} alt="Image Preview" style="max-width: 100%; height: auto;" />
+  //   </div>
+  // );
+  
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (!handleValidation()) return;
+  
+  //   const authToken = localStorage.getItem("token");
+  //   if (!authToken) {
+  //     alert("Authorization required");
+  //     return;
+  //   }
+  
+    // const formDataObj = new FormData();
+    // Object.keys(formData).forEach((key) => {
+    //   formDataObj.append(key, formData[key]);
+    // });
+  
+    // try {
+    //   const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/admin/add-vehicle/`,{
+    //     // formDataObj,
+    //     method: 'POST',
+    //   headers: {
+    //         "x-auth-token": authToken,
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body:JSON.stringify({
+    //         car_make: formData.car_make,
+    //         car_model: formData.car_model,
+    //         vehicle_registration_number: formData.vehicle_registration_number,
+    //         price_per_week: formData.price_per_week,
+    //         car_description: formData.car_description,
+    //         vehicle_type: formData.vehicle_type,
+    //         transmission: formData.transmission,
+    //         fuel_type: formData.fuel_type,
+    //         miles_per_gallon: formData.miles_per_gallon,
+    //         people: formData.people,
+    //         mileage_allowance: formData.mileage_allowance,
+    //         additional_mileage_cost: formData.additional_mileage_cost,
+    //         reset_period: formData.reset_period,
+    //         holding_deposit: formData.holding_deposit,
+    //         insurance_excess: formData.insurance_excess,
+    //         pcn_fee: formData.pcn_fee,
+    //         vehicle_gallery: formData.vehicle_gallery,
+    //         mot_certificate_document: formData.mot_certificate_document,
+    //         insurance_certificate_document: formData.insurance_certificate_document,
+    //         vehicle_licence_document: formData.vehicle_licence_document,
+    //         permission_letter_document: formData.permission_letter_document,
+    //         image: formData.image,
+    //       })
+    //     });
+    //     if (response.ok) {
+    //       const data = await response.json();  
+          
+    //       // Assuming 'data' contains the user ID and email in the response
+    //       // const createdUserId = data.data.userCreated.id; 
+    //       // const createdUserEmail = formData.email;
+    
+    //       // // Save the user ID and email to localStorage
+    //       // localStorage.setItem('user_id', createdUserId);
+    //       // localStorage.setItem('user_email', createdUserEmail);
+    
+    //       setSuccess(true);
+    //       setErrors({});
+          
+    //       // Redirect to verification page
+    //       // navigate('/verification');
+    //     } else {
+    //       const errorData = await response.json(); // Get the error data from response
+          
+    //       // Check if the error contains a specific message
+    //       if (errorData.error && errorData.error.message) {
+    //         // Set the error message in the state
+    //         setErrors({ general: errorData.error.message }); // Display the general error message
+    //       } else {
+    //         setErrors({ general: 'Registration failed. Please try again.' });
+    //       }
+    //     }
+    //   } catch (err) {
+    //     console.error('Registration error:', err); 
+    //     setErrors({ general: 'Something went wrong. Please try again.' });
+    //   }
+    // };
+  
+  // const handleSaveClick = () => {
+  //   if (formRef.current) {
+  //     formRef.current.requestSubmit();
+  //   }
+
+  // };
+  
+
     
 
   return (
     <>
       <section className="user-dashboard">
+      
+
         <div className="container-fluid">
           <div className="row g-0">
             <Col lg={3} md={3} className="sidebar-col">
@@ -177,12 +286,19 @@ function Addvehicle() {
                             >
                               Cancel
                             </Link>
-                            <button
-                              onClick={handleSubmit}
+                            {/* <Form.Control
+                              // onClick={handleSubmit}
+                              // onClick={handleSaveClick}
+                              type="submit"
                               className="phn-change"
-                            >
-                              Save
-                            </button>
+                              value='Save'
+                            /> */}
+                                    <button type="submit" class="phn-change" onClick={handleSubmit}>Submit</button>
+
+                              {/* Save
+                            </Form.Control> */}
+                            {/* {error && <div className="error-message">{error}</div>} */}
+                            {responseMessage && <p>{responseMessage}</p>}
                           </div>
                         </div>
                         <div className="row inner-row">
@@ -191,7 +307,9 @@ function Addvehicle() {
                               <h5>Vehicle Details</h5>
                             </div>
                             <div className="vehciles-bx-form">
-                              <form onSubmit={handleSubmit}>
+                            <Form 
+      // ref={formRef}
+      >
                                 <Row >
                                   <Col lg={12} md={12} >
                                     <div className="form-group">
@@ -201,10 +319,10 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="carMake"
-                                        id="carMake"
-                                        value={formData.carMake}
-                                        onChange={handleFormChange}
+                                        name="car_make"
+                                        id="car_make"
+                                        value={formData.car_make}
+                                        onChange={handleChange}
                                         placeholder=""
                                       />
                                     </div>
@@ -217,11 +335,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="carModel"
-                                        id="carModel"
+                                        name="car_model"
+                                        id="car_model"
                                         placeholder=""
-                                        value={formData.carModel}
-                                        onChange={handleFormChange}
+                                        value={formData.car_model}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -233,11 +351,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="registrationNumber"
-                                        id="registrationNumber"
+                                        name="vehicle_registration_number"
+                                        id="vehicle_registration_number"
                                         placeholder=""
-                                        value={formData.registrationNumber}
-                                        onChange={handleFormChange}
+                                        value={formData.vehicle_registration_number}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -249,11 +367,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="pricePerWeek"
-                                        id="pricePerWeek"
+                                        name="price_per_week"
+                                        id="price_per_week"
                                         placeholder=""
-                                        value={formData.pricePerWeek}
-                                        onChange={handleFormChange}
+                                        value={formData.price_per_week}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -265,12 +383,12 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="textarea"
-                                        name="carDescription"
-                                        id="carDescription"
+                                        name="car_description"
+                                        id="car_description"
                                         placeholder=""
                                         className="mg05"
-                                        value={formData.carDescription}
-                                        onChange={handleFormChange}
+                                        value={formData.car_description}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -286,7 +404,7 @@ function Addvehicle() {
                                       </label>
                                       <br />
                                       {/* <!-- <input type="text" name="form-control" id="" placeholder="" className="mg05"><i className="fas fa-chevron-down"></i> --> */}
-                                      <select name="vehicle_type" id="vehicle" value={formData.vehicleType}  onChange={handleFormChange}>
+                                      <select name="vehicle_type" id="vehicle" value={formData.vehicle_type}  onChange={handleChange}>
                                         <option value="volvo">Saloon</option>
                                         <option value="saab">Saloon</option>
                                         <option value="opel">Saloon</option>
@@ -297,7 +415,7 @@ function Addvehicle() {
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
                                       <label for="control-label">
-                                        Transmission:
+                                        transmission:
                                       </label>
                                       <br />
                                       <input
@@ -306,7 +424,7 @@ function Addvehicle() {
                                         id="transmission"
                                         placeholder=""
                                         value={formData.transmission}
-                                        onChange={handleFormChange}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -318,40 +436,40 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="fuelType"
-                                        id="fuelType"
+                                        name="fuel_type"
+                                        id="fuel_type"
                                         placeholder=""
-                                        value={formData.fuelType}
-                                        onChange={handleFormChange}
+                                        value={formData.fuel_type}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
                                       <label for="control-label">
-                                        Miles per Gallon (MPG)
+                                        Miles per Gallon (miles_per_gallon)
                                       </label>
                                       <br />
                                       <input
                                         type="number"
-                                        name="mpg"
-                                        id="mpg"
+                                        name="miles_per_gallon"
+                                        id="miles_per_gallon"
                                         placeholder=""
-                                        value={formData.mpg}
-                                        onChange={handleFormChange}
+                                        value={formData.miles_per_gallon}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">People</label>
+                                      <label for="control-label">people</label>
                                       <br />
                                       {/* <!-- <input type="text" name="form-control" id="" placeholder="" className="mg05"><i className="fas fa-chevron-down"></i> --> */}
-                                      <select name="people" id="people" value={formData.people}  onChange={handleFormChange}>
-                                        <option value="volvo">5 People</option>
-                                        <option value="saab">5 People</option>
-                                        <option value="opel">5 People</option>
-                                        <option value="audi">5 People</option>
+                                      <select name="people" id="people" value={formData.people}  onChange={handleChange}>
+                                        <option value="volvo">5 people</option>
+                                        <option value="saab">5 people</option>
+                                        <option value="opel">5 people</option>
+                                        <option value="audi">5 people</option>
                                       </select>
                                     </div>
                                   </Col>
@@ -368,11 +486,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="mileageAllowance"
-                                        id="mileageAllowance"
+                                        name="mileage_allowance"
+                                        id="mileage_allowance"
                                         placeholder=""
-                                        value={formData.mileageAllowance}
-                                        onChange={handleFormChange}
+                                        value={formData.mileage_allowance}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -384,11 +502,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="additionalMileageCost"
-                                        id="additionalMileageCost"
+                                        name="additional_mileage_cost"
+                                        id="additional_mileage_cost"
                                         placeholder=""
-                                        value={formData.additionalMileageCost}
-                                        onChange={handleFormChange}
+                                        value={formData.additional_mileage_cost}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -400,11 +518,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="text"
-                                        name="resetPeriod"
-                                        id="resetPeriod"
+                                        name="reset_period"
+                                        id="reset_period"
                                         placeholder=""
-                                        value={formData.resetPeriod}
-                                        onChange={handleFormChange}
+                                        value={formData.reset_period}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -416,11 +534,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="number"
-                                        name="holdingDeposit"
-                                        id="holdingDeposit"
+                                        name="holding_deposit"
+                                        id="holding_deposit"
                                         placeholder=""
-                                        value={formData.holdingDeposit}
-                                        onChange={handleFormChange}
+                                        value={formData.holding_deposit}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -432,11 +550,11 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="number"
-                                        name="insuranceExcess"
-                                        id="insuranceExcess"
+                                        name="insurance_excess"
+                                        id="insurance_excess"
                                         placeholder=""
-                                        value={formData.insuranceExcess}
-                                        onChange={handleFormChange}
+                                        value={formData.insurance_excess}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
@@ -446,16 +564,16 @@ function Addvehicle() {
                                       <br />
                                       <input
                                         type="number"
-                                        name="pcnFee"
-                                        id="pcnFee"
+                                        name="pcn_fee"
+                                        id="pcn_fee"
                                         placeholder=""
-                                        value={formData.pcnFee}
-                                        onChange={handleFormChange}
+                                        value={formData.pcn_fee}
+                                        onChange={handleChange}
                                       />
                                     </div>
                                   </Col>
                                 </Row>
-                              </form>
+                            </Form>
                             </div>
                           </div>
                           <div className="col-lg-6 col-md-6">
@@ -511,7 +629,7 @@ function Addvehicle() {
                               <Col lg={12} md={12} >
                                 <label htmlFor="label-control"></label>
                                 <div className="row file-upload-wrap">
-                                  {fileInputs.map((enabled, index) => (
+                                  {/* {fileInputs.map((enabled, index) => (
                                     <div
                                       key={index}
                                       className="col-lg-2 col-md-2 upload_img_preview_wrapper"
@@ -527,7 +645,7 @@ function Addvehicle() {
                                         />
                                       </div>
                                     </div>
-                                  ))}
+                                  ))} */}
                                 </div>
                               </Col>
                             </div>
@@ -561,7 +679,7 @@ function Addvehicle() {
                                       name="mot_certificate_document"
                                        id="mot_certificate_document" 
                                        value={formData.mot_certificate_document}
-                                       onChange={handleFormChange}
+                                       onChange={handleChange}
                                        >
                                       </input>
                                         <img
@@ -600,7 +718,7 @@ function Addvehicle() {
                                       name="insurance_certificate_document"
                                       id="insurance_certificate_document"
                                       value={formData.insurance_certificate_document}
-                                      onChange={handleFormChange} >
+                                      onChange={handleChange} >
                                       </input>
                                         <img
                                           src="./admin_assets/images/Frame 13680.png"
@@ -638,7 +756,7 @@ function Addvehicle() {
                                       name="vehicle_licence_document"
                                       id="vehicle_licence_document"
                                       value={formData.vehicle_licence_document}
-                                      onChange={handleFormChange} >
+                                      onChange={handleChange} >
                                       </input>
                                         <img
                                           src="./admin_assets/images/Frame 13680.png"
@@ -676,7 +794,7 @@ function Addvehicle() {
                                       name="permission_letter_document"
                                       id="permission_letter_document"
                                       value={formData.permission_letter_document}
-                                      onChange={handleFormChange}
+                                      onChange={handleChange}
                                       >
                                       </input>
                                         <img

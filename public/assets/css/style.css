@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #000;
+  background-color: #000 !important;
   color: #fff;
 }
 
@@ -302,7 +302,9 @@ input.sb-btn {
 .nav-btn-wrapper a:first-child {
   margin-right: 16px;
 }
-
+nav.container.main-nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background: none !important;
+}
 .main-nav {
   background: transparent !important;
   /* position: absolute;

@@ -5601,3 +5601,417 @@
       transition: all 0.5s ease-in-out;
       background: #4c008b;
   }
+
+
+
+/**********************OVERVIEW VEHICLES SCREEN CSS****************/
+.member {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: absolute;
+  right: 4%;
+}
+.member a.change-img-btn {
+  background: #138808 !important;
+  border: 1px solid #138808 !important;
+  margin-left: 16px;
+  padding: 2px 12px 2px 12px;
+}
+.member p {
+  color: #98A2B3;
+  font-size: 16px;
+  font-family: 'Plus Jakarta Sans';
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.member-frm form .form-group input {
+  background: transparent;
+  border-bottom: 1px solid #1f2329 !important;
+  border: none;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  padding-bottom: 12px;
+  width: 100%;
+  outline: none;
+  margin-bottom: 32px;
+}
+.member-frm form .form-group label {
+  color: #667085;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+.member-frm form .form-group input:focus {
+  outline: none;
+}
+.member-wrapper {
+  display: block !important;
+}
+.member-frm {
+  padding-top: 25px;
+}
+
+.image-picker-txt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  /* padding-top: 32px; */
+}
+.image-picker-txt .distance-txt h6 {
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  font-family: 'Plus Jakarta Sans';
+}
+.image-picker-txt .distance-txt span {
+  color: #90A3BF;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+  padding-top: 8px;
+}
+.image-picker-txt:last-child {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.image-picker img {
+  width: 100%;
+}
+.picker-img img {
+  width: 100%;
+}
+.image-date-picker-rw {
+  padding-top: 25px;
+}
+.contract-doc {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+.contract-doc  ul.rental-files li {
+  background: #1B1F24;
+  border-radius: 8px;
+  padding: 16px 17px 16px 17px !important;
+  border-bottom: 0 !important;
+  margin-bottom: 16px;
+  margin-top: 12px;
+}
+.contract-doc ul.rental-files li:last-child {
+  padding-bottom: 17px;
+}
+.contract-doc ul.rental-files span {
+  margin: 0;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 500;
+  color: #667085;
+}
+.contract-doc ul.rental-files li:last-child {
+  margin-bottom: 0;
+}
+.contract-doc ul.rental-files a.down-btn {
+  background: #000;
+}
+.image-picker {
+  padding-bottom: 32px;
+}
+.fleet-calender-txt h4 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #FCFCFC;
+}
+.fleet-calender-txt h4 {
+  padding-top: 32px;
+  padding-bottom: 12px;
+}
+.main-txt-img {
+  display: flex;
+}
+.calender-txt-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.calender-txt-box .main-txt-img .txt-img-f span {
+  font-size: 13px;
+  line-height: normal;
+  color: #AFAFAF;
+}
+.calender-txt-box .main-txt-img .txt-img-f h5 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.calender-txt-box  .calendr-btn a {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  text-decoration: none;
+  background: #FF9933;
+  border-radius: 16px;
+  padding: 2px 10px 5px 10px;
+  font-weight: 500;
+}
+.calender-txt-box {
+  background: #000;
+  border-radius: 12px;
+  padding: 12px 12px 18px 12px;
+}
+.calender-txt-box .main-txt-img .txt-img-f {
+  padding-left: 12px;
+}
+.calender-txt-box .main-txt-img .txt-img-f h6 {
+  color: #7F8596;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.calender-txt-box a.Expire-btn {
+  background: #F41010;
+}
+.expire-box {
+  margin-top: 12px;
+}
+.main-license-box {
+  background: #000;
+  border-radius: 10px;
+  padding: 24px;
+}
+.main-license-box h5 {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+.main-license-box  .lincense-box-txt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+.main-license-box .lincense-box-txt p {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  width: 70%;
+}
+.main-license-box .license-yes p {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+  color: #90A3BF;
+  margin-bottom: 0;
+}
+.main-license-box .license-frm form .form-group input {
+  background: transparent;
+  border-bottom: 1px solid #1f2329 !important;
+  border: none;
+  color: #667085;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  padding-bottom: 12px;
+  width: 100%;
+  outline: none;
+  margin-bottom: 12px;
+}
+.main-license-box .license-frm form .form-group label {
+  color: #667085
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+.main-license-box .license-frm form .form-group input[type="date"]::placeholder {
+  color: #667085;
+}
+.main-license-box .license-frm form {
+  padding-top: 12px;
+}
+.proof-txtx {
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+.proof-txtx h5 {
+  margin: 0;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 600;
+  color: #fff;
+}
+.lincense-rw {
+  padding-top: 32px;
+}
+.Services-Maintenance-main-box {
+  background: #000;
+  padding: 24px;
+  border-radius: 10px;
+}
+.Services-Maintenance-main-box .serv-txt h5 {
+  margin: 0;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 24px;
+}
+.Services-Maintenance-main-box .book-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+.Services-Maintenance-main-box .booking-box .booking-txt-one span {
+  font-size: 15px;
+  line-height: 18px;
+  color: #667085;
+  font-weight: 400;
+}
+.Services-Maintenance-main-box .booking-box .booking-txt-one h6 {
+  margin: 0;
+  font-size: 15px;
+  line-height: normal;
+  font-weight: 500;
+  padding-top: 5px;
+}
+.Services-Maintenance-main-box .booking-box {
+  border: 1px solid #1F2329;
+  border-radius: 12px;
+  padding: 16px 94px 16px 24px;
+}
+.Services-Maintenance-main-box .book-text h6.bk-vehicle {
+  color: #9A75EC;
+  padding-left: 10px;
+}
+.Services-Maintenance-main-box .bookig-box-2 {
+  margin-top: 24px;
+}
+
+/* Admin Vehicle Details */
+.admin_vehicle_details .chng-chng-otp {
+  color: #fff;
+}
+.admin_vehicle_details .nav-item button {
+  margin-right: 60px;
+  cursor: pointer;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  background: transparent !important;
+  border: none;
+  color: #667085 !important;
+}
+.admin_vehicle_details ul.mb-3.nav.nav-tabs {
+  border-bottom: none;
+}
+.admin_vehicle_details li.nav-item .nav-link.active {
+  margin-right: 60px;
+  cursor: pointer;
+  color: #667085;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+div#telematics_tabs {
+  padding: 15px;
+}
+div#telematics_tabs .row .Telematics-sc-col-1 {
+  padding-left: 0;
+}
+
+div#telematics_tabs .row .Telematics-sc-col-2 {
+  padding-right: 0;
+}
+div#mileage_tabs {
+  padding: 15px;
+}
+
+div#mileage_tabs .overall-milleage-img {
+  padding: 30px 0;
+}
+
+/***********LOGIN SCREEN CSS********/
+.login-main-bx {
+  background: #141414;
+  border-radius: 24px;
+  width: 537px;
+  height: 492px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px;
+  margin: 0 auto;
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+.login-main-bx .login-txt img {
+  display: block;
+  margin: 0 auto;
+}
+.login-main-bx .login-txt .login-frm form .form-group input {
+  background: #121418;
+  border-radius: 12px;
+  border: 1px solid #1F2329;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #ffff;
+  padding-left: 30px;
+}
+.login-main-bx .login-txt .login-frm form .form-group input:focus {
+  outline: none;
+}
+.login-main-bx .login-txt .login-frm form .form-group label {
+  color: #FCFCFC;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+.login-main-bx .login-txt .login-frm form .sbmt-btn a.submit-btn {
+  color: #fff !important;
+  background: #4A068F;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 13px 157px 13px 157px;
+  border: 1px solid #4A068F;
+  transition: all 0.5s ease-in-out;
+  width: 361px;
+}
+.login-main-bx .login-txt .login-frm form .sbmt-btn {
+  text-align: center;
+}
+.login-main-bx .login-txt .login-frm form .form-group ion-icon.toggle-password.md.hydrated {
+  margin-top: 16px;
+}
+.login_admin {
+  background: #1B1F24;
+}

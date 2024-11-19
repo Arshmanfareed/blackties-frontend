@@ -140,7 +140,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -150,7 +150,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -160,7 +160,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -170,7 +170,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -180,7 +180,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -190,7 +190,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -200,7 +200,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -210,7 +210,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>VH12893719HJFHJ</td>
@@ -220,7 +220,7 @@ function Allvehicle() {
                                                                     <td>60</td>
                                                                     <td>£280</td>
                                                                     <td>Automatic</td>
-                                                                    <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                    <td><Link to="/admin-vehicledetails" className="view-btn">View</Link></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
