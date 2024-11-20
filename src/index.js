@@ -43,6 +43,9 @@ import Addvehicle from './admin/Addvehicle';
 import Allvehicle from './admin/Allvehicle';
 import Adminlogin from './admin/Adminlogin';
 import Vehicledetails from './admin/Vehicledetails';
+import Penaltychargesnotice from './admin/Penaltychargesnotice';
+import Financialpayments from './admin/Financialpayments';
+import Financialinvoice from './admin/Financialinvoice';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -89,6 +92,9 @@ root.render(
     <Route path="/all-vehicle" element={<><Allvehicle/></>} />
     <Route path="/admin-login" element={<><Adminlogin/></>} />
     <Route path="/admin-vehicledetails" element={<><Vehicledetails/></>} />
+    <Route path="/admin-penaltycharge" element={<><Penaltychargesnotice/></>} />
+    <Route path="/admin-financialpayment" element={<><Financialpayments/></>} />
+    <Route path="/admin-financialinvoice" element={<><Financialinvoice/></>} />
 
   </Routes>
 </Router>
