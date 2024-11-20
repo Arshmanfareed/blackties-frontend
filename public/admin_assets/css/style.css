@@ -5043,6 +5043,101 @@
       overflow: hidden;
       /* border-radius: 12px; */
   }
+  .add_vehicle_images .upload-file-group .del_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.add_vehicle_images .upload-file-group .del_btn button.btn.btn-danger {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #F00;
+    position: absolute;
+    top: 4%;
+    right: 3%;
+}
+.add_vehicle_images .upload-file-group .del_btn p {
+    margin: 0;
+    position: absolute;
+    bottom: -18%;
+    font-size: 12px;
+    color: #FFF;
+    font-size: 11.492px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15.323px; /* 133.333% */
+    font-family: 'Poppins';
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.add_vehicle_images .upload-file-group .upload_data-wrap {
+  z-index: 99;
+}
+.add_vehicle_images .upload-file-group {
+    padding: 0 !important;
+}
+.add_vehicle_images .upload-file-group input.upload_img_preview {
+  z-index: 99;
+}
+.add_vehicle_images .upload-file-group .del_btn button.btn.btn-danger {
+  z-index: 999;
+}
+.error-message {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+}
+
+.main-veh-bx {
+  position: relative;
+}
+button.btn.btn-primary.add_more_vehicle_gallery {
+  /* font-size: 0px; */
+  height: 74.773px;
+  border-radius: 6px;
+  border: 1px solid #667085;
+  background: transparent !important;
+  position: relative;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 125px;
+  height: 125px;
+}
+button.btn.btn-primary.add_more_vehicle_gallery i.fa-solid.fa-plus {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+button.btn.btn-primary.add_more_vehicle_gallery {
+  font-size: 14px;
+  color: #667085;
+}
+.error-message .alert.alert-danger {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+.main-veh-btn {
+  position: relative;
+  z-index: 9;
+}
   .vehicle-main-box  {
       padding: 30px 32px 24px 32px;
       background: #121418;

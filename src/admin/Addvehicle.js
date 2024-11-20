@@ -1,25 +1,24 @@
-import React, { useEffect,useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Addcarimages from "./components/Addcarimages";
-import { Col, Form, Row } from "react-bootstrap";
-import axios from "axios";
-
-
+import { Col, Row } from "react-bootstrap";
 function Addvehicle() {
-  
+  const [fileInputs, setFileInputs] = useState([true]); // Track which file inputs are enabled
+
   const [formData, setFormData] = useState({
-      car_make: "",
+    car_make: "",
     car_model: "",
     vehicle_registration_number: "",
     price_per_week: "",
     car_description: "",
-    vehicle_type: "",
+    vehicle_type: "Saloon",
     transmission: "",
     fuel_type: "",
     miles_per_gallon: "",
-    people: "",
+    people: "5 People",
+    image: "",
     mileage_allowance: "",
     additional_mileage_cost: "",
     reset_period: "",
@@ -31,247 +30,262 @@ function Addvehicle() {
     insurance_certificate_document: "",
     vehicle_licence_document: "",
     permission_letter_document: "",
-    image: "",
   });
 
-    // State to manage response or errors
-  const [responseMessage, setResponseMessage] = useState("");
+  const [carImages, setCarImages] = useState([]); // State for uploaded images
+  const [error, setError] = useState("");
 
-// Handle input changes
-const handleChange = (e) => {
-  const { name, value } = e.target;
-  setFormData({ ...formData, [name]: value });
-};
- // Handle form submission
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  // const handleImageChange = (e, index) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     // Update the fileInputs array with the File object
+  //     const newFileInputs = [...fileInputs];
+  //     newFileInputs[index] = file; // Store the File object
+  //     setFileInputs(newFileInputs);
 
-  const authToken = localStorage.getItem("token");
-
-  if (!authToken) {
-    setResponseMessage("Error: No authentication token found.");
-    return;
-  }
-
-  console.log("Form Data being submitted:", formData); // Log the form data for debugging
-
-    try {
-      const response = await axios.post(
-        "https://blackties-backend.dev.internalstaging.com/dev/blackties/api/v1/admin/add-vehicle/",
-        formData,
-        {
-          headers: {
-            "x-auth-token": authToken,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      console.log("API Response:", response); // Log the response for debugging
-
-      setResponseMessage(`Success: ${response.data.message}`);
-      // Clear the form if successful
-    } catch (error) {
-      console.error("Error details:", error);
-      setResponseMessage(`Error: ${error.response?.data?.message || "Something went wrong"}`);
-    }
-};
-
-
-
-  // const [formData, setFormData] = useState({
-  //   car_make: "",
-  //   car_model: "",
-  //   vehicle_registration_number: "",
-  //   price_per_week: "",
-  //   car_description: "",
-  //   vehicle_type: "",
-  //   transmission: "",
-  //   fuel_type: "",
-  //   miles_per_gallon: "",
-  //   people: "",
-  //   mileage_allowance: "",
-  //   additional_mileage_cost: "",
-  //   reset_period: "",
-  //   holding_deposit: "",
-  //   insurance_excess: "",
-  //   pcn_fee: "",
-  //   vehicle_gallery: "",
-  //   mot_certificate_document: "",
-  //   insurance_certificate_document: "",
-  //   vehicle_licence_document: "",
-  //   permission_letter_document: "",
-  //   image: "",
-  // });
-  
-  // // // const [carImages, setCarImages] = useState([]);
-  // // const [error, setError] = useState("");
-  // // const formRef = useRef(null);
-  // const [errors, setErrors] = useState({});
-  // const [success, setSuccess] = useState(false);
-  // const navigate = useNavigate();
-
-  // const handleFileChange = (e) => {
-  //   const files = e.target.files;
-  //   if (files.length > 0) {
-  //     const file = files[0];
+  //     // Show the image preview
   //     const reader = new FileReader();
-  //     reader.onload   
-  //  = (event) => {
-  //       setCarImages([...carImages, event.target.result]);
+  //     reader.onloadend = (event) => {
+  //       const imgPreview = document.createElement("div");
+  //       imgPreview.className = "upload_data-wrap";
+  //       imgPreview.innerHTML = `<img src="${event.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;">`;
+
+  //       // Prevent duplicate previews
+  //       const uploadGroup = e.target.closest(".upload-file-group");
+  //       const existingPreview = uploadGroup.querySelector(".upload_data-wrap");
+  //       if (existingPreview) {
+  //         uploadGroup.removeChild(existingPreview);
+  //       }
+
+  //       uploadGroup.appendChild(imgPreview);
   //     };
-  //     reader.readAsDataURL(file);
+  //     reader.readAsDataURL(file); // Convert file to base64 for preview only
   //   }
   // };
-  
-  // const handleFormChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData({ ...formData, [name]: value });
-  // };
-  // const handleFormChange = (e) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value
-  //   });
-  // };
-  
-  // const handleValidation = () => {
-  //   const requiredFields = [
-  //     "car_make",
-  //     "car_model",
-  //     "vehicle_registration_number",
-  //     "price_per_week",
-  //   ];
-  
-  //   for (const field of requiredFields) {
-  //     if (!formData[field]) {
-  //       setErrors(`Please fill in the required field: ${field}`);
-  //       return false;
-  //     }
+
+  // const handleImageChange = (e, index) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onloadend = (event) => {
+
+  //       const imgPreview = document.createElement("div");
+  //       imgPreview.className = "upload_data-wrap";
+  //       imgPreview.innerHTML = `<img src="${event.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;">`;
+  //       e.target.closest(".upload-file-group").appendChild(imgPreview);
+
+  //       // Assuming fileInputs is an array of objects or image containers
+  //       const newFileInputs = [...fileInputs];
+  //       newFileInputs[index] = reader.result;  // Set the base64 value
+  //       setFileInputs(newFileInputs);
+  //     };
+  //     reader.readAsDataURL(file); // This converts the file to base64
   //   }
-  
-  //   // Add additional validation checks here
-  
-  //   return true;
   // };
-  
-  // const ImagePreview = ({ src }) => (
-  //   <div className="upload_data-wrap">
-  //     <img src={src} alt="Image Preview" style="max-width: 100%; height: auto;" />
-  //   </div>
-  // );
-  
-  // const handleSubmit = async (e) => {
+
+  // Handle file input change
+
+  const handleImageChange = (e, index) => {
+    const files = e.target.files;
+    if (files.length > 0) {
+      const updatedInputs = [...fileInputs];
+      updatedInputs[index] = files[0]; // Save the file object
+      const file = files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const imgPreview = document.createElement("div");
+        imgPreview.className = "upload_data-wrap";
+        imgPreview.innerHTML = `<img src="${event.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;">`;
+        e.target.closest(".upload-file-group").appendChild(imgPreview);
+      };
+      reader.readAsDataURL(file);
+
+      setFileInputs(updatedInputs);
+    }
+  };
+
+  // Add a new file input
+  const addFileInput = () => {
+    setFileInputs([...fileInputs, ""]); // Add an empty placeholder for a new file
+  };
+
+  // Remove a file input
+  const removeFileInput = (index) => {
+    const updatedInputs = [...fileInputs];
+    updatedInputs.splice(index, 1); // Remove the file input at the specified index
+    setFileInputs(updatedInputs);
+  };
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleImagesChange = (images) => {
+    setCarImages(images); // Update the uploaded images state
+  };
+
+  const handleFileChange = (event, fieldName) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64 = reader.result; // Base64 data of the file
+      setFormData((prevData) => ({
+        ...prevData,
+        [fieldName]: base64, // Update only the specific field
+      }));
+    };
+    reader.readAsDataURL(file); // Read the file as a Data URL
+  };
+
+  // const handleSubmit = (e) => {
   //   e.preventDefault();
-  //   if (!handleValidation()) return;
-  
+
   //   const authToken = localStorage.getItem("token");
+
   //   if (!authToken) {
   //     alert("Authorization required");
   //     return;
   //   }
-  
-    // const formDataObj = new FormData();
-    // Object.keys(formData).forEach((key) => {
-    //   formDataObj.append(key, formData[key]);
-    // });
-  
-    // try {
-    //   const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/admin/add-vehicle/`,{
-    //     // formDataObj,
-    //     method: 'POST',
-    //   headers: {
-    //         "x-auth-token": authToken,
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body:JSON.stringify({
-    //         car_make: formData.car_make,
-    //         car_model: formData.car_model,
-    //         vehicle_registration_number: formData.vehicle_registration_number,
-    //         price_per_week: formData.price_per_week,
-    //         car_description: formData.car_description,
-    //         vehicle_type: formData.vehicle_type,
-    //         transmission: formData.transmission,
-    //         fuel_type: formData.fuel_type,
-    //         miles_per_gallon: formData.miles_per_gallon,
-    //         people: formData.people,
-    //         mileage_allowance: formData.mileage_allowance,
-    //         additional_mileage_cost: formData.additional_mileage_cost,
-    //         reset_period: formData.reset_period,
-    //         holding_deposit: formData.holding_deposit,
-    //         insurance_excess: formData.insurance_excess,
-    //         pcn_fee: formData.pcn_fee,
-    //         vehicle_gallery: formData.vehicle_gallery,
-    //         mot_certificate_document: formData.mot_certificate_document,
-    //         insurance_certificate_document: formData.insurance_certificate_document,
-    //         vehicle_licence_document: formData.vehicle_licence_document,
-    //         permission_letter_document: formData.permission_letter_document,
-    //         image: formData.image,
-    //       })
-    //     });
-    //     if (response.ok) {
-    //       const data = await response.json();  
-          
-    //       // Assuming 'data' contains the user ID and email in the response
-    //       // const createdUserId = data.data.userCreated.id; 
-    //       // const createdUserEmail = formData.email;
-    
-    //       // // Save the user ID and email to localStorage
-    //       // localStorage.setItem('user_id', createdUserId);
-    //       // localStorage.setItem('user_email', createdUserEmail);
-    
-    //       setSuccess(true);
-    //       setErrors({});
-          
-    //       // Redirect to verification page
-    //       // navigate('/verification');
-    //     } else {
-    //       const errorData = await response.json(); // Get the error data from response
-          
-    //       // Check if the error contains a specific message
-    //       if (errorData.error && errorData.error.message) {
-    //         // Set the error message in the state
-    //         setErrors({ general: errorData.error.message }); // Display the general error message
-    //       } else {
-    //         setErrors({ general: 'Registration failed. Please try again.' });
-    //       }
-    //     }
-    //   } catch (err) {
-    //     console.error('Registration error:', err); 
-    //     setErrors({ general: 'Something went wrong. Please try again.' });
-    //   }
-    // };
-  
-  // const handleSaveClick = () => {
-  //   if (formRef.current) {
-  //     formRef.current.requestSubmit();
+
+  //   // Validate formData
+  //   if (!formData.car_make || !formData.car_model || !formData.vehicle_registration_number) {
+  //     alert("Please fill in all required fields.");
+  //     return;
   //   }
 
-  // };
-  
+  //   // Remove empty fields from payload
+  //   const sanitizedPayload = Object.fromEntries(
+  //     Object.entries(formData).filter(([key, value]) => value !== "")
+  //   );
 
-    
+  //   fetch("http://localhost:5050/dev/blackties/api/v1/admin/add-vehicle", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "x-auth-token": authToken,
+  //     },
+  //     body: JSON.stringify(sanitizedPayload),
+  //   })
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         return response.text().then((text) => {
+  //           throw new Error(text || response.statusText);
+  //         });
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       console.log("Successfully added vehicle:", data);
+  //       alert("Vehicle added successfully!");
+  //       setError("");
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error:", error.message);
+  //       try {
+  //         const parsedError = JSON.parse(error.message);
+  //         setError(parsedError.error?.message || "An unexpected error occurred.");
+  //       } catch (e) {
+  //         setError("An error occurred while adding the vehicle. Please try again.");
+  //       }
+  //     });
+  // };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const authToken = localStorage.getItem("token");
+
+    if (!authToken) {
+      alert("Authorization required");
+      return;
+    }
+
+    // Validate formData
+    if (
+      !formData.car_make ||
+      !formData.car_model ||
+      !formData.vehicle_registration_number
+    ) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Create a FormData object
+    const formDataPayload = new FormData();
+
+    // Append text fields to FormData
+    for (let key in formData) {
+      formDataPayload.append(key, formData[key]);
+    }
+
+    // Append images to FormData
+    fileInputs.forEach((file, index) => {
+      if (file) {
+        formDataPayload.append(`vehicle_gallery[]`, file); // Append File objects directly
+      }
+    });
+
+    // Send the data using fetch
+    fetch(
+      "https://blackties-backend.dev.internalstaging.com/dev/blackties/api/v1/admin/add-vehicle",
+      {
+        method: "POST",
+        headers: {
+          "x-auth-token": authToken, // Do not set Content-Type manually for FormData
+        },
+        body: formDataPayload,
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          return response.text().then((text) => {
+            throw new Error(text || response.statusText);
+          });
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Successfully added vehicle:", data);
+        alert("Vehicle added successfully!");
+        setError("");
+      })
+      .catch((error) => {
+        console.error("Error:", error.message);
+        try {
+          const parsedError = JSON.parse(error.message);
+          setError(
+            parsedError.error?.message || "An unexpected error occurred."
+          );
+        } catch (e) {
+          setError(
+            "An error occurred while adding the vehicle. Please try again."
+          );
+        }
+      });
+  };
 
   return (
     <>
       <section className="user-dashboard">
-      
-
         <div className="container-fluid">
-          <div className="row g-0">
+          <Row className=" g-0">
             <Col lg={3} md={3} className="sidebar-col">
               <Sidebar />
             </Col>
             <Col lg={9} md={9} className=" panel-col">
               <div className="dashboard-panel application-panel">
-                <Row >
-                  <Col lg={12} md={12} >
+                <Row>
+                  <Col lg={12} md={12}>
                     <div className="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
                   </Col>
                 </Row>
-                <Row >
-                  <Col lg={12} md={12} >
+                <Row>
+                  <Col lg={12} md={12}>
                     <div className="main-veh-box">
                       <div className="vehicle-main-box">
                         <div className="main-veh-bx">
@@ -281,25 +295,33 @@ const handleChange = (e) => {
                           <div className="main-veh-btn">
                             <Link
                               href="javascript:void(0);"
-                              onclick="popup_alrt(this)"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setError(""); // Clear error on cancel
+                              }}
                               className="phn-cancel"
                             >
                               Cancel
                             </Link>
-                            {/* <Form.Control
-                              // onClick={handleSubmit}
-                              // onClick={handleSaveClick}
-                              type="submit"
+                            <button
+                              onClick={handleSubmit}
                               className="phn-change"
-                              value='Save'
-                            /> */}
-                                    <button type="submit" class="phn-change" onClick={handleSubmit}>Submit</button>
-
-                              {/* Save
-                            </Form.Control> */}
-                            {/* {error && <div className="error-message">{error}</div>} */}
-                            {responseMessage && <p>{responseMessage}</p>}
+                            >
+                              Save
+                            </button>
                           </div>
+
+                          {/* Display the error message */}
+                          {error && (
+                            <div
+                              className="error-message"
+                              style={{ color: "red", marginTop: "10px" }}
+                            >
+                              <div class="alert alert-danger" role="alert">
+                                {error}
+                              </div>
+                            </div>
+                          )}
                         </div>
                         <div className="row inner-row">
                           <div className="col-lg-6 col-md-6">
@@ -307,11 +329,9 @@ const handleChange = (e) => {
                               <h5>Vehicle Details</h5>
                             </div>
                             <div className="vehciles-bx-form">
-                            <Form 
-      // ref={formRef}
-      >
-                                <Row >
-                                  <Col lg={12} md={12} >
+                              <form onSubmit={handleSubmit}>
+                                <Row>
+                                  <Col lg={12} md={12}>
                                     <div className="form-group">
                                       <label for="control-label">
                                         Car Make
@@ -322,12 +342,12 @@ const handleChange = (e) => {
                                         name="car_make"
                                         id="car_make"
                                         value={formData.car_make}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         placeholder=""
                                       />
                                     </div>
                                   </Col>
-                                  <Col lg={12} md={12} >
+                                  <Col lg={12} md={12}>
                                     <div className="form-group">
                                       <label for="control-label">
                                         Car Model
@@ -339,11 +359,11 @@ const handleChange = (e) => {
                                         id="car_model"
                                         placeholder=""
                                         value={formData.car_model}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
-                                  <Col lg={12} md={12} >
+                                  <Col lg={12} md={12}>
                                     <div className="form-group">
                                       <label for="control-label">
                                         Vehicle Registration Number
@@ -354,12 +374,14 @@ const handleChange = (e) => {
                                         name="vehicle_registration_number"
                                         id="vehicle_registration_number"
                                         placeholder=""
-                                        value={formData.vehicle_registration_number}
-                                        onChange={handleChange}
+                                        value={
+                                          formData.vehicle_registration_number
+                                        }
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
-                                  <Col lg={12} md={12} >
+                                  <Col lg={12} md={12}>
                                     <div className="form-group">
                                       <label for="control-label">
                                         Price per Week
@@ -371,11 +393,11 @@ const handleChange = (e) => {
                                         id="price_per_week"
                                         placeholder=""
                                         value={formData.price_per_week}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
-                                  <Col lg={12} md={12} >
+                                  <Col lg={12} md={12}>
                                     <div className="form-group">
                                       <label for="control-label">
                                         Car Description
@@ -388,11 +410,11 @@ const handleChange = (e) => {
                                         placeholder=""
                                         className="mg05"
                                         value={formData.car_description}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
-                                  <Col lg={12} md={12} >
+                                  <Col lg={12} md={12}>
                                     <div className="form-group">
                                       <h3>Features</h3>
                                     </div>
@@ -404,7 +426,12 @@ const handleChange = (e) => {
                                       </label>
                                       <br />
                                       {/* <!-- <input type="text" name="form-control" id="" placeholder="" className="mg05"><i className="fas fa-chevron-down"></i> --> */}
-                                      <select name="vehicle_type" id="vehicle" value={formData.vehicle_type}  onChange={handleChange}>
+                                      <select
+                                        name="vehicle_type"
+                                        id="vehicle"
+                                        value={formData.vehicle_type}
+                                        onChange={handleFormChange}
+                                      >
                                         <option value="volvo">Saloon</option>
                                         <option value="saab">Saloon</option>
                                         <option value="opel">Saloon</option>
@@ -415,7 +442,7 @@ const handleChange = (e) => {
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
                                       <label for="control-label">
-                                        transmission:
+                                        Transmission:
                                       </label>
                                       <br />
                                       <input
@@ -424,7 +451,7 @@ const handleChange = (e) => {
                                         id="transmission"
                                         placeholder=""
                                         value={formData.transmission}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
@@ -440,14 +467,14 @@ const handleChange = (e) => {
                                         id="fuel_type"
                                         placeholder=""
                                         value={formData.fuel_type}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
                                       <label for="control-label">
-                                        Miles per Gallon (miles_per_gallon)
+                                        Miles per Gallon (MPG)
                                       </label>
                                       <br />
                                       <input
@@ -456,24 +483,29 @@ const handleChange = (e) => {
                                         id="miles_per_gallon"
                                         placeholder=""
                                         value={formData.miles_per_gallon}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">people</label>
+                                      <label for="control-label">People</label>
                                       <br />
                                       {/* <!-- <input type="text" name="form-control" id="" placeholder="" className="mg05"><i className="fas fa-chevron-down"></i> --> */}
-                                      <select name="people" id="people" value={formData.people}  onChange={handleChange}>
-                                        <option value="volvo">5 people</option>
-                                        <option value="saab">5 people</option>
-                                        <option value="opel">5 people</option>
-                                        <option value="audi">5 people</option>
+                                      <select
+                                        name="people"
+                                        id="people"
+                                        value={formData.people}
+                                        onChange={handleFormChange}
+                                      >
+                                        <option value="5">5 People</option>
+                                        <option value="5">5 People</option>
+                                        <option value="5">5 People</option>
+                                        <option value="5">5 People</option>
                                       </select>
                                     </div>
                                   </Col>
-                                  <Col lg={12} md={12} >
+                                  <Col lg={12} md={12}>
                                     <div className="form-group">
                                       <h3>Key Details</h3>
                                     </div>
@@ -485,12 +517,12 @@ const handleChange = (e) => {
                                       </label>
                                       <br />
                                       <input
-                                        type="text"
+                                        type="number"
                                         name="mileage_allowance"
                                         id="mileage_allowance"
                                         placeholder=""
                                         value={formData.mileage_allowance}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
@@ -506,7 +538,7 @@ const handleChange = (e) => {
                                         id="additional_mileage_cost"
                                         placeholder=""
                                         value={formData.additional_mileage_cost}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
@@ -522,7 +554,7 @@ const handleChange = (e) => {
                                         id="reset_period"
                                         placeholder=""
                                         value={formData.reset_period}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
@@ -538,7 +570,7 @@ const handleChange = (e) => {
                                         id="holding_deposit"
                                         placeholder=""
                                         value={formData.holding_deposit}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
@@ -554,7 +586,7 @@ const handleChange = (e) => {
                                         id="insurance_excess"
                                         placeholder=""
                                         value={formData.insurance_excess}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
@@ -568,12 +600,12 @@ const handleChange = (e) => {
                                         id="pcn_fee"
                                         placeholder=""
                                         value={formData.pcn_fee}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                       />
                                     </div>
                                   </Col>
                                 </Row>
-                            </Form>
+                              </form>
                             </div>
                           </div>
                           <div className="col-lg-6 col-md-6">
@@ -626,10 +658,55 @@ const handleChange = (e) => {
                             </div>
                             {/* <Addcarimages/> */}
                             <div className="Canvassec add_vehicle_images">
+                              <label>Add Vehicle Images</label>
+                              <div className="row file-upload-wrap">
+                                {fileInputs.map((file, index) => (
+                                  <div
+                                    key={index}
+                                    className="col-lg-2 col-md-2 upload_img_preview_wrapper"
+                                  >
+                                    <div className="upload-file-group">
+                                      <input
+                                        type="file"
+                                        className="upload_img_preview"
+                                        onChange={(e) =>
+                                          handleImageChange(e, index)
+                                        }
+                                      />
+                                      {file && (
+                                        <div className="del_btn">
+                                          <p>{file.name}</p>
+                                          <button
+                                            type="button"
+                                            className="btn btn-danger"
+                                            onClick={() =>
+                                              removeFileInput(index)
+                                            }
+                                          >
+                                            <i class="fa-solid fa-trash"></i>
+                                          </button>
+                                        </div>
+                                      )}
+                                    </div>
+                                  </div>
+                                ))}
+                                <Col lg={2} md={2}>
+                                  <button
+                                    type="button"
+                                    className="btn btn-primary add_more_vehicle_gallery"
+                                    onClick={addFileInput}
+                                  >
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add More
+                                  </button>
+                                </Col>
+                              </div>
+                            </div>
+                            {/* <div className="Canvassec add_vehicle_images">
                               <Col lg={12} md={12} >
                                 <label htmlFor="label-control"></label>
                                 <div className="row file-upload-wrap">
-                                  {/* {fileInputs.map((enabled, index) => (
+                                  {fileInputs.map((enabled, index) => (
                                     <div
                                       key={index}
                                       className="col-lg-2 col-md-2 upload_img_preview_wrapper"
@@ -639,16 +716,16 @@ const handleChange = (e) => {
                                           type="file"
                                           className="upload_img_preview"
                                           onChange={(e) =>
-                                            handleFileChange(e, index)
+                                            handleImageChange(e, index)
                                           }
                                           disabled={!enabled}
                                         />
                                       </div>
                                     </div>
-                                  ))} */}
+                                  ))}
                                 </div>
                               </Col>
-                            </div>
+                            </div> */}
                             <div className="row inner-doc-sc">
                               <div className="main-veh-txt">
                                 <h5>Document</h5>
@@ -675,13 +752,19 @@ const handleChange = (e) => {
                                         Download
                                       </Link>
                                       <div className="upload_vehicle_docs">
-                                      <input type="file" 
-                                      name="mot_certificate_document"
-                                       id="mot_certificate_document" 
-                                       value={formData.mot_certificate_document}
-                                       onChange={handleChange}
-                                       >
-                                      </input>
+                                        <input
+                                          type="file"
+                                          name="mot_certificate_document"
+                                          id="mot_certificate_document"
+                                          //  value={formData.mot_certificate_document}
+                                          accept="application/pdf"
+                                          onChange={(e) =>
+                                            handleFileChange(
+                                              e,
+                                              "mot_certificate_document"
+                                            )
+                                          }
+                                        ></input>
                                         <img
                                           src="./admin_assets/images/Frame 13680.png"
                                           className="pen-img"
@@ -714,12 +797,18 @@ const handleChange = (e) => {
                                         Download
                                       </Link>
                                       <div className="upload_vehicle_docs">
-                                      <input type="file"
-                                      name="insurance_certificate_document"
-                                      id="insurance_certificate_document"
-                                      value={formData.insurance_certificate_document}
-                                      onChange={handleChange} >
-                                      </input>
+                                        <input
+                                          type="file"
+                                          name="insurance_certificate_document"
+                                          id="insurance_certificate_document"
+                                          accept="application/pdf"
+                                          onChange={(e) =>
+                                            handleFileChange(
+                                              e,
+                                              "insurance_certificate_document"
+                                            )
+                                          }
+                                        ></input>
                                         <img
                                           src="./admin_assets/images/Frame 13680.png"
                                           className="pen-img"
@@ -752,12 +841,18 @@ const handleChange = (e) => {
                                         Download
                                       </Link>
                                       <div className="upload_vehicle_docs">
-                                      <input type="file"
-                                      name="vehicle_licence_document"
-                                      id="vehicle_licence_document"
-                                      value={formData.vehicle_licence_document}
-                                      onChange={handleChange} >
-                                      </input>
+                                        <input
+                                          type="file"
+                                          name="vehicle_licence_document"
+                                          id="vehicle_licence_document"
+                                          accept="application/pdf"
+                                          onChange={(e) =>
+                                            handleFileChange(
+                                              e,
+                                              "vehicle_licence_document"
+                                            )
+                                          }
+                                        ></input>
                                         <img
                                           src="./admin_assets/images/Frame 13680.png"
                                           className="pen-img"
@@ -790,13 +885,18 @@ const handleChange = (e) => {
                                         Download
                                       </Link>
                                       <div className="upload_vehicle_docs">
-                                      <input type="file"
-                                      name="permission_letter_document"
-                                      id="permission_letter_document"
-                                      value={formData.permission_letter_document}
-                                      onChange={handleChange}
-                                      >
-                                      </input>
+                                        <input
+                                          type="file"
+                                          name="permission_letter_document"
+                                          id="permission_letter_document"
+                                          accept="application/pdf"
+                                          onChange={(e) =>
+                                            handleFileChange(
+                                              e,
+                                              "permission_letter_document"
+                                            )
+                                          }
+                                        ></input>
                                         <img
                                           src="./admin_assets/images/Frame 13680.png"
                                           className="pen-img"
@@ -808,60 +908,6 @@ const handleChange = (e) => {
                                           src="./admin_assets/images/Trash.png"
                                           alt="delete"
                                         />
-                                      </Link>
-                                    </li>
-                                    <span className="doc-field">
-                                      Vehicle Licence Document
-                                    </span>
-                                    <li>
-                                      <img
-                                        src="./admin_assets/images/Frame 2085663522.png"
-                                        alt="Docs"
-                                      />
-                                      <div>
-                                        <h6>Vehicle Licence</h6>
-                                        <span>3.6 MB</span>
-                                      </div>
-                                      <Link
-                                        href="javascript:;"
-                                        className="down-btn"
-                                      >
-                                        Download
-                                      </Link>
-                                      <div className="upload_vehicle_docs">
-                                      <input type="file">
-                                      </input>
-                                        <img
-                                          src="./admin_assets/images/Frame 13680.png"
-                                          className="pen-img"
-                                          alt="Docs"
-                                        />
-                                      </div>
-                                    
-                                      <Link href="javascript:;">
-                                        <img
-                                          src="./admin_assets/images/Trash.png"
-                                          alt="delete"
-                                        />
-                                      </Link>
-                                    </li>
-                                    <span className="doc-field">
-                                      Vehicle Licence Document
-                                    </span>
-                                    <li>
-                                      <img
-                                        src="./admin_assets/images/Frame 2085663522 (1).png"
-                                        alt="Docs"
-                                      />
-                                      <div>
-                                        <h6>Vehicle Licence</h6>
-                                        <span>3.6 MB</span>
-                                      </div>
-                                      <Link
-                                        href="javascript:;"
-                                        className="down-btn"
-                                      >
-                                        Download
                                       </Link>
                                     </li>
                                   </ul>
@@ -874,11 +920,11 @@ const handleChange = (e) => {
                     </div>
                   </Col>
                 </Row>
-                </div>
-                </Col>
-                </div>
-                </div>
-                </section>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </section>
     </>
   );
 }
