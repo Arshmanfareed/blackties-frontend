@@ -1,12 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
-import { useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { Container, Row, Col } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 function Vehicledetails() {
+  const [vehicle, setVehicle] = useState(null);
+  const [error, setError] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(
+    vehicle && vehicle.gallery && vehicle.gallery.length > 0
+      ? `https://blackties-backend.dev.internalstaging.com/${vehicle.gallery[0].image}`
+      : ''
+  );
+  const handleImageClick = (image) => {
+    setSelectedImage(`https://blackties-backend.dev.internalstaging.com/${image}`);
+  };
+
+  const { id } = useParams();
+  const authToken = localStorage.getItem("token"); // Replace with the actual token
+
+  useEffect(() => {
+    const fetchVehicleDetails = async () => {
+      try {
+        const response = await fetch(
+          process.env.REACT_APP_BACKEND_URL + `/admin/vehicle-details/` + id, {
+          method: 'GET',
+          headers: {
+            'x-auth-token': authToken, // Include the auth token in the headers
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        setVehicle(data.data[0]);
+
+        if (data.data[0] && data.data[0].gallery && data.data[0].gallery.length > 0) {
+          setSelectedImage(`https://blackties-backend.dev.internalstaging.com/${data.data[0].gallery[0].image}`);
+        }
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+
+    fetchVehicleDetails();
+  }, [id]);
+
   return (
     <section className="user-dashboard">
       <Container fluid>
@@ -31,17 +74,18 @@ function Vehicledetails() {
                         <div className="chng-chng-otp">
                           <i className="fas fa-chevron-left"></i>
                           <h4>Vehicle Search</h4>
-                          <h4>Mercedes-Benz E Class . 2019 . KJ19 0JX</h4>
+                          <h4>
+                            {
+                              vehicle
+                                ? `${vehicle.car_make} E class . 2019 . ${vehicle.vehicle_registration_number}`
+                                : "Loading..."
+                            }
+                          </h4>
                           <h5>
-                            <img
-                              src="./admin_assets/images/Frame 81.png"
-                              alt=""
-                            />
+                            <img src="./admin_assets/images/Frame 81.png" alt="" />
                             John Smith .{" "}
                             <a href="tel:+44 2134 2134">+44 2134 2134</a> .{" "}
-                            <a href="mailto:Sample@gmail.com">
-                              Sample@gmail.com
-                            </a>
+                            <a href="mailto:Sample@gmail.com">Sample@gmail.com</a>
                           </h5>
                         </div>
                         <div className="tabs-container">
@@ -52,10 +96,7 @@ function Vehicledetails() {
                                 <Col lg={12} md={12}>
                                   <div className="profile-meta-wrapper member-wrapper">
                                     <div className="profile-meta member-meta">
-                                      <img
-                                        src="./admin_assets/images/dashboard/Frame 81.png"
-                                        alt="prfile"
-                                      />
+                                      <img src="./admin_assets/images/dashboard/Frame 81.png" alt="prfile" />
                                       <div>
                                         <h4 className="profile-name">Omar</h4>
                                         <h6 className="profile-status">
@@ -69,12 +110,7 @@ function Vehicledetails() {
                                       </div>
                                       <div className="member">
                                         <p>Member Since: July 19, 2024</p>
-                                        <a
-                                          href="javascript:;"
-                                          className="change-img-btn"
-                                        >
-                                          Approved
-                                        </a>
+                                        <a href="javascript:;" className="change-img-btn">Approved</a>
                                       </div>
                                     </div>
                                     <div className="member-frm">
@@ -82,16 +118,10 @@ function Vehicledetails() {
                                         <Row>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
-                                                First Name
-                                              </label>
+                                              <label for="control-label">First Name</label>
                                               <br />
-                                              <input
-                                                type="text"
-                                                name="form-control"
-                                                id=""
-                                                placeholder=""
-                                              />
+                                              <input type="text" name="form-control" id=""
+                                                placeholder="" />
                                             </div>
                                           </Col>
                                           <Col lg={6} md={6}>
@@ -611,6 +641,7 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.car_make : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
@@ -625,6 +656,7 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.car_model : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
@@ -639,6 +671,7 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.vehicle_registration_number : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
@@ -653,6 +686,7 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.price_per_week : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
@@ -668,6 +702,7 @@ function Vehicledetails() {
                                               id=""
                                               placeholder=""
                                               className="mg05"
+                                              value={vehicle ? vehicle.car_description : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
@@ -676,13 +711,12 @@ function Vehicledetails() {
                                             <h3>Features</h3>
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Vehicle Type:
                                             </label>
                                             <br />
-                                            {/* <!-- <input type="text" name="form-control" id="" placeholder="" className="mg05"><i className="fas fa-chevron-down"></i> --> */}
                                             <select
                                               name="vehicle_type:"
                                               id="vehicle"
@@ -702,7 +736,7 @@ function Vehicledetails() {
                                             </select>
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Transmission:
@@ -713,10 +747,11 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.transmission : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Fuel Type
@@ -727,10 +762,11 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.fuel_type : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Miles per Gallon (MPG)
@@ -741,16 +777,16 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.miles_per_gallon : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               People
                                             </label>
                                             <br />
-                                            {/* <!-- <input type="text" name="form-control" id="" placeholder="" className="mg05"><i className="fas fa-chevron-down"></i> --> */}
                                             <select name="people" id="vehicle">
                                               <option value="volvo">
                                                 5 People
@@ -772,7 +808,7 @@ function Vehicledetails() {
                                             <h3>Key Details</h3>
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Mileage Allowance:
@@ -783,10 +819,11 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.mileage_allowance : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Additional Mileage Cost:
@@ -797,10 +834,11 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.additional_mileage_cost : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Reset Period:
@@ -811,10 +849,11 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.reset_period : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Holding Deposit:
@@ -825,10 +864,11 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.holding_deposit : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               Insurance Excess:
@@ -839,10 +879,11 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.insurance_excess : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
-                                        <Col className=" up-bx">
+                                        <Col lg={12} md={12} className=" up-bx">
                                           <div className="form-group">
                                             <label for="control-label">
                                               PCN Fee
@@ -853,6 +894,7 @@ function Vehicledetails() {
                                               name="form-control"
                                               id=""
                                               placeholder=""
+                                              value={vehicle ? vehicle.pcn_fee : 'Loading...'}
                                             />
                                           </div>
                                         </Col>
@@ -865,118 +907,62 @@ function Vehicledetails() {
                                     <h5>Upload Image</h5>
                                   </div>
                                   <div className="upload-img-rw">
-                                    <img
-                                      src="./admin_assets/images/up-img.png"
-                                      alt=""
-                                    />
+                                    <img src={selectedImage} alt="Vehicle Image" style={{ width: '100%', height: '400px', borderRadius: '8px', objectFit: 'contain', }} />
                                   </div>
-                                  <Row className=" upload-rw">
-                                    <Col lg={4} md={4}>
-                                      <div className="detailCar-slide-controller upload-img-dv">
-                                        <ul>
-                                          <li id="item1" className="">
-                                            <img
-                                              src="./admin_assets/images/slider/image 67.png"
-                                              alt=""
-                                            />
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </Col>
-                                    <Col lg={4} md={4}>
-                                      <div className="detailCar-slide-controller upload-img-dv">
-                                        <ul>
-                                          <li id="item2" className="">
-                                            <img
-                                              src="./admin_assets/images/slider/image346.png"
-                                              alt=""
-                                            />
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </Col>
-                                    <Col lg={4} md={4}>
-                                      <div className="detailCar-slide-controller upload-img-dv">
-                                        <ul>
-                                          <li id="item3" className="slide-active">
-                                            <img
-                                              src="./admin_assets/images/slider/image 66.png"
-                                              alt=""
-                                            />
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </Col>
+                                  <Row className="upload-rw">
+                                    {vehicle && vehicle.gallery && vehicle.gallery.length > 0 ? (
+                                      vehicle.gallery.map((item) => (
+                                        <Col lg={4} md={4} key={item.id}>
+                                          <div className="detailCar-slide-controller upload-img-dv">
+                                            <ul>
+                                              <li
+                                                id={`item${item.id}`}
+                                                className="gallery-item"
+                                                onClick={() => handleImageClick(item.image)}
+                                                style={{ cursor: "pointer" }}
+                                              >
+                                                <img
+                                                  src={`https://blackties-backend.dev.internalstaging.com/${item.image}`}
+                                                  alt={`Gallery item ${item.id}`}
+                                                />
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </Col>
+                                      ))
+                                    ) : (
+                                      <p>No images available</p>
+                                    )}
                                     <Row className=" upload-rw upload-delete-opt">
-                                      <Col lg={3} md={3} >
-                                        <div className="detailCar-slide-controller upload-img-dv">
-                                          <ul>
-                                            <li>
-                                              <img
-                                                src="./admin_assets/images/slider/image 67.png"
-                                                alt=""
-                                              />
-                                            </li>
-                                            <h6>Image_name123.jpg</h6>
-                                            <span>24 Mb</span>
-                                            <a
-                                              href="javascript:;"
-                                              className="delete-opytion"
-                                            >
-                                              <img
-                                                src="./admin_assets/images/slider/delete.png"
-                                                alt=""
-                                              />
-                                            </a>
-                                          </ul>
-                                        </div>
-                                      </Col>
-                                      <Col lg={3} md={3} >
-                                        <div className="detailCar-slide-controller upload-img-dv">
-                                          <ul>
-                                            <li id="item2">
-                                              <img
-                                                src="./admin_assets/images/slider/image346.png"
-                                                alt=""
-                                              />
-                                            </li>
-                                            <h6>Image_name123.jpg</h6>
-                                            <span>24 Mb</span>
-                                            <a
-                                              href="javascript:;"
-                                              className="delete-opytion"
-                                            >
-                                              <img
-                                                src="./admin_assets/images/slider/delete.png"
-                                                alt=""
-                                              />
-                                            </a>
-                                          </ul>
-                                        </div>
-                                      </Col>
-                                      <Col lg={3} md={3} >
-                                        <div className="detailCar-slide-controller upload-img-dv">
-                                          <ul>
-                                            <li id="item3">
-                                              <img
-                                                src="./admin_assets/images/slider/image 66.png"
-                                                alt=""
-                                              />
-                                            </li>
-                                            <h6>Image_name123.jpg</h6>
-                                            <span>24 Mb</span>
-                                            <a
-                                              href="javascript:;"
-                                              className="delete-opytion"
-                                            >
-                                              <img
-                                                src="./admin_assets/images/slider/delete.png"
-                                                alt=""
-                                              />
-                                            </a>
-                                          </ul>
-                                        </div>
-                                      </Col>
+                                      {vehicle && vehicle.gallery && vehicle.gallery.length > 0 ? (
+                                        vehicle.gallery.map((item) => (
+                                          <Col lg={3} md={3} >
+                                            <div className="detailCar-slide-controller upload-img-dv">
+                                              <ul>
+                                                <li>
+                                                  <img
+                                                    src={`https://blackties-backend.dev.internalstaging.com/${item.image}`}
+                                                    alt={`Gallery item ${item.id}`}
+                                                  />
+                                                </li>
+                                                <h6>Image_name123.jpg</h6>
+                                                <span>24 Mb</span>
+                                                <a
+                                                  href="javascript:;"
+                                                  className="delete-opytion"
+                                                >
+                                                  <img
+                                                    src="./admin_assets/images/slider/delete.png"
+                                                    alt=""
+                                                  />
+                                                </a>
+                                              </ul>
+                                            </div>
+                                          </Col>
+                                        ))
+                                      ) : (
+                                        <p>No images available</p>
+                                      )}
                                       <Col lg={3} md={3} >
                                         <div className="detailCar-slide-controller upload-img-dv">
                                           <div className="up-img-option">
@@ -1464,22 +1450,22 @@ function Vehicledetails() {
                                         </tr>
                                       </tbody>
                                     </table>
-                                    </div>
-                                    </Col>
-                                    </Row>
-                                    </Tab>
-                                    </Tabs>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </Col>
-                                    </Row>
-                                    </div>
-                                    </Col>
-                                    </Row>
-                                    </Container>
-                                    </section>
+                                  </div>
+                                </Col>
+                              </Row>
+                            </Tab>
+                          </Tabs>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 }
 

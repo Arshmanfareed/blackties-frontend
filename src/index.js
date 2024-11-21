@@ -88,7 +88,7 @@ root.render(
     <Route path="/add-vehicle" element={<><Addvehicle/></>} />
     <Route path="/all-vehicle" element={<><Allvehicle/></>} />
     <Route path="/admin-login" element={<><Adminlogin/></>} />
-    <Route path="/admin-vehicledetails" element={<><Vehicledetails/></>} />
+    <Route path="/admin-vehicle-details/:id" element={<><Vehicledetails/></>} />
 
   </Routes>
 </Router>

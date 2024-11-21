@@ -13,7 +13,7 @@ function Allvehicle() {
 
   useEffect(() => {
     // Fetching data from the API
-    fetch('https://blackties-backend.dev.internalstaging.com/dev/blackties/api/v1/admin/all-vehicles/', {
+    fetch(process.env.REACT_APP_BACKEND_URL + `/admin/all-vehicles/`, {
       method: 'GET',
       headers: {
         'x-auth-token': authToken, // Include the auth token in the headers
@@ -95,7 +95,7 @@ function Allvehicle() {
                                     <td>{vehicle.transmission}</td>
                                     <td>
                                       <Link
-                                        to={`/admin-vehicledetails`}
+                                        to={`/admin-vehicle-details/` + vehicle.id}
                                         className="view-btn"
                                       >
                                         View
