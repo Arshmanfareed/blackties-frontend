@@ -188,7 +188,7 @@ function Sidebar() {
                 className="dropdown-toggle"
               >
                 <img
-                  src="./admin_assets/images/dashboard/Category.svg"
+                  src="./admin_assets/images/dashboard/financial.png"
                   alt=""
                 />
                 Financials
@@ -201,7 +201,7 @@ function Sidebar() {
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
-                        src="./admin_assets/images/dashboard/Category12.svg"
+                        src="./admin_assets/images/dashboard/Coins.png"
                         alt=""
                       />
                       Revenue
@@ -213,7 +213,7 @@ function Sidebar() {
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
-                        src="./admin_assets/images/dashboard/Category12.svg"
+                        src="./admin_assets/images/dashboard/Receipt.png"
                         alt=""
                       />
                       Expenses
@@ -225,7 +225,7 @@ function Sidebar() {
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
-                        src="./admin_assets/images/dashboard/Category12.svg"
+                        src="./admin_assets/images/dashboard/financial.png"
                         alt=""
                       />
                       Payment
@@ -243,7 +243,7 @@ function Sidebar() {
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img
-                    src="./admin_assets/images/dashboard/Receipt.svg"
+                    src="./admin_assets/images/dashboard/support.png"
                     alt=""
                   />
                   Support & Issue
@@ -264,7 +264,7 @@ function Sidebar() {
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./admin_assets/images/dashboard/Icon3.svg" alt="" />
-                  Settingss
+                  Settings
                 </NavLink>
               </li>
             </ul>

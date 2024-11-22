@@ -165,8 +165,8 @@
   .dashboard-menu ul.setting_ul li.setting_nav,  
   .dashboard-menu #setting_nav {
     margin-bottom: 0px !important;
-    padding-top: 24px !important;;
-    border-top: 1px solid #d0d5dd !important;;
+    padding-bottom: 24px !important;;
+    border-bottom: 1px solid #d0d5dd !important;;
   }
   
   .sidebar-user-profile-wrapper h6 {
