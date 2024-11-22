@@ -7,112 +7,112 @@ import { Link } from 'react-router-dom'
 function Alluser() {
   return (
     <>
-          <section class="user-dashboard">
+          <section className="user-dashboard">
         <Container fluid>
-            <Row class=" g-0">
-                <Col lg={3} md={3} class=" sidebar-col">
+            <Row className=" g-0">
+                <Col lg={3} md={3} className=" sidebar-col">
                     <Sidebar/>
                 </Col>
-                <Col lg={9} md={9} class=" panel-col">
-                    <div class="dashboard-panel overview-panel">
+                <Col lg={9} md={9} className=" panel-col">
+                    <div className="dashboard-panel overview-panel">
                         <Row >
                             <Col lg={12} md={12} >
-                                <div class="dashboard-panel-topbar">
+                                <div className="dashboard-panel-topbar">
                                    <Dashboardpaneltopbar/>
                                 </div>
                             </Col>
                         </Row>
                         <Row >
                             <Col lg={12} md={12} >
-                                <div class="overview-sec db-default-sec adm-sec">
-                                    <div class="overview-card db-default-wrapper">
-                                        <div class="adm-user-tabs">
-                                            <div class="tabs-container ">
+                                <div className="overview-sec db-default-sec adm-sec">
+                                    <div className="overview-card db-default-wrapper">
+                                        <div className="adm-user-tabs">
+                                            <div className="tabs-container ">
                                                 {/* <!-- Tabs Header --> */}
-                                                <div class="vehicle-tabs">
-                                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                        <li class="nav-item" role="presentation">
-                                                            <Link class="nav-link active" id="all-users-tab" data-bs-toggle="tab" to="#all-users" role="tab" aria-controls="all-users" aria-selected="false">All Users</Link>
+                                                <div className="vehicle-tabs">
+                                                    <ul className="nav nav-tabs" id="myTab" role="tablist">
+                                                        <li className="nav-item" role="presentation">
+                                                            <Link className="nav-link active" id="all-users-tab" data-bs-toggle="tab" to="#all-users" role="tab" aria-controls="all-users" aria-selected="false">All Users</Link>
                                                         </li>
-                                                        <li class="nav-item" role="presentation">
-                                                            <Link class="nav-link" id="user-application-tab" data-bs-toggle="tab" to="#user-application" role="tab" aria-controls="user-application" aria-selected="false">Application</Link>
+                                                        <li className="nav-item" role="presentation">
+                                                            <Link className="nav-link" id="user-application-tab" data-bs-toggle="tab" to="#user-application" role="tab" aria-controls="user-application" aria-selected="false">Application</Link>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div>
-                                                    <Link class="invoiceDownload-btn" to="javascript:;"><img src="./admin_assets/images/dashboard/download432.svg" alt="Invoice Download"/></Link>
-                                                    <div class="search-bar-v1">
-                                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                                    <Link className="invoiceDownload-btn" to="#"><img src="./admin_assets/images/dashboard/download432.svg" alt="Invoice Download"/></Link>
+                                                    <div className="search-bar-v1">
+                                                        <button type="submit"><i className="fa fa-search"></i></button>
                                                         <input type="text" placeholder="Search here..."/>
                                                     </div>
                                                 </div>
 
                                             </div>
-                                            <div class="tab-content" id="v-pills-tabContent">
-                                                <div class="tab-pane fade show active" id="all-users" role="tabpanel" aria-labelledby="all-users-tab">
-                                                    <div class="row frm-inner-row user-app-frm">
+                                            <div className="tab-content" id="v-pills-tabContent">
+                                                <div className="tab-pane fade show active" id="all-users" role="tabpanel" aria-labelledby="all-users-tab">
+                                                    <div className="row frm-inner-row user-app-frm">
                                                         <form action="" method="">
                                                             <Row >
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Customer ID</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">First Name</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Last Name</label>
-                                                                        <input type="text" name="form-control" id="" class="mg0"/>
+                                                                        <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Phone Number</label>
-                                                                        <input type="number" name="form-control" id="" class="mg0"/>
+                                                                        <input type="number" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                             </Row>
                                                         </form>
                                                     </div>
-                                                    <div class="row frm-inner-row user-app-frm-2">
+                                                    <div className="row frm-inner-row user-app-frm-2">
                                                         <form action="" method="">
                                                             <Row >
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Applicant Date</label>
                                                                         <br/>
                                                                         <input type="date" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Driving License Number</label>
                                                                         <br/>
                                                                         <input type="number" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Email</label>
-                                                                        <input type="email" name="form-control" id="" class="mg0"/>
+                                                                        <input type="email" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">VRN</label>
-                                                                        <input type="text" name="form-control" id="" class="mg0"/>
+                                                                        <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Status</label>
                                                                         <select name="Approved" id="Approved-fld">
                                                                             <option value="volvo">Approved</option>
@@ -125,13 +125,13 @@ function Alluser() {
                                                             </Row>
                                                         </form>
                                                     </div>
-                                                    <div class="user-app-tabl">
-                                                        <div class="veh-registration-table rigistration-tabl Maintenance-tble">
-                                                        <table class="maintenance-table ds-table veh-history-tble adm-user-tble">
+                                                    <div className="user-app-tabl">
+                                                        <div className="veh-registration-table rigistration-tabl Maintenance-tble">
+                                                        <table className="maintenance-table ds-table veh-history-tble adm-user-tble">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Customer ID</th>
-                                                                    <th>First Name<i class="fas fa-arrow-down"></i></th>
+                                                                    <th>First Name<i className="fas fa-arrow-down"></i></th>
                                                                     <th>Last Name</th>
                                                                     <th>Email Address</th>
                                                                     <th>Phone Number</th>
@@ -144,194 +144,194 @@ function Alluser() {
                                                             <tbody>
                                                                 <tr>
                                                                     <td>001</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="/admin-user-info">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>002</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>NA</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="/admin-user-info">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>003</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>004</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="Pending-btn"><Link to="javascript:;">Pending</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="Pending-btn"><Link to="#">Pending</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                  <tr>
                                                                     <td>005</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                  <tr>
                                                                     <td>006</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                  <tr>
                                                                     <td>007</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                  <tr>
                                                                     <td>008</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>NA</td>
-                                                                    <td class="Rejected-btn"><Link to="javascript:;">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="Rejected-btn"><Link to="#">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>009</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>010</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
                                                                     <td>7493 231691</td>
                                                                     <td>KM19 VUG</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
-                                                    <div class="show-paginaion adm-user-nxt-btn">
-                                                        <div class="showing-txt">
+                                                    <div className="show-paginaion adm-user-nxt-btn">
+                                                        <div className="showing-txt">
                                                             <h5>Page 1 of 10</h5>
                                                         </div>
-                                                        <div class="showing-pagination-number">
-                                                            <Link to="javascript:;" class="previous-btn">Previous</Link>
-                                                            <Link to="javascript:;" class="previous-btn">Next</Link>
+                                                        <div className="showing-pagination-number">
+                                                            <Link to="#" className="previous-btn">Previous</Link>
+                                                            <Link to="#" className="previous-btn">Next</Link>
                                                         </div>
                                                     </div>
                                             </div>
 
 
-                                        <div class="tab-pane fade show" id="user-application" role="tabpanel" aria-labelledby="user-application-tab">
-                                                    <div class="row frm-inner-row user-app-frm">
+                                        <div className="tab-pane fade show" id="user-application" role="tabpanel" aria-labelledby="user-application-tab">
+                                                    <div className="row frm-inner-row user-app-frm">
                                                         <form action="" method="">
                                                             <Row >
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Customer ID</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">First Name</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Last Name</label>
-                                                                        <input type="text" name="form-control" id="" class="mg0"/>
+                                                                        <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Phone Number</label>
-                                                                        <input type="number" name="form-control" id="" class="mg0"/>
+                                                                        <input type="number" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                             </Row>
                                                         </form>
                                                     </div>
-                                                    <div class="row frm-inner-row user-app-frm-2">
+                                                    <div className="row frm-inner-row user-app-frm-2">
                                                         <form action="" method="">
                                                             <Row >
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Applicant Date</label>
                                                                         <br/>
                                                                         <input type="date" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Driving License Number</label>
                                                                         <br/>
                                                                         <input type="number" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Email</label>
-                                                                        <input type="email" name="form-control" id="" class="mg0"/>
+                                                                        <input type="email" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">VRN</label>
-                                                                        <input type="text" name="form-control" id="" class="mg0"/>
+                                                                        <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
-                                                                    <div class="form-group">
+                                                                    <div className="form-group">
                                                                         <label for="control-label">Status</label>
                                                                         <select name="Approved" id="Approved-fld">
                                                                             <option value="volvo">Approved</option>
@@ -344,13 +344,13 @@ function Alluser() {
                                                             </Row>
                                                         </form>
                                                     </div>
-                                                    <div class="user-app-tabl">
-                                                        <div class="veh-registration-table rigistration-tabl Maintenance-tble">
-                                                        <table class="maintenance-table ds-table veh-history-tble adm-user-tble">
+                                                    <div className="user-app-tabl">
+                                                        <div className="veh-registration-table rigistration-tabl Maintenance-tble">
+                                                        <table className="maintenance-table ds-table veh-history-tble adm-user-tble">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Customer ID</th>
-                                                                    <th>First Name<i class="fas fa-arrow-down"></i></th>
+                                                                    <th>First Name<i className="fas fa-arrow-down"></i></th>
                                                                     <th>Last Name</th>
                                                                     <th>Email Address</th>
                                                                     <th>Phone Number</th>
@@ -361,105 +361,105 @@ function Alluser() {
                                                             <tbody>
                                                                 <tr>
                                                                     <td>001</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>002</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>003</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>004</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>005</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>006</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>007</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>008</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>009</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>010</td>
-                                                                    <td class="td-clr">Omar</td>
-                                                                    <td class="td-clr">Benyoucef</td>
+                                                                    <td className="td-clr">Omar</td>
+                                                                    <td className="td-clr">Benyoucef</td>
                                                                     <td>Ron.don@gmail.com</td>
                                                                     <td>7493 231691</td>
-                                                                    <td class="approved-btn"><Link to="javascript:;">Approved</Link><Link to="javascript:;" class="Rejected-btn">Rejected</Link></td>
-                                                                    <td class="view-btn"><Link to="javascript:;">View</Link></td>
+                                                                    <td className="approved-btn"><Link to="#">Approved</Link><Link to="#" className="Rejected-btn">Rejected</Link></td>
+                                                                    <td className="view-btn"><Link to="#">View</Link></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
-                                                    <div class="show-paginaion adm-user-nxt-btn">
-                                                        <div class="showing-txt">
+                                                    <div className="show-paginaion adm-user-nxt-btn">
+                                                        <div className="showing-txt">
                                                             <h5>Page 1 of 10</h5>
                                                         </div>
-                                                        <div class="showing-pagination-number">
-                                                            <Link to="javascript:;" class="previous-btn">Previous</Link>
-                                                            <Link to="javascript:;" class="previous-btn">Next</Link>
+                                                        <div className="showing-pagination-number">
+                                                            <Link to="#" className="previous-btn">Previous</Link>
+                                                            <Link to="#" className="previous-btn">Next</Link>
                                                         </div>
                                                     </div>
                                             </div>

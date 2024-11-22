@@ -29,12 +29,12 @@ function Refundinvoice() {
                                     <Row className="">
                                         <Col lg={12} md={12} className="">
                                             <div className="invoice-view-topbar ">
-                                                <Link to="/admin-financialpayment" className="back-to"><ion-icon name="chevron-back-outline" role="img" className="md hydrated"></ion-icon> Back to Invoice</Link>
+                                                <Link to="/admin-financialpayment" className="back-to"><i class="fas fa-chevron-left"></i> Back to Invoice</Link>
                                                     <div className="admin-invoice-view-card-btns">
                                                         <div className="admin-invoice-main-btn">
-                                                            <Link to="javascript:;" className="cancel-btn">Cancel</Link>
-                                                            <Link to="javascript:;" className="save-btn">Save</Link>
-                                                            <Link to="javascript:;" className="refund-btn">Refund</Link>
+                                                            <Link to="#" className="cancel-btn">Cancel</Link>
+                                                            <Link to="#" className="save-btn">Save</Link>
+                                                            <Link to="#" className="refund-btn">Refund</Link>
                                                         </div>
                                                     </div>
                                             </div>
@@ -81,24 +81,24 @@ function Refundinvoice() {
                                                                 <td>£360</td>
                                                                 <td>10 %</td>
                                                                 <td>£360</td>
-                                                                <td><Link to="javascript:;"><img src="./admin_assets/images/trash-can.png" alt="delete"/></Link></td>
+                                                                <td><Link to="#"><img src="./admin_assets/images/trash-can.png" alt="delete"/></Link></td>
                                                             </tr>
                                                             <tr>
                                                                 <td className="first-td">Insurance Excess</td>
                                                                 <td>£360</td>
                                                                 <td>-</td>
                                                                 <td>£360</td>
-                                                                <td><Link to="javascript:;"><img src="./admin_assets/images/trash-can.png" alt="delete"/></Link></td>
+                                                                <td><Link to="#"><img src="./admin_assets/images/trash-can.png" alt="delete"/></Link></td>
                                                             </tr>
                                                             <tr>
                                                                 <td className="first-td">Refund</td>
                                                                 <td>£360</td>
                                                                 <td></td>
                                                                 <td>£360</td>
-                                                                <td><Link to="javascript:;"><img src="./admin_assets/images/trash-can.png" alt="delete"/></Link></td>
+                                                                <td><Link to="#"><img src="./admin_assets/images/trash-can.png" alt="delete"/></Link></td>
                                                             </tr>
                                                             <tr>
-                                                                <td className="big-td"><Link to="javascript:;"><img src="./admin_assets/images/plus.png" className="plus-img" alt="comm"/>Add another Payment</Link></td>
+                                                                <td className="big-td"><Link to="#"><img src="./admin_assets/images/plus.png" className="plus-img" alt="comm"/>Add another Payment</Link></td>
                                                                 <td></td>
                                                                 <td></td>
                                                                 <td></td>

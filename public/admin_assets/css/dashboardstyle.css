@@ -328,7 +328,7 @@
   .vehicles-menu-new ul {
       border-left: 0 !important;
       margin-left: 0;
-      padding-bottom: 15px;
+      padding-bottom: 10px;
   }
   .vehicles-menu-new ul li a {
       text-decoration: none;
@@ -396,4 +396,14 @@
     margin-right: 7px;
     width: 125px;
     height: 125px;
+}
+
+
+
+.dashboard-menu ul.dropdown-menu {
+  border-left: 1px solid #667085 !important;
+  margin-left: 20px;
+  border-top: 0;
+  border-bottom: 0;
+  margin-bottom: 5px;
 }

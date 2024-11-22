@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const [toggleUsers, setToggleUsers] = useState(false);
@@ -13,8 +13,9 @@ function Sidebar() {
     <div className="dashboard-sidebar">
       <div className="sidebar-routes-wrapper">
         <div className="dash-brand-wrapper">
-          <Link to="#!">
-            Blackties<br />
+          <Link to="#">
+            Blackties
+            <br />
             <span>Rental</span>
           </Link>
           <Button variant="link" className="dashNav-close-btn">
@@ -27,10 +28,16 @@ function Sidebar() {
           <div className="vehicles-menu vehicles-menu-new">
             <ul>
               <li>
-                <Link to="#!">
-                  <img src="./admin_assets/images/dashboard/Category.svg" alt="" />
+                <NavLink
+                 to="javascript:;"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img
+                    src="./admin_assets/images/dashboard/Category.svg"
+                    alt=""
+                  />
                   Dashboard
-                </Link>
+                </NavLink>
               </li>
             </ul>
 
@@ -41,22 +48,34 @@ function Sidebar() {
                 onClick={() => setToggleUsers(!toggleUsers)}
                 className="dropdown-toggle"
               >
-                <img src="./admin_assets/images/dashboard/bk-car.svg" alt="" />
+                <img src="./admin_assets/images/dashboard/Users.png" alt="" />
                 Users
               </Button>
               {toggleUsers && (
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="#!">
-                      <img src="./admin_assets/images/dashboard/Category12.svg" alt="" />
+                    <NavLink
+                      to="/admin-all-user"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/Search_icon.png"
+                        alt=""
+                      />
                       Users Search
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link to="#!">
-                      <img src="./admin_assets/images/dashboard/dc.svg" alt="" />
+                    <NavLink
+                     to="javascript:;"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/plus_icon.svg"
+                        alt=""
+                      />
                       Add Users
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               )}
@@ -69,22 +88,37 @@ function Sidebar() {
                 onClick={() => setToggleVehicles(!toggleVehicles)}
                 className="dropdown-toggle"
               >
-                <img src="./admin_assets/images/dashboard/Category.svg" alt="" />
+                <img
+                  src="./admin_assets/images/dashboard/Category.svg"
+                  alt=""
+                />
                 Vehicles
               </Button>
               {toggleVehicles && (
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="/all-vehicle">
-                      <img src="./admin_assets/images/dashboard/bk-car.svg" alt="" />
+                    <NavLink
+                      to="/all-vehicle"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/Search_icon.png"
+                        alt=""
+                      />
                       Vehicle Search
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link to="/add-vehicle">
-                      <img src="./admin_assets/images/dashboard/dc.svg" alt="" />
+                    <NavLink
+                      to="/add-vehicle"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/dc.svg"
+                        alt=""
+                      />
                       Add Vehicle
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               )}
@@ -97,95 +131,145 @@ function Sidebar() {
                 onClick={() => setToggleCalendar(!toggleCalendar)}
                 className="dropdown-toggle"
               >
-                <img src="./admin_assets/images/dashboard/Category.svg" alt="" />
+                <img
+                  src="./admin_assets/images/dashboard/Category.svg"
+                  alt=""
+                />
                 Calendar
               </Button>
               {toggleCalendar && (
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="#!">
-                      <img src="./admin_assets/images/dashboard/Category12.svg" alt="" />
+                    <NavLink
+                      to="javascript:;"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/plus_icon.svg"
+                        alt=""
+                      />
                       Add Calendar
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               )}
-              <ul>
-            <li>
-              <Link to="#!">
-                <img src="./admin_assets/images/dashboard/Receipt.svg" alt="" />
-                Deposit
-              </Link>
-            </li>
-            <li>
-              <Link to="#!">
-                <img src="./admin_assets/images/dashboard/Icon3.svg" alt="" />
-                PCNs
-              </Link>
-            </li>
-          </ul>
-          {/* Financials Toggle */}
-    
-            <Button
-              variant="link"
-              onClick={() => setToggleFinancials(!toggleFinancials)}
-              className="dropdown-toggle"
-            >
-              <img src="./admin_assets/images/dashboard/Category.svg" alt="" />
-              Financials
-            </Button>
-            {toggleFinancials && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="#!">
-                    <img src="./admin_assets/images/dashboard/Category12.svg" alt="" />
-                    Revenue
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#!">
-                    <img src="./admin_assets/images/dashboard/Category12.svg" alt="" />
-                    Expenses
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#!">
-                    <img src="./admin_assets/images/dashboard/Category12.svg" alt="" />
-                    Payment
-                  </Link>
-                </li>
-              </ul>
-            )}
-             <ul className='setting_ul'>
-          <li>
-            <Link to="#!">
-              <img src="./admin_assets/images/dashboard/Receipt.svg" alt="" />
-              Support & Issue
-            </Link>
-          </li>
-          <li>
-            <Link to="#!">
-              <img src="./admin_assets/images/dashboard/Icon2.svg" alt="" />
-              Notifications <span id="notific">10</span>
-            </Link>
-          </li>
-          <li className='setting_nav' id='setting_nav'>
-            <Link to="#!">
-              <img src="./admin_assets/images/dashboard/Icon3.svg" alt="" />
-              Settings
-            </Link>
-          </li>
-        </ul>
-          </div>
             </div>
-            
 
-        
+            {/* Deposit */}
+            <ul>
+              <li>
+                <NavLink
+                  to="/admin-deposit"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img
+                    src="./admin_assets/images/dashboard/deposit.png"
+                    alt=""
+                  />
+                  Deposit
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/admin-penaltycharge"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img src="./admin_assets/images/dashboard/pcn.png" alt="" />
+                  PCNs
+                </NavLink>
+              </li>
+            </ul>
 
-          
+            {/* Financials Toggle */}
+            <div>
+              <Button
+                variant="link"
+                onClick={() => setToggleFinancials(!toggleFinancials)}
+                className="dropdown-toggle"
+              >
+                <img
+                  src="./admin_assets/images/dashboard/Category.svg"
+                  alt=""
+                />
+                Financials
+              </Button>
+              {toggleFinancials && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <NavLink
+                      to="javascript:;"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/Category12.svg"
+                        alt=""
+                      />
+                      Revenue
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="javascript:;"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/Category12.svg"
+                        alt=""
+                      />
+                      Expenses
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/admin-financialpayment"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/Category12.svg"
+                        alt=""
+                      />
+                      Payment
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </div>
+
+            {/* Settings */}
+            <ul className="setting_ul">
+              <li>
+                <NavLink
+                  to="/admin-support"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img
+                    src="./admin_assets/images/dashboard/Receipt.svg"
+                    alt=""
+                  />
+                  Support & Issue
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/admin-notifications"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img src="./admin_assets/images/dashboard/Icon2.svg" alt="" />
+                  Notifications <span id="notific">10</span>
+                </NavLink>
+              </li>
+              <li className="setting_nav" id="setting_nav">
+                <NavLink
+                  to="javascript:;"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img src="./admin_assets/images/dashboard/Icon3.svg" alt="" />
+                  Settingss
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-
-       
       </div>
 
       <div className="sidebar-user-profile-wrapper">
@@ -201,7 +285,7 @@ function Sidebar() {
             </span>
           </div>
         </div>
-        <Link to="#!" className="sidebar-log-btn">
+        <Link to="#" className="sidebar-log-btn">
           <img src="./admin_assets/images/dashboard/logout.svg" alt="" />
           Log out
         </Link>

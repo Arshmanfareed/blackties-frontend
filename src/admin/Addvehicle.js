@@ -294,7 +294,7 @@ function Addvehicle() {
                           </div>
                           <div className="main-veh-btn">
                             <Link
-                              href="javascript:void(0);"
+                              to="#"
                               onClick={(e) => {
                                 e.preventDefault();
                                 setError(""); // Clear error on cancel
@@ -746,7 +746,7 @@ function Addvehicle() {
                                         <span>3.6 MB</span>
                                       </div>
                                       <Link
-                                        href="javascript:;"
+                                        to="#"
                                         className="down-btn"
                                       >
                                         Download
@@ -771,7 +771,7 @@ function Addvehicle() {
                                           alt="Docs"
                                         />
                                       </div>
-                                      <Link href="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/Trash.png"
                                           alt="delete"
@@ -791,7 +791,7 @@ function Addvehicle() {
                                         <span>3.6 MB</span>
                                       </div>
                                       <Link
-                                        href="javascript:;"
+                                        to="#"
                                         className="down-btn"
                                       >
                                         Download
@@ -815,7 +815,7 @@ function Addvehicle() {
                                           alt="Docs"
                                         />
                                       </div>
-                                      <Link href="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/Trash.png"
                                           alt="delete"
@@ -835,7 +835,7 @@ function Addvehicle() {
                                         <span>3.6 MB</span>
                                       </div>
                                       <Link
-                                        href="javascript:;"
+                                        to="#"
                                         className="down-btn"
                                       >
                                         Download
@@ -859,7 +859,7 @@ function Addvehicle() {
                                           alt="Docs"
                                         />
                                       </div>
-                                      <Link href="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/Trash.png"
                                           alt="delete"
@@ -879,7 +879,7 @@ function Addvehicle() {
                                         <span>3.6 MB</span>
                                       </div>
                                       <Link
-                                        href="javascript:;"
+                                        to="#"
                                         className="down-btn"
                                       >
                                         Download
@@ -903,7 +903,7 @@ function Addvehicle() {
                                           alt="Docs"
                                         />
                                       </div>
-                                      <Link href="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/Trash.png"
                                           alt="delete"

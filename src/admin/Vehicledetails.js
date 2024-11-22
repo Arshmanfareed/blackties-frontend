@@ -5,6 +5,7 @@ import { useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Vehicledetails() {
   return (
@@ -38,10 +39,10 @@ function Vehicledetails() {
                               alt=""
                             />
                             John Smith .{" "}
-                            <a href="tel:+44 2134 2134">+44 2134 2134</a> .{" "}
-                            <a href="mailto:Sample@gmail.com">
+                            <Link to="tel:+44 2134 2134">+44 2134 2134</Link> .{" "}
+                            <Link to="mailto:Sample@gmail.com">
                               Sample@gmail.com
-                            </a>
+                            </Link>
                           </h5>
                         </div>
                         <div className="tabs-container">
@@ -69,12 +70,12 @@ function Vehicledetails() {
                                       </div>
                                       <div className="member">
                                         <p>Member Since: July 19, 2024</p>
-                                        <a
-                                          href="javascript:;"
+                                        <Link
+                                          to="#"
                                           className="change-img-btn"
                                         >
                                           Approved
-                                        </a>
+                                        </Link>
                                       </div>
                                     </div>
                                     <div className="member-frm">
@@ -183,12 +184,12 @@ function Vehicledetails() {
                                             <h6>Contract</h6>
                                             <span>3.6 MB</span>
                                           </div>
-                                          <a
-                                            href="javascript:;"
+                                          <Link
+                                            to="#"
                                             className="down-btn"
                                           >
                                             Download
-                                          </a>
+                                          </Link>
                                         </li>
                                         <span className="doc-field">
                                           Damage Report
@@ -202,12 +203,12 @@ function Vehicledetails() {
                                             <h6>Damage Report</h6>
                                             <span>3.6 MB</span>
                                           </div>
-                                          <a
-                                            href="javascript:;"
+                                          <Link
+                                            to="#"
                                             className="down-btn"
                                           >
                                             Download
-                                          </a>
+                                          </Link>
                                         </li>
                                       </ul>
                                     </div>
@@ -240,12 +241,12 @@ function Vehicledetails() {
                                       </div>
                                     </div>
                                     <div className="calendr-btn">
-                                      <a
-                                        href="javascript:;"
+                                      <Link
+                                        to="#"
                                         className="Maintenance-btn"
                                       >
                                         Maintenance
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
                                   <div className="calender-txt-box expire-box">
@@ -265,9 +266,9 @@ function Vehicledetails() {
                                       </div>
                                     </div>
                                     <div className="calendr-btn">
-                                      <a href="javascript:;" className="Expire-btn">
+                                      <Link to="#" className="Expire-btn">
                                         Expire Soon
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
                                 </Col>
@@ -335,12 +336,12 @@ function Vehicledetails() {
                                                   <h6>Paper Copy</h6>
                                                   <span>3.6 MB</span>
                                                 </div>
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="down-btn"
                                                 >
                                                   Download
-                                                </a>
+                                                </Link>
                                               </li>
                                               <li>
                                                 <img
@@ -351,12 +352,12 @@ function Vehicledetails() {
                                                   <h6>Badge</h6>
                                                   <span>3.6 MB</span>
                                                 </div>
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="down-btn"
                                                 >
                                                   Download
-                                                </a>
+                                                </Link>
                                               </li>
                                             </ul>
                                           </div>
@@ -379,12 +380,12 @@ function Vehicledetails() {
                                                   </h6>
                                                   <span>3.6 MB</span>
                                                 </div>
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="down-btn"
                                                 >
                                                   Download
-                                                </a>
+                                                </Link>
                                               </li>
                                             </ul>
                                           </div>
@@ -569,7 +570,7 @@ function Vehicledetails() {
                                     <div className="mileage-insights-wrap Telematics-sc-txt">
                                       <div className="head-options">
                                         <h5>Mileage Insights</h5>
-                                        {/* <!-- <a href="javascript:;"><ion-icon name="ellipsis-horizontal"></ion-icon></a> --> */}
+                                        {/* <!-- <Link to="#"><ion-icon name="ellipsis-horizontal"></ion-icon></Link> --> */}
                                       </div>
                                       <div className="mileage-graph">
                                         <div className="mileage-indicate">
@@ -919,15 +920,15 @@ function Vehicledetails() {
                                             </li>
                                             <h6>Image_name123.jpg</h6>
                                             <span>24 Mb</span>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="delete-opytion"
                                             >
                                               <img
                                                 src="./admin_assets/images/slider/delete.png"
                                                 alt=""
                                               />
-                                            </a>
+                                            </Link>
                                           </ul>
                                         </div>
                                       </Col>
@@ -942,15 +943,15 @@ function Vehicledetails() {
                                             </li>
                                             <h6>Image_name123.jpg</h6>
                                             <span>24 Mb</span>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="delete-opytion"
                                             >
                                               <img
                                                 src="./admin_assets/images/slider/delete.png"
                                                 alt=""
                                               />
-                                            </a>
+                                            </Link>
                                           </ul>
                                         </div>
                                       </Col>
@@ -965,28 +966,28 @@ function Vehicledetails() {
                                             </li>
                                             <h6>Image_name123.jpg</h6>
                                             <span>24 Mb</span>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="delete-opytion"
                                             >
                                               <img
                                                 src="./admin_assets/images/slider/delete.png"
                                                 alt=""
                                               />
-                                            </a>
+                                            </Link>
                                           </ul>
                                         </div>
                                       </Col>
                                       <Col lg={3} md={3} >
                                         <div className="detailCar-slide-controller upload-img-dv">
                                           <div className="up-img-option">
-                                            <a href="javascript:;">
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/slider/plus.png"
                                                 alt=""
                                               />
                                               <h5>Upload image</h5>
-                                            </a>
+                                            </Link>
                                           </div>
                                         </div>
                                       </Col>
@@ -1011,25 +1012,25 @@ function Vehicledetails() {
                                               <h6>MOT Certificate</h6>
                                               <span>3.6 MB</span>
                                             </div>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="down-btn"
                                             >
                                               Download
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Frame 13680.png"
                                                 className="pen-img"
                                                 alt="Docs"
                                               />
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Trash.png"
                                                 alt="delete"
                                               />
-                                            </a>
+                                            </Link>
                                           </li>
                                           <span className="doc-field">
                                             Insurance Certificate Document
@@ -1043,25 +1044,25 @@ function Vehicledetails() {
                                               <h6>Insurance Certificate</h6>
                                               <span>3.6 MB</span>
                                             </div>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="down-btn"
                                             >
                                               Download
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Frame 13680.png"
                                                 className="pen-img"
                                                 alt="Docs"
                                               />
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Trash.png"
                                                 alt="delete"
                                               />
-                                            </a>
+                                            </Link>
                                           </li>
                                           <span className="doc-field">
                                             Vehicle Licence Document
@@ -1075,25 +1076,25 @@ function Vehicledetails() {
                                               <h6>Vehicle Licence</h6>
                                               <span>3.6 MB</span>
                                             </div>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="down-btn"
                                             >
                                               Download
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Frame 13680.png"
                                                 className="pen-img"
                                                 alt="Docs"
                                               />
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Trash.png"
                                                 alt="delete"
                                               />
-                                            </a>
+                                            </Link>
                                           </li>
                                           <span className="doc-field">
                                             Permission Letter Document
@@ -1107,25 +1108,25 @@ function Vehicledetails() {
                                               <h6>Permission Letter</h6>
                                               <span>3.6 MB</span>
                                             </div>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="down-btn"
                                             >
                                               Download
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Frame 13680.png"
                                                 className="pen-img"
                                                 alt="Docs"
                                               />
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Trash.png"
                                                 alt="delete"
                                               />
-                                            </a>
+                                            </Link>
                                           </li>
                                           <span className="doc-field">
                                             Vehicle Licence Document
@@ -1139,25 +1140,25 @@ function Vehicledetails() {
                                               <h6>Vehicle Licence</h6>
                                               <span>3.6 MB</span>
                                             </div>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="down-btn"
                                             >
                                               Download
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Frame 13680.png"
                                                 className="pen-img"
                                                 alt="Docs"
                                               />
-                                            </a>
-                                            <a href="javascript:;">
+                                            </Link>
+                                            <Link to="#">
                                               <img
                                                 src="./admin_assets/images/Trash.png"
                                                 alt="delete"
                                               />
-                                            </a>
+                                            </Link>
                                           </li>
                                           <span className="doc-field">
                                             Vehicle Licence Document
@@ -1171,12 +1172,12 @@ function Vehicledetails() {
                                               <h6>Vehicle Licence</h6>
                                               <span>3.6 MB</span>
                                             </div>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="down-btn"
                                             >
                                               Download
-                                            </a>
+                                            </Link>
                                           </li>
                                         </ul>
                                       </div>

@@ -52,6 +52,16 @@ import Addpaymentschedule from './admin/Addpaymentschedule';
 import Userinvoice from './admin/Userinvoice';
 import Alluser from './admin/Alluser';
 import Userinfo from './admin/Userinfo';
+import Ammenduserapplication from './admin/Ammenduserapplication';
+import Ammendinvoice from './admin/Ammendinvoice';
+import Ammendrefundinvoice from './admin/Ammendrefundinvoice';
+import Failedpayinvoice from './admin/Failedpayinvoice';
+import Adminsupport from './admin/Adminsupport';
+import Supportmessage from './admin/Supportmessage';
+import Createticket from './admin/Createticket';
+import Deposit from './admin/Deposit';
+import Adminnotification from './admin/Adminnotification';
+import Adminnotifications from './admin/Adminnotifications';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -103,10 +113,20 @@ root.render(
     <Route path="/admin-financialinvoice" element={<><Financialinvoice/></>} />
     <Route path="/admin-schedule-invoice" element={<><Scheduleinvoice/></>} />
     <Route path="/admin-refund-invoice" element={<><Refundinvoice/></>} />
+    <Route path="/admin-ammend-invoice" element={<><Ammendinvoice/></>} />
+    <Route path="/admin-ammend-refund-invoice" element={<><Ammendrefundinvoice/></>} />
+    <Route path="/admin-failed-pay-invoice" element={<><Failedpayinvoice/></>} />
     <Route path="/admin-add-payment-schedule" element={<><Addpaymentschedule/></>} />
     <Route path="/admin-user-invoice" element={<><Userinvoice/></>} />
     <Route path="/admin-all-user" element={<><Alluser/></>} />
     <Route path="/admin-user-info" element={<><Userinfo/></>} />
+    <Route path="/admin-user-application-ammend" element={<><Ammenduserapplication/></>} />
+    <Route path="/admin-support" element={<><Adminsupport/></>} />
+    <Route path="/admin-support-chat" element={<><Supportmessage/></>} />
+    <Route path="/admin-support-create-ticket" element={<><Createticket/></>} />
+    <Route path="/admin-deposit" element={<><Deposit/></>} />
+    <Route path="/admin-notifications" element={<><Adminnotifications/></>} />
+    <Route path="/admin-notification" element={<><Adminnotification/></>} />
 
   </Routes>
 </Router>

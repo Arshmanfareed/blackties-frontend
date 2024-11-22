@@ -7,7 +7,7 @@ function Dashboardpaneltopbar() {
       <div className="dashboard-panel-topbar">
     <div className="mobile-dash-topbar-wrap">
         <div className="dash-brand-wrapper">
-            <Link href="javascript:;">Blackties<br /><span>Rental</span></Link>
+            <Link href="#">Blackties<br /><span>Rental</span></Link>
         </div>
         <button className="dash-mobileNav-btn"><ion-icon name="reorder-three-outline"></ion-icon></button>
     </div>

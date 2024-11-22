@@ -28,49 +28,49 @@ function Userinvoice() {
 
   return (
     <>
-      <section class="user-dashboard">
+      <section className="user-dashboard">
         <Container fluid>
-          <Row class=" g-0">
-            <Col lg={3} md={3} class="sidebar-col">
+          <Row className=" g-0">
+            <Col lg={3} md={3} className="sidebar-col">
               <Sidebar />
             </Col>
-            <Col lg={9} md={9} class="panel-col">
-              <div class="dashboard-panel invoice-view-panel payment-schedule-invoice-view-panel payment-schedule-two">
+            <Col lg={9} md={9} className="panel-col">
+              <div className="dashboard-panel invoice-view-panel payment-schedule-invoice-view-panel payment-schedule-two">
                 <Row>
                   <Col lg={12} md={12}>
-                    <div class="dashboard-panel-topbar">
+                    <div className="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
                   </Col>
                 </Row>
                 <Row>
                   <Col lg={12} md={12}>
-                    <div class="invoice-view-sec db-default-sec">
-                      <Link href="javascript" class="back-to">
+                    <div className="invoice-view-sec db-default-sec">
+                      <Link to="#" className="back-to">
                         <ion-icon
                           name="chevron-back-outline"
                           role="img"
-                          class="md hydrated"
+                          className="md hydrated"
                         ></ion-icon>{" "}
                         Back to Vehicle
                       </Link>
-                      <div class="col-md-12">
-                        <div class="row innr-row">
-                          <div class="col-md-6">
-                            <div class="drvr_deta">
-                              <div class="drvrmain">
+                      <div className="col-md-12">
+                        <div className="row innr-row">
+                          <div className="col-md-6">
+                            <div className="drvr_deta">
+                              <div className="drvrmain">
                                 <img
                                   src="./admin_assets/images/new-customers-list.png"
-                                  class="new-customers-img"
+                                  className="new-customers-img"
                                   alt="new-customers-img"
                                 />
-                                <div class="drvrnam">
+                                <div className="drvrnam">
                                   <h6>Omar A</h6>
                                   <span>Customer ID: D0012</span>
                                 </div>
                               </div>
-                              <div class="drvrcar-main">
-                                <div class="drvrcar">
+                              <div className="drvrcar-main">
+                                <div className="drvrcar">
                                   <p>Mercedes-Benz E Class</p>
                                   <span>example@gmail.com</span>
                                   <svg
@@ -89,15 +89,15 @@ function Userinvoice() {
                                   </svg>
                                   <span>+44 334 2345</span>
                                 </div>
-                                <button class="close-btn">×</button>
+                                <button className="close-btn">×</button>
                               </div>
                             </div>
-                            <div class="payment-schedule-disc">
-                              <div class="row frm-inner-row invoice-tab-frm-2">
+                            <div className="payment-schedule-disc">
+                              <div className="row frm-inner-row invoice-tab-frm-2">
                                 <form action="" method="">
                                   <Row>
                                     <Col lg={12} md={12}>
-                                      <div class="form-group">
+                                      <div className="form-group">
                                         <label for="control-label">
                                           Schedule Pay Date
                                         </label>
@@ -171,11 +171,11 @@ function Userinvoice() {
                                   ))}
                                 </form>
                               </div>
-                              <div class="add-pcn-view-comm_head ">
+                              <div className="add-pcn-view-comm_head ">
                                 <Link onClick={handleClone}>
                                   <img
                                     src="./admin_assets/images/plus.png"
-                                    class="plus-img"
+                                    className="plus-img"
                                     alt="comm"
                                   />
                                   Add another Paymentr
@@ -183,17 +183,17 @@ function Userinvoice() {
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-6">
-                            <div class="payment-schedule-card-main-head">
+                          <div className="col-md-6">
+                            <div className="payment-schedule-card-main-head">
                               <h4>Invoice Preview</h4>
-                              <div class="zoom-options">
-                                <Link href="javascript:;" class="incoming-btn">
+                              <div className="zoom-options">
+                                <Link to="#" className="incoming-btn">
                                   <img
                                     src="./admin_assets/images/zoom-out.png"
                                     alt="zoom-out"
                                   />
                                 </Link>
-                                <Link href="javascript:;" class="incoming-btn">
+                                <Link to="#" className="incoming-btn">
                                   <img
                                     src="./admin_assets/images/zoom-in.png"
                                     alt="zoom-in"
@@ -201,20 +201,20 @@ function Userinvoice() {
                                 </Link>
                               </div>
                             </div>
-                            <div class="invoice-view-card db-default-wrapper payment-schedule-card">
-                              <div class="row invoice-view-details admin-invoice-view-details">
+                            <div className="invoice-view-card db-default-wrapper payment-schedule-card">
+                              <div className="row invoice-view-details admin-invoice-view-details">
                                 <Col lg={6} md={6}>
                                   <h2>BLACKTIES</h2>
                                   <h5>RENTAL</h5>
                                 </Col>
                                 <Col lg={6} md={6}>
-                                  <p class="inv-address">
+                                  <p className="inv-address">
                                     328 Summerwood Road, Isleworth, Greater
                                     London, TW7 7QP{" "}
                                   </p>
                                 </Col>
                               </div>
-                              <div class="row invoice-view-subscription">
+                              <div className="row invoice-view-subscription">
                                 <Col lg={4} md={4}>
                                   <p>
                                     <span>Full Name</span>
@@ -237,7 +237,7 @@ function Userinvoice() {
                                   </p>
                                 </Col>
                               </div>
-                              <div class="row invoice-view-subscription-2">
+                              <div className="row invoice-view-subscription-2">
                                 <Col lg={4} md={4}>
                                   <p>
                                     <span>Receipt Date:</span>
@@ -263,10 +263,10 @@ function Userinvoice() {
                               <Row>
                                 <Col lg={12} md={12}>
                                   <div style={{ overflowX: "auto" }}>
-                                    <table class="cancellation-disc-table">
+                                    <table className="cancellation-disc-table">
                                       <thead>
                                         <tr>
-                                          <th class="first-th">Description</th>
+                                          <th className="first-th">Description</th>
                                           <th>Price</th>
                                           <th>Vat %</th>
                                           <th>Amount (GBP)</th>
@@ -274,7 +274,7 @@ function Userinvoice() {
                                       </thead>
                                       <tbody>
                                         <tr>
-                                          <td class="first-td">Damage Car</td>
+                                          <td className="first-td">Damage Car</td>
                                           <td>£360</td>
                                           <td>10 %</td>
                                           <td>£360</td>
@@ -303,11 +303,11 @@ function Userinvoice() {
                                 </Col>
                               </Row>
                             </div>
-                            <div class="pay-schedule-btns">
-                              <Link href="javascript:;" class="cancel-btn">
+                            <div className="pay-schedule-btns">
+                              <Link to="#" className="cancel-btn">
                                 Cancel
                               </Link>
-                              <Link href="javascript:;" class="send-btn">
+                              <Link to="#" className="send-btn">
                                 Send
                               </Link>
                             </div>

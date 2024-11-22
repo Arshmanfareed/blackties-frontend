@@ -35,7 +35,7 @@ function Scheduleinvoice() {
                         <Row>
                           <Col lg={12} md={12} >
                             <div className="invoice-view-topbar ">
-                              <Link to="javascript" className="back-to">
+                              <Link to="#" className="back-to">
                                 <ion-icon
                                   name="chevron-back-outline"
                                   role="img"
@@ -45,10 +45,10 @@ function Scheduleinvoice() {
                               </Link>
                               <div className="admin-invoice-view-card-btns">
                                 <div className="admin-invoice-main-btn">
-                                  <Link to="javascript:;" className="cancel-btn">
+                                  <Link to="#" className="cancel-btn">
                                     Cancel
                                   </Link>
-                                  <Link to="javascript:;" className="save-btn">
+                                  <Link to="#" className="save-btn">
                                     Save
                                   </Link>
                                   <Link onClick={handleShow} className="pay-btn">
@@ -113,7 +113,7 @@ function Scheduleinvoice() {
                                     <td>10 %</td>
                                     <td>£360</td>
                                     <td>
-                                      <Link to="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/trash-can.png"
                                           alt="delete"
@@ -127,7 +127,7 @@ function Scheduleinvoice() {
                                     <td>-</td>
                                     <td>£360</td>
                                     <td>
-                                      <Link to="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/trash-can.png"
                                           alt="delete"
@@ -141,7 +141,7 @@ function Scheduleinvoice() {
                                     <td></td>
                                     <td>£360</td>
                                     <td>
-                                      <Link to="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/trash-can.png"
                                           alt="delete"
@@ -151,7 +151,7 @@ function Scheduleinvoice() {
                                   </tr>
                                   <tr>
                                     <td className="big-td">
-                                      <Link to="javascript:;">
+                                      <Link to="#">
                                         <img
                                           src="./admin_assets/images/plus.png"
                                           className="plus-img"
@@ -218,7 +218,7 @@ function Scheduleinvoice() {
               <div className="card-innr-blk">
                 <div className="card-selection">
                   <h4>Select a Card</h4>
-                  <Link to="javascript:;">
+                  <Link to="#">
                     <img
                       src="./admin_assets/images/plus.png"
                       className="plus-img"

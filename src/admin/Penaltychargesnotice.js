@@ -201,7 +201,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="uploaded-btn"
                                         >
                                           <svg
@@ -222,7 +222,7 @@ function Penaltychargesnotice() {
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="javascript:;" className="view-btn" onClick={handleShow}>
+                                        <Link to="#" className="view-btn" onClick={handleShow}>
                                           View
                                         </Link>
                                       </td>
@@ -238,7 +238,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="pending-btn"
                                         >
                                           <svg
@@ -259,7 +259,7 @@ function Penaltychargesnotice() {
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="javascript:;" className="view-btn" onClick={handleShow}>
+                                        <Link to="#" className="view-btn" onClick={handleShow}>
                                           View
                                         </Link>
                                       </td>
@@ -275,7 +275,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="forwarded-btn"
                                         >
                                           <svg
@@ -296,7 +296,7 @@ function Penaltychargesnotice() {
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="javascript:;" className="view-btn" onClick={handleShow}>
+                                        <Link to="#" className="view-btn" onClick={handleShow}>
                                           View
                                         </Link>
                                       </td>
@@ -312,7 +312,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="forwarded-btn"
                                         >
                                           <svg
@@ -333,7 +333,7 @@ function Penaltychargesnotice() {
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="javascript:;" className="view-btn" onClick={handleShow}>
+                                        <Link to="#" className="view-btn" onClick={handleShow}>
                                           View
                                         </Link>
                                       </td>
@@ -349,7 +349,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="pending-btn"
                                         >
                                           <svg
@@ -370,7 +370,7 @@ function Penaltychargesnotice() {
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="javascript:;" className="view-btn" onClick={handleShow}>
+                                        <Link to="#" className="view-btn" onClick={handleShow}>
                                           View
                                         </Link>
                                       </td>
@@ -386,7 +386,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="uploaded-btn"
                                         >
                                           <svg
@@ -407,7 +407,7 @@ function Penaltychargesnotice() {
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="javascript:;" className="view-btn" onClick={handleShow}>
+                                        <Link to="#" className="view-btn" onClick={handleShow}>
                                           View
                                         </Link>
                                       </td>
@@ -423,7 +423,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="pending-btn"
                                         >
                                           <svg
@@ -444,7 +444,7 @@ function Penaltychargesnotice() {
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="javascript:;" className="view-btn" onClick={handleShow}>
+                                        <Link to="#" className="view-btn" onClick={handleShow}>
                                           View
                                         </Link>
                                       </td>
@@ -460,7 +460,7 @@ function Penaltychargesnotice() {
                                       <td>Yes</td>
                                       <td>
                                         <Link
-                                          to="javascript:;"
+                                          to="#"
                                           className="pending-btn"
                                         >
                                           <svg
@@ -493,19 +493,19 @@ function Penaltychargesnotice() {
                             <div className="showing-pagination-number">
                               <ul>
                                 <li className="active">
-                                  <Link to="javascript:;">1</Link>
+                                  <Link to="#">1</Link>
                                 </li>
                                 <li>
-                                  <Link to="javascript:;">2</Link>
+                                  <Link to="#">2</Link>
                                 </li>
                                 <li>
-                                  <Link to="javascript:;">3</Link>
+                                  <Link to="#">3</Link>
                                 </li>
                                 <li>
-                                  <Link to="javascript:;">4</Link>
+                                  <Link to="#">4</Link>
                                 </li>
                                 <li>
-                                  <Link to="javascript:;">5</Link>
+                                  <Link to="#">5</Link>
                                 </li>
                               </ul>
                             </div>
@@ -529,7 +529,7 @@ function Penaltychargesnotice() {
             <button className="close-btn" onClick={handleClose}>&times;</button>
         </div>
         <div className="PCN-view-status">
-            <Link to="javascript:;" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
+            <Link to="#" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
         </div>
         <div className="inner-view-detail-sc">
             <table>
@@ -584,13 +584,13 @@ function Penaltychargesnotice() {
                             </div>
                             </div>
                             <div className="tools-for-pdfs">
-                                <Link to="javascript:;">
+                                <Link to="#">
                                 <img src="./admin_assets/images/Eye.png" className="eye-img" alt="Docs"/>
                             </Link>
-                            <Link to="javascript:;">
+                            <Link to="#">
                                 <img src="./admin_assets/images/Edit 1.png" className="pen-img" alt="Docs"/>
                             </Link>
-                            <Link to="javascript:;">
+                            <Link to="#">
                                 <img src="./admin_assets/images/trash-can.png" alt="delete"/>
                             </Link>
                             </div>
@@ -601,13 +601,13 @@ function Penaltychargesnotice() {
         </div>
         <div className="pcn_inner-comm-sc">
             <div className="add-pcn-view-comm_head">
-                <Link to="javascript:;">
+                <Link to="#">
                     <img src="./admin_assets/images/plus.png" className="plus-img" alt="comm"/>Add Comment</Link>
             </div>
             <div className="add-pcn-view-comm">
                 <div className="comment_bxhead">
                     <h5>Comment</h5>
-                    <Link to="javascript:;">
+                    <Link to="#">
                         <img src="./admin_assets/images/trash-can.png" alt="delete"/>
                     </Link>
                 </div>
@@ -617,7 +617,7 @@ function Penaltychargesnotice() {
             </div>
         </div>
         <div className="pcn-view-action-btns">
-            <Link to="javascript:;" className="amend-btn" onClick={handleShowamend}>Amend</Link>
+            <Link to="#" className="amend-btn" onClick={handleShowamend}>Amend</Link>
         </div>
     </div>
       </Modal>
@@ -628,7 +628,7 @@ function Penaltychargesnotice() {
             <button className="close-btn" onClick={handleCloseamend}>&times;</button>
         </div>
         <div className="PCN-view-status">
-            <Link to="javascript:;" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
+            <Link to="#" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
         </div>
         <div className="row frm-inner-row pcn_amend-inner-row">
             <form action="" method="">
@@ -724,7 +724,7 @@ function Penaltychargesnotice() {
                 <div className="rental-vehicle-docs-wrap">
                 <h5>Document Upload</h5>
                    <div className="pdf_upl-bx">
-                        {/* <!-- <Link to="javascript:;"> --> */}
+                        {/* <!-- <Link to="#"> --> */}
                             <input type="file" name=""/>
                             <img src="./admin_assets/images/pdf-upload.png" alt="pdf-upload"/>
                             <div className="filedetails">
@@ -738,14 +738,14 @@ function Penaltychargesnotice() {
         </div>
         <div className="pcn_inner-comm-sc">
             <div className="add-pcn-view-comm_head">
-                <Link to="javascript:;">
+                <Link to="#">
                     <img src="./admin_assets/images/plus.png" className="plus-img" alt="comm"/>
                     Add Comment</Link>
             </div>
             <div className="add-pcn-view-comm">
                 <div className="comment_bxhead">
                     <h5>Comment</h5>
-                    <Link to="javascript:;">
+                    <Link to="#">
                         <img src="./admin_assets/images/trash-can.png" alt="delete"/>
                     </Link>
                 </div>
@@ -755,8 +755,8 @@ function Penaltychargesnotice() {
             </div>
         </div>
         <div className="pcn-view-action-btns">
-            <Link to="javascript:;" className="delete-btn" onClick={handleCloseamend}>Delete</Link>
-            <Link to="javascript:;" className="save-btn" onClick={handleCloseamend}>Save</Link>
+            <Link to="#" className="delete-btn" onClick={handleCloseamend}>Delete</Link>
+            <Link to="#" className="save-btn" onClick={handleCloseamend}>Save</Link>
         </div>
     </div>
       </Modal>
@@ -768,7 +768,7 @@ function Penaltychargesnotice() {
             <button className="close-btn" onClick={handleCloseaddpcn}>&times;</button>
         </div>
         <div className="PCN-view-status">
-            <Link to="javascript:;" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
+            <Link to="#" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
         </div>
         <div className="row frm-inner-row Id_drivr pcn_amend-inner-row">
             <h5>Identify Drivers</h5>
@@ -910,12 +910,12 @@ function Penaltychargesnotice() {
         </div>
         <div className="pcn_inner-comm-sc">
             {/* <!-- <div className="add-pcn-view-comm_head">
-                <Link to="javascript:;"><img src="./admin_assets/images/plus.png" className="plus-img" alt="comm">Add Comment</Link>
+                <Link to="#"><img src="./admin_assets/images/plus.png" className="plus-img" alt="comm">Add Comment</Link>
             </div> --> */}
             <div className="add-pcn-view-comm">
                 <div className="comment_bxhead">
                     <h5>Comment</h5>
-                    <Link to="javascript:;">
+                    <Link to="#">
                         <img src="./admin_assets/images/trash-can.png" alt="delete"/>
                     </Link>
                 </div>
@@ -925,8 +925,8 @@ function Penaltychargesnotice() {
             </div>
         </div>
         <div className="add-pcn-action-btns">
-            <Link to="javascript:;" onClick={handleCloseaddpcn} className="cancel-btn">Cancel</Link>
-            <Link to="javascript:;" onClick={handleCloseaddpcn} className="submit-btn">Submit</Link>
+            <Link to="#" onClick={handleCloseaddpcn} className="cancel-btn">Cancel</Link>
+            <Link to="#" onClick={handleCloseaddpcn} className="submit-btn">Submit</Link>
         </div>
     </div>
   </ModalBody>

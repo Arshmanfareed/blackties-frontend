@@ -68,7 +68,7 @@ function Financialpayments() {
                                 <div className="penalty-card db-default-wrapper rigistration-tabl">
                                     <div className="row invoice-tabs">
                                     <div className="invoice-topbar-wrap invoice_sear">
-                                                <Link className="invoiceDownload-btn" to="javascript:;"><img src="./admin_assets/images/dashboard/download432.svg" alt="Invoice Download"/></Link>
+                                                <Link className="invoiceDownload-btn" to="#"><img src="./admin_assets/images/dashboard/download432.svg" alt="Invoice Download"/></Link>
                                                 <div className="search-bar-v1">
                                                     <button type="submit"><i className="fa fa-search"></i></button>
                                                     <input type="text" placeholder="Search here..."/>
@@ -88,7 +88,7 @@ function Financialpayments() {
                                               <button className="nav-link" id="nav-failedPay-tab" data-bs-toggle="tab" data-bs-target="#nav-failedPay" type="button" role="tab" aria-controls="nav-failedPay" aria-selected="false"><h5>Failed Pay</h5></button>
                                             </div>
                                             <div className="invoice-topbar-wrap">
-                                                <Link className="invoiceDownload-btn" to="javascript:;"><img src="./admin_assets/images/dashboard/download432.svg" alt="Invoice Download"/></Link>
+                                                <Link className="invoiceDownload-btn" to="#"><img src="./admin_assets/images/dashboard/download432.svg" alt="Invoice Download"/></Link>
                                                 <div className="search-bar-v1">
                                                     <button type="submit"><i className="fa fa-search"></i></button>
                                                     <input type="text" placeholder="Search here..."/>
@@ -193,8 +193,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="incoming-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Incoming</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="incoming-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Incoming</Link></td>
+                                                                        <td><Link to="#" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>002</td>
@@ -203,8 +203,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£4,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="payment-hold-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Payment Hold</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="payment-hold-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Payment Hold</Link></td>
+                                                                        <td><Link to="#" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                      <tr>
                                                                         <td>003</td>
@@ -213,7 +213,7 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
                                                                         <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
@@ -268,8 +268,8 @@ function Financialpayments() {
                                                                 <h6>page <span className="initail">1</span> to <span className="total">10</span></h6>
                                                             </div>
                                                             <div className="pagination-nav">
-                                                                <Link to="javascript:;" className="pg-prev">Previous</Link>
-                                                                <Link to="javascript:;" className="pg-next">Next</Link>
+                                                                <Link to="#" className="pg-prev">Previous</Link>
+                                                                <Link to="#" className="pg-next">Next</Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -285,14 +285,14 @@ function Financialpayments() {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <div className="invoice-topbar-wrap">
-                                                            <Link className="invoiceDownload-btn" to="javascript:;">
+                                                            <Link className="invoiceDownload-btn" to="#">
                                                                 <img src="./admin_assets/images/dashboard/download432.svg" alt="Invoice Download"/></Link>
                                                             <div className="search-bar-v1">
                                                                 <button type="submit"><i className="fa fa-search"></i></button>
                                                                 <input type="text" placeholder="Search here..."/>
                                                             </div>
                                                             <div className="filter-btn">
-                                                                <Link to="javascript:;">Filter</Link>
+                                                                <Link to="#">Filter</Link>
                                                             </div>
                                                             <div className="add-sh-pmnt">
                                                                 <Link to="/admin-add-payment-schedule" className="shed-pmnt-btn">Add Schedules Payment</Link>
@@ -324,8 +324,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="incoming-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Incoming</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="incoming-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Incoming</Link></td>
+                                                                        <td><Link to="#" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>002</td>
@@ -334,8 +334,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£4,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="payment-hold-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Payment Hold</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="payment-hold-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Payment Hold</Link></td>
+                                                                        <td><Link to="#" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                      <tr>
                                                                         <td>003</td>
@@ -344,7 +344,7 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
                                                                         <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
@@ -399,8 +399,8 @@ function Financialpayments() {
                                                                 <h6>page <span className="initail">1</span> to <span className="total">10</span></h6>
                                                             </div>
                                                             <div className="pagination-nav">
-                                                                <Link to="javascript:;" className="pg-prev">Previous</Link>
-                                                                <Link to="javascript:;" className="pg-next">Next</Link>
+                                                                <Link to="#" className="pg-prev">Previous</Link>
+                                                                <Link to="#" className="pg-next">Next</Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -504,8 +504,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="incoming-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Incoming</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="incoming-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Pay</Link></td>
+                                                                        <td><Link to="/admin-ammend-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>002</td>
@@ -514,8 +514,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£4,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="payment-hold-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Payment Hold</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="payment-hold-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Payment Hold</Link></td>
+                                                                        <td><Link to="#" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                      <tr>
                                                                         <td>003</td>
@@ -524,8 +524,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
-                                                                        <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Refund</Link></td>
+                                                                        <td><Link to="/admin-ammend-refund-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -579,8 +579,8 @@ function Financialpayments() {
                                                                 <h6>page <span className="initail">1</span> to <span className="total">10</span></h6>
                                                             </div>
                                                             <div className="pagination-nav">
-                                                                <Link to="javascript:;" className="pg-prev">Previous</Link>
-                                                                <Link to="javascript:;" className="pg-next">Next</Link>
+                                                                <Link to="#" className="pg-prev">Previous</Link>
+                                                                <Link to="#" className="pg-next">Next</Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -684,8 +684,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="incoming-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Incoming</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td><Link to="/admin-failed-pay-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>002</td>
@@ -694,8 +694,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£4,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="payment-hold-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Payment Hold</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td><Link to="/admin-failed-pay-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                      <tr>
                                                                         <td>003</td>
@@ -704,8 +704,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
-                                                                        <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td><Link to="/admin-failed-pay-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -714,8 +714,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td><Link to="/admin-failed-pay-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -724,8 +724,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td><Link to="/admin-failed-pay-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -734,8 +734,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td><Link to="/admin-failed-pay-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -744,8 +744,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link to="#" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
+                                                                        <td><Link to="/admin-failed-pay-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -759,8 +759,8 @@ function Financialpayments() {
                                                                 <h6>page <span className="initail">1</span> to <span className="total">10</span></h6>
                                                             </div>
                                                             <div className="pagination-nav">
-                                                                <Link to="javascript:;" className="pg-prev">Previous</Link>
-                                                                <Link to="javascript:;" className="pg-next">Next</Link>
+                                                                <Link to="#" className="pg-prev">Previous</Link>
+                                                                <Link to="#" className="pg-next">Next</Link>
                                                             </div>
                                                         </div>
                                                     </div>

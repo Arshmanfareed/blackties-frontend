@@ -41,7 +41,7 @@ function Addpaymentschedule() {
                 <Row >
                   <Col lg={12} md={12} >
                     <div className="invoice-view-sec db-default-sec">
-                      <Link to="javascript" className="back-to">
+                      <Link to="#" className="back-to">
                         <ion-icon
                           name="chevron-back-outline"
                           role="img"
@@ -135,7 +135,7 @@ function Addpaymentschedule() {
                                 </form>
                               </Row>
                               <div className="add-pcn-view-comm_head">
-                                <Link to="javascript:;">
+                                <Link to="#">
                                   <img
                                     src="./admin_assets/images/plus.png"
                                     className="plus-img"
@@ -150,13 +150,13 @@ function Addpaymentschedule() {
                             <div className="payment-schedule-card-main-head">
                               <h4>Invoice Preview</h4>
                               <div className="zoom-options">
-                                <Link to="javascript:;" className="incoming-btn">
+                                <Link to="#" className="incoming-btn">
                                   <img
                                     src="./admin_assets/images/zoom-out.png"
                                     alt="zoom-out"
                                   />
                                 </Link>
-                                <Link to="javascript:;" className="incoming-btn">
+                                <Link to="#" className="incoming-btn">
                                   <img
                                     src="./admin_assets/images/zoom-in.png"
                                     alt="zoom-in"
@@ -267,10 +267,10 @@ function Addpaymentschedule() {
                               </Row>
                             </div>
                             <div className="pay-schedule-btns">
-                              <Link to="javascript:;" className="cancel-btn">
+                              <Link to="#" className="cancel-btn">
                                 Cancel
                               </Link>
-                              <Link to="javascript:;" className="send-btn">
+                              <Link to="#" className="send-btn">
                                 Send
                               </Link>
                             </div>
@@ -551,11 +551,11 @@ function Addpaymentschedule() {
                       </Row>
                     </form>
                     <div className="pcn-view-action-btns">
-                      <Link to="javascript:;" className="search-btn">
+                      <Link to="#" className="search-btn">
                         Search 12 Name
                       </Link>
                       <Link
-                        to="javascript:;"
+                        to="#"
                         className="filter-btn"
                         onClick={handleCloseusername}
                       >
@@ -656,7 +656,7 @@ function Addpaymentschedule() {
                             <span>+44 334 2345</span>
                           </div>
                           <div className="cstmr-view-deta-eye">
-                            <Link to="javascript:;" className="uploaded-btn">
+                            <Link to="#" className="uploaded-btn">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -715,7 +715,7 @@ function Addpaymentschedule() {
                             <span>+44 334 2345</span>
                           </div>
                           <div className="cstmr-view-deta-eye">
-                            <Link to="javascript:;" className="uploaded-btn">
+                            <Link to="#" className="uploaded-btn">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -774,7 +774,7 @@ function Addpaymentschedule() {
                             <span>+44 334 2345</span>
                           </div>
                           <div className="cstmr-view-deta-eye">
-                            <Link to="javascript:;" className="uploaded-btn">
+                            <Link to="#" className="uploaded-btn">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -833,7 +833,7 @@ function Addpaymentschedule() {
                             <span>+44 334 2345</span>
                           </div>
                           <div className="cstmr-view-deta-eye">
-                            <Link to="javascript:;" className="uploaded-btn">
+                            <Link to="#" className="uploaded-btn">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -1045,7 +1045,7 @@ function Addpaymentschedule() {
                           alt="car-img"
                         />
                         <div className="drvrnam">
-                          <Link to="javascript:;" className="active-btn">
+                          <Link to="#" className="active-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="9"
