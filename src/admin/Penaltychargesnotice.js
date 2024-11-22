@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
-import { Button, Col, Modal, Row } from "react-bootstrap";
+import { Button, Col, Modal, ModalBody, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Penaltychargesnotice() {
@@ -13,6 +13,10 @@ function Penaltychargesnotice() {
     const[showamend, setShowamend] =useState(false);
     const handleCloseamend=()=> setShowamend(false);
     const handleShowamend=()=> setShowamend(true);
+    // Add PCN
+    const[showaddpcn, setShowaddpcn] =useState(false);
+    const handleCloseaddpcn=()=> setShowaddpcn(false);
+    const handleShowaddpcn=()=> setShowaddpcn(true);
   
   return (
     <>
@@ -42,7 +46,7 @@ function Penaltychargesnotice() {
                               <h5>Penalty Charge Notice</h5>
                             </div>
                             <div className="add_btns">
-                              <Link to="#!">
+                              <Link to="#" onClick={handleShowaddpcn}>
                                 <i className="fas fa-plus"></i> Add PCN
                               </Link>
                             </div>
@@ -525,7 +529,7 @@ function Penaltychargesnotice() {
             <button className="close-btn" onClick={handleClose}>&times;</button>
         </div>
         <div className="PCN-view-status">
-            <a href="javascript:;" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</a>
+            <Link to="javascript:;" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
         </div>
         <div className="inner-view-detail-sc">
             <table>
@@ -580,15 +584,15 @@ function Penaltychargesnotice() {
                             </div>
                             </div>
                             <div className="tools-for-pdfs">
-                                <a href="javascript:;">
+                                <Link to="javascript:;">
                                 <img src="./admin_assets/images/Eye.png" className="eye-img" alt="Docs"/>
-                            </a>
-                            <a href="javascript:;">
+                            </Link>
+                            <Link to="javascript:;">
                                 <img src="./admin_assets/images/Edit 1.png" className="pen-img" alt="Docs"/>
-                            </a>
-                            <a href="javascript:;">
+                            </Link>
+                            <Link to="javascript:;">
                                 <img src="./admin_assets/images/trash-can.png" alt="delete"/>
-                            </a>
+                            </Link>
                             </div>
                         </li>
                     </ul>
@@ -597,15 +601,15 @@ function Penaltychargesnotice() {
         </div>
         <div className="pcn_inner-comm-sc">
             <div className="add-pcn-view-comm_head">
-                <a href="javascript:;">
-                    <img src="./admin_assets/images/plus.png" className="plus-img" alt="comm"/>Add Comment</a>
+                <Link to="javascript:;">
+                    <img src="./admin_assets/images/plus.png" className="plus-img" alt="comm"/>Add Comment</Link>
             </div>
             <div className="add-pcn-view-comm">
                 <div className="comment_bxhead">
                     <h5>Comment</h5>
-                    <a href="javascript:;">
+                    <Link to="javascript:;">
                         <img src="./admin_assets/images/trash-can.png" alt="delete"/>
-                    </a>
+                    </Link>
                 </div>
                 <div className="form-group">
                     <textarea type="textarea" name="form-control" id="" placeholder="Damage Cae" className="mg05"></textarea>
@@ -613,40 +617,40 @@ function Penaltychargesnotice() {
             </div>
         </div>
         <div className="pcn-view-action-btns">
-            <a href="javascript:;" className="amend-btn" onClick={handleShowamend}>Amend</a>
+            <Link to="javascript:;" className="amend-btn" onClick={handleShowamend}>Amend</Link>
         </div>
     </div>
       </Modal>
       <Modal show={showamend} onHide={handleCloseamend} className="password_modal  ">
-      <div class="Pcn-view-popup_bx">
-        <div class="PCN-view">
+      <div className="Pcn-view-popup_bx">
+        <div className="PCN-view">
             <h2>Amend</h2>
-            <button class="close-btn" onClick={handleCloseamend}>&times;</button>
+            <button className="close-btn" onClick={handleCloseamend}>&times;</button>
         </div>
-        <div class="PCN-view-status">
-            <a href="javascript:;" class="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</a>
+        <div className="PCN-view-status">
+            <Link to="javascript:;" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
         </div>
-        <div class="row frm-inner-row pcn_amend-inner-row">
+        <div className="row frm-inner-row pcn_amend-inner-row">
             <form action="" method="">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
                             <label for="control-label">Internal Number</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="Omar"/>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
                             <label for="control-label">Date & Time</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="placeholder"/>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
+                    </Col>
+                </Row>
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
                             <label for="control-label">Authority</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Council</option>
@@ -655,41 +659,41 @@ function Penaltychargesnotice() {
                                 <option value="audi">Council</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
                             <label for="control-label">Ticket Number</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="placeholder"/>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
+                    </Col>
+                </Row>
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
                             <label for="control-label">Vehicle</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="KM19 VTY"/>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
                             <label for="control-label">Renter</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="placeholder"/>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
+                    </Col>
+                </Row>
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
                             <label for="control-label">Admin Fee</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="£10"/>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                         <div class="form-group">
+                    </Col>
+                    <Col lg={6} md={6} >
+                         <div className="form-group">
                             <label for="control-label">Appealed</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Placeholder</option>
@@ -698,11 +702,11 @@ function Penaltychargesnotice() {
                                 <option value="audi">Placeholder</option>
                             </select>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                       <div class="form-group">
+                    </Col>
+                </Row>
+                <Row >
+                    <Col lg={6} md={6} >
+                       <div className="form-group">
                             <label for="control-label">Status</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Placeholder</option>
@@ -711,19 +715,19 @@ function Penaltychargesnotice() {
                                 <option value="audi">Placeholder</option>
                             </select>
                         </div>
-                    </div>
-                    </div>
+                    </Col>
+                    </Row>
             </form>
         </div>
-        <div class="inner-doc-sc pcn_inner-doc-sc">
-            <div class="doc-information">
-                <div class="rental-vehicle-docs-wrap">
+        <div className="inner-doc-sc pcn_inner-doc-sc">
+            <div className="doc-information">
+                <div className="rental-vehicle-docs-wrap">
                 <h5>Document Upload</h5>
-                   <div class="pdf_upl-bx">
-                        {/* <!-- <a href="javascript:;"> --> */}
+                   <div className="pdf_upl-bx">
+                        {/* <!-- <Link to="javascript:;"> --> */}
                             <input type="file" name=""/>
                             <img src="./admin_assets/images/pdf-upload.png" alt="pdf-upload"/>
-                            <div class="filedetails">
+                            <div className="filedetails">
                                 <span>Click to upload</span>
                                 <span>or drag and drop Maximum file size 50 MB.</span>
                             </div>
@@ -732,31 +736,201 @@ function Penaltychargesnotice() {
                 </div>
             </div>
         </div>
-        <div class="pcn_inner-comm-sc">
-            <div class="add-pcn-view-comm_head">
-                <a href="javascript:;">
-                    <img src="./admin_assets/images/plus.png" class="plus-img" alt="comm"/>
-                    Add Comment</a>
+        <div className="pcn_inner-comm-sc">
+            <div className="add-pcn-view-comm_head">
+                <Link to="javascript:;">
+                    <img src="./admin_assets/images/plus.png" className="plus-img" alt="comm"/>
+                    Add Comment</Link>
             </div>
-            <div class="add-pcn-view-comm">
-                <div class="comment_bxhead">
+            <div className="add-pcn-view-comm">
+                <div className="comment_bxhead">
                     <h5>Comment</h5>
-                    <a href="javascript:;">
+                    <Link to="javascript:;">
                         <img src="./admin_assets/images/trash-can.png" alt="delete"/>
-                    </a>
+                    </Link>
                 </div>
-                <div class="form-group">
-                    <textarea type="textarea" name="form-control" id="" placeholder="Damage Cae" class="mg05"></textarea>
+                <div className="form-group">
+                    <textarea type="textarea" name="form-control" id="" placeholder="Damage Cae" className="mg05"></textarea>
                 </div>
             </div>
         </div>
-        <div class="pcn-view-action-btns">
-            <a href="javascript:;" class="delete-btn" onClick={handleCloseamend}>Delete</a>
-            <a href="javascript:;" class="save-btn" onClick={handleCloseamend}>Save</a>
+        <div className="pcn-view-action-btns">
+            <Link to="javascript:;" className="delete-btn" onClick={handleCloseamend}>Delete</Link>
+            <Link to="javascript:;" className="save-btn" onClick={handleCloseamend}>Save</Link>
         </div>
     </div>
       </Modal>
-
+<Modal show={showaddpcn} onHide={handleCloseaddpcn} className="password_modal">
+  <ModalBody>
+  <div className="Pcn-view-popup_bx add-pcn-pop-bx">
+        <div className="PCN-view">
+            <h2>Add PCN</h2>
+            <button className="close-btn" onClick={handleCloseaddpcn}>&times;</button>
+        </div>
+        <div className="PCN-view-status">
+            <Link to="javascript:;" className="uploaded-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg>Uploaded</Link>
+        </div>
+        <div className="row frm-inner-row Id_drivr pcn_amend-inner-row">
+            <h5>Identify Drivers</h5>
+            <form action="" method="">
+            <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Vehicle Registration Number</label>
+                            <br/>
+                            <input type="text" name="form-control" placeholder="KM19 VTY"/>
+                        </div>
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Date of incident</label>
+                            <br/>
+                            <input type="text" name="form-control" placeholder="10 December, 2024 10:32"/>
+                        </div>
+                    </Col>
+                    <div className="col-lg-12 col-md-12">
+                        <div className="form-group">
+                            <input className="submit_btn" type="submit" name="form-control" value="Identify"/>
+                        </div>
+                    </div>
+                </Row>
+            </form>
+        </div>
+        <div className="drvr_deta">
+            <div className="drvrmain">
+                <img src="./admin_assets/images/Frame 76.png" className="new-customers-img" alt="new-customers-img"/>
+                <div className="drvrnam">
+                    <h6>Rohan Shibu</h6>
+                    <span>Customer ID: D0012</span>
+                </div>
+            </div>
+            <div className="drvrcar">
+                <p>Mercedes-Benz E Class</p>
+                <span>example@gmail.com</span><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"/></svg><span>+44 334 2345</span>
+            </div>
+        </div>
+        <div className="row frm-inner-row pcn_amend-inner-row pcn_info">
+            <div className="pcninfo-head">
+                <h2>PCN Information</h2>
+            </div>
+            <form action="" method="">
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Internal Number</label>
+                            <br/>
+                            <input type="text" name="form-control" placeholder="1231232412"/>
+                        </div>
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Authority</label>
+                            <select name="Council" id="Rented-fld">
+                                <option value="volvo">Council</option>
+                                <option value="saab">Council</option>
+                                <option value="opel">Council</option>
+                                <option value="audi">Council</option>
+                            </select>
+                        </div>
+                    </Col>
+                </Row>
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Ticket Number</label>
+                            <br/>
+                            <input type="text" name="form-control" placeholder="placeholder"/>
+                        </div>
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Admin Fee</label>
+                            <br/>
+                            <input type="text" name="form-control" placeholder="£10"/>
+                        </div>
+                    </Col>
+                </Row>
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Appealed</label>
+                            <select name="Council" id="Rented-fld">
+                                <option value="volvo">Yes</option>
+                                <option value="saab">No</option>
+                                <option value="opel">Yes</option>
+                                <option value="audi">No</option>
+                            </select>
+                        </div>
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Status</label>
+                            <select name="Council" id="Rented-fld">
+                                <option value="volvo">Placeholder</option>
+                                <option value="saab">Placeholder</option>
+                                <option value="opel">Placeholder</option>
+                                <option value="audi">Placeholder</option>
+                            </select>
+                        </div>
+                    </Col>
+                </Row>
+                <Row >
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Renter</label>
+                            <br/>
+                            <input type="text" name="form-control" placeholder="Placeholder"/>
+                        </div>
+                    </Col>
+                    <Col lg={6} md={6} >
+                        <div className="form-group">
+                            <label for="control-label">Date & Time</label>
+                            <br/>
+                            <input type="text" name="form-control" placeholder="Placeholder"/>
+                        </div>
+                    </Col>
+                </Row>
+            </form>
+        </div>
+        <div className="inner-doc-sc pcn_inner-doc-sc">
+            <div className="doc-information">
+                <div className="rental-vehicle-docs-wrap">
+                <h5>Document Upload</h5>
+                   <div className="pdf_upl-bx">
+                   <input type="file" name=""/>
+                        <img src="./admin_assets/images/pdf-upload.png" alt="pdf-upload"/>
+                            <div className="filedetails">
+                                <span>Click to upload</span>
+                                <span>or drag and drop Maximum file size 50 MB.</span>
+                            </div>
+                     
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div className="pcn_inner-comm-sc">
+            {/* <!-- <div className="add-pcn-view-comm_head">
+                <Link to="javascript:;"><img src="./admin_assets/images/plus.png" className="plus-img" alt="comm">Add Comment</Link>
+            </div> --> */}
+            <div className="add-pcn-view-comm">
+                <div className="comment_bxhead">
+                    <h5>Comment</h5>
+                    <Link to="javascript:;">
+                        <img src="./admin_assets/images/trash-can.png" alt="delete"/>
+                    </Link>
+                </div>
+                <div className="form-group">
+                    <textarea type="textarea" name="form-control" id="" placeholder="Damage Cae" className="mg05"></textarea>
+                </div>
+            </div>
+        </div>
+        <div className="add-pcn-action-btns">
+            <Link to="javascript:;" onClick={handleCloseaddpcn} className="cancel-btn">Cancel</Link>
+            <Link to="javascript:;" onClick={handleCloseaddpcn} className="submit-btn">Submit</Link>
+        </div>
+    </div>
+  </ModalBody>
+</Modal>
       </section>
     </>
   );

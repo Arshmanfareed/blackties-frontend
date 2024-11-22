@@ -46,6 +46,12 @@ import Vehicledetails from './admin/Vehicledetails';
 import Penaltychargesnotice from './admin/Penaltychargesnotice';
 import Financialpayments from './admin/Financialpayments';
 import Financialinvoice from './admin/Financialinvoice';
+import Scheduleinvoice from './admin/Scheduleinvoice';
+import Refundinvoice from './admin/Refundinvoice';
+import Addpaymentschedule from './admin/Addpaymentschedule';
+import Userinvoice from './admin/Userinvoice';
+import Alluser from './admin/Alluser';
+import Userinfo from './admin/Userinfo';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -95,6 +101,12 @@ root.render(
     <Route path="/admin-penaltycharge" element={<><Penaltychargesnotice/></>} />
     <Route path="/admin-financialpayment" element={<><Financialpayments/></>} />
     <Route path="/admin-financialinvoice" element={<><Financialinvoice/></>} />
+    <Route path="/admin-schedule-invoice" element={<><Scheduleinvoice/></>} />
+    <Route path="/admin-refund-invoice" element={<><Refundinvoice/></>} />
+    <Route path="/admin-add-payment-schedule" element={<><Addpaymentschedule/></>} />
+    <Route path="/admin-user-invoice" element={<><Userinvoice/></>} />
+    <Route path="/admin-all-user" element={<><Alluser/></>} />
+    <Route path="/admin-user-info" element={<><Userinfo/></>} />
 
   </Routes>
 </Router>

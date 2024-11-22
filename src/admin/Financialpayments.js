@@ -214,7 +214,7 @@ function Financialpayments() {
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
                                                                         <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -223,8 +223,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -233,8 +233,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -243,8 +243,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -253,8 +253,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -295,7 +295,7 @@ function Financialpayments() {
                                                                 <Link to="javascript:;">Filter</Link>
                                                             </div>
                                                             <div className="add-sh-pmnt">
-                                                                <Link to="javascript:;" className="shed-pmnt-btn">Add Schedules Payment</Link>
+                                                                <Link to="/admin-add-payment-schedule" className="shed-pmnt-btn">Add Schedules Payment</Link>
                                                             </div>
                                                         </div>
                                                     </div>       
@@ -345,7 +345,7 @@ function Financialpayments() {
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
                                                                         <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -354,8 +354,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -364,8 +364,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -374,8 +374,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -384,8 +384,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -525,7 +525,7 @@ function Financialpayments() {
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
                                                                         <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -534,8 +534,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -544,8 +544,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -554,8 +554,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -564,8 +564,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -705,7 +705,7 @@ function Financialpayments() {
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
                                                                         <td className="status-tagbtns"><Link to="javascript:;" className="failed-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Failed</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td><Link to="/admin-refund-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -714,8 +714,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -724,8 +724,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -734,8 +734,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>010</td>
@@ -744,8 +744,8 @@ function Financialpayments() {
                                                                         <td>27 June, 2024</td>
                                                                         <td>MH2131241</td>
                                                                         <td>£5,00</td>
-                                                                        <td className="status-tagbtns"><Link to="javascript:;" className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
-                                                                        <td><Link to="javascript:;" className="view-btn">View</Link></td>
+                                                                        <td className="status-tagbtns"><Link  className="scheduled-btn"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="white"></circle></svg>Scheduled</Link></td>
+                                                                        <td><Link to="/admin-schedule-invoice" className="view-btn">View</Link></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>

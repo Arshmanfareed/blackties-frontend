@@ -5691,6 +5691,7 @@ button.btn.btn-primary.add_more_vehicle_gallery {
   .show-paginaion .showing-txt h5 {
       font-size: 16px;
       line-height: 26px;
+      color: #fff;
   }
   .show-paginaion .showing-pagination-number ul li:hover {
       transition: all 0.5s ease-in-out;
@@ -5933,7 +5934,7 @@ button.btn.btn-primary.add_more_vehicle_gallery {
   margin-bottom: 12px;
 }
 .main-license-box .license-frm form .form-group label {
-  color: #667085
+  color: #667085;
   font-family: "Poppins";
   font-size: 14px;
   font-style: normal;
@@ -6563,7 +6564,7 @@ div#mileage_tabs .overall-milleage-img {
 .user-pro .user-pro-btn a.profile-cancel-btn {
   border-radius: 4px;
   border: 1px solid #4A068F;
-  color: #FFF !important;!i;!;
+  color: #FFF !important;
   text-align: center;
   font-family: Poppins;
   font-size: 16px;
@@ -6600,13 +6601,13 @@ div#mileage_tabs .overall-milleage-img {
   padding-top: 0;
   border-bottom: 1px solid #fff;
   border-radius: 0 !important;
-  color: #fff !important;!i;!;
+  color: #fff !important;
 }
 .vehicle-doc-tabs ul#docTab li a {
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 50px;
-  color: #667085 !important;!i;!;
+  color: #667085 !important;
 }
 .pro-doc .back-hme h5 {
   color: #FFF;
@@ -6737,7 +6738,7 @@ div#mileage_tabs .overall-milleage-img {
   width: 25%;
 }
 .user-app-frm-2 form .form-group select#Approved-fld {
-  background: #1D1F22; !important;!i;!;
+  background: #1D1F22 !important;
   border-radius: 12px;
   border: 1px solid #1D1F22;
   height: 45px;
@@ -6821,7 +6822,7 @@ table.adm-user-tble tr td a.Rejected-btn {
 
 .admin-pro-main .tabs-container {
   border-left: 0;
-  border=l: ;
+  /* border=l: ; */
   padding-left: 0;
 }
 .user-pro-one-btn a.profile-cancel-btn {
@@ -6832,7 +6833,7 @@ table.adm-user-tble tr td a.Rejected-btn {
   border: 1px solid #4a068f;
   width: 154px;
   height: 44px;
-  font-weight: 500 !important;!i;!;
+  font-weight: 500 !important;
   font-size: 16px;
 }
 .user-pro-one-wrapper h6.profile-date {
@@ -6857,6 +6858,10 @@ table.adm-user-tble tr td a.Rejected-btn {
   line-height: normal;
   font-weight: 600;
   margin-left: 10px;
+  color: #fff;
+}
+.user-vehcle-tble {
+  color: #fff;
 }
 
 .name-bx {
@@ -6894,7 +6899,7 @@ table.adm-user-tble tr td a.Rejected-btn {
   border-radius: 12px;
   padding-left: 20px;
   padding-top: 10px;
-  margin-bottom: 0 !important;!i;!;!;
+  margin-bottom: 0 !important;
 }
 .user-pro-two-form .Reset-Password-btn h5 a {
   font-size: 16px;
@@ -6924,9 +6929,7 @@ table.adm-user-tble tr td a.Rejected-btn {
   margin-bottom: 0 !important;
 }
 .profile-info-form-wrap form .form-group h5 a.Verified-btn {
-  position: relative;
-  left: 390px;
-  bottom: 43px;
+  position: relative; 
   font-size: 14px;
   line-height: normal;
   font-weight: 400;
@@ -6940,7 +6943,22 @@ table.adm-user-tble tr td a.Rejected-btn {
   justify-content: center;
   text-decoration: none;
   padding: 0 0 3px 0;
+  right: 0;
+  margin-right: 0;
 }
+.admin-user-pro-one .form-group {
+  position: relative;
+}
+.vehicle-documents-sec.db-default-sec.pro-doc.admin-user-pro-one table.adm-user-tble tr td {
+  padding: 23px 19px;
+}
+
+.profile-info-form-wrap form .form-group h5 {
+  position: absolute;
+  bottom: 30%;
+  right: 3%;
+}
+
 /****************USER_VEHICLES SCREEN CSS**************/
 .user-vehicles h6.profile-date {
   color: #00803C;
@@ -7453,7 +7471,1276 @@ table.adm-user-tble tr td a.Rejected-btn {
 /*----- Invoice View End -----*/
 /* invoice new pages end */
 
+/**********Admin Financials Invoice Pay Screen CSS***************/
+.admin-invoice-pay-card .admin-invoice-view-card-btns .admin-invoice-main-btn a.pay-btn {
+  background: #138808;
+  border: none;
+}
+.admin-invoice-pay-card .admin-invoice-view-card-btns .admin-invoice-main-btn a.refund-btn {
+  background: #4A068F;
+}
+.cancellation-disc-table td.big-td {
+  text-align: left;
+}
+.cancellation-disc-table td.big-td a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: #FFF;
+  text-align: center;
+}
 
+.admin-invoice-pay-card .admin-invoice-view-card-btns .admin-invoice-main-btn a.cancel-btn, .admin-invoice-refund-card .admin-invoice-view-card-btns .admin-invoice-main-btn a.cancel-btn {
+  display: flex;
+  padding: 12px 35px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #4A068F;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.admin-invoice-pay-card .admin-invoice-view-card-btns .admin-invoice-main-btn  a.save-btn, .admin-invoice-refund-card .admin-invoice-view-card-btns .admin-invoice-main-btn a.save-btn {
+  display: flex;
+  width: 121px;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #4A068F;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.admin-invoice-refund-card .bal_amnt h3.refundpay {
+  color: #F41010;
+}
+
+
+/**********Admin Financials Invoice Pay POP-PUP Screen CSS***************/
+
+.cardpay-popup_bx {
+  background: #1A2028;
+  box-shadow: 0px 6px 14px 0px rgba(187, 185, 185, 0.07);
+  display: flex;
+  width: 477px;
+  padding: 24px;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 12px;
+}
+.cardpay-popup_bx .card-main-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardpay-popup_bx .card-main-head h2 {
+  margin: 0;
+  color: var(--Text-color-Dark, #FCFCFC);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.cardpay-popup_bx .card-innr-blk {
+  border-radius: var(--Photo, 16px);
+  background: #121418;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  gap: 24px;
+  align-self: stretch;
+}
+.cardpay-popup_bx .card-innr-blk .card-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardpay-popup_bx .card-innr-blk .card-selection h4 {
+  margin: 0;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  color: #fff;
+  line-height: 20px;
+}
+.cardpay-popup_bx .card-innr-blk .card-selection  a {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  display: flex;
+  align-items: end;
+}
+.cardpay-popup_bx .card-bttm-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardpay-popup_bx .card-bttm-head h3 {
+  margin: 0;
+  color: var(--Text-color-Dark, #FCFCFC);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.cardpay-popup_bx .card-pay-action-btns {
+  display: flex;
+  gap: 16px;
+}
+.cardpay-popup_bx .card-pay-action-btns a.cancel-btn, .cardpay-popup_bx .card-pay-action-btns a.refund-btn {
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #4A068F;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+  width: 100%;
+}
+.cardpay-popup_bx .card-pay-action-btns a.refund-btn, .maintenance-table td.status-tagbtns a.rejected-btn {
+  background: #F41010;
+  border: none;
+}
+.maintenance-table td a.view-btn {
+  display: flex;
+  padding: 5px 7px;
+  gap: 10px;
+  border-radius: 5px;
+  background: var(--BG-color-Dark, #1B1F24);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #9A75EC;
+  font-family: Archivo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/**********Admin Financials Payment Shedule Screen TWO CSS***************/
+
+.payment-schedule-invoice-view-panel .innr-row {
+  padding-top: 33px;
+}
+.payment-schedule-invoice-view-panel .innr-row .invoice-topbar-wrap {
+  display: block !important;
+}
+.payment-schedule-invoice-view-panel .innr-row .invoice-topbar-wrap .search-bar-v1 {
+  background: #121418;
+  border-radius: 12px;
+  display: flex;
+  height: 44px;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  width: 100%;
+}
+.payment-schedule-invoice-view-panel .innr-row .invoice-topbar-wrap .search-bar-v1 input {
+  background: #121418;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card-main-head h4 {
+  color: var(--Text-color-Dark, #FCFCFC);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card-main-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card {
+  border-radius: 16px;
+  padding: 24px;
+  min-height: unset !important;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-details {
+  padding: 0;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-details p.inv-address {
+  color: var(--Gray, #858585);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-subscription, .payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-subscription-2 {
+  padding: 24px 15px;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-subscription-2 {
+  border-top: 1px dashed #667085;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-subscription p, .payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-subscription-2 p {
+  text-align: center;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-subscription p span, .payment-schedule-invoice-view-panel .innr-row .payment-schedule-card .invoice-view-subscription-2 p span {
+  opacity: 0.64;
+}
+.payment-schedule-invoice-view-panel .innr-row .pay-schedule-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+}
+.payment-schedule-invoice-view-panel .innr-row .pay-schedule-btns a.cancel-btn {
+  display: flex;
+  height: 55px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 9px;
+  border: 1px solid #4A068F;
+  color: var(--base-white, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+}
+.payment-schedule-invoice-view-panel .innr-row .pay-schedule-btns  a.send-btn {
+  text-decoration: none;
+  display: flex;
+  height: 55px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 9px;
+  background: #121418;
+  color: #667085;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-disc {
+  border-radius: 12px;
+  background: #121418;
+  margin-top: 24px;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-disc .invoice-tab-frm-2 .form-group input, .payment-schedule-invoice-view-panel .innr-row .payment-schedule-disc .invoice-tab-frm-2 .form-group select {
+  height: 60px;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-disc .invoice-tab-frm-2 .form-group textarea {
+  height: 120px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #ffff;
+  padding: 10px 12px;
+  resize: none;
+  background: #1D1F22;
+  border-radius: 12px;
+  border: 1px solid #1D1F22;
+}
+.payment-schedule-invoice-view-panel .innr-row .payment-schedule-disc .add-pcn-view-comm_head a {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+
+/**********Admin Financials Payment Shedule Screen TWO pop-pup CSS***************/
+.pay-Sch-PP-one {
+  display: flex;
+  width: 598px;
+  padding: 24px;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  background: #000;
+}
+.pay-Sch-PP-one .pp-main-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pay-Sch-PP-one .pp-main-head h2 {
+  margin: 0;
+  color: var(--Text-color-Dark, #FCFCFC);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.pay-Sch-PP-one .pcn-view-action-btns {
+  display: block;
+  text-align: center;
+}
+.pay-Sch-PP-one .pcn-view-action-btns a.search-btn {
+  display: flex;
+  height: 55px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 9px;
+  background: #4A068F;
+  color: var(--base-white, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  margin: 16px 0;
+}
+.pay-Sch-PP-one .pcn-view-action-btns a.filter-btn {
+  display: flex;
+  height: 55px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 9px;
+  color: #F41010;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+}
+
+
+/**********Admin Financials Payment Shedule Screen TWO pop-pup-two CSS***************/
+
+.cstmr-bx {
+  border-radius: 8px;
+  border: 1px solid #282F36;
+  background: #121418;
+  padding: 12px;
+}
+.cstmr-bx .cstmr-srchbox {
+  height: 168px;
+  overflow-y: scroll;
+  padding-right: 12px;
+}
+.cstmr-bx .cstmr-srchbox .cstmr-view-deta-eye a {
+  display: flex;
+  padding: 2px 8px 2px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  background: #667085;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.cstmr-bx .cstmr-srchbox .drvr_deta.active {
+  border-radius: 4px;
+  background: #1F2329;
+  padding: 4px 8px;
+}
+.cstmr-bx .cstmr-srchbox .drvr_deta {
+  padding: 12px 0;
+}
+.cstmr-bx .cstmr-srchbox::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #667085;
+}
+
+.cstmr-bx .cstmr-srchbox::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: #667085;
+}
+
+.cstmr-bx .cstmr-srchbox::-webkit-scrollbar-thumb
+{
+  background-color: #4A068F;
+}
+
+/**********Admin Financials Payment Shedule Screen TWO pop-pup-three CSS***************/
+
+.pay-Sch-PP-three button.close-btn {
+  text-align: end;
+}
+.pay-Sch-PP-three .pp-main-head {
+  display: block;
+  text-align: center;
+}
+.pay-Sch-PP-three .pp-main-head p {
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: var(--Grey-400, #98A2B3);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+.pay-Sch-PP-three .innr-bx {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  gap: 32px;
+  align-self: stretch;
+  border-radius: var(--Medium, 8px);
+  border: 1px solid #1F2329;
+  background: #121418;
+}
+.pay-Sch-PP-three .innr-bx h3 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1F2329;
+  margin: 0;
+}
+.pay-Sch-PP-three .innr-bx .cstmr-details .frm-inner-row2 .form-group {
+  padding-bottom: 32px;
+}
+.pay-Sch-PP-three .innr-bx .cstmr-details .form-group label {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+.pay-Sch-PP-three .innr-bx .cstmr-details .form-group input {
+  background: transparent;
+  border: none;
+  padding: 12px 0;
+  border-bottom: 1px solid #1F2329;
+}
+.pay-Sch-PP-three .innr-bx .cstmr-details .form-group input::placeholder {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+.pay-Sch-PP-three .innr-bx img.car-img {
+  height: 100%;
+}
+.pay-Sch-PP-three .innr-bx .drvr_deta .drvrmain {
+  align-items: center;
+}
+.pay-Sch-PP-three .innr-bx .drvrnam a.active-btn {
+  text-decoration: none;
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  background: #138808;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  width: fit-content;
+}
+.pay-Sch-PP-three .innr-bx .drvrnam  h6 {
+  padding: 8px 0 0;
+}
+.pay-Sch-PP-three .innr-bx .drvr_deta {
+  align-items: flex-start;
+}
+.pay-Sch-PP-three .innr-bx .drvr_deta span {
+  color: #AFAFAF;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.frmmainbx {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  height: 720px;
+  overflow-y: scroll;
+  padding-right: 16px;
+}
+
+.frmmainbx::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #667085;
+}
+
+.frmmainbx::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: #667085;
+}
+
+.frmmainbx::-webkit-scrollbar-thumb
+{
+  background-color: #4A068F;
+}
+
+/**********Admin Financials Payment Shedule Screen THREE CSS***************/
+
+.payment-schedule-two .innr-row .drvr_deta .drvrcar-main {
+  display: flex;
+  gap: 20px;
+}
+.payment-schedule-two .innr-row .drvr_deta {
+  border-radius: 12px;
+  background: #121418;
+  display: flex;
+  padding: 16px 12px;
+  gap: 12px;
+}
+.payment-schedule-two .innr-row .drvr_deta .drvrmain {
+  align-items: center;
+}
+
+.frm-inner-row form .form-group textarea {
+  background: #121418 !important;
+}
+/****************USER_VEHICLES SCREEN CSS**************/
+.user-vehicles h6.profile-date {
+  color: #00803C;
+}
+.user-vehicles a.change-img-btn {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #98A2B3 !important;
+  border: none;
+}
+
+.vehicle-rent-wrapper {
+  padding-top: 25px;
+}
+.vehicle-rent-wrapper .veh-ren h5 {
+  font-size: 20px;
+  line-height: normal;
+  color: #fff;
+  margin: 0;
+}
+.user-vehicle-app-wrapper .veh-ren h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+.user-vehicle-app-wrapper .veh-ren {
+  padding-bottom: 32px;
+}
+.user-vehicle-app-wrapper .vehicle-rent-main .veh-rent-image img {
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+}
+.user-vehicle-app-wrapper .vehicle-rent-main .veh-rent-image {
+  padding-bottom: 45px;
+}
+.user-vehicle-app-wrapper .user-vehicle-app {
+  background: transparent !important;
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 32px;
+}
+.user-vehicle-app-wrapper .user-vehicle-app .rental-vehicle-dt1 {
+  padding-top: 0;
+  border-bottom: 1px solid #667085;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.user-vehcle-tble table tr td.file-img {
+  text-align: center;
+}
+.user-vehcle-tble {
+  padding-top: 25px;
+}
+
+/*****************PAYMENT & INVOICE TABS SCREEN CSS*******************/
+.payment-tble-main .payment-tble tr td.Failed-btn a {
+  background: #F41010;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: normal;
+  font-weight: 400;
+  border-radius: 16px;
+  padding: 2px 10px 5px 10px;
+}
+tr td.View-btn a {
+  background: #1B1F24;
+  color: #9A75EC;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: normal;
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+}
+.pay-history .payment-tble td.Incoming-btn a {
+  background: #138808;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 400;
+  border-radius: 16px;
+  padding: 3px 10px 3px 10px;
+}
+.pay-history .payment-tble td.Hold-btn a {
+  background: #667085;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 400;
+  border-radius: 16px;
+  padding: 3px 12px 3px 12px;
+}
+.pay-history .payment-tble td.Scheduled-btn a {
+  background: #FF9933;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 400;
+  border-radius: 16px;
+  padding: 3px 10px 3px 10px;
+}
+.pay-history  .payment-tble-head {
+  border-bottom: 1px solid #1F2329;
+  padding-bottom: 20px;
+}
+.pay-history {
+  padding-top: 0;
+}
+.payment-bx .outstanding-bx {
+  background: #1B1F24;
+  color: #fff;
+}
+.pcns-main {
+  padding-top: 0;
+}
+.pcn-tble td.View-btn a {
+  background: #000;
+}
+.pro-doc .back-hme h5 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/**************VIEW APPLICATION SCREEN TAB CSS***********/
+.app-col-1 .app-personal-head h5 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: 600;
+  font-family: 'Poppins';
+}
+.app-col-1 .app-personal-head {
+  padding-bottom: 30px;
+  padding-top: 40px;
+}
+.app-col-1 .form-personal  form .form-group label {
+  color: #667085;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+.app-col-1 .form-personal form .form-group input {
+  background: transparent !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #1D1F22 !important;
+  height: 32px !important;
+  width: 100%;
+  margin-bottom: 20px !important;
+  color: #667085;
+  padding-left: 30px;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+.pro-license-txt {
+  display: flex;
+  justify-content: space-between;
+}
+.pro-license-txt .pro-pera p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 0;
+  color: #ffff;
+  font-weight: 400;
+  width: 70%;
+}
+.pro-license-txt .pro-yes span {
+  font-weight: 700;
+  color: #90A3BF;
+  font-size: 16px;
+  line-height: 20px;
+}
+.pro-license-txt {
+  padding-bottom: 20px;
+}
+.app-col-1 .app-personal-head:first-child {
+  padding-top: 0;
+}
+.app-col-1 .contract-doc ul.rental-files a.View-btn {
+  background: #000;
+  color: #9A75EC;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: normal;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+}
+.app-col-2 {
+  background: #000;
+  padding: 34px;
+  border-radius: 10px;
+  color: #fff;
+}
+.app-col-2  a.delete-img img {
+  width: 25px !important;
+  height: 25px !important;
+}
+.app-col-1 .app-accident-head {
+  border-bottom: 1px solid #667085;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.app-col-1 .app-accident-head h5 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+.app-col-1 .deails-pera span {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #667085;
+}
+.app-col-1 .deails-pera p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #fff;
+  width: 70%;
+  margin-bottom: 0;
+}
+
+.view-app-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view-app-btn .view-app-buttons a.Amend-cancel-btn {
+  background: #1B1F24;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #000;
+  font-weight: 400 !important;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 11px 52px 11px 52px;
+  color: #9A75EC !important;
+  text-decoration: none;
+}
+.view-app-btn .view-app-buttons a.Rejected-cancel-btn {
+  background: #F41010;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #1B1F24;
+  font-weight: 400 !important;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 11px 52px 11px 52px;
+  color: #FFF !important;
+  text-decoration: none;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+.view-app-btn .view-app-buttons a.Approved-cancel-btn {
+  background: #00803C;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #1B1F24;
+  font-weight: 400 !important;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 11px 52px 11px 52px;
+  color: #fff !important;
+  text-decoration: none;
+}
+.view-app-btn .view-app-buttons a.Save-cancel-btn {
+  background: #4A068F;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #000;
+  font-weight: 400 !important;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 11px 52px 11px 52px;
+  color: #fff!important;
+  text-decoration: none;
+}
+
+
+
+/***************VIEW APPLICATION AMEND SCREEN CSS********/
+.amend-col .form-personal form .form-group input {
+  background: #1F2329 !important;
+  border-radius: 12px !important;
+  height: 56px !important;
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 100%;
+}
+.amend-col .upload-file form input {
+  display: none;
+}
+.amend-col .upload-file form  a.upld-file {
+  display: block;
+  background: transparent !important;
+  color: #fff;
+  font-weight: 600;
+}
+.amend-col-2 .form-personal form .form-group input.message-area {
+  height: 120px !important;
+}
+.amend-col-2 .form-personal form .form-group input.message-area:focus {
+  outline: none;
+}
+
+.amend-col-2 .on-off-button .checkbox {
+display: none;
+}
+.amend-col-2 .on-off-button .switch {
+
+align-items: center;
+background-color: gray;
+border-radius: 500px;
+cursor: pointer;
+display: flex;
+height: 20px;
+justify-content: space-between;
+padding: 0 10px;
+position: relative;
+user-select: none;
+width: 40px;
+}
+.amend-col-2 .on-off-button .checkbox:checked ~ .switch {
+background-color: blue;
+}
+.amend-col-2 .on-off-button .checkbox:not(:checked) ~ .switch {
+background-color: #4A068F;
+}
+.amend-col-2 .on-off-button .checkbox:checked ~ .switch {
+  background-color: #1b1f24;
+}
+.on-off-button .switch__left,
+.on-off-button .switch__right {
+color: white;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 0 !important;
+}
+.amend-col-2 .on-off-button .checkbox:checked ~ .switch .switch__left {
+visibility: hidden;
+}
+.amend-col-2 .on-off-button .checkbox:not(:checked) ~ .switch .switch__right {
+visibility: hidden;
+}
+.on-off-button .switch__circle {
+height: 30px;
+padding: 5px;
+position: absolute;
+transition: all 0.1s linear;
+width: 40px;
+}
+.amend-col-2 .on-off-button .checkbox:checked ~ .switch .switch__circle {
+left: 0;
+right: calc(100% - 40px);
+}
+.amend-col-2 .on-off-button .checkbox:not(:checked) ~ .switch .switch__circle {
+left: calc(100% - 26px);
+right: 0;
+}
+.amend-col-2 .on-off-button .switch__circle-inner {
+background-color: white;
+border-radius: 50%;
+display: block;
+height: 20px;
+width: 20px;
+}
+.amend-col-2 .pro-yes {
+  display: flex;
+  align-items: center;
+}
+.amend-col-2 .on-off-button {
+  margin-left: 15px;
+}
+
+
+
+/***********POPUP CSS**********/
+.user-app-popup {
+  width: 584px;
+  height: 539px;
+  padding: 24px 24px 24px 24px;
+  border-radius: 12px;
+  background: #1B1F24;
+  box-shadow: 0px 6px 4px 0px rgba(187, 185, 185, 0.07);
+}
+.user-app-popup .userr-pop-txt-head h5 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 155%;
+  font-weight: 600;
+  padding-top: 24px;
+  text-align: center;
+}
+.user-app-popup .userr-pop-txt-head p {
+  color: #667085;
+  font-size: 16px;
+  line-height: 155%;
+  margin-bottom: 0;
+  padding-top: 24px;
+}
+.user-app-popup .userr-pop-txt-form .form-personal form .form-group label {
+  color: #667085;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+.user-app-popup .userr-pop-txt-head {
+  text-align: center;
+}
+.user-app-popup .userr-pop-txt-form .form-personal form .form-group input {
+  background: #121418 !important;
+  border-bottom: 1px solid #1f2329 !important;
+  border: none;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding-bottom: 12px;
+  width: 100%;
+  outline: none;
+  margin-bottom: 32px;
+  height: 56px;
+  border-radius: 12px;
+  padding-left: 20px;
+  padding-top: 11px;
+}
+.user-app-popup .userr-pop-txt-form .form-personal form .form-group input.popup-massage {
+  height: 112px;
+  padding-left: 10px;
+}
+
+.user-app-popup .warning-img {
+  text-align: center;
+}
+.userr-pop-txt-btns a.chng-otp-ver {
+  color: #fff !important;
+  background: transparent !important;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #667085;
+  font-weight: 500 !important;
+  font-size: 16px;
+  width: 260px;
+  display: inline-block;
+  height: 44px;
+  text-align: center;
+  padding: 9px 0 0 0;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.userr-pop-txt-btns a.succes-return {
+  color: #fff !important;
+  background: #4a068f;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #4a068f;
+  font-weight: 500 !important;
+  font-size: 16px;
+  width: 260px;
+  display: inline-block;
+  height: 44px;
+  text-align: center;
+  padding: 9px 0 0 0;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+/*****************SUPPORT SCREEN ONE CSS*************/
+.support-num-perctgre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.support-num-perctgre .suprt-percantage h3 {
+  color: #138808;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0;
+  font-weight: 400;
+  font-family: poppins;
+}
+.support-num-perctgre .suprt-percantage h3 i {
+  color: #8D98AF;
+  margin-left: 7px;
+}
+.support-main {
+  padding: 32px;
+}
+.support-issue-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.support-issue-head h4 {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 600;
+  margin: 0;
+  color: #FCFCFC;
+}
+.support-issue-head .issue-btns a {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #676D7C;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.support-issue-head .issue-btns {
+  background: #1B1F24;
+  border-radius: 4px;
+  height: 39px;
+  padding: 4px 0px 0 20px;
+}
+.support-issue-head .issue-btns a.active {
+  background: #4A068F;
+  color: #fff;
+  padding: 2px 10px 5px 10px;
+  border-radius: 4px;
+}
+.support-issue-head .time-frame span {
+  font-size: 14px;
+  line-height: normal;
+  margin: 0;
+  color: #6E7074;
+}
+.support-issue-head .time-frame span input {
+  margin-left: 10px;
+  background: #1B1F24;
+  border: 1px solid #1B1F24;
+  border-radius: 4px;
+  padding: 0px 20px 0 20px;
+  height: 39px;
+  font-size: 15px;
+  color: #6E7074;
+}
+.support-issue-head .tivcket-btn a {
+  background: #4A068F;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #000;
+  font-weight: 400 !important;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 16px 10px 16px;
+  color: #fff !important;
+  text-decoration: none;
+}
+.support-issue-main-bx {
+  background: #121418;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+.support-issue-head .view-support {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #676D7C;
+  text-decoration: none;
+  position: relative;
+  left: 8%;
+}
+.support-issue-head .tivcket-btn a i {
+  margin-right: 10px;
+}
+.support-issue-tabs ul li a {
+  margin-right: 10px;
+}
+.support-issue-tabs ul li a.nav-link.active {
+  margin-right: 10px;
+}
+table.adm-user-tble tr td.Open-btn a {
+  background: #667085;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: normal;
+  font-weight: 400;
+  border-radius: 16px;
+  padding: 4px 14px 5px 14px;
+}
+table.adm-user-tble tr td.New-btn a {
+  background: #1F2329;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: normal;
+  font-weight: 400;
+  border-radius: 16px;
+  padding: 3px 14px 5px 13px;
+}
+table.adm-user-tble tr td.Resolved-btn a {
+  background: #138808;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: normal;
+  font-weight: 400;
+  border-radius: 16px;
+  padding: 5px 13px 5px 14px;
+}
+table.adm-user-tble tr td.High-btn a {
+  color: #F41010;
+  text-decoration: none;
+}
+table.adm-user-tble tr td.Low-btn a {
+  color: #667085;
+  text-decoration: none;
+}
+table.adm-user-tble tr td.Medium-btn a {
+  text-decoration: none;
+  color: #FF9933;
+}
+table.supp-issue {
+  margin-top: 34px;
+}
+.support-issue-tabs {
+  padding-top: 45px;
+}
+.invoice-view-card.db-default-wrapper.admin-invoice-view-card.admin-invoice-refund-card {
+  color: #fff;
+}
+.dashboard-panel.invoice-view-panel.payment-schedule-invoice-view-panel.payment-schedule-two textarea {
+  background: #1D1F22 !important;
+}
+.view-app-btn.reject_btn {position: absolute;top: 34px;right: 50px;}
+.reject_user_application  .user-app-popup {
+  width: 60%;
+}
+
+.reject_user_application .user-app-popup .succes-return-btn.Confirm-alert-btns.userr-pop-txt-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.reject_user_application .user-app-popup .succes-return-btn.Confirm-alert-btns.userr-pop-txt-btns a {
+  margin: 0 10px;
+}
 
 
 
