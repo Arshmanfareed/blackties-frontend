@@ -49,49 +49,57 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <Router>
-  <Routes>
-  <Route path="/" element={<><Header /><HomePage /><Footer /></>} />
-        <Route path="/our-vehicle" element={<><Header /><Our_Vehicle /><Footer /></>} />
-        <Route path="/driver-benefits" element={<><Header /><Driver_benefits /><Footer /></>} />
-        <Route path="/car-details" element={<><Header /><Car_details /><Footer /></>} />
-        <Route path="/how-it-works" element={<><Header /><How_It_Works /><Footer /></>} />
-        <Route path="/login" element={<><Header /><Login /><Footer /></>} />
-        <Route path="/register" element={<><Header /><Register /><Footer /></>} />
-        <Route path="/verification" element={<><Header /><Verification /><Footer /></>} />
-        <Route path="/forget-password" element={<><Header /><Forget_password /><Footer /></>} />
-        <Route path="/create-password" element={<><Header /><Create_password /><Footer /></>} />
-    {/* Dashboard Routes */}
-    <Route path="/applicant" element={<><Applicant /></>} />
-    <Route path="/welcome" element={<><WelcomePage /></>} />
-    <Route path="/rent-car" element={<><RentCar /></>} />
-    <Route path="/overview" element={<><Overview /></>} />
-    <Route path="/vehicle-document" element={<><Vehicledocument /></>} />
-    <Route path="/penalty-charge-notice" element={<><Palentychargenotice /></>} />
-    <Route path="/driver-score" element={<><Driverscore /></>} />
-    <Route path="/maintenance" element={<><Maintainance /></>} />
-    <Route path="/invoice" element={<><Invoice /></>} />
-    <Route path="/invoice-view" element={<><InvoiceView /></>} />
-    <Route path="/notifications" element={<><Notifications /></>} />
-    <Route path="/single-notification" element={<><SingleNotification /></>} />
-    <Route path="/settings" element={<><Profile /></>} />
-    <Route path="/cancellation" element={<><Cancellation /></>} />
-    <Route path="/payment" element={<><Payment/></>} />
-    <Route path="/payment-process" element={<><PaymentProcess/></>} />
-    <Route path="/message" element={<><Message/></>} />
-    <Route path="/setting-profile" element={<><Settingprofile/></>} />
-    <Route path="/calender-all" element={<><Calenderall/></>} />
-    <Route path="/failed-pay" element={<><Failedpay/></>} />
-    <Route path="/support-ticket" element={<><Support/></>} />
-    <Route path="/rent-our-vehicle" element={<><Ourvehicle/></>} />
+    <Routes>
+      <Route path="/" element={<><Header /><HomePage /><Footer /></>} />
+      <Route path="/our-vehicle" element={<><Header /><Our_Vehicle /><Footer /></>} />
+      <Route path="/driver-benefits" element={<><Header /><Driver_benefits /><Footer /></>} />
+      <Route path="/car-details" element={<><Header /><Car_details /><Footer /></>} />
+      <Route path="/how-it-works" element={<><Header /><How_It_Works /><Footer /></>} />
+      <Route path="/login" element={<><Header /><Login /><Footer /></>} />
+      <Route path="/register" element={<><Header /><Register /><Footer /></>} />
+      <Route path="/verification" element={<><Header /><Verification /><Footer /></>} />
+      <Route path="/forget-password" element={<><Header /><Forget_password /><Footer /></>} />
+      <Route path="/create-password" element={<><Header /><Create_password /><Footer /></>} />
+      {/* Dashboard Routes */}
+      <Route path="/applicant" element={<><Applicant /></>} />
+      <Route path="/welcome" element={<><WelcomePage /></>} />
+      <Route path="/rent-car" element={<><RentCar /></>} />
+      <Route path="/overview" element={<><Overview /></>} />
+      <Route path="/vehicle-document" element={<><Vehicledocument /></>} />
+      <Route path="/penalty-charge-notice" element={<><Palentychargenotice /></>} />
+      <Route path="/driver-score" element={<><Driverscore /></>} />
+      <Route path="/maintenance" element={<><Maintainance /></>} />
+      <Route path="/invoice" element={<><Invoice /></>} />
+      <Route path="/invoice-view" element={<><InvoiceView /></>} />
+      <Route path="/notifications" element={<><Notifications /></>} />
+      <Route path="/single-notification" element={<><SingleNotification /></>} />
+      <Route path="/settings" element={<><Profile /></>} />
+      <Route path="/cancellation" element={<><Cancellation /></>} />
+      <Route path="/payment" element={<><Payment /></>} />
+      <Route path="/payment-process" element={<><PaymentProcess /></>} />
+      <Route path="/message" element={<><Message /></>} />
+      <Route path="/setting-profile" element={<><Settingprofile /></>} />
+      <Route path="/calender-all" element={<><Calenderall /></>} />
+      <Route path="/failed-pay" element={<><Failedpay /></>} />
+      <Route path="/support-ticket" element={<><Support /></>} />
+      <Route path="/rent-our-vehicle" element={<><Ourvehicle /></>} />
+      {/* Admin Routes */}
+      <Route path="/add-vehicle" element={<><Addvehicle /></>} />
+      <Route path="/all-vehicle" element={<><Allvehicle /></>} />
+      <Route path="/admin-login" element={<><Adminlogin /></>} />
+      <Route path="/admin-vehicle-details/:id" element={<><Vehicledetails /></>} />
+      <Route path="/admin-penalty-charge" element={<><Penaltychargesnotice /></>} />
+      <Route path="/admin-financial-payment" element={<><Financialpayments /></>} />
+      <Route path="/admin-financial-invoice" element={<><Financialinvoice /></>} />
+      <Route path="/admin-schedule-invoice" element={<><Scheduleinvoice /></>} />
+      <Route path="/admin-refund-invoice" element={<><Refundinvoice /></>} />
+      <Route path="/admin-add-payment-schedule" element={<><Addpaymentschedule /></>} />
+      <Route path="/admin-user-invoice" element={<><Userinvoice /></>} />
+      <Route path="/admin-all-user" element={<><Alluser /></>} />
+      <Route path="/admin-user-info" element={<><Userinfo /></>} />
 
-    {/* Admin Routes */}
-    <Route path="/add-vehicle" element={<><Addvehicle/></>} />
-    <Route path="/all-vehicle" element={<><Allvehicle/></>} />
-    <Route path="/admin-login" element={<><Adminlogin/></>} />
-    <Route path="/admin-vehicle-details/:id" element={<><Vehicledetails/></>} />
-
-  </Routes>
-</Router>
+    </Routes>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
