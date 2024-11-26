@@ -9448,3 +9448,755 @@ background-position: center;
 .create-ticket-top-btns a {
   margin: 0 5px;
 }
+
+/*********MOT CERTIFICATION POPUP CSS************/
+.Mot-certificate-body {
+  background-color: #1B1F24 !important;
+  border-radius: 16px;
+  padding: 42px 32px 42px 32px;
+  margin-top: 40px;
+  width: 771px;
+  height: 650px;
+}
+.Mot-certificate-body .chng-psd h4 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.Mot-certificate-body .mot-pera p {
+  color: #FFF;
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Mot-certificate-body form .form-group input {
+  background: transparent;
+  border-radius: 12px;
+  border: 0px solid #000;
+  height: 32px;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #ffff;
+  padding-left: 30px;
+  border-bottom: 2px solid #1F2329;
+  border-radius: 0;
+  padding-bottom: 10px;
+}
+.Mot-certificate-body form .form-group label {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding-bottom: 10px;
+}
+.Mot-certificate-body form .form-group input:focus {
+  outline: none;
+}
+.Mot-certificate-body .change-pass-btn {
+  text-align: right;
+  padding-top: 0px;
+  margin-top: -10px;
+}
+.Mot-certificate-body .change-pass-btn a.psd-cancel {
+  color: #667085 !important;
+  background: transparent;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 9px 48px 9px 48px;
+  border: 1px solid #667085;
+  margin-right: 13px;
+  transition: all 0.5s ease-in-out;
+}
+.Mot-certificate-body .change-pass-btn a.psd-change {
+  color: #fff !important;
+  background: #4A068F;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 9px 48px 9px 48px;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #4A068F;
+}
+.Mot-certificate-body form .form-group .file_cont input[type="file"]::file-selector-button {
+font-size: 0px;
+display: none;
+}
+.Mot-certificate-body form .form-group .file_cont input[type="file"] {
+font-size: 0px !important;
+position: relative;
+border: 1px dashed #121418 !important;
+background: #121418 !important;
+height: 160px;
+border-radius: 8px;
+margin-bottom: 0;
+}
+.Mot-certificate-body form .form-group .file_cont input[type="file"]::before {
+content: "";
+width: 65px;
+height: 48px;
+background: url(../images/dashboard/file-upload.png);
+position: absolute;
+right: 0;
+top: 30px;
+left: 0;
+margin: 0 auto;
+background-size: 100%;
+background-position: center;
+}
+.Mot-certificate-body form .form-group .file_cont input[type="file"]::after {
+content: "Click to upload or drag and drop Maximum file size 50 MB.";
+position: absolute;
+}
+.Mot-certificate-body form .form-group span.file_cont span {
+  top: -70px;
+}
+.Mot-certificate-body .chng-psd {
+  padding-bottom: 40px;
+}
+
+/********PRIVATE HIRE LICENSE POPUP CSS***********/
+.privte-hire {
+  height: 742px;
+}
+.privte-hire form .form-group input.num {
+  background: #121418 !important;
+  height: 60px;
+  border-radius: 8px;
+  padding-bottom: 0;
+}
+/*************Vehicle-Pick-Up POPUP CSS*************/
+
+.Vehicle-Pick-Up {
+  height: 1080px;
+}
+.Vehicle-Pick-Up .pick-up-txt-one p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  border-bottom: 1px solid #667085;
+}
+.Vehicle-Pick-Up span {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+  padding-bottom: 20px;
+}
+.Vehicle-Pick-Up .change-pass-btn {
+  margin-top: 45px;
+}
+
+
+/*********Confirm-Pick-Up POPUP CSS*********/
+
+
+.Confirm-Pick-Up .chng-psd a.cross-icon i.fas.fa-envelope {
+  background: #4A068F;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 100%;
+}
+.Confirm-Pick-Up .chng-psd a.cross-icon i.fas.fa-phone-alt {
+  background: #4A068F;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 100%;
+  rotate: 90deg;
+}
+.Confirm-Pick-Up .chng-psd a.cross-icon i {
+  margin-right: 10px;
+}
+.Confirm-Pick-Up a.cross-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Confirm-Pick-Up .change-pass-btn a.mark-complete {
+  color: #fff!important;
+  background: transparent;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 9px 48px 9px 48px;
+  border: 1px solid #4A068F;
+  margin-right: 13px;
+  transition: all 0.5s ease-in-out;
+}
+.Confirm-Pick-Up {
+  height: 1020px;
+}
+.Confirm-Pick-Up form .form-group input[type="textarea"] {
+  position: relative;
+  border: 1px dashed #121418 !important;
+  background: #121418 !important;
+  height: 120px;
+  border-radius: 8px;
+  margin-bottom: 0;
+  color: #fff;
+}
+.Vehicle-Pick-Up img {
+  padding-bottom: 10px;
+}
+
+
+/***********CREATE CALENDER POPUP SCREEN CSS********/
+.crate-cal form .form-group select#Oil-Changes-fld {
+  background: #121418 !important;
+  border-radius: 12px;
+  border: 1px solid #1D1F22;
+  height: 60px !important;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #fff;
+  padding-left: 20px;
+  font-size: 16px;
+}
+.crate-cal form .form-group input {
+  background: #121418 !important;
+  height: 60px !important;
+  border-radius: 8px;
+}
+.crate-cal form .form-group select#Oil-Changes-fld:focus {
+  outline: none;
+}
+.crate-cal form .form-group input[type="file"] {
+  height: 160px !important;
+}
+.crate-cal-main {
+  height: 768px;
+  margin: 0 auto;
+}
+.crate-cal-main .change-pass-btn {
+  margin-top: -20px;
+}
+
+
+/**********************Admin Financials Invoice Revenue ADD Popup CSS******************************/
+
+.revenue-PP-one {
+  width: 771px;
+  padding: 32px;
+  border-radius: 16px;
+  background: #1B1F24;
+}
+.pp-main-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pp-main-head h2 {
+  margin: 0;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.Popup-inner-row {
+  padding-top: 32px;
+}
+.Popup-inner-row .cstmr-bx {
+  margin-bottom: 32px;
+}
+.Popup-inner-row .form-group input::placeholder {
+  color: #fff;
+}
+.Popup-inner-row .rental-vehicle-docs-wrap {
+  margin-top: 0;
+  background: transparent;
+  padding: 0;
+}
+.Popup-inner-row h5 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #64748B;
+}
+.Popup-inner-row .pdf_upl-bx {
+  position: relative;
+  background: #121418;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+.Popup-inner-row .pdf_upl-bx input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 3;
+}
+.Popup-inner-row .pdf_upl-bx img {
+  width: 68px;
+  height: 65px;
+}
+.Popup-inner-row .pdf_upl-bx .filedetails {
+  width: 37%;
+  margin: 0 auto;
+}
+.Popup-inner-row .pdf_upl-bx .filedetails span:first-child {
+  text-decoration: underline;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 166.667% */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.Popup-inner-row .pdf_upl-bx .filedetails span:last-child {
+  color: var(--Primary-Gray, #7F8596);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.Popup-inner-row .revenue-add-action-btns {
+  display: flex;
+  padding: 32px 0px 0;
+  align-items: center;
+  gap: 13px;
+  justify-content: end;
+}
+.Popup-inner-row .revenue-add-action-btns a {
+  text-decoration: none;
+}
+.Popup-inner-row .revenue-add-action-btns a.delete-btn {
+  display: flex;
+  width: 189px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #667085;
+  background: #F41010;
+  color: #FFF;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Popup-inner-row .revenue-add-action-btns a.cancel-btn {
+  display: flex;
+  width: 189px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #667085;
+  color: #667085;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Popup-inner-row .revenue-add-action-btns a.submit-btn {
+  display: flex;
+  width: 189px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #4A068F;
+  color: #FFF;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/**********************Admin Financials Invoice Revenue View Popup CSS******************************/
+
+.revenue-PP-two {
+  width: 771px;
+  padding: 32px;
+  border-radius: 16px;
+  background: #1B1F24;
+  height: fit-content;
+}
+.revenue-PP-two .form-group .drvr_deta {
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-bottom: 32px;
+  background: #1F2329;
+}
+.drvr_deta .cstmr-view-deta-eye a.uploaded-btn {
+  display: flex;
+  padding: 2px 8px 2px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  background: #667085;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.revenue-PP-two .form-group .drvr_deta .drvrmain {
+  align-items: center;
+}
+section.user-dashboard .revenue-PP-two .form-group input {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #667085 !important;
+}
+.revenue-PP-two .chngs-pdf-ppr {
+  display: flex;
+  align-items: center;
+}
+.revenue-PP-two .chngs-pdf-ppr img.paper-pdf-img {
+  border-radius: 2.333px;
+  background: #2E3446;
+  width: 42px;
+  height: 42px;
+  padding: 8.75px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.revenue-PP-two .chngs-pdf-ppr .pdfdetail {
+  margin-left: 12px;
+}
+.revenue-PP-two .chngs-pdf-ppr .pdfdetail h6 {
+  margin: 0;
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 12px;
+}
+.revenue-PP-two .chngs-pdf-ppr .pdfdetail p {
+  margin: 0;
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.revenue-PP-two .pdf-chng-btns {
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+}
+.revenue-PP-two .pdf-chng-btns a {
+  text-decoration: none;
+}
+.revenue-PP-two .pdf-chng-btns a.view-btn {
+  display: flex;
+  padding: 5px 12px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: #000;
+  color: #9A75EC;
+  font-family: Archivo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.revenue-PP-two .pdf-chng-btns a.download-btn {
+  display: flex;
+  padding: 5px 12px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: #000;
+  color: #9A75EC;
+  font-family: Archivo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/**********************Admin Financials Invoice Revenue/Expense Remove Popup CSS******************************/
+.remove-alert-pop-up {
+  display: flex;
+  width: 360px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 10px;
+  background: #1B1F24;
+  height: fit-content;
+}
+.remove-alert-pop-up .alrt-deta {
+  text-align: center;
+}
+.remove-alert-pop-up .alrt-deta h6 {
+  margin: 0;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 155%;
+  padding-bottom: 24px;
+}
+.remove-alert-pop-up .alrt-deta p {
+  color: #667085;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+  margin: 0;
+  padding-bottom: 24px;
+}
+.remove-alert-pop-up .alrt-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+.remove-alert-pop-up .alrt-btns a {
+  text-decoration: none;
+}
+.remove-alert-pop-up .alrt-btns a.cancel-btn {
+  display: flex;
+  padding: 12px 49px 12px 48px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid #4A068F;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.remove-alert-pop-up .alrt-btns a.yes-btn {
+  display: flex;
+  padding: 12px 49px 12px 48px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  background: #F41010;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+
+
+/**********************Admin Financials Invoice Revenue/Expense EDIT SETTING CSS******************************/
+
+
+.hidden-content {
+  display: none;
+}
+
+.hidden-content.visible {
+  display: block;
+  transition: all 0.3s ease;
+}
+.maintenance-table td.pdfs-td, .maintenance-table td.dot-td {
+  position: relative;
+}
+.pdf-content.visible {
+  position: absolute;
+  width: 159px;
+  padding: 12px;
+  top: 15%;
+  left: -200%;
+  border-radius: 8px;
+  background: #1B1F24;
+  box-shadow: 0px 1px 7.8px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9998;
+}
+.dots-content.dropdown-menu.show {
+  position: absolute;
+  width: 159px;
+  padding: 12px;
+  top: 15%;
+  left: -150%;
+  border-radius: 8px;
+  background: #1B1F24;
+  box-shadow: 0px 1px 7.8px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+}
+.pdf-content.visible .pdfs-pp-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.pdf-content.visible .pdfs-pp-btns a.pdf-view-btn {
+  border-radius: 6px;
+  background: #667085;
+  color: var(--Primary-Black, #191C20);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.pdf-content.visible .pdfs-pp-btns a {
+  text-decoration: none;
+  display: flex;
+  padding: 6px 8px 6px 8px;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+.pdf-content.visible .pdfs-pp-btns a {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.pdf-content.visible .pdfs-pp-btns a.pdf-delete-btn {
+  color: #F41010;
+}
+.dots-content .dot-pp-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dots-content .dot-pp-btns a {
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.dots-content a.dot-brng-btn {
+  display: flex;
+  padding: 6px 8px 6px 8px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 6px;
+  /* background: #667085; */
+  color: var(--Primary-Black, #191C20);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.dots-content  a.dot-delete-btn {
+  color: #F41010;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.maintenance-table td .dropdown button {
+  display: flex;
+  padding: 5px 6px;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 5px;
+  background: var(--BG-color-Dark, #1B1F24);
+  border: none;
+  align-items: center;
+  color: #667085;
+  font-family: Archivo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.maintenance-table td .dropdown .dropdown-menu.show {
+  background: #1B1F24;
+  box-shadow: 0px 1px 7.8px 0px rgba(0, 0, 0, 0.05);
+  color: #667085;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.maintenance-table td .dropdown .dropdown-menu.show  a {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.maintenance-table td.dot-td .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.maintenance-table td.dot-td .dropdown button#dropdown-basic {
+  background: none;
+}
