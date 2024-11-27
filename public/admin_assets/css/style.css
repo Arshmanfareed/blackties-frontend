@@ -10200,3 +10200,792 @@ section.user-dashboard .revenue-PP-two .form-group input {
 .maintenance-table td.dot-td .dropdown button#dropdown-basic {
   background: none;
 }
+
+/*********DELETE ACCOUNT POPUP CSS**********/
+.delete-alert {
+    width: 400px;
+    height: 396px;
+}
+.delete-alert .delete-alert-btn a.chng-otp-ver {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: #4A068F;
+    letter-spacing: 2px;
+    padding: 9px 76px 9px 76px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #4A068F;
+}
+.delete-alert .delete-alert-btn a.succes-return {
+    background: #FF0000;
+    border: 1px solid #FF0000;
+    margin-top: 24px;
+    padding: 9px 76px 9px 76px;
+} 
+
+.delete-alert .delete-alert-btn {
+    display: grid;
+}
+
+/********SUCCESSFULL REQUEST POPUP CSS*********/
+.resqt-body {
+    height: 346px;
+}
+.resqt-body .resqt-body-btn a.succes-return {
+    padding: 11px 81px 11px 81px;
+}
+
+/**********************Admin Dashboard Main CSS******************************/
+
+section.admin-dashboard-main .dashboard-panel-topbar h2 {
+  margin: 0;
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+section.admin-dashboard-main .dashboard-panel-topbar {
+  padding: 20px 42px;
+}
+.unpd-inv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.unpd-inv .unpd-inv-deta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+}
+.unpd-inv .unpd-inv-deta h1 {
+  margin: 0;
+  color: var(--Text-color-Dark, #FCFCFC);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.unpd-inv .unpd-inv-deta span {
+  display: flex;
+  height: 28px;
+  padding: 3px 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #4A068F;
+  color: var(--white-white, #FFF);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.unpd-inv .unpd-inv-deta button {
+  display: flex;
+  padding: 5px 7px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: var(--BG-color-Dark, #1B1F24);
+  border: none;
+  font-family: Archivo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #9A75EC;
+}
+.unpd-inv .unpd-inv-v-btn a, .unpd-inv .unpd-inv-cal-btn a {
+  text-decoration: none;
+  display: flex;
+  padding: 9px 13px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--Divider-color-Dark, #1F2329);
+  background: var(--Black-color-Dark, #121418);
+  font-family: Archivo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  color: var(--2nd-text-dark, #6E7074);
+}
+section.admin-dashboard-main .admin-dash-frm .form-group input {
+  border-radius: 8px;
+  background: #1D1F22 !important;
+  height: 36px !important;
+  padding: 6px 16px;
+  margin-bottom: 0;
+}
+section.admin-dashboard-main .admin-dash-frm .brdr-r {
+  border-right: 1px solid #1F2329;
+}
+.rigistration-tabl table tr:last-child {
+  border: none;
+}
+section.admin-dashboard-main .admin-dash-frm table.adm-user-tble {
+  margin-bottom: 0;
+  border-bottom: 1px solid #1F2329;
+}
+section.admin-dashboard-main table.adm-user-tble tr th {
+  padding: 12px 16px !important;
+}
+section.admin-dashboard-main .overview-card {
+  padding: 24px;
+}
+.nopd-col .unpd-inv {
+  padding-bottom: 0;
+}
+.viewbyd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.viewbyd a.view-support {
+  position: unset;
+  margin-right: 12px;
+}
+section.admin-dashboard-main .support-issue-head {
+  padding: 44px 20px 25px;
+}
+section.admin-dashboard-main .vehicle-tabs .nav-tabs .nav-item .nav-link {
+  margin-right: 14px !important;!i;!;
+  padding: 10px;
+  color: #667085;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.admin-dash-stats {
+  padding: 25px 0;
+  position: relative;
+}
+.admin-dash-stats::before {
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 0.1px;
+  background-color: #464849;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.admin-dash-stats span.red-clr {
+  color: var(--2nd-color, #FC5A5A);
+}
+.admin-dash-stats .vehicle-average-wrap {
+  padding-right: 30px;
+}
+.admin-dash-stats .average-score {
+  justify-content: space-between;
+}
+.brdrnn {
+  border: none !important;
+}
+.brdrnn::before {
+  display: none;
+}
+.main-stats-box {
+  border-radius: 12px;
+  background: #010202;
+  padding: 15px 29px 15px 25px;
+}
+.stats-graph {
+  padding-top: 24px;
+}
+.stats-graph img {
+  width: 100%;
+}
+.statshead-cal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+
+
+/**********************Admin Dashboard Main Unpaid Pop-up CSS******************************/
+.unpaid-pp {
+  width: 1080px;
+  padding: 32px 24px;
+  border-radius: 12px;
+  background: #000;
+}
+.unpaid-inv-card {
+  padding: 24px;
+}
+.unpaid-inv-card .invoice-view-details {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.unpaid-inv-card .invoice-view-details p.inv-address {
+  color: var(--Gray, #858585);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.unpaid-inv-card .invoice-view-details .col-lg-6:nth-child(2) {
+  padding-left: 45px;
+}
+.unpaid-inv-card .invoice-view-details  h5 {
+  padding-bottom: 32px;
+}
+.unpaid-inv-card .invoice-view-subscription, .unpaid-inv-card .invoice-view-subscription-2 {
+  padding: 24px 15px;
+}
+.unpaid-inv-card .invoice-view-subscription-2 {
+  border-top: 1px dashed #667085;
+}
+.unpaid-inv-card .invoice-view-subscription p span, .unpaid-inv-card .invoice-view-subscription-2 p span {
+  opacity: 0.64;
+}
+.unpaid-inv-card .invoice-view-subscription p, .unpaid-inv-card .invoice-view-subscription-2 p {
+  text-align: center;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.unpaid-pp-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: end;
+  padding-top: 16px;
+}
+.unpaid-pp-btns a {
+  text-decoration: none;
+}
+.unpaid-pp-btns a.amend-btn {
+  display: flex;
+  padding: 5px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background: var(--BG-color-Dark, #1B1F24);
+  color: #9A75EC;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.unpaid-pp-btns  a.delete-btn {
+  display: flex;
+  height: 44px;
+  padding: 4px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: #F41010;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.unpaid-pp-btns a.try-payment-btn {
+  display: flex;
+  height: 44px;
+  padding: 4px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: #00803C;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.unpaid-pp .cstmr-bx {
+  border-radius: var(--Medium, 8px);
+  border: 1px solid #1F2329;
+  background: #121418;
+  width: 324px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.cstmr-bx .cstmr-mn-deta {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.cstmr-bx .cstmr-details {
+  padding-top: 24px;
+}
+.cstmr-bx .cstmr-mn-deta .c_nm h4 {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFF;
+  padding-bottom: 8px;
+}
+.cstmr-bx .cstmr-mn-deta .c_nm p {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--Grey-400, #98A2B3);
+}
+.cstmr-bx .cstmr-mn-deta img {
+  width: 54px;
+  height: 54px;
+}
+.cstmr-bx .cstmr-details .form-group {
+  margin-bottom: 16px;
+}
+.cstmr-bx .cstmr-details .form-group label {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+.cstmr-bx .cstmr-details .form-group  input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding-bottom: 12px;
+}
+.cstmr-bx .cstmr-details .form-group:last-child {
+  margin: 0;
+}
+.cstmr-bx .cstmr-details .form-group input::placeholder {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+.unpaid-pp .vehical-bx {
+  width: 324px;
+  padding: 16px;
+  border-radius: var(--Medium, 8px);
+  border: 1px solid #1F2329;
+  background: #121418;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vehical-bx .veh-head {
+  display: flex;
+  padding-bottom: 16px;
+  gap: 10px;
+  align-self: stretch;
+  border-bottom: 1px solid #1F2329;
+  justify-content: space-between;
+}
+.vehical-bx .veh-head h4 {
+  margin: 0;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+.vehical-bx .veh-head a.active-btn {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  background: #138808;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-decoration: none;
+}
+.vehical-bx .vehicle-img {
+  text-align: center;
+}
+.vehical-bx .vehicle-img img {
+  width: 104px;
+}
+.vehical-bx .car-details h6 {
+  margin: 0;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.vehical-bx .car-details p {
+  margin: 0;
+  color: #667085;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.vehical-bx .car-details span {
+  color: #AFAFAF;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.vehical-bx .car-details svg {
+  margin: 0 6px;
+}
+.unpaid-pp button.close-btn {
+  width: 100%;
+  text-align: end;
+}
+
+.unpaid-inv-card {
+  padding: 24px !important;
+}
+
+/**********************Admin Dashboard Main Amend Pop-up CSS******************************/
+
+.amend-pp-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+}
+.amend-pp-btns a {
+  text-decoration: none;
+}
+.amend-pp-btns a.cancel-btn {
+  display: flex;
+  padding: 5px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 5px;
+  border: 1px solid #4A068F;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.amend-pp-btns a.save-btn {
+  display: flex;
+  height: 44px;
+  padding: 4px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: #4A068F;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+/**********************Admin Dashboard Main Deleted Pop-up CSS******************************/
+
+.delete-alert-pop-up {
+  display: flex;
+  width: 531px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 10px;
+  background: #1B1F24;
+}
+.delete-alert-pop-up .alrt-deta h6 {
+  margin: 0;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 155%;
+  color: #FFF;
+  padding-bottom: 24px;
+}
+.delete-alert-pop-up .alrt-deta p {
+  margin: 0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+  color: #667085;
+  text-align: center;
+  padding-bottom: 24px;
+}
+.delete-alert-pop-up .alrt-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.delete-alert-pop-up .alrt-btns a.cancel-btn {
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid #667085;
+}
+.delete-alert-pop-up .alrt-btns a {
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.delete-alert-pop-up .alrt-btns a.yes-btn {
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  background: #4A068F;
+}
+
+
+/**********************Admin Dashboard Main Try Payment Pop-up CSS******************************/
+
+.cardpay-popup_bx .card-pay-action-btns a.payment-btn {
+  text-decoration: none;
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  background: #138808;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.cardpay-popup_bx .card-pay-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+.cardpay-popup_bx .card-pay-action-btns a.cancel-btn, .cardpay-popup_bx .card-pay-action-btns a.refund-btn {
+  width: 207px;
+}
+
+
+
+
+/**********************Admin Dashboard Main Try Payment Confirmation Pop-up CSS******************************/
+
+.cardpay-popup_bx .card-innr-blk .payment-card-wrapper {
+  padding: 0;
+}
+.cardpay-popup_bx .card-innr-blk  form {
+  padding: 0;
+}
+.cardpay-popup_bx .card-innr-blk .debit-card-wrap {
+  margin: 0;
+}
+
+
+/********************** Admin Dashboard Main Payment Processing Pop-up ******************************/
+
+.pyment-procesw-pop-up {
+  width: 531px;
+  padding: 24px;
+  border-radius: 10px;
+  background: #1B1F24;
+  text-align: center;
+}
+.pyment-procesw-pop-up h6 {
+  margin-bottom: 0;
+  margin-top: 24px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 155%; /* 24.8px */
+}
+.pyment-procesw-pop-up table {
+  width: 100%;
+}
+.pyment-procesw-pop-up table td.td-1 {
+  text-align: left;
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.pyment-procesw-pop-up table tr td {
+  padding-bottom: 16px;
+}
+.pyment-procesw-pop-up table td.td-2 {
+  text-align: end;
+  color: #90A3BF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+}
+.pyment-procesw-pop-up table tr td.status-tagbtns {
+  text-align: end;
+}
+.pyment-procesw-pop-up table tr td.status-tagbtns a.completed-btn {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  background: #138808;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-decoration: none;
+  width: fit-content;
+  margin: 0 0 0 auto;
+}
+.pyment-procesw-pop-up .alrt-btns {
+  padding-top: 24px;
+}
+.pyment-procesw-pop-up .alrt-btns a.back-btn {
+  text-decoration: none;
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid #667085;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+
+
+/********************** Admin Dashboard Main Payment Processing Failed Pop-up ******************************/
+
+.failed-alert {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #121418;
+}
+.failed-alert .error-data  h6 {
+  margin: 0;
+  color: var(--Error-500, #F04438);
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+  margin-bottom: 6px;
+}
+.failed-alert .error-data  p {
+  margin: 0;
+  color: #667085;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+.pyment-procesw-pop-up table tr td.status-tagbtns a.failed-btn {
+  display: flex;
+  padding: 2px 8px 2px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  background: #F41010;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 180% */
+  text-decoration: none;
+  width: fit-content;
+  margin: 0 0 0 auto;
+}

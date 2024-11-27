@@ -64,6 +64,7 @@ import Adminnotification from './admin/Adminnotification';
 import Adminnotifications from './admin/Adminnotifications';
 import Financialinvoicerevenue from './admin/Financialinvoicerevenue';
 import Adminfinancialexpense from './admin/Adminfinancialexpense';
+import Admindashboardmain from './admin/Admindashboardmain';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -131,6 +132,7 @@ root.render(
     <Route path="/admin-notification" element={<><Adminnotification/></>} />
     <Route path="/admin-financial-revenue" element={<><Financialinvoicerevenue/></>} />
     <Route path="/admin-financial-expense" element={<><Adminfinancialexpense/></>} />
+    <Route path="/admin-dashboard-main" element={<><Admindashboardmain/></>} />
 
   </Routes>
 </Router>
