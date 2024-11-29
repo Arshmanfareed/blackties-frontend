@@ -32,6 +32,59 @@ const [showdelete, setShowdelete] = useState(false);
 
 const handleClosedelete = () => setShowdelete(false);
 const handleShowdelete = () => setShowdelete(true);
+
+//   Payment Sucess Modal
+const [showpaymentsucess, setShowpaymentsucess] = useState(false);
+
+const handleClosepaymentsucess = () => setShowpaymentsucess(false);
+const handleShowpaymentsucess = () => setShowpaymentsucess(true);
+
+
+//   Payment Failed Modal
+const [showpaymentfailed, setShowpaymentfailed] = useState(false);
+
+const handleClosepaymentfailed = () => setShowpaymentfailed(false);
+const handleShowpaymentfailed = () => setShowpaymentfailed(true);
+
+
+//   Unrated Vehicle Modal
+const [showunratedvehicle, setShowunratedvehicle] = useState(false);
+
+const handleCloseunratedvehicle = () => setShowunratedvehicle(false);
+const handleShowunratedvehicle = () => setShowunratedvehicle(true);
+
+//   Unrated Vehicle Modal
+const [showunratedvehicle_updated, setShowunratedvehicle_updated] = useState(false);
+
+const handleCloseunratedvehicle_updated = () => {
+  setShowunratedvehicle_updated(false);
+  setShowunratedvehicle(true);
+}
+const handleShowunratedvehicle_updated = () =>{
+
+ setShowunratedvehicle_updated(true);
+ setShowunratedvehicle(false);
+}
+
+
+//   MOT Modal
+const [showmot, setShowmot] = useState(false);
+
+const handleClosemot = () => setShowmot(false);
+const handleShowmot = () => setShowmot(true);
+
+//   MOT Update Modal
+const [showmot_update, setShowmot_update] = useState(false);
+
+const handleClosemot_update = () => {
+  setShowmot_update(false);
+  setShowmot(true);
+}
+const handleShowmot_update = () =>{
+setShowmot_update(true);
+setShowmot(false);
+}
+
   return (
     <>
 <section className="user-dashboard admin-dashboard-main">
@@ -276,7 +329,7 @@ const handleShowdelete = () => setShowdelete(true);
                                   <td>KM19 VUG</td>
                                   <td>July 19, 2024 10:00</td>
                                   <td className="view-btn">
-                                    <Link to="javascript:;">View</Link>
+                                    <Link to="javascript:;" onClick={handleShowunratedvehicle}>View</Link>
                                   </td>
                                 </tr>
                                 <tr>
@@ -284,7 +337,7 @@ const handleShowdelete = () => setShowdelete(true);
                                   <td>KM19 VUG</td>
                                   <td>July 19, 2024 10:00</td>
                                   <td className="view-btn">
-                                    <Link to="javascript:;">View</Link>
+                                    <Link to="javascript:;" onClick={handleShowunratedvehicle}>View</Link>
                                   </td>
                                 </tr>
                                 <tr>
@@ -292,7 +345,7 @@ const handleShowdelete = () => setShowdelete(true);
                                   <td>N/A</td>
                                   <td>July 19, 2024 10:00</td>
                                   <td className="view-btn">
-                                    <Link to="javascript:;">View</Link>
+                                    <Link to="javascript:;" onClick={handleShowunratedvehicle}>View</Link>
                                   </td>
                                 </tr>
                                 <tr>
@@ -300,7 +353,7 @@ const handleShowdelete = () => setShowdelete(true);
                                   <td>N/A</td>
                                   <td>July 19, 2024 10:00</td>
                                   <td className="view-btn">
-                                    <Link to="javascript:;">View</Link>
+                                    <Link to="javascript:;" onClick={handleShowunratedvehicle}>View</Link>
                                   </td>
                                 </tr>
                               </tbody>
@@ -396,7 +449,7 @@ const handleShowdelete = () => setShowdelete(true);
                                   <td>KM19 VUG</td>
                                   <td>19</td>
                                   <td className="view-btn">
-                                    <Link to="javascript:;">View</Link>
+                                    <Link to="javascript:;" onClick={handleShowunratedvehicle}>View</Link>
                                   </td>
                                 </tr>
                                 <tr>
@@ -405,7 +458,7 @@ const handleShowdelete = () => setShowdelete(true);
                                   <td>KM19 VUG</td>
                                   <td>21</td>
                                   <td className="view-btn">
-                                    <Link to="javascript:;">View</Link>
+                                    <Link to="javascript:;" onClick={handleShowmot}>View</Link>
                                   </td>
                                 </tr>
                                 <tr>
@@ -1204,8 +1257,8 @@ const handleShowdelete = () => setShowdelete(true);
 </div>
 
 <div className="card-pay-action-btns">
-    <Link to="javascript:;" className="cancel-btn" onClick={handleClosepayment}>Cancel</Link>
-    <Link to="javascript:;" className="payment-btn" onClick={handleClosepayment}>Payment</Link>
+    <Link to="javascript:;" className="cancel-btn" onClick={handleShowpaymentfailed}>Cancel</Link>
+    <Link to="javascript:;" className="payment-btn" onClick={handleShowpaymentsucess}>Payment</Link>
 </div>
 </div>
 </ModalBody></Modal>
@@ -1319,8 +1372,9 @@ const handleShowdelete = () => setShowdelete(true);
 
 
 {/* <!--------------------------------- Admin Dashboard Main Payment Processing Pop-up ----------------------------------> */}
-
-{/* <div className="pyment-procesw-pop-up">
+<Modal show={showpaymentsucess} onHide={handleClosepaymentsucess} className='password_modal'>
+  <ModalBody>
+<div className="pyment-procesw-pop-up">
 <img src="./admin_assets/images/Icon.png" className="Icon-img" alt="Icon-img"/>
 <div className="alrt-deta">
    <h6>Payment processing...</h6>
@@ -1344,16 +1398,18 @@ const handleShowdelete = () => setShowdelete(true);
    </table>
 
    <div className="alrt-btns">
-       <Link to="javascript:;" className="back-btn">Back</Link>
+       <Link to="javascript:;" className="back-btn" onClick={handleClosepaymentsucess}>Back</Link>
    </div>
 </div>
-</div> */}
-
+</div>
+</ModalBody>
+</Modal>
 
 
 {/* <!--------------------------------- Admin Dashboard Main Payment Processing Failed Pop-up ----------------------------------> */}
-
-{/* <div className="pyment-procesw-pop-up">
+<Modal show={showpaymentfailed} onHide={handleClosepaymentfailed} className='password_modal'>
+  <ModalBody>
+<div className="pyment-procesw-pop-up">
 <img src="./admin_assets/images/Icon.png" className="Icon-img" alt="Icon-img"/>
 <div className="alrt-deta">
    <h6>Payment processing...</h6>
@@ -1385,10 +1441,274 @@ const handleShowdelete = () => setShowdelete(true);
    </div>
 
    <div className="alrt-btns">
-       <Link to="javascript:;" className="back-btn">Back</Link>
+       <Link to="javascript:;" className="back-btn" onClick={handleClosepaymentfailed}>Back</Link>
    </div>
 </div>
-</div> */}
+</div>
+</ModalBody>
+</Modal>
+
+
+{/* <!------------------------------Admin Dashboard Main PCO POPUP----------------------> */}
+<Modal show={showunratedvehicle} onHide={handleCloseunratedvehicle} className='password_modal'>
+  <ModalBody>
+<div className="pco-pop-up">
+   <div className="pco-txt">
+    <div className="pco-head">
+          <a href="javascript:;" onClick={handleCloseunratedvehicle}><h5><i className="fas fa-chevron-left"></i>Back to Dashboard</h5></a>
+          <div className="pco-update">
+              <a href="javascript:;" className="update-btn" onClick={handleShowunratedvehicle_updated}>Update</a>
+          </div>
+    </div>
+    <div className="pco-img-txt">
+      <div className="image-text">
+        <img src="./admin_assets/images/image 67.png" className="car-img" alt="car-img"/>
+      </div>
+      <div className="img-text-head">
+        <h4>Mercedes-Benz E Class</h4>
+        <h6>Sedan Car</h6>
+      </div>
+      <div className="image-tag">
+        <p>KM19 VUG</p>
+      </div>
+    </div>
+    <div className="pco-licens">
+      <h5>PCO Licence</h5>
+    </div> 
+    <div className="date-main">
+      <div className="date-txt">
+        <p>Expiry Date</p>
+        <h6>23 May 2024</h6>
+      </div>
+      <div className="expired-date">
+          <a href="javascript;:" className="yellow-expired-btn">19 Day until Expired</a>
+      </div>
+    </div> 
+    <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+         <ul className="rental-files contract-files">
+            <li>
+                <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
+                 <div>
+                    <h6>PCO Licence</h6>
+                    <span>3.6 MB</span>
+                </div>
+                <a href="javascript:;" className="View-btn">View</a>
+                <a href="javascript:;" className="down-btn">Download</a>
+            </li>
+        </ul>
+    </div>
+   </div> 
+</div>
+</ModalBody>
+</Modal>
+
+{/* <!------------------------------Admin Dashboard Main PCO UPDATE POPUP----------------------> */}
+<Modal show={showunratedvehicle_updated} onHide={handleCloseunratedvehicle_updated} className='password_modal '>
+  <ModalBody>
+<div className="pco-pop-up pco-update">
+   <div className="pco-txt">
+    <div className="pco-head">
+          <a href="javascript:;" onClick={handleCloseunratedvehicle_updated}><h5><i className="fas fa-chevron-left"  ></i> Back to Dashboard</h5></a>
+          {/* <div className="pco-update">
+              <a href="javascript:;" className="update-btn">Update</a>
+          </div> */}
+    </div>
+    <div className="pco-img-txt">
+      <div className="image-text">
+        <img src="./admin_assets/images/image 67.png" className="car-img" alt="car-img"/>
+      </div>
+      <div className="img-text-head">
+        <h4>Mercedes-Benz E Class</h4>
+        <h6>Sedan Car</h6>
+      </div>
+      <div className="image-tag">
+        <p>KM19 VUG</p>
+      </div>
+    </div>
+    <div className="pco-licens">
+      <h5>PCO Licence</h5>
+    </div> 
+    <div className="date-main">
+      <div className="date-txt">
+        <p>Expiry Date</p>
+        <h6>23 May 2024</h6>
+      </div>
+      <div className="expired-date">
+          <a href="javascript;:" className="yellow-expired-btn">7 Days until Expiry</a>
+      </div>
+    </div> 
+    <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+         <ul className="rental-files contract-files">
+            <li>
+                <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
+                 <div>
+                    <h6>PCO Licence</h6>
+                    <span>3.6 MB</span>
+                </div>
+                <a href="javascript:;" className="View-btn">View</a>
+                <a href="javascript:;" className="down-btn">Download</a>
+            </li>
+        </ul>
+    </div>
+    <form action="" method="">
+      <div className="row">
+          <div className="col-lg-12 col-md-12">
+              <div className="form-group">
+                  <label for="control-label">New Expiry Date</label>
+                  <br/>
+                  <input type="date" name="form-control" placeholder=""/>
+              </div>
+          </div>
+         <div className="col-lg-12 col-md-12 up-bx">
+          <div className="form-group">
+              <label for="control-label">Please upload Document</label><br/>
+              <span className="file_cont">
+              <input type="file" name="form-control"/>
+                  <span>
+                      <b>Click to upload</b> or drag and drop Maximum file size 50 MB.
+                   </span>
+              </span>
+          </div>
+        </div>
+      </div>
+   </form>
+   </div> 
+   <div className="Amend-mot-buttons">
+        <a href="javascript:;" className="control-cancel-btn" onClick={handleCloseunratedvehicle_updated}>Cancel</a>
+        <a href="javascript:;" className="control-save-btn" onClick={handleCloseunratedvehicle_updated}>Save</a>
+    </div>
+</div>
+</ModalBody>
+</Modal>
+{/* <!------------------------------Admin Dashboard Main MTO POPUP----------------------> */}
+<Modal show={showmot} onHide={handleClosemot} className='password_modal'>
+  <ModalBody>
+<div className="pco-pop-up">
+   <div className="pco-txt">
+    <div className="pco-head">
+          <a href="javascript:;" onClick={handleClosemot}><h5><i className="fas fa-chevron-left"></i>Back to Dashboard</h5></a>
+          <div className="pco-update">
+              <a href="javascript:;" className="update-btn" onClick={handleShowmot_update}>Update</a>
+          </div>
+    </div>
+    <div className="pco-img-txt">
+      <div className="image-text">
+        <img src="./admin_assets/images/image 67.png" className="car-img" alt="car-img"/>
+      </div>
+      <div className="img-text-head">
+        <h4>Mercedes-Benz E Class</h4>
+        <h6>Sedan Car</h6>
+      </div>
+      <div className="image-tag">
+        <p>KM19 VUG</p>
+      </div>
+    </div>
+    <div className="pco-licens">
+      <h5>MOT</h5>
+    </div> 
+    <div className="date-main">
+      <div className="date-txt">
+        <p>Expiry Date</p>
+        <h6>23 May 2024</h6>
+      </div>
+      <div className="expired-date">
+          <a href="javascript;:" className="yellow-expired-btn">19 Day until Expired</a>
+      </div>
+    </div> 
+    <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+         <ul className="rental-files contract-files">
+            <li>
+                <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
+                 <div>
+                    <h6>MOT</h6>
+                    <span>3.6 MB</span>
+                </div>
+                <a href="javascript:;" className="View-btn">View</a>
+                <a href="javascript:;" className="down-btn">Download</a>
+            </li>
+        </ul>
+    </div>
+   </div> 
+</div>
+</ModalBody>
+</Modal>
+
+{/* <!------------------------------Admin Dashboard Main Amend MOT POPUP----------------------> */}
+<Modal show={showmot_update} onHide={handleClosemot_update} className='password_modal'>
+  <ModalBody>
+<div className="pco-pop-up pco-update Amend-mot">
+   <div className="pco-txt">
+    <div className="pco-head">
+          <a href="javascript:;" onClick={handleClosemot_update}><h5><i className="fas fa-chevron-left"></i>Back to Dashboard</h5></a>
+    </div>
+    <div className="pco-img-txt">
+      <div className="image-text">
+        <img src="./admin_assets/images/image 67.png" className="car-img" alt="car-img"/>
+      </div>
+      <div className="img-text-head">
+        <h4>Mercedes-Benz E Class</h4>
+        <h6>2019</h6>
+      </div>
+      <div className="image-tag">
+        <p>KM19 VUG</p>
+      </div>
+    </div>
+    <div className="pco-licens">
+      <h5>MOT</h5>
+    </div> 
+    <div className="date-main">
+      <div className="date-txt">
+        <p>Expiry Date</p>
+        <h6>23 May 2024</h6>
+      </div>
+      <div className="expired-date">
+          <a href="javascript;:" className="yellow-expired-btn">7 Days until Expiry</a>
+      </div>
+    </div> 
+    <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+         <ul className="rental-files contract-files">
+            <li>
+                <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
+                 <div>
+                    <h6>MOT</h6>
+                    <span>3.6 MB</span>
+                </div>
+                <a href="javascript:;" className="View-btn">View</a>
+                <a href="javascript:;" className="down-btn">Download</a>
+            </li>
+        </ul>
+    </div>
+    <form action="" method="">
+      <div className="row">
+          <div className="col-lg-12 col-md-12">
+              <div className="form-group">
+                  <label for="control-label">New Expiry Date</label>
+                  <br/>
+                  <input type="date" name="form-control" placeholder=""/>
+                  <span className="warning-pera"><img src="./admin_assets/images/Error.png" alt="warning"/>warning: new expiry date should be 6 months from new MOT date</span>
+              </div>
+          </div>
+         <div className="col-lg-12 col-md-12 up-bx">
+          <div className="form-group">
+              <label for="control-label">Upload New MOT</label><br/>
+              <span className="file_cont">
+              <input type="file" name="form-control"/>
+                  <span>
+                      <b>Click to upload</b> or drag and drop Maximum file size 50 MB.
+                   </span>
+              </span>
+          </div>
+        </div>
+      </div>
+   </form>
+    <div className="Amend-mot-buttons">
+        <a href="javascript:;" className="control-cancel-btn" onClick={handleClosemot_update}>Cancel</a>
+        <a href="javascript:;" className="control-save-btn" onClick={handleClosemot_update}>Save</a>
+    </div>
+   </div> 
+</div>
+</ModalBody>
+</Modal>
 
 </section>
 

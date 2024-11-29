@@ -3988,7 +3988,7 @@
   
   /******CALENDER WARNING ALLERT POPUP CSS*******/
   .calen-bx-body {
-      width: 30%;
+      width: 40%;
       height: 240px;
       padding: 24px 24px 24px 24px;
       border-radius: 12px;
@@ -4001,6 +4001,7 @@
       font-weight: 600;
       padding-top: 24px;
       padding-bottom: 24px;
+      color: #fff ;
   }
   .calen-bx-body .calen-bx-btn a.calen-bx-change {
       color: #fff !important;
@@ -10363,7 +10364,7 @@ section.admin-dashboard-main .support-issue-head {
   padding: 44px 20px 25px;
 }
 section.admin-dashboard-main .vehicle-tabs .nav-tabs .nav-item .nav-link {
-  margin-right: 14px !important;!i;!;
+  margin-right: 14px !important;
   padding: 10px;
   color: #667085;
   font-family: Poppins;
@@ -10988,4 +10989,579 @@ section.admin-dashboard-main .vehicle-tabs .nav-tabs .nav-item .nav-link {
   text-decoration: none;
   width: fit-content;
   margin: 0 0 0 auto;
+}
+
+/*******************SETTING USER BACKOFFICE SCREEN CSS*************/
+.permission-mian .permission-btn a.profile-cancel-btn {
+    color: #fff !important;
+    text-overflow: ellipsis;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    width: 139px;
+    height: 43px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Medium, 8px);
+    border-radius: 4px;
+    background: #4a068f !important;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.permission-mian .set-permission {
+    border-bottom: 1px solid #667085;
+    border-radius: 0;
+}
+.permission-mian .serch-filter-dv {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* padding-top: 60px; */
+}
+
+.permission-mian .serch-filter-dv .search-bar-v1 {
+    margin-right: 30px;
+}
+.permission-mian .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+.permission-mian .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.permission-mian .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #666; 
+    border-radius: 25px;
+    transition: 0.4s;
+}
+.permission-mian .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white; 
+     border-radius: 50%;
+    transition: 0.4s;
+}
+.permission-mian span.status {
+    margin-right: 10px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+}
+.permission-mian input:checked + .slider {
+    background-color: #6c2fb8; 
+}
+.permission-mian input:checked + .slider:before {
+    transform: translateX(24px);
+/*    background-color: #ffffff;*/
+}
+.permission-mianinput:not(:checked) + .slider:before {
+     background-color: #6c2fb8; 
+}
+.permission-table tr {
+    border: 1px solid #1F2329;
+}
+.permission-mian table.permission-table tr th {
+    background: #0F1013;
+}
+.permission-table tr:last-child {
+    border: 1px solid #1F2329 !important;
+}
+.permission-mian div#v-pills-tabContent {
+    border-left: 1px solid #1f2329;
+    padding-left: 44px;
+    margin-left: -20px;
+}
+.permission-mian .Profile-password-tabs-v1 .nav {
+    border: none;
+}
+
+
+/****************SETTING PERMISSION CSS********/
+.set-permi .serch-filter-dv {
+    padding-top: 30px;
+}
+.set-permi  .per-table tr th {
+    width: 100%;
+}
+.permission-mian tr td.td-clr {
+    color: #fff;
+}
+.permission-mian.set-permi a.view-btn {
+  width: fit-content;
+}
+
+/***************BACK TO ADMIN ONE CONTROL SCREEN CSS******/
+.control-form-main {
+    padding-top: 100px;
+}
+.control-form-main .permission-btn a.control-cancel-btn {
+    color: #fff !important;
+    text-overflow: ellipsis;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    width: 249px;
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Medium, 8px);
+    border-radius: 4px;
+    background: transparent !important;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid #4A068F !important;;
+}
+.control-form-main .permission-btn a.control-save-btn {
+    color: #fff !important;
+    text-overflow: ellipsis;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    width: 249px;
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Medium, 8px);
+    border-radius: 4px;
+    background: #4A068F !important;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.control-form-main .set-permission h5 {
+    margin: 0;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px; 
+}
+.control-form-main .set-permission h5 i {
+    margin-right: 20px;
+}
+.admin-control-form {
+    background-color: #1B1F24 !important;
+    border-radius: 16px;
+    padding: 42px 32px 42px 32px;
+    margin-top: 40px !important;
+    width: 590px;
+    height: 560px;
+    margin: 0 auto;
+}
+.admin-control-form form .form-group label {
+    color: #64748B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 11px;
+}
+.admin-control-form form .form-group input {
+    background: #363B43 !important;
+    height: 60px !important;
+    width: 100%;
+    border: 1px solid #363B43 !important;
+    border-radius: 12px;
+    color: #fff;
+    padding-left: 20px;
+    margin-bottom: 32px;
+}
+.admin-control-form form .form-group select#Admin-fld {
+    background: #363B43 !important;
+    border-radius: 12px;
+    border: 1px solid #1D1F22;
+    height: 60px !important;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #ffff;
+    padding-left: 30px;
+}
+.admin-control-form form .form-group input:focus {
+    outline: none;
+}
+.admin-control-form form .form-group select#Admin-fld:focus {
+    outline: none;
+}
+
+
+
+/***************BACK TO ADMIN TWO CONTROL SCREEN CSS******/
+
+.admin-control-form-two {
+    padding-top: 50px;
+}
+.admin-control-form-two form .form-group label {
+    color: #64748B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 11px;
+}
+.admin-control-form-two form .form-group input {
+    background: #363B43 !important;
+    height: 60px !important;
+    width: 100%;
+    border: 1px solid #363B43 !important;
+    border-radius: 12px;
+    color: #fff;
+    padding-left: 20px;
+    margin-bottom: 32px;
+}
+.admin-control-form-two form .form-group input::placeholder {
+    color: #fff;
+}
+.admin-control-form-two form .form-group input:focus {
+    outline: none;
+}
+.checkboxes-columns h6 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */    
+    margin-bottom: 20px;
+}
+.checkboxes-columns span {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    padding-left: 10px;
+}
+.checkboxes-columns ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.checkboxes-columns ul li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+.checkboxes-columns input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #4c008b;
+    
+}
+.checkboxes-columns input {
+    background: #4c008b;
+    color: #fff;
+    width: 27px;
+    height: 27px;
+    border: 2px solid #98a2b3a8;
+}
+.checkboxes-columns input:checked {
+    background-color: #4d0088 !important;
+    border: 2px solid #4d0088 !important;
+}
+.rw-two-check {
+    padding-top: 50px;
+}
+.checkboxes-columns-two {
+    padding-top: 40px;
+}
+
+.checkboxes-columns .form-check-input:checked {
+    background-color: #007bff; 
+    border-color: #007bff; 
+}
+/* When checkbox is unchecked */
+.checkboxes-columns .form-check-input:not(:checked) {
+    background-color: transparent; 
+}
+.control-form-main .set-permission a {
+    text-decoration: none;
+}
+
+
+
+/***************MAIN DASHBOARD PCO POPUP CSS***********/
+.pco-pop-up {
+    width: 540px;
+    padding: 24px;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+}
+.pco-pop-up .pco-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pco-pop-up .pco-head a {
+text-decoration: none;
+}
+.pco-pop-up .pco-head a h5 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+}
+.pco-pop-up .pco-head a h5 i {
+    margin-right: 10px;
+}
+.pco-pop-up .pco-update a.update-btn {
+    display: flex;
+    padding: 5px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #1B1F24 !important;
+    color: #9A75EC;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 133px;
+    height: 34px;
+}
+.pco-pop-up .pco-img-txt {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.pco-pop-up .pco-img-txt .image-text img {
+    width: 95px;
+    height: 51px;
+    border-radius: 4px;
+}
+.pco-pop-up .pco-img-txt .image-tag p {
+    margin-bottom: 0;
+    color: #FFF;
+    text-align: right;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+}
+.pco-pop-up .pco-img-txt .img-text-head h4 {
+    margin: 0;
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.pco-pop-up .pco-img-txt .img-text-head {
+    margin-left: -50px;
+}
+.pco-pop-up .pco-img-txt .img-text-head h6 {
+    color: #90A3BF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+}
+.date-main {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.date-main p {
+    color: #667085;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+}
+.date-main h6 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.date-main .expired-date  a.yellow-expired-btn {
+    color: #EDF410;
+    font-family: Archivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+.date-main .expired-date {
+  background: #1b1f24;
+  padding: 0 10px 3px 10px;
+  border-radius: 5px;
+  color: #EDF410;
+}
+.pco-licens {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.pco-update  form .form-group .file_cont input[type="file"]::file-selector-button {
+  font-size: 0px;
+  display: none;
+}
+.pco-update  form .form-group .file_cont input[type="file"] {
+  font-size: 0px !important;
+  position: relative;
+  border: 1px dashed #121418 !important;
+  background: #121418 !important;
+  height: 160px !important;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+.pco-update  form .form-group .file_cont input[type="file"]::before {
+  content: "";
+  width: 65px;
+  height: 48px;
+  background: url(../images/dashboard/file-upload.png);
+  position: absolute;
+  right: 0;
+  top: 30px;
+  left: 0;
+  margin: 0 auto;
+  background-size: 100%;
+  background-position: center;
+}
+.pco-update  form .form-group .file_cont input[type="file"]::after {
+  content: "Click to upload or drag and drop Maximum file size 50 MB.";
+  position: absolute;
+}
+.pco-update  form .form-group span.file_cont span {
+    top: -70px;
+}
+.pco-update form .form-group input {
+    border: 1px solid #121418 !important;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #ffff;
+    padding-left: 30px;
+    padding-bottom: 0px;
+    background: #121418 !important;
+    height: 60px !important;
+    border-radius: 8px;
+}
+.pco-update form .form-group label {
+    color: #667085;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding-bottom: 11px;
+}
+.pco-update form {
+    padding-top: 30px;
+}
+.pco-update form .form-group span.warning-pera {
+    font-size: 13px;
+    line-height: 20px;
+    color: #F04438;
+}
+.pco-update form .form-group img {
+    padding-right: 10px;
+}
+.pco-update form .up-bx {
+    padding-top: 30px;
+}
+ .Amend-mot-buttons a.control-cancel-btn {
+    color: #fff !important;
+    text-overflow: ellipsis;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    width: 235px;
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Medium, 8px);
+    border-radius: 4px;
+    background: transparent;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid #4A068F !important;
+}
+.Amend-mot-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Amend-mot-buttons a.control-save-btn {
+    color: #fff !important;
+    text-overflow: ellipsis;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    width: 235px;
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Medium, 8px);
+    border-radius: 4px;
+    background: #4A068F !important;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.control-form-main.add_admin_control {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.control-form-main.add_admin_control .admin-control-form {
+  width: 60%;
+  padding: 20px 30px;
+}
+.checkboxes-columns ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }

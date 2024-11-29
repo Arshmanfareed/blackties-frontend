@@ -65,6 +65,12 @@ import Adminnotifications from './admin/Adminnotifications';
 import Financialinvoicerevenue from './admin/Financialinvoicerevenue';
 import Adminfinancialexpense from './admin/Adminfinancialexpense';
 import Admindashboardmain from './admin/Admindashboardmain';
+import Adminsetting from './admin/Adminsetting';
+import Adminpermissionsetting from './admin/Adminaddcontrol';
+import Adminaddcontrol from './admin/Adminaddcontrol';
+import Adminrolepermission from './admin/Adminrolepermission';
+import Admincalenderall from './admin/Admincalenderall';
+import Adminaddcalender from './admin/Adminaddcalender';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -102,6 +108,7 @@ root.render(
     <Route path="/message" element={<><Message/></>} />
     <Route path="/setting-profile" element={<><Settingprofile/></>} />
     <Route path="/calender-all" element={<><Calenderall/></>} />
+    <Route path="/calender-all" element={<><Calenderall/></>} />
     <Route path="/failed-pay" element={<><Failedpay/></>} />
     <Route path="/support-ticket" element={<><Support/></>} />
     <Route path="/rent-our-vehicle" element={<><Ourvehicle/></>} />
@@ -133,6 +140,11 @@ root.render(
     <Route path="/admin-financial-revenue" element={<><Financialinvoicerevenue/></>} />
     <Route path="/admin-financial-expense" element={<><Adminfinancialexpense/></>} />
     <Route path="/admin-dashboard-main" element={<><Admindashboardmain/></>} />
+    <Route path="/admin-setting" element={<><Adminsetting/></>} />
+    <Route path="/admin-add-admin-control" element={<><Adminaddcontrol/></>} />
+    <Route path="/admin-add-role-permission" element={<><Adminrolepermission/></>} />
+    <Route path="/admin-calendar-all" element={<><Admincalenderall/></>} />
+    <Route path="/admin-add-calendar" element={<><Adminaddcalender/></>} />
 
   </Routes>
 </Router>

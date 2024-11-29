@@ -130,6 +130,7 @@ function Sidebar() {
                 variant="link"
                 onClick={() => setToggleCalendar(!toggleCalendar)}
                 className="dropdown-toggle"
+                
               >
                 <img
                   src="./admin_assets/images/dashboard/Category.svg"
@@ -141,7 +142,19 @@ function Sidebar() {
                 <ul className="dropdown-menu">
                   <li>
                     <NavLink
-                      to="javascript:;"
+                     to="/admin-calendar-all"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <img
+                        src="./admin_assets/images/dashboard/Category.svg"
+                        alt=""
+                      />
+                      All Calendar
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/admin-add-calendar"
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
@@ -197,7 +210,7 @@ function Sidebar() {
                 <ul className="dropdown-menu">
                   <li>
                     <NavLink
-                      to="javascript:;"
+                      to="/admin-financial-revenue"
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
@@ -209,7 +222,7 @@ function Sidebar() {
                   </li>
                   <li>
                     <NavLink
-                      to="javascript:;"
+                      to="/admin-financial-expense"
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
@@ -260,7 +273,7 @@ function Sidebar() {
               </li>
               <li className="setting_nav" id="setting_nav">
                 <NavLink
-                  to="javascript:;"
+                  to="/admin-setting"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./admin_assets/images/dashboard/Icon3.svg" alt="" />
