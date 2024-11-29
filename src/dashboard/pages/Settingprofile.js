@@ -3,6 +3,8 @@ import DashboardSidebar from "../partials/dashboard-sidebar";
 import DashboardPanelTopbar from "../components/DashboardPanelTopbar";
 import { Button, Col, Modal, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
 
 function Settingprofile() {
     // PAssowrd
@@ -67,6 +69,39 @@ const handleClosedeleteaccountsucess = () =>{
 }
 const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
 
+const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]); // Set the selected file
+  };
+
+  const handleImageUpload = async () => {
+    if (!selectedFile) {
+      alert("Please select an image first!");
+      return;
+    }
+
+    try {
+      const formData = new FormData();
+      formData.append("image", selectedFile); // Append file to formData
+
+      const userId = "1"; // Replace with dynamic user ID
+      const apiUrl = `https://blackties-backend.dev.internalstaging.com/dev/blackties/api/v1/admin/update-user-image/${userId}`;
+
+      const response = await axios.put(apiUrl, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          "x-auth-token": `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6Imx1Y2Fzd2lsbGlzNzQxQHlvcG1haWwuY29tIiwicGhvbmVObyI6IjQ0NDU1NTIyMjQ0NTU1IiwidXNlcm5hbWUiOiJsdWNhc3dpbGxpczc0MSIsImZpcnN0bmFtZSI6IiIsImxhc3RuYW1lIjoiV2lsbGlzIiwicGxhdGZvcm0iOm51bGwsImZjbVRva2VuIjpudWxsLCJjb2RlIjpudWxsLCJvdHAiOjE5MDYzMCwib3RwRXhwaXJ5IjoiMjAyNC0xMC0xMFQxNDoxNDo0MS4wMDBaIiwic3RhdHVzIjoiQUNUSVZFIiwic29ja2V0SWQiOm51bGwsImxhbmd1YWdlIjoiZW4iLCJjdXJyZW5jeSI6InVuaXRlZF9zdGF0ZXNfZG9sbGFyIiwidGVtcEVtYWlsIjpudWxsLCJpc09ubGluZSI6ZmFsc2UsImxhc3RMb2dpbiI6IjIwMjQtMTAtMTdUMTU6MDQ6MjkuMDAwWiIsImNyZWF0ZWRBdCI6IjIwMjQtMTAtMTBUMTQ6MTQ6NDEuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjQtMTAtMTdUMTU6MDQ6MjkuMDAwWiIsImlhdCI6MTcyOTE3NzQ3N30.Ui5KAGyCw9Sdu6c07P8HTg2AKTl7-kya27xPIagcTZU`, // Replace with actual token
+        },
+      });
+
+      alert("Image updated successfully!");
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      alert("Failed to update image. Please try again.");
+    }
+  };
 
   return (
     <>
@@ -156,6 +191,12 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                           >
                                             Change Image
                                           </Link>
+                                          <div>
+                                            <input type="file" onChange={handleFileChange} accept="image/*" />
+                                            <button className="change-img-btn" onClick={handleImageUpload}>
+                                              Change Image
+                                            </button>
+                                          </div>
                                         </div>
                                       </Col>
                                     </Row>
