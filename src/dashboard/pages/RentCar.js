@@ -5,7 +5,6 @@ import CanvasSection from "../components/CanvasSec";
 import DocumentSignatureForm from "../components/CanvasSec";
 import SignatureUpload from "../components/CanvasSec";
 import { Link } from "react-router-dom";
-import DetailCarSlider from "../components/DashboardDetailCarSlider";
 
 function RentCar() {
     const [isActive, setIsActive] = useState(false);
@@ -40,14 +39,13 @@ function RentCar() {
                           <div className="col-lg-6 col-md-6">
                             <div className="row back-to-sec">
                               <div className="col-lg-12 col-md-12">
-                                <Link to="#" onClick={(e) => e.preventDefault()} className="back-to">
-                                  <ion-icon name="chevron-back-outline"></ion-icon>{" "}
+                                <Link to="/rent-our-vehicle" className="back-to">
+                                <i class="fa-solid fa-angle-left"></i>{" "}
                                   Back to Our Vehicles
                                 </Link>
                               </div>
                             </div>
-                            {/* <DetailCarSlider/> */}
-                            {/* <div className="row">
+                            <div className="row">
                               <div className="col-lg-12 col-md-12">
                                 <div className="detailCar-slider owl-carousel owl-theme">
                                   <div data-item="item1" className="item">
@@ -118,7 +116,7 @@ function RentCar() {
                                   </ul>
                                 </div>
                               </div>
-                            </div> */}
+                            </div>
                             <div className="row">
                               <div className="col-lg-12 col-md-12">
                                 <div className="detail-car-ptag">

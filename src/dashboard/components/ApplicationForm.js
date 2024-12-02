@@ -127,7 +127,7 @@ const ApplicationForm = () => {
                   <label>Have you got more than 6 Points on your License?</label>
                   <div className="checkboxes__item">
                     <label className="checkbox style-e">
-                      <input type="checkbox" onChange={handleAccidentChange} />
+                      <input type="checkbox"  />
                       <div className="checkbox__checkmark"></div>
                       <div className="checkbox__body label">Yes</div>
                     </label>
@@ -191,22 +191,34 @@ const ApplicationForm = () => {
           {currentStep === 3 && (
             <div id="step-3" className="row setup-content form-container">
               <div className="col-lg-12 col-md-12">
-                <div className="form-group check-switch-group">
-                  <label>Have you had a PCO License for more than 12 Months?</label>
-                  <div className="checkboxes__item">
+                <div className="form-group ">
+                  <label className='d-block'>When did you first obtain a PCO licence?</label>
+                  <div className='pco_get_date d-flex'>
+                    <div className='pco_month d-flex'>
+<input type='number' placeholder='M'/>
+<input type='number' placeholder='M'/>
+                    </div>
+<div className='pco_year d-flex'>
+<input type='number' placeholder='Y'/>
+<input type='number' placeholder='Y'/>
+<input type='number' placeholder='Y'/>
+<input type='number' placeholder='Y'/>
+</div>
+                  </div>
+                  {/* <div className="checkboxes__item">
                     <label className="checkbox style-e">
                       <input type="checkbox" />
                       <div className="checkbox__checkmark"></div>
                       <div className="checkbox__body label">Yes</div>
                     </label>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="form-group">
-                  <label>Date of Accident</label>
+                  <label>PCO Licence Number</label>
                   <input type="text" className="form-control" />
                 </div>
                 <div className="form-group">
-                  <label>Date of Accident</label>
+                  <label>Expiry Date</label>
                   <input type="date" className="form-control" />
                 </div>
                 <div className="form-group">

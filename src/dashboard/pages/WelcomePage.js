@@ -40,7 +40,7 @@ function WelcomePage() {
                                     <div className="wrapper">
                                         <h3>Welcome</h3>
                                         <h4>It’s your first time!</h4>
-                                        <p>Please to finish to submit applicant to rent a car.</p>
+                                        <p>Fill out a quick application with necessary details such as your PCO licence, insurance information and rental preferences. Our automated system will handle the rest and get you approved fast.</p>
                                         <Link to="#" className="theme-btn6 wlcm-satrted-btn">Get Started</Link>
                                     </div>
                                 </div>

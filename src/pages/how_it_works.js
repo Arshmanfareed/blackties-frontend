@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function How_It_Works() {
   return (
@@ -33,6 +34,7 @@ function How_It_Works() {
                             <p>Once approved, finalise your rental agreement through our automated platform. You can collect your vehicle at the scheduled time and drive away.</p>
                         </li>
                     </ol>
+                    <Link to={'/register'} className='theme-btn5'>Register Now</Link>
                 </Col>
             </Row>
         </Container>

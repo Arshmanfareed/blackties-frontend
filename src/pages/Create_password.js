@@ -72,12 +72,12 @@ function Create_password() {
             <Col lg={6} md={6}>
               <div className="LR-Form-wrapper create-password-frame">
                 <h3>Create Password</h3>
-                <p>No worries, you can now create a new password!</p>
+                <p>Please enter a new password. Make sure the password is strong and uncompromised.</p>
 
                 <Form onSubmit={handleSubmit}>
                   <Row>
                     <Col lg={12} md={6}>
-                      <label htmlFor="password">Password</label>
+                      <label htmlFor="password">New Password</label>
                       <Form.Control
                         type="password"
                         name="password"

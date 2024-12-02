@@ -37,26 +37,26 @@ setIsVisible(!isVisible);
             <div class="vehicles-menu">
                 <button class="dropdown-toggle" onClick={toggleVisibility}> <img src="./assets/images/dashboard/bk-car.svg" alt=""/>KM19 VTY</button>
                 <ul class="dropdown-menu" style={{ display: isVisible ? 'block' : 'none' }}>
-                    <li><Link to="/welcome"><img src="./assets/images/dashboard/Category12.svg" alt=""/>Dashboard</Link></li>
-                    <li><Link to="/vehicle-document"><img src="./assets/images/dashboard/dc.svg" alt=""/>Document</Link></li>
-                    <li><Link to="/maintenance"><img src="./assets/images/dashboard/tools 1.svg" alt=""/>Maintenance</Link></li>
-                    <li><Link to="/palenty-charge-notice"><img src="./assets/images/dashboard/expense 1.svg" alt=""/>PCNs</Link></li>
+                    <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/welcome"><img src="./assets/images/dashboard/Category12.svg" alt=""/>Dashboard</Link></li>
+                    <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/vehicle-document"><img src="./assets/images/dashboard/dc.svg" alt=""/>Document</Link></li>
+                    <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/maintenance"><img src="./assets/images/dashboard/tools 1.svg" alt=""/>Maintenance</Link></li>
+                  
                     <li><Link to="/driver-score"><img src="./assets/images/dashboard/driver-man 32423.svg" alt=""/>Driver Score</Link></li>
                 </ul>
             </div>
             <ul>
               <li>
-                <NavLink
+                {/* <NavLink
                   to="/applicant"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/Category.svg" alt="" />
                   Application
-                </NavLink>
+                </NavLink> */}
               </li>
               <li>
                 <NavLink
-                  to="#" 
+                  to="/rent-our-vehicle" 
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/booking.svg" alt="" />
@@ -69,9 +69,45 @@ setIsVisible(!isVisible);
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/Receipt.svg" alt="" />
-                  Invoice
+                  Payment & Invoices
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/support-ticket" 
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img src="./assets/images/dashboard/mail.png" alt="" />
+                  Support & Issues
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/penalty-charge-notice"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                <img src="./assets/images/dashboard/expense 1.svg" alt=""/>
+                PCNs
+                </NavLink>
+                </li>
+              {/* <li>
+                <NavLink
+                  to="/#" 
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img src="./assets/images/dashboard/Receipt.svg" alt="" />
+                  PCNs
+                </NavLink>
+              </li> */}
+              <li>
+                <NavLink
+                  to="/calender-all" 
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <img src="./assets/images/dashboard/calendar.png" alt="" />
+                  Calendar
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink
                   to="/notifications" 
@@ -84,7 +120,7 @@ setIsVisible(!isVisible);
               </li>
               <li>
                 <NavLink
-                  to="javascript:;" 
+                  to="/setting-profile" 
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/Icon3.svg" alt="" />
