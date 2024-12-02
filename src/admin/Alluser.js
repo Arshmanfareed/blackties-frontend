@@ -50,7 +50,7 @@ function Alluser() {
                                             </div>
                                             <div className="tab-content" id="v-pills-tabContent">
                                                 <div className="tab-pane fade show active" id="all-users" role="tabpanel" aria-labelledby="all-users-tab">
-                                                    <div className="row frm-inner-row user-app-frm">
+                                                    <Row className=" frm-inner-row user-app-frm">
                                                         <form action="" method="">
                                                             <Row >
                                                                 <Col lg={3} md={3} >
@@ -81,7 +81,7 @@ function Alluser() {
                                                                 </Col>
                                                             </Row>
                                                         </form>
-                                                    </div>
+                                                    </Row>
                                                     <div className="row frm-inner-row user-app-frm-2">
                                                         <form action="" method="">
                                                             <Row >

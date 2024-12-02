@@ -26,7 +26,7 @@ function Addpaymentschedule() {
       <section className="user-dashboard">
         <Container fluid className="container-fluid">
           <Row className=" g-0">
-            <Col lg={3} md={3} className="idebar-col">
+            <Col lg={3} md={3} className="sidebar-col">
               <Sidebar />
             </Col>
             <Col lg={9} md={9} className="panel-col">

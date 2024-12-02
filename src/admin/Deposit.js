@@ -2,48 +2,49 @@ import React from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
 import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 
 function Deposit() {
   return (
     <>
       <section class="user-dashboard">
-        <div class="container-fluid">
-          <div class="row g-0">
-            <div class="col-lg-3 col-md-3 sidebar-col">
+        <Container fluid>
+          <Row class=" g-0">
+            <Col lg={3} md={3} class=" sidebar-col">
               <Sidebar />
-            </div>
-            <div class="col-lg-9 col-md-9 panel-col">
+            </Col>
+            <Col lg={9} md={9} class=" panel-col">
               <div class="dashboard-panel application-panel">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12">
+                <Row>
+                  <Col lg={12} md={12}>
                     <div class="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
 
-                <div class="row">
-                  <div class="col-lg-12 col-md-12">
+                <Row>
+                  <Col lg={12} md={12}>
                     <div class="main-veh-box deposit-main">
                       <div class="vehicle-main-box">
-                        <div class="row frm-inner-row deposit-rw">
+                        <Row class=" frm-inner-row deposit-rw">
                           <form action="" method="">
-                            <div class="row">
-                              <div class="col-lg-3 col-md-3">
+                            <Row>
+                              <Col lg={3} md={3}>
                                 <div class="form-group">
                                   <label for="control-label">Customer ID</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-3 col-md-3">
+                              </Col>
+                              <Col lg={3} md={3}>
                                 <div class="form-group">
                                   <label for="control-label">First Name</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-3 col-md-3">
+                              </Col>
+                              <Col lg={3} md={3}>
                                 <div class="form-group">
                                   <label for="control-label">Last Name</label>
                                   <input
@@ -53,8 +54,8 @@ function Deposit() {
                                     class="mg0"
                                   />
                                 </div>
-                              </div>
-                              <div class="col-lg-3 col-md-3">
+                              </Col>
+                              <Col lg={3} md={3}>
                                 <div class="form-group">
                                   <label for="control-label">
                                     Phone Number
@@ -66,14 +67,14 @@ function Deposit() {
                                     class="mg0"
                                   />
                                 </div>
-                              </div>
-                            </div>
+                              </Col>
+                            </Row>
                           </form>
-                        </div>
-                        <div class="row frm-inner-row deposit-rw-two">
+                        </Row>
+                        <Row class=" frm-inner-row deposit-rw-two">
                           <form action="" method="">
-                            <div class="row">
-                              <div class="col-lg-4 col-md-4">
+                            <Row>
+                              <Col lg={4} md={4}>
                                 <div class="form-group">
                                   <label for="control-label">
                                     Applicant Date
@@ -81,15 +82,15 @@ function Deposit() {
                                   <br />
                                   <input type="date" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-4 col-md-4">
+                              </Col>
+                              <Col lg={4} md={4}>
                                 <div class="form-group">
                                   <label for="control-label">Email</label>
                                   <br />
                                   <input type="email" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-4 col-md-4">
+                              </Col>
+                              <Col lg={4} md={4}>
                                 <div class="form-group">
                                   <label for="control-label">Status</label>
                                   <select name="Approved" id="Approved-fld">
@@ -99,11 +100,11 @@ function Deposit() {
                                     <option value="audi">Approved</option>
                                   </select>
                                 </div>
-                              </div>
-                            </div>
+                              </Col>
+                            </Row>
                           </form>
-                          <div class="row inner-rw-register">
-                            <div class="col-lg-12 col-md-12">
+                          <Row class="inner-rw-register">
+                            <Col lg={12} md={12}>
                               <div class="veh-registration-table rigistration-tabl deposit-table">
                                 <table class="maintenance-table ds-table">
                                   <thead>
@@ -132,10 +133,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" class="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
@@ -154,10 +152,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" class="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
@@ -176,10 +171,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" class="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
@@ -198,10 +190,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" class="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
@@ -220,10 +209,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" class="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
@@ -242,10 +228,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" class="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
@@ -264,10 +247,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" class="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
@@ -286,10 +266,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" class="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
@@ -308,10 +285,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" class="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
@@ -330,10 +304,7 @@ function Deposit() {
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" class="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
@@ -346,8 +317,8 @@ function Deposit() {
                                   </tbody>
                                 </table>
                               </div>
-                            </div>
-                          </div>
+                            </Col>
+                          </Row>
                           <div class="show-paginaion adm-user-nxt-btn">
                             <div class="showing-txt">
                               <h5>Page 1 of 10</h5>
@@ -361,20 +332,18 @@ function Deposit() {
                               </Link>
                             </div>
                           </div>
-                        </div>
+                        </Row>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
     </>
   );
 }
 
 export default Deposit;
-
-

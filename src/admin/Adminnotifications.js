@@ -1,205 +1,327 @@
-import React from 'react'
-import Sidebar from './partials/Sidebar'
-import Dashboardpaneltopbar from './partials/Dashboardpaneltopbar'
-import { Link } from 'react-router-dom'
+import React from "react";
+import Sidebar from "./partials/Sidebar";
+import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
+import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 
 function Adminnotifications() {
   return (
     <>
-      <section class="user-dashboard">
-    <div class="container-fluid">
-        <div class="row g-0">
-            <div class="col-lg-3 col-md-3 sidebar-col">
-               <Sidebar/>
-            </div>
-            <div class="col-lg-9 col-md-9 panel-col">
-                <div class="dashboard-panel notifications-panel">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <div class="dashboard-panel-topbar">
-                               <Dashboardpaneltopbar/>
-                            </div>
-                        </div>
+      <section className="user-dashboard">
+        <Container fluid>
+          <Row className=" g-0">
+            <Col lg={3} md={3} className="sidebar-col">
+              <Sidebar />
+            </Col>
+            <Col lg={9} md={9} className=" panel-col">
+              <div className="dashboard-panel notifications-panel">
+                <Row>
+                  <Col lg={12} md={12}>
+                    <div className="dashboard-panel-topbar">
+                      <Dashboardpaneltopbar />
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <div class="notifications-sec db-default-sec">
-                                <div class="notifications-card db-default-wrapper">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="search-bar-wrapper">
-                                                <h5 class="theme-h5">Notifications</h5>
-                                                <div>
-                                                    <div class="search-bar-v1">
-                                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                                        <input type="text" placeholder="Search here..."/>
-                                                    </div>
-                                                    <Link to="javacscript:;" class="nofitic-markRead-btn">Mark as Read</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="user-notifications-wrapper">
-                                                <ul>
-                                                    <li>
-                                                        <Link to="/admin-notification" class="active">
-                                                            <div class="notific-data-box">
-                                                                <div class="noific-user-img">
-                                                                    <img src="./admin_assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <i class="fas fa-circle"></i>
-                                                                </div>
-                                                                <div>
-                                                                    <h6 class="notific-user">Michael Dane</h6>
-                                                                    <p class="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
-                                                                    <span class="notific-time">10:13 AM</span>
-                                                                    <span class="notific-date"><i class="fas fa-circle"></i> Sep 23, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/admin-notification">
-                                                            <div class="notific-data-box">
-                                                                <div class="noific-user-img">
-                                                                    <img src="./admin_assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <i class="fas fa-circle"></i>
-                                                                </div>
-                                                                <div>
-                                                                    <h6 class="notific-user">Michael Dane</h6>
-                                                                    <p class="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
-                                                                    <span class="notific-time">10:13 AM</span>
-                                                                    <span class="notific-date"><i class="fas fa-circle"></i> Sep 23, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/admin-notification">
-                                                            <div class="notific-data-box">
-                                                                <div class="noific-user-img">
-                                                                    <img src="./admin_assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <i class="fas fa-circle"></i>
-                                                                </div>
-                                                                <div>
-                                                                    <h6 class="notific-user">Michael Dane</h6>
-                                                                    <p class="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
-                                                                    <span class="notific-time">10:13 AM</span>
-                                                                    <span class="notific-date"><i class="fas fa-circle"></i> Sep 23, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                        </Link>
-                                                    </li>
-                                                     <li>
-                                                        <Link to="/admin-notification">
-                                                            <div class="notific-data-box">
-                                                                <div class="noific-user-img">
-                                                                    <img src="./admin_assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <i class="fas fa-circle"></i>
-                                                                </div>
-                                                                <div>
-                                                                    <h6 class="notific-user">Michael Dane</h6>
-                                                                    <p class="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
-                                                                    <span class="notific-time">10:13 AM</span>
-                                                                    <span class="notific-date"><i class="fas fa-circle"></i> Sep 23, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                        </Link>
-                                                    </li>
-                                                     <li>
-                                                        <Link to="/admin-notification">
-                                                            <div class="notific-data-box">
-                                                                <div class="noific-user-img">
-                                                                    <img src="./admin_assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <i class="fas fa-circle"></i>
-                                                                </div>
-                                                                <div>
-                                                                    <h6 class="notific-user">Michael Dane</h6>
-                                                                    <p class="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
-                                                                    <span class="notific-time">10:13 AM</span>
-                                                                    <span class="notific-date"><i class="fas fa-circle"></i> Sep 23, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/admin-notification">
-                                                            <div class="notific-data-box">
-                                                                <div class="noific-user-img">
-                                                                    <img src="./admin_assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <i class="fas fa-circle"></i>
-                                                                </div>
-                                                                <div>
-                                                                    <h6 class="notific-user">Michael Dane</h6>
-                                                                    <p class="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
-                                                                    <span class="notific-time">10:13 AM</span>
-                                                                    <span class="notific-date"><i class="fas fa-circle"></i> Sep 23, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="nofitic-vehicles">
-                                                                <img src="./admin_assets/images/dashboard/image 67.png" alt="vehicle"/>
-                                                            </div>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/admin-notification">
-                                                            <div class="notific-data-box">
-                                                                <div class="noific-user-img">
-                                                                    <img src="./admin_assets/images/dashboard/New Customers List.png" alt="User"/>
-                                                                    <i class="fas fa-circle"></i>
-                                                                </div>
-                                                                <div>
-                                                                    <h6 class="notific-user">Michael Dane</h6>
-                                                                    <p class="short-notific">Lorem ipsum dolor sit amet consectetur. Consequat habitasse tincidunt ut sed semper.</p>
-                                                                    <span class="notific-time">10:13 AM</span>
-                                                                    <span class="notific-date"><i class="fas fa-circle"></i> Sep 23, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                        </Link>
-                                                        <div class="notific-file-download">
-                                                            <div class="notific-file-data">
-                                                                <img src="./admin_assets/images/dashboard/img-frame.png" alt="jpg"/>
-                                                                <div>
-                                                                    <h6>Table Sample.jpg</h6>
-                                                                    <span class="file-size">3 MB</span>
-                                                                </div>
-                                                            </div>
-                                                            <div>
-                                                                <Link to="#" class="notific-file-down">Download</Link>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="invoice-order-pagination">
-                                                <div class="pagination-indicator">
-                                                    <h6>page <span class="initail">1</span> to <span class="total">10</span></h6>
-                                                </div>
-                                                <div class="pagination-nav">
-                                                    <Link to="#" class="pg-prev">Previous</Link>
-                                                    <Link to="#" class="pg-next">Next</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col lg={12} md={12}>
+                    <div className="notifications-sec db-default-sec">
+                      <div className="notifications-card db-default-wrapper">
+                        <Row>
+                          <Col lg={12} md={12}>
+                            <div className="search-bar-wrapper">
+                              <h5 className="theme-h5">Notifications</h5>
+                              <div>
+                                <div className="search-bar-v1">
+                                  <button type="submit">
+                                    <i className="fa fa-search"></i>
+                                  </button>
+                                  <input
+                                    type="text"
+                                    placeholder="Search here..."
+                                  />
                                 </div>
+                                <Link
+                                  to="javacscript:;"
+                                  className="nofitic-markRead-btn"
+                                >
+                                  Mark as Read
+                                </Link>
+                              </div>
                             </div>
-                        </div>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col lg={12} md={12}>
+                            <div className="user-notifications-wrapper">
+                              <ul>
+                                <li>
+                                  <Link to="/admin-notification" className="active">
+                                    <div className="notific-data-box">
+                                      <div className="noific-user-img">
+                                        <img
+                                          src="./admin_assets/images/dashboard/New Customers List.png"
+                                          alt="User"
+                                        />
+                                        <i className="fas fa-circle"></i>
+                                      </div>
+                                      <div>
+                                        <h6 className="notific-user">
+                                          Michael Dane
+                                        </h6>
+                                        <p className="short-notific">
+                                          Lorem ipsum dolor sit amet
+                                          consectetur. Consequat habitasse
+                                          tincidunt ut sed semper.
+                                        </p>
+                                        <span className="notific-time">
+                                          10:13 AM
+                                        </span>
+                                        <span className="notific-date">
+                                          <i className="fas fa-circle"></i> Sep 23,
+                                          2024
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/admin-notification">
+                                    <div className="notific-data-box">
+                                      <div className="noific-user-img">
+                                        <img
+                                          src="./admin_assets/images/dashboard/New Customers List.png"
+                                          alt="User"
+                                        />
+                                        <i className="fas fa-circle"></i>
+                                      </div>
+                                      <div>
+                                        <h6 className="notific-user">
+                                          Michael Dane
+                                        </h6>
+                                        <p className="short-notific">
+                                          Lorem ipsum dolor sit amet
+                                          consectetur. Consequat habitasse
+                                          tincidunt ut sed semper.
+                                        </p>
+                                        <span className="notific-time">
+                                          10:13 AM
+                                        </span>
+                                        <span className="notific-date">
+                                          <i className="fas fa-circle"></i> Sep 23,
+                                          2024
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/admin-notification">
+                                    <div className="notific-data-box">
+                                      <div className="noific-user-img">
+                                        <img
+                                          src="./admin_assets/images/dashboard/New Customers List.png"
+                                          alt="User"
+                                        />
+                                        <i className="fas fa-circle"></i>
+                                      </div>
+                                      <div>
+                                        <h6 className="notific-user">
+                                          Michael Dane
+                                        </h6>
+                                        <p className="short-notific">
+                                          Lorem ipsum dolor sit amet
+                                          consectetur. Consequat habitasse
+                                          tincidunt ut sed semper.
+                                        </p>
+                                        <span className="notific-time">
+                                          10:13 AM
+                                        </span>
+                                        <span className="notific-date">
+                                          <i className="fas fa-circle"></i> Sep 23,
+                                          2024
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/admin-notification">
+                                    <div className="notific-data-box">
+                                      <div className="noific-user-img">
+                                        <img
+                                          src="./admin_assets/images/dashboard/New Customers List.png"
+                                          alt="User"
+                                        />
+                                        <i className="fas fa-circle"></i>
+                                      </div>
+                                      <div>
+                                        <h6 className="notific-user">
+                                          Michael Dane
+                                        </h6>
+                                        <p className="short-notific">
+                                          Lorem ipsum dolor sit amet
+                                          consectetur. Consequat habitasse
+                                          tincidunt ut sed semper.
+                                        </p>
+                                        <span className="notific-time">
+                                          10:13 AM
+                                        </span>
+                                        <span className="notific-date">
+                                          <i className="fas fa-circle"></i> Sep 23,
+                                          2024
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/admin-notification">
+                                    <div className="notific-data-box">
+                                      <div className="noific-user-img">
+                                        <img
+                                          src="./admin_assets/images/dashboard/New Customers List.png"
+                                          alt="User"
+                                        />
+                                        <i className="fas fa-circle"></i>
+                                      </div>
+                                      <div>
+                                        <h6 className="notific-user">
+                                          Michael Dane
+                                        </h6>
+                                        <p className="short-notific">
+                                          Lorem ipsum dolor sit amet
+                                          consectetur. Consequat habitasse
+                                          tincidunt ut sed semper.
+                                        </p>
+                                        <span className="notific-time">
+                                          10:13 AM
+                                        </span>
+                                        <span className="notific-date">
+                                          <i className="fas fa-circle"></i> Sep 23,
+                                          2024
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/admin-notification">
+                                    <div className="notific-data-box">
+                                      <div className="noific-user-img">
+                                        <img
+                                          src="./admin_assets/images/dashboard/New Customers List.png"
+                                          alt="User"
+                                        />
+                                        <i className="fas fa-circle"></i>
+                                      </div>
+                                      <div>
+                                        <h6 className="notific-user">
+                                          Michael Dane
+                                        </h6>
+                                        <p className="short-notific">
+                                          Lorem ipsum dolor sit amet
+                                          consectetur. Consequat habitasse
+                                          tincidunt ut sed semper.
+                                        </p>
+                                        <span className="notific-time">
+                                          10:13 AM
+                                        </span>
+                                        <span className="notific-date">
+                                          <i className="fas fa-circle"></i> Sep 23,
+                                          2024
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div className="nofitic-vehicles">
+                                      <img
+                                        src="./admin_assets/images/dashboard/image 67.png"
+                                        alt="vehicle"
+                                      />
+                                    </div>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/admin-notification">
+                                    <div className="notific-data-box">
+                                      <div className="noific-user-img">
+                                        <img
+                                          src="./admin_assets/images/dashboard/New Customers List.png"
+                                          alt="User"
+                                        />
+                                        <i className="fas fa-circle"></i>
+                                      </div>
+                                      <div>
+                                        <h6 className="notific-user">
+                                          Michael Dane
+                                        </h6>
+                                        <p className="short-notific">
+                                          Lorem ipsum dolor sit amet
+                                          consectetur. Consequat habitasse
+                                          tincidunt ut sed semper.
+                                        </p>
+                                        <span className="notific-time">
+                                          10:13 AM
+                                        </span>
+                                        <span className="notific-date">
+                                          <i className="fas fa-circle"></i> Sep 23,
+                                          2024
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                  <div className="notific-file-download">
+                                    <div className="notific-file-data">
+                                      <img
+                                        src="./admin_assets/images/dashboard/img-frame.png"
+                                        alt="jpg"
+                                      />
+                                      <div>
+                                        <h6>Table Sample.jpg</h6>
+                                        <span className="file-size">3 MB</span>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <Link to="#" className="notific-file-down">
+                                        Download
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col lg={12} md={12}>
+                            <div className="invoice-order-pagination">
+                              <div className="pagination-indicator">
+                                <h6>
+                                  page <span className="initail">1</span> to{" "}
+                                  <span className="total">10</span>
+                                </h6>
+                              </div>
+                              <div className="pagination-nav">
+                                <Link to="#" className="pg-prev">
+                                  Previous
+                                </Link>
+                                <Link to="#" className="pg-next">
+                                  Next
+                                </Link>
+                              </div>
+                            </div>
+                          </Col>
+                        </Row>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </>
-  )
+  );
 }
 
-export default Adminnotifications
+export default Adminnotifications;

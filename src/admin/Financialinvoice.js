@@ -16,18 +16,18 @@ function Financialinvoice() {
             <Col lg={9} md={9} className="panel-col">
               <div className="dashboard-panel invoice-view-panel">
                 <Row>
-                  <div className="col-lg-12 col-md-12">
+                  <Col lg={12} md={12} >
                     <div className="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
-                  </div>
+                  </Col>
                 </Row>
                 <Row>
-                  <div className="col-lg-12 col-md-12">
+                  <Col lg={12} md={12} >
                     <div className="invoice-view-sec db-default-sec">
                       <div className="invoice-view-card db-default-wrapper admin-invoice-view-card">
                         <Row>
-                          <div className="col-lg-12 col-md-12">
+                          <Col lg={12} md={12} >
                             <div className="invoice-view-topbar ">
                               <Link to="/admin-financialpayment" className="back-to">
                               <i class="fa-solid fa-chevron-left"></i>{" "}
@@ -67,9 +67,9 @@ function Financialinvoice() {
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </Col>
                         </Row>
-                        <Row className="row invoice-view-details admin-invoice-view-details">
+                        <Row className=" invoice-view-details admin-invoice-view-details">
                           <Col lg={6} md={6}>
                             <h2>BLACKTIES</h2>
                             <h5>RENTAL</h5>
@@ -90,7 +90,7 @@ function Financialinvoice() {
                             </p>
                           </Col>
                         </Row>
-                        <Row className="row invoice-view-subscription">
+                        <Row className=" invoice-view-subscription">
                           <Col lg={6} md={6}>
                             <p className="billing-name">Billing to</p>
                             <p className="user">Omar Waldii</p>
@@ -104,7 +104,7 @@ function Financialinvoice() {
                           </Col>
                         </Row>
                         <Row>
-                          <div className="col-lg-12 col-md-12">
+                          <Col lg={12} md={12} >
                             <div style={{ overflowX: "auto" }}>
                               <table className="cancellation-disc-table">
                                 <thead>
@@ -149,9 +149,9 @@ function Financialinvoice() {
                                 </tbody>
                               </table>
                             </div>
-                          </div>
+                          </Col>
                         </Row>
-                        <Row className="row totalamount">
+                        <Row className=" totalamount">
                           <div className="bal_amnt">
                             <h3>Outstanding Balance</h3>
                             <h3>£360</h3>
@@ -159,7 +159,7 @@ function Financialinvoice() {
                         </Row>
                       </div>
                     </div>
-                  </div>
+                  </Col>
                 </Row>
               </div>
             </Col>
