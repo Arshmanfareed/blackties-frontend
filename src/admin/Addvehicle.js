@@ -3,7 +3,7 @@ import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
 import { Link } from "react-router-dom";
 import Addcarimages from "./components/Addcarimages";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 function Addvehicle() {
   const [fileInputs, setFileInputs] = useState([true]); // Track which file inputs are enabled
 
@@ -270,7 +270,7 @@ function Addvehicle() {
   return (
     <>
       <section className="user-dashboard">
-        <div className="container-fluid">
+        <Container fluid>
           <Row className=" g-0">
             <Col lg={3} md={3} className="sidebar-col">
               <Sidebar />
@@ -923,7 +923,7 @@ function Addvehicle() {
               </div>
             </Col>
           </Row>
-        </div>
+        </Container>
       </section>
     </>
   );

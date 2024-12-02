@@ -116,59 +116,51 @@ function Adminlogin() {
 
     return (
         <>
-            <section class="user-dashboard">
-                <div class="container-fluid">
-                    <div class="row g-0">
-                        {/* <div class="col-lg-3 col-md-3 sidebar-col">
-                    <Sidebar/>
-                </div> */}
-                        <div class="col-lg-12 col-md-12 panel-col login_admin">
-                            <div class="dashboard-panel application-panel">
-                                {/* <div class="row">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="dashboard-panel-topbar">
-                                   <Dashboardpaneltopbar/>
-                                </div>
-                            </div>
-                        </div> */}
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="login-main-bx">
-                                            <div class="login-txt">
+            <section className="user-dashboard">
+                <Container fluid>
+                    <Row className="g-0">
+                    
+                        <Col lg={12} md={12} className=" login_admin">
+                            <div className="dashboard-panel application-panel">
+                           
+                                <Row>
+                                    <Col lg={12} md={12} >
+                                        <div className="login-main-bx">
+                                            <div className="login-txt">
                                                 <img src="./admin_assets/images/login-logo.png" alt="logo" />
-                                                <div class="login-frm">
+                                                <div className="login-frm">
                                                     <form onSubmit={handleSubmit}>
-                                                        <div class="row">
-                                                            <div class="col-lg-12 col-md-12">
-                                                                <div class="form-group">
+                                                        <Row>
+                                                            <Col lg={12} md={12} >
+                                                                <div className="form-group">
                                                                     <label for="control-label">Email</label>
                                                                     <br />
                                                                     <input type="email" name="email" id="" placeholder="Enter your email" onChange={handleChange} />
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12 col-md-12">
-                                                                <div class="form-group">
+                                                            </Col>
+                                                            <Col lg={12} md={12} >
+                                                                <div className="form-group">
                                                                     <label for="control-label">Password</label>
                                                                     <br />
                                                                     <input type="password" name="password" id="" placeholder="Enter your password" onChange={handleChange} />
-                                                                    <ion-icon class="toggle-password" name="eye-outline"></ion-icon>
+                                                                    <ion-icon className="toggle-password" name="eye-outline"></ion-icon>
                                                                 </div>
-                                                            </div>
-                                                            <div class="sbmt-btn">
+                                                            </Col>
+                                                            <div className="sbmt-btn">
                                                                 {error && <p className="text-danger">{error}</p>}
                                                                 <Form.Control type="submit" className="theme-btn6 sb-btn submit-btn" value={loading ? "Logging in..." : "Login"} disabled={loading} />
                                                             </div>
-                                                        </div>
+                                                        </Row>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </Col>
+                                </Row>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
         </>
     )

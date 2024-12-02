@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
-import { Col, Container, Modal, ModalBody } from "react-bootstrap";
+import { Col, Container, Modal, ModalBody, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Userinfo() {
@@ -14,21 +14,21 @@ function Userinfo() {
     <>
       <section className="user-dashboard">
         <Container fluid>
-          <div className="row g-0">
-            <div className="col-lg-3 col-md-3 sidebar-col">
+          <Row className=" g-0">
+            <Col lg={3} md={3} className=" sidebar-col">
               <Sidebar />
-            </div>
-            <div className="col-lg-9 col-md-9 panel-col">
+            </Col>
+            <Col lg={9} md={9} className=" panel-col">
               <div className="dashboard-panel vehicle-documents-panel">
-                <div className="row">
-                  <Col lg={12} md={12} className="col-lg-12 col-md-12">
+                <Row>
+                  <Col lg={12} md={12} className="">
                     <div className="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
                   </Col>
-                </div>
-                <div className="row">
-                  <Col lg={12} md={12} className="col-lg-12 col-md-12">
+                </Row>
+                <Row>
+                  <Col lg={12} md={12}>
                     <div className="vehicle-documents-sec db-default-sec pro-doc admin-user-pro-one">
                       <div className="vehicle-documents-card db-default-wrapper">
                         <div className="back-hme">
@@ -37,8 +37,8 @@ function Userinfo() {
                             <Link to="#">Application</Link>
                           </h5>
                         </div>
-                        <div className="row">
-                          <Col lg={12} md={12} className="col-lg-12 col-md-12">
+                        <Row>
+                          <Col lg={12} md={12}>
                             <div className="admin-pro-main">
                               <div className="tabs-container ">
                                 {/* <!-- Tabs Header --> */}
@@ -48,7 +48,10 @@ function Userinfo() {
                                     id="myTab"
                                     role="tablist"
                                   >
-                                    <li className="nav-item" role="presentation">
+                                    <li
+                                      className="nav-item"
+                                      role="presentation"
+                                    >
                                       <Link
                                         className="nav-link active"
                                         id="all-users-pro-tab"
@@ -61,7 +64,10 @@ function Userinfo() {
                                         User Profile
                                       </Link>
                                     </li>
-                                    <li className="nav-item" role="presentation">
+                                    <li
+                                      className="nav-item"
+                                      role="presentation"
+                                    >
                                       <Link
                                         className="nav-link "
                                         id="user-pro-application-tab"
@@ -151,12 +157,8 @@ function Userinfo() {
                                             aria-labelledby="v-pills-Profile-tab"
                                           >
                                             <div className="profile-wrapper">
-                                              <div className="row">
-                                                <Col
-                                                  lg={12}
-                                                  md={12}
-                                                  className="col-lg-12 col-md-12"
-                                                >
+                                              <Row>
+                                                <Col lg={12} md={12}>
                                                   <div className="profile-top-bar">
                                                     <h5>Profile</h5>
                                                     <div className="profile-btn-wrap user-pro-one-btn">
@@ -169,13 +171,9 @@ function Userinfo() {
                                                     </div>
                                                   </div>
                                                 </Col>
-                                              </div>
-                                              <div className="row">
-                                                <Col
-                                                  lg={12}
-                                                  md={12}
-                                                  className="col-lg-12 col-md-12"
-                                                >
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
                                                   <div className="profile-meta-wrapper user-pro-one-wrapper">
                                                     <div className="profile-meta">
                                                       <img
@@ -210,13 +208,9 @@ function Userinfo() {
                                                     </Link>
                                                   </div>
                                                 </Col>
-                                              </div>
-                                              <div className="row">
-                                                <Col
-                                                  lg={12}
-                                                  md={12}
-                                                  className="col-lg-12 col-md-12"
-                                                >
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
                                                   <div className="profile-info-form-wrap user-pro-one-form">
                                                     <div className="head-wrap">
                                                       <h3>
@@ -224,12 +218,8 @@ function Userinfo() {
                                                       </h3>
                                                     </div>
                                                     <form action="" method="">
-                                                      <div className="row">
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                      <Row>
+                                                        <Col lg={6} md={6}>
                                                           <div className="form-group">
                                                             <label for="control-label">
                                                               First Name
@@ -241,11 +231,7 @@ function Userinfo() {
                                                             />
                                                           </div>
                                                         </Col>
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                        <Col lg={6} md={6}>
                                                           <div className="form-group">
                                                             <label for="control-label">
                                                               Last Name
@@ -257,11 +243,7 @@ function Userinfo() {
                                                             />
                                                           </div>
                                                         </Col>
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                        <Col lg={6} md={6}>
                                                           <div className="form-group">
                                                             <label for="control-label">
                                                               Email Address
@@ -283,11 +265,7 @@ function Userinfo() {
                                                             </h5>
                                                           </div>
                                                         </Col>
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                        <Col lg={6} md={6}>
                                                           <div className="form-group">
                                                             <label for="control-label">
                                                               Phone Number
@@ -310,17 +288,13 @@ function Userinfo() {
                                                             </h5>
                                                           </div>
                                                         </Col>
-                                                      </div>
+                                                      </Row>
                                                     </form>
                                                   </div>
                                                 </Col>
-                                              </div>
-                                              <div className="row">
-                                                <Col
-                                                  lg={12}
-                                                  md={12}
-                                                  className="col-lg-12 col-md-12"
-                                                >
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
                                                   <div className="profile-info-form-wrap user-pro-two-form">
                                                     <div className="pass-reset">
                                                       <div className="head-wrap">
@@ -335,12 +309,8 @@ function Userinfo() {
                                                       </div>
                                                     </div>
                                                     <form action="" method="">
-                                                      <div className="row">
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                      <Row>
+                                                        <Col lg={6} md={6}>
                                                           <div className="form-group">
                                                             <label for="control-label">
                                                               Password
@@ -352,11 +322,7 @@ function Userinfo() {
                                                             />
                                                           </div>
                                                         </Col>
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                        <Col lg={6} md={6}>
                                                           <div className="form-group">
                                                             <label for="control-label">
                                                               Confirm Password
@@ -368,11 +334,11 @@ function Userinfo() {
                                                             />
                                                           </div>
                                                         </Col>
-                                                      </div>
+                                                      </Row>
                                                     </form>
                                                   </div>
                                                 </Col>
-                                              </div>
+                                              </Row>
                                             </div>
                                           </div>
                                           <div
@@ -382,12 +348,8 @@ function Userinfo() {
                                             aria-labelledby="v-pills-vehicle-history-tab"
                                           >
                                             <div className="profile-wrapper">
-                                              <div className="row">
-                                                <Col
-                                                  lg={12}
-                                                  md={12}
-                                                  className="col-lg-12 col-md-12"
-                                                >
+                                              <Row>
+                                                <Col lg={12} md={12}>
                                                   <div className="profile-meta-wrapper user-pro-one-wrapper user-vehicles">
                                                     <div className="profile-meta">
                                                       <img
@@ -413,24 +375,16 @@ function Userinfo() {
                                                     </Link>
                                                   </div>
                                                 </Col>
-                                              </div>
-                                              <div className="row">
-                                                <Col
-                                                  lg={12}
-                                                  md={12}
-                                                  className="col-lg-12 col-md-12"
-                                                >
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
                                                   <div className="vehicle-rent-wrapper user-vehicle-app-wrapper">
                                                     <div className="veh-ren">
                                                       <h5>Vehicle Rental</h5>
                                                     </div>
                                                     <div className="vehicle-rent-main">
-                                                      <div className="row">
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                      <Row>
+                                                        <Col lg={6} md={6}>
                                                           <div className="veh-rent-image">
                                                             <img
                                                               src="./admin_assets/images/Frame 2085663709.png"
@@ -465,11 +419,7 @@ function Userinfo() {
                                                             </ul>
                                                           </div>
                                                         </Col>
-                                                        <Col
-                                                          lg={6}
-                                                          md={6}
-                                                          
-                                                        >
+                                                        <Col lg={6} md={6}>
                                                           <div className="detail-rent-wrapper adm-wrapper user-vehicle-app">
                                                             <div className="rental-vehicle-dt1">
                                                               <div>
@@ -543,12 +493,12 @@ function Userinfo() {
                                                             </ul>
                                                           </div>
                                                         </Col>
-                                                      </div>
+                                                      </Row>
                                                     </div>
                                                   </div>
                                                 </Col>
-                                              </div>
-                                              <div className="row">
+                                              </Row>
+                                              <Row>
                                                 <div className="user-vehcle-tble">
                                                   <div className="veh-ren">
                                                     <h5>Vehicle History</h5>
@@ -670,7 +620,7 @@ function Userinfo() {
                                                     </Link>
                                                   </div>
                                                 </div>
-                                              </div>
+                                              </Row>
                                             </div>
                                           </div>
 
@@ -682,18 +632,10 @@ function Userinfo() {
                                           >
                                             <div className="payments-wrapper">
                                               <div className="row">
-                                                <Col
-                                                  lg={12}
-                                                  md={12}
-                                                  className="col-lg-12 col-md-12"
-                                                >
+                                                <Col lg={12} md={12}>
                                                   <div className="payment-bx">
-                                                    <div className="row">
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                    <Row>
+                                                      <Col lg={6} md={6}>
                                                         <div className="outstanding-bx">
                                                           <div className="outstanding-txt">
                                                             <h4>
@@ -704,11 +646,7 @@ function Userinfo() {
                                                           </div>
                                                         </div>
                                                       </Col>
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                      <Col lg={6} md={6}>
                                                         <div className="outstanding-bx">
                                                           <div className="outstanding-txt">
                                                             <h4>
@@ -719,11 +657,11 @@ function Userinfo() {
                                                           </div>
                                                         </div>
                                                       </Col>
-                                                    </div>
+                                                    </Row>
                                                   </div>
                                                 </Col>
                                               </div>
-                                              <div className="row">
+                                              <Row>
                                                 <div className="user-vehcle-tble payment-tble-main">
                                                   <div className="payment-tble-head">
                                                     <h5>
@@ -945,7 +883,7 @@ function Userinfo() {
                                                     </Link>
                                                   </div>
                                                 </div>
-                                              </div>
+                                              </Row>
                                             </div>
                                           </div>
 
@@ -957,12 +895,8 @@ function Userinfo() {
                                           >
                                             <div className="profile-wrapper">
                                               <div className="vehicle-documnents-wrapper Maintenance-main pcns-main">
-                                                <div className="row">
-                                                  <Col
-                                                    lg={12}
-                                                    md={12}
-                                                    className="col-lg-12 col-md-12"
-                                                  >
+                                                <Row>
+                                                  <Col lg={12} md={12}>
                                                     <div className="search-bar-wrapper">
                                                       <h5 className="theme-h5">
                                                         Penalty Charge Notice
@@ -980,9 +914,9 @@ function Userinfo() {
                                                       </div>
                                                     </div>
                                                   </Col>
-                                                </div>
+                                                </Row>
                                               </div>
-                                              <div className="row">
+                                              <Row>
                                                 <div className="user-vehcle-tble">
                                                   <div className="veh-ren">
                                                     <h5>Vehicle History</h5>
@@ -1119,7 +1053,7 @@ function Userinfo() {
                                                     </Link>
                                                   </div>
                                                 </div>
-                                              </div>
+                                              </Row>
                                             </div>
                                           </div>
                                         </div>
@@ -1157,31 +1091,19 @@ function Userinfo() {
                                         </Link>
                                       </div>
                                     </div>
-                                    <div className="row">
-                                      <Col
-                                        lg={12}
-                                        md={12}
-                                        className="col-lg-12 col-md-12"
-                                      >
+                                    <Row>
+                                      <Col lg={12} md={12}>
                                         <div className="app-col-1">
-                                          <div className="row">
-                                            <Col
-                                              lg={6}
-                                              md={6}
-                                              
-                                            >
+                                          <Row>
+                                            <Col lg={6} md={6}>
                                               <div className="app-col-2">
                                                 <div className="app-personal-head">
                                                   <h5>Personal Information </h5>
                                                 </div>
                                                 <div className="form-personal">
                                                   <form action="" method="">
-                                                    <div className="row">
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                    <Row>
+                                                      <Col lg={6} md={6}>
                                                         <div className="form-group">
                                                           <label for="control-label">
                                                             First Name
@@ -1193,11 +1115,7 @@ function Userinfo() {
                                                           />
                                                         </div>
                                                       </Col>
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                      <Col lg={6} md={6}>
                                                         <div className="form-group">
                                                           <label for="control-label">
                                                             Last Name
@@ -1209,11 +1127,7 @@ function Userinfo() {
                                                           />
                                                         </div>
                                                       </Col>
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                      <Col lg={6} md={6}>
                                                         <div className="form-group">
                                                           <label for="control-label">
                                                             Email Address
@@ -1226,11 +1140,7 @@ function Userinfo() {
                                                           />
                                                         </div>
                                                       </Col>
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                      <Col lg={6} md={6}>
                                                         <div className="form-group">
                                                           <label for="control-label">
                                                             Phone Number
@@ -1243,7 +1153,7 @@ function Userinfo() {
                                                           />
                                                         </div>
                                                       </Col>
-                                                    </div>
+                                                    </Row>
                                                   </form>
                                                 </div>
                                                 <div className="app-personal-head">
@@ -1262,12 +1172,8 @@ function Userinfo() {
                                                 </div>
                                                 <div className="form-personal">
                                                   <form action="" method="">
-                                                    <div className="row">
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                    <Row>
+                                                      <Col lg={6} md={6}>
                                                         <div className="form-group">
                                                           <label for="control-label">
                                                             PCO License Number
@@ -1279,11 +1185,7 @@ function Userinfo() {
                                                           />
                                                         </div>
                                                       </Col>
-                                                      <Col
-                                                        lg={6}
-                                                        md={6}
-                                                        
-                                                      >
+                                                      <Col lg={6} md={6}>
                                                         <div className="form-group">
                                                           <label for="control-label">
                                                             Expiry Date
@@ -1295,7 +1197,7 @@ function Userinfo() {
                                                           />
                                                         </div>
                                                       </Col>
-                                                    </div>
+                                                    </Row>
                                                   </form>
                                                 </div>
                                                 <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
@@ -1380,242 +1282,211 @@ function Userinfo() {
                                                 </div>
                                               </div>
                                             </Col>
-                                         
-                                          <Col
-                                            lg={6}
-                                            md={6}
-                                            
-                                          >
-                                            <div className="app-col-2">
-                                              <div className="app-personal-head">
-                                                <h5>Driving Information</h5>
-                                              </div>
-                                              <div className="form-personal">
-                                                <form action="" method="">
-                                                  <div className="row">
-                                                    <Col
-                                                      lg={6}
-                                                      md={6}
-                                                      
-                                                    >
-                                                      <div className="form-group">
-                                                        <label for="control-label">
-                                                          Driving License Number
-                                                        </label>
-                                                        <br />
-                                                        <input
-                                                          type="number"
-                                                          name="form-control"
-                                                        />
-                                                      </div>
-                                                    </Col>
-                                                    <Col
-                                                      lg={6}
-                                                      md={6}
-                                                      
-                                                    >
-                                                      <div className="form-group">
-                                                        <label for="control-label">
-                                                          Driver License Expiry
-                                                          Date
-                                                        </label>
-                                                        <br />
-                                                        <input
-                                                          type="date"
-                                                          name="form-control"
-                                                        />
-                                                      </div>
-                                                    </Col>
-                                                    <Col
-                                                      lg={6}
-                                                      md={6}
-                                                      
-                                                    >
-                                                      <div className="form-group">
-                                                        <label for="control-label">
-                                                          DVLA Check Code 1
-                                                        </label>
-                                                        <input
-                                                          type="number"
-                                                          name="form-control"
-                                                          id=""
-                                                          className="mg0"
-                                                        />
-                                                      </div>
-                                                    </Col>
-                                                    <Col
-                                                      lg={6}
-                                                      md={6}
-                                                      
-                                                    >
-                                                      <div className="form-group">
-                                                        <label for="control-label">
-                                                          DVLA Check Code 2
-                                                        </label>
-                                                        <input
-                                                          type="number"
-                                                          name="form-control"
-                                                          id=""
-                                                          className="mg0"
-                                                        />
-                                                      </div>
-                                                    </Col>
-                                                    <Col
-                                                      lg={6}
-                                                      md={6}
-                                                      
-                                                    >
-                                                      <div className="form-group">
-                                                        <label for="control-label">
-                                                          National Insurance
-                                                          Number
-                                                        </label>
-                                                        <input
-                                                          type="number"
-                                                          name="form-control"
-                                                          id=""
-                                                          className="mg0"
-                                                        />
-                                                      </div>
-                                                    </Col>
-                                                  </div>
-                                                </form>
-                                              </div>
-                                              <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                <ul className="rental-files contract-files">
-                                                  <li>
-                                                    <img
-                                                      src="./admin_assets/images/Frame 2085663522.png"
-                                                      alt="Docs"
-                                                    />
-                                                    <div>
-                                                      <h6>
-                                                        Driving License Number
-                                                      </h6>
-                                                      <span>3.6 MB</span>
-                                                    </div>
-                                                    <Link
-                                                      to="#"
-                                                      className="View-btn"
-                                                    >
-                                                      View
-                                                    </Link>
-                                                    <Link
-                                                      to="#"
-                                                      className="down-btn"
-                                                    >
-                                                      Download
-                                                    </Link>
-                                                    <Link
-                                                      to="#"
-                                                      className="delete-img"
-                                                    >
+
+                                            <Col lg={6} md={6}>
+                                              <div className="app-col-2">
+                                                <div className="app-personal-head">
+                                                  <h5>Driving Information</h5>
+                                                </div>
+                                                <div className="form-personal">
+                                                  <form action="" method="">
+                                                    <Row>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label for="control-label">
+                                                            Driving License
+                                                            Number
+                                                          </label>
+                                                          <br />
+                                                          <input
+                                                            type="number"
+                                                            name="form-control"
+                                                          />
+                                                        </div>
+                                                      </Col>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label for="control-label">
+                                                            Driver License
+                                                            Expiry Date
+                                                          </label>
+                                                          <br />
+                                                          <input
+                                                            type="date"
+                                                            name="form-control"
+                                                          />
+                                                        </div>
+                                                      </Col>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label for="control-label">
+                                                            DVLA Check Code 1
+                                                          </label>
+                                                          <input
+                                                            type="number"
+                                                            name="form-control"
+                                                            id=""
+                                                            className="mg0"
+                                                          />
+                                                        </div>
+                                                      </Col>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label for="control-label">
+                                                            DVLA Check Code 2
+                                                          </label>
+                                                          <input
+                                                            type="number"
+                                                            name="form-control"
+                                                            id=""
+                                                            className="mg0"
+                                                          />
+                                                        </div>
+                                                      </Col>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label for="control-label">
+                                                            National Insurance
+                                                            Number
+                                                          </label>
+                                                          <input
+                                                            type="number"
+                                                            name="form-control"
+                                                            id=""
+                                                            className="mg0"
+                                                          />
+                                                        </div>
+                                                      </Col>
+                                                    </Row>
+                                                  </form>
+                                                </div>
+                                                <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+                                                  <ul className="rental-files contract-files">
+                                                    <li>
                                                       <img
-                                                        src="./admin_assets/images/Trash.png"
-                                                        alt="delete"
+                                                        src="./admin_assets/images/Frame 2085663522.png"
+                                                        alt="Docs"
                                                       />
-                                                    </Link>
-                                                  </li>
-                                                </ul>
-                                              </div>
-                                              <div className="app-personal-head">
-                                                <h5>Driving History</h5>
-                                              </div>
-                                              <div className="pro-license-txt">
-                                                <div className="pro-pera">
-                                                  <p>
-                                                    Have you got more than 6
-                                                    Points on your License ?
-                                                  </p>
-                                                </div>
-                                                <div className="pro-yes">
-                                                  <span>Yes</span>
-                                                </div>
-                                              </div>
-                                              <div className="pro-license-txt">
-                                                <div className="pro-pera">
-                                                  <p>
-                                                    Have you been in any
-                                                    accidents in the last three
-                                                    years?
-                                                  </p>
-                                                </div>
-                                                <div className="pro-yes">
-                                                  <span>Yes</span>
-                                                </div>
-                                              </div>
-                                              <div className="app-accident-head">
-                                                <h5>Accident</h5>
-                                              </div>
-                                              <div className="form-personal">
-                                                <form action="" method="">
-                                                  <div className="row">
-                                                    <Col
-                                                      lg={6}
-                                                      md={6}
-                                                      
-                                                    >
-                                                      <div className="form-group">
-                                                        <label for="control-label">
-                                                          Date of Accident
-                                                        </label>
-                                                        <br />
-                                                        <input
-                                                          type="date"
-                                                          name="form-control"
-                                                        />
+                                                      <div>
+                                                        <h6>
+                                                          Driving License Number
+                                                        </h6>
+                                                        <span>3.6 MB</span>
                                                       </div>
-                                                    </Col>
-                                                    <Col
-                                                      lg={6}
-                                                      md={6}
-                                                      
-                                                    >
-                                                      <div className="form-group">
-                                                        <label for="control-label">
-                                                          Fault/ Non Fault /
-                                                          Pending
-                                                        </label>
-                                                        <br />
-                                                        <input
-                                                          type="text"
-                                                          name="form-control"
+                                                      <Link
+                                                        to="#"
+                                                        className="View-btn"
+                                                      >
+                                                        View
+                                                      </Link>
+                                                      <Link
+                                                        to="#"
+                                                        className="down-btn"
+                                                      >
+                                                        Download
+                                                      </Link>
+                                                      <Link
+                                                        to="#"
+                                                        className="delete-img"
+                                                      >
+                                                        <img
+                                                          src="./admin_assets/images/Trash.png"
+                                                          alt="delete"
                                                         />
-                                                      </div>
-                                                    </Col>
+                                                      </Link>
+                                                    </li>
+                                                  </ul>
+                                                </div>
+                                                <div className="app-personal-head">
+                                                  <h5>Driving History</h5>
+                                                </div>
+                                                <div className="pro-license-txt">
+                                                  <div className="pro-pera">
+                                                    <p>
+                                                      Have you got more than 6
+                                                      Points on your License ?
+                                                    </p>
                                                   </div>
-                                                </form>
+                                                  <div className="pro-yes">
+                                                    <span>Yes</span>
+                                                  </div>
+                                                </div>
+                                                <div className="pro-license-txt">
+                                                  <div className="pro-pera">
+                                                    <p>
+                                                      Have you been in any
+                                                      accidents in the last
+                                                      three years?
+                                                    </p>
+                                                  </div>
+                                                  <div className="pro-yes">
+                                                    <span>Yes</span>
+                                                  </div>
+                                                </div>
+                                                <div className="app-accident-head">
+                                                  <h5>Accident</h5>
+                                                </div>
+                                                <div className="form-personal">
+                                                  <form action="" method="">
+                                                    <Row>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label for="control-label">
+                                                            Date of Accident
+                                                          </label>
+                                                          <br />
+                                                          <input
+                                                            type="date"
+                                                            name="form-control"
+                                                          />
+                                                        </div>
+                                                      </Col>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label for="control-label">
+                                                            Fault/ Non Fault /
+                                                            Pending
+                                                          </label>
+                                                          <br />
+                                                          <input
+                                                            type="text"
+                                                            name="form-control"
+                                                          />
+                                                        </div>
+                                                      </Col>
+                                                    </Row>
+                                                  </form>
+                                                </div>
+                                                <div className="deails-pera">
+                                                  <span>Details</span>
+                                                  <p>
+                                                    At Blackties, we believe in
+                                                    smart risk management to
+                                                    ensure a seamless rental
+                                                    experience for both our
+                                                    customers and our business
+                                                    partners.
+                                                  </p>
+                                                </div>
                                               </div>
-                                              <div className="deails-pera">
-                                                <span>Details</span>
-                                                <p>
-                                                  At Blackties, we believe in
-                                                  smart risk management to
-                                                  ensure a seamless rental
-                                                  experience for both our
-                                                  customers and our business
-                                                  partners.
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </Col>
-                                          </div>
+                                            </Col>
+                                          </Row>
                                         </div>
                                       </Col>
-                                    </div>
+                                    </Row>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </Col>
-                        </div>
+                        </Row>
                       </div>
                     </div>
                   </Col>
-                </div>
+                </Row>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Container>
 
         <Modal
@@ -1636,8 +1507,8 @@ function Userinfo() {
                 <div className="userr-pop-txt-form">
                   <div className="form-personal">
                     <form action="" method="">
-                      <div className="row">
-                        <Col lg={12} md={12} className="col-lg-12 col-md-12">
+                      <Row>
+                        <Col lg={12} md={12}>
                           <div className="form-group">
                             <label for="control-label">Reason to Reject</label>
                             <br />
@@ -1648,14 +1519,14 @@ function Userinfo() {
                             />
                           </div>
                         </Col>
-                        <Col lg={12} md={12} className="col-lg-12 col-md-12">
+                        <Col lg={12} md={12}>
                           <div className="form-group">
                             <label for="control-label">date to reapply</label>
                             <br />
                             <input type="date" name="form-control" />
                           </div>
                         </Col>
-                      </div>
+                      </Row>
                     </form>
                   </div>
                 </div>
@@ -1663,11 +1534,7 @@ function Userinfo() {
                   <Link onClick={handleClose} to="#" className="chng-otp-ver">
                     Cancel
                   </Link>
-                  <Link
-                    to="#"
-                   onClick={handleClose}
-                    className="succes-return"
-                  >
+                  <Link to="#" onClick={handleClose} className="succes-return">
                     Yes
                   </Link>
                 </div>
