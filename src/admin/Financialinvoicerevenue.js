@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
 import { Col, Container, Dropdown, Modal, ModalBody, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Financialinvoicerevenue() {
   // View Modal
@@ -130,16 +131,16 @@ const handleOpenremove=()=>setShowremove(true);
                               <div className="support-issue-head">
                                 <h4>Revenue</h4>
                                 <div className="viewbyd">
-                                  <a href="javascript:;" className="view-support">
+                                  <Link to="#" className="view-support">
                                     View
-                                  </a>
+                                  </Link>
                                   <div className="issue-btns">
-                                    <a href="javascript:;" className="active">
+                                    <Link to="#" className="active">
                                       Weekly
-                                    </a>
-                                    <a href="javascript:;">Monthly</a>
-                                    <a href="javascript:;">Yearly</a>
-                                    <a href="javascript:;">Custom</a>
+                                    </Link>
+                                    <Link to="#">Monthly</Link>
+                                    <Link to="#">Yearly</Link>
+                                    <Link to="#">Custom</Link>
                                   </div>
                                 </div>
                                 <div className="time-frame">
@@ -154,29 +155,29 @@ const handleOpenremove=()=>setShowremove(true);
                                 </div>
                                 <div className="revenue-main-btns">
                                   <div className="tivcket-btn">
-                                    <a
-                                      href="javascript:;"
+                                    <Link
+                                      to="#"
                                       onClick={handleOpenadd}
                                     >
                                       Add Data <i className="fas fa-plus"></i>
-                                    </a>
+                                    </Link>
                                   </div>
                                   <div className="file-dow-btn">
-                                    <a href="javascript:;">
+                                    <Link to="#">
                                       <img
                                         src="./admin_assets/images/File-download.png"
                                         alt="file-download"
                                       />
-                                    </a>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>
-                              <div className="row frm-inner-row invoice-tab-frm revenue-tab-frm">
+                              <Row className=" frm-inner-row invoice-tab-frm revenue-tab-frm">
                                 <form action="" method="">
                                   <Row>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Date & Time
                                         </label>
                                         <br />
@@ -188,7 +189,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Transaction ID
                                         </label>
                                         <br />
@@ -201,7 +202,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Transaction Description
                                         </label>
                                         <input
@@ -215,7 +216,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">From</label>
+                                        <label htmlFor="control-label">From</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -230,7 +231,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">To</label>
+                                        <label htmlFor="control-label">To</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -245,14 +246,14 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                   </Row>
                                 </form>
-                              </div>
+                              </Row>
 
                               <Row className=" frm-inner-row invoice-tab-frm revenue-tab-frm2">
                                 <form action="" method="">
                                   <Row>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Amount
                                         </label>
                                         <br />
@@ -265,7 +266,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Categories
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -283,7 +284,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Income/Expense
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -298,7 +299,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Asset/Liability
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -312,7 +313,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           PDF Uploaded?
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -354,8 +355,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -373,7 +374,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -385,13 +386,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -407,37 +408,37 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-btn"
                                               onClick={handleOpenview}
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
@@ -448,8 +449,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£4,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -467,7 +468,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -479,13 +480,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -501,37 +502,37 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
                                               className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
@@ -542,8 +543,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="liability-btn"
                                             >
                                               <svg
@@ -561,7 +562,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Liability
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -573,13 +574,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -595,37 +596,37 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
                                               className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
@@ -636,8 +637,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="cat-asset-btn"
                                             >
                                               <svg
@@ -655,7 +656,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Asset
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -667,13 +668,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -689,37 +690,37 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
                                               className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
@@ -730,8 +731,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="expense-btn"
                                             >
                                               <svg
@@ -749,7 +750,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Expense
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -761,13 +762,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -783,37 +784,37 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
                                               className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
@@ -824,8 +825,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -843,7 +844,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -855,13 +856,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -877,37 +878,37 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
                                               className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
@@ -918,8 +919,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -937,7 +938,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -949,13 +950,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -971,37 +972,37 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="d-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files2.png"
                                                 alt="filesr"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
                                               className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                       </tbody>
@@ -1019,12 +1020,12 @@ const handleOpenremove=()=>setShowremove(true);
                                       </h6>
                                     </div>
                                     <div className="pagination-nav">
-                                      <a href="javascript:;" className="pg-prev">
+                                      <Link to="#" className="pg-prev">
                                         Previous
-                                      </a>
-                                      <a href="javascript:;" className="pg-next">
+                                      </Link>
+                                      <Link to="#" className="pg-next">
                                         Next
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
                                 </Col>
@@ -1040,16 +1041,16 @@ const handleOpenremove=()=>setShowremove(true);
                               <div className="support-issue-head">
                                 <h4>Revenue</h4>
                                 <div className="viewbyd">
-                                  <a href="javascript:;" className="view-support">
+                                  <Link to="#" className="view-support">
                                     View
-                                  </a>
+                                  </Link>
                                   <div className="issue-btns">
-                                    <a href="javascript:;" className="active">
+                                    <Link to="#" className="active">
                                       Weekly
-                                    </a>
-                                    <a href="javascript:;">Monthly</a>
-                                    <a href="javascript:;">Yearly</a>
-                                    <a href="javascript:;">Custom</a>
+                                    </Link>
+                                    <Link to="#">Monthly</Link>
+                                    <Link to="#">Yearly</Link>
+                                    <Link to="#">Custom</Link>
                                   </div>
                                 </div>
                                 <div className="time-frame">
@@ -1064,21 +1065,21 @@ const handleOpenremove=()=>setShowremove(true);
                                 </div>
                                 <div className="revenue-main-btns">
                                   <div className="file-dow-btn">
-                                    <a href="javascript:;">
+                                    <Link to="#">
                                       <img
                                         src="./admin_assets/images/File-download.png"
                                         alt="file-download"
                                       />
-                                    </a>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>
-                              <div className="row frm-inner-row invoice-tab-frm revenue-tab-frm">
+                              <Row className=" frm-inner-row invoice-tab-frm revenue-tab-frm">
                                 <form action="" method="">
                                   <Row>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Date & Time
                                         </label>
                                         <br />
@@ -1090,7 +1091,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Transaction ID
                                         </label>
                                         <br />
@@ -1103,7 +1104,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Transaction Description
                                         </label>
                                         <input
@@ -1117,7 +1118,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">From</label>
+                                        <label htmlFor="control-label">From</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -1132,7 +1133,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">To</label>
+                                        <label htmlFor="control-label">To</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -1147,14 +1148,14 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                   </Row>
                                 </form>
-                              </div>
+                              </Row>
 
                               <Row className="frm-inner-row invoice-tab-frm revenue-tab-frm2">
                                 <form action="" method="">
                                   <Row>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Amount
                                         </label>
                                         <br />
@@ -1167,7 +1168,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Categories
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1185,7 +1186,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Income/Expense
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1200,7 +1201,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Asset/Liability
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1214,7 +1215,7 @@ const handleOpenremove=()=>setShowremove(true);
                                     </Col>
                                     <Col lg={2} md={2}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           PDF Uploaded?
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1256,8 +1257,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -1275,7 +1276,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1287,13 +1288,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1309,32 +1310,32 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td className="pdfs-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                             <div className="hidden-content pdf-content">
                                               <div className="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="pdf-view-btn"
                                                 >
                                                   <img
@@ -1343,9 +1344,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-change-btn"
                                                 >
                                                   <img
@@ -1354,9 +1355,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-upload-btn"
                                                 >
                                                   <img
@@ -1365,9 +1366,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-delete-btn"
                                                 >
                                                   <img
@@ -1376,7 +1377,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1399,7 +1400,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1414,7 +1415,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1439,8 +1440,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£4,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -1458,7 +1459,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1470,13 +1471,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1492,32 +1493,32 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td className="pdfs-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                             <div className="hidden-content pdf-content">
                                               <div className="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="pdf-view-btn"
                                                 >
                                                   <img
@@ -1526,9 +1527,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-change-btn"
                                                 >
                                                   <img
@@ -1537,9 +1538,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-upload-btn"
                                                 >
                                                   <img
@@ -1548,9 +1549,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-delete-btn"
                                                 >
                                                   <img
@@ -1559,7 +1560,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1582,7 +1583,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1597,7 +1598,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1622,8 +1623,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="liability-btn"
                                             >
                                               <svg
@@ -1641,7 +1642,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Liability
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1653,13 +1654,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1675,32 +1676,32 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td className="pdfs-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                             <div className="hidden-content pdf-content">
                                               <div className="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="pdf-view-btn"
                                                 >
                                                   <img
@@ -1709,9 +1710,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-change-btn"
                                                 >
                                                   <img
@@ -1720,9 +1721,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-upload-btn"
                                                 >
                                                   <img
@@ -1731,9 +1732,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-delete-btn"
                                                 >
                                                   <img
@@ -1742,7 +1743,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1765,7 +1766,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1780,7 +1781,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1805,8 +1806,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="cat-asset-btn"
                                             >
                                               <svg
@@ -1824,7 +1825,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Asset
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1836,13 +1837,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1858,32 +1859,32 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td className="pdfs-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                             <div className="hidden-content pdf-content">
                                               <div className="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="pdf-view-btn"
                                                 >
                                                   <img
@@ -1892,9 +1893,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-change-btn"
                                                 >
                                                   <img
@@ -1903,9 +1904,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-upload-btn"
                                                 >
                                                   <img
@@ -1914,9 +1915,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-delete-btn"
                                                 >
                                                   <img
@@ -1925,7 +1926,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1948,7 +1949,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1963,7 +1964,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1988,8 +1989,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="expense-btn"
                                             >
                                               <svg
@@ -2007,7 +2008,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Expense
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -2019,13 +2020,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -2041,32 +2042,32 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td className="pdfs-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                             <div className="hidden-content pdf-content">
                                               <div className="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="pdf-view-btn"
                                                 >
                                                   <img
@@ -2075,9 +2076,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-change-btn"
                                                 >
                                                   <img
@@ -2086,9 +2087,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-upload-btn"
                                                 >
                                                   <img
@@ -2097,9 +2098,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-delete-btn"
                                                 >
                                                   <img
@@ -2108,7 +2109,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -2131,7 +2132,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -2146,7 +2147,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -2171,8 +2172,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -2190,7 +2191,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -2202,13 +2203,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -2224,32 +2225,32 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td className="pdfs-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                             <div className="hidden-content pdf-content">
                                               <div className="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="pdf-view-btn"
                                                 >
                                                   <img
@@ -2258,9 +2259,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-change-btn"
                                                 >
                                                   <img
@@ -2269,9 +2270,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-upload-btn"
                                                 >
                                                   <img
@@ -2280,9 +2281,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-delete-btn"
                                                 >
                                                   <img
@@ -2291,7 +2292,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -2314,7 +2315,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -2329,7 +2330,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -2354,8 +2355,8 @@ const handleOpenremove=()=>setShowremove(true);
                                           <td>Rohan</td>
                                           <td>£5,00</td>
                                           <td className="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="incoming-btn"
                                             >
                                               <svg
@@ -2373,7 +2374,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -2385,13 +2386,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -2407,32 +2408,32 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td className="pdfs-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files2.png"
                                                 alt="filesr"
                                               />
-                                            </a>
+                                            </Link>
                                             <div className="hidden-content pdf-content">
                                               <div className="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="pdf-view-btn"
                                                 >
                                                   <img
@@ -2441,9 +2442,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-change-btn"
                                                 >
                                                   <img
@@ -2452,9 +2453,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-upload-btn"
                                                 >
                                                   <img
@@ -2463,9 +2464,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="pdf-delete-btn"
                                                 >
                                                   <img
@@ -2474,28 +2475,28 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
                                           <td className="dot-td">
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               className="view-dots-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/pepicons-pop_dots-y.png"
                                                 alt="dots"
                                               />
-                                            </a>
+                                            </Link>
                                             <div
                                               className={`hidden-content dots-content ${
                                                 isVisible ? "visible" : ""
                                               }`}
                                             >
                                               <div className="dot-pp-btns">
-                                                <a
-                                                  href="javascript:;"
+                                                <Link
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -2504,9 +2505,9 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="check-img"
                                                   />
                                                   Bring Back
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
+                                                </Link>
+                                                <Link
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -2515,7 +2516,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -2535,12 +2536,12 @@ const handleOpenremove=()=>setShowremove(true);
                                       </h6>
                                     </div>
                                     <div className="pagination-nav">
-                                      <a href="javascript:;" className="pg-prev">
+                                      <Link to="#" className="pg-prev">
                                         Previous
-                                      </a>
-                                      <a href="javascript:;" className="pg-next">
+                                      </Link>
+                                      <Link to="#" className="pg-next">
                                         Next
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
                                 </Col>
@@ -2576,7 +2577,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Date & Time</label>
+                        <label htmlFor="control-label">Date & Time</label>
                         <br />
                         <input
                           type="date"
@@ -2587,7 +2588,7 @@ const handleOpenremove=()=>setShowremove(true);
                     </Col>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Transaction Description
                         </label>
                         <br />
@@ -2602,7 +2603,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row >
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">From</label>
+                        <label htmlFor="control-label">From</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Rohan</option>
                           <option value="saab">Rohan Shibu</option>
@@ -2641,7 +2642,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2665,7 +2666,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -2695,7 +2696,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2719,7 +2720,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -2749,7 +2750,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2773,7 +2774,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -2803,7 +2804,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2827,7 +2828,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -2857,7 +2858,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2881,7 +2882,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -2889,7 +2890,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">To</label>
+                        <label htmlFor="control-label">To</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Rohan</option>
                           <option value="saab">Rohan Shibu</option>
@@ -2928,7 +2929,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2952,7 +2953,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -2982,7 +2983,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3006,7 +3007,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -3036,7 +3037,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3060,7 +3061,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -3090,7 +3091,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3114,7 +3115,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="drvr_deta">
@@ -3144,7 +3145,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3168,7 +3169,7 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -3176,7 +3177,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Amount</label>
+                        <label htmlFor="control-label">Amount</label>
                         <br />
                         <input
                           type="number"
@@ -3187,7 +3188,7 @@ const handleOpenremove=()=>setShowremove(true);
                     </Col>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Categories</label>
+                        <label htmlFor="control-label">Categories</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">10 December, 2024</option>
                           <option value="saab">10 December, 2024</option>
@@ -3200,7 +3201,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Income/Expense</label>
+                        <label htmlFor="control-label">Income/Expense</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Expense</option>
                           <option value="saab">Income</option>
@@ -3211,7 +3212,7 @@ const handleOpenremove=()=>setShowremove(true);
                     </Col>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Asset/Liability</label>
+                        <label htmlFor="control-label">Asset/Liability</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Asset</option>
                           <option value="saab">Asset</option>
@@ -3237,15 +3238,15 @@ const handleOpenremove=()=>setShowremove(true);
                   </Row>
                 </form>
                 <div className="revenue-add-action-btns">
-                  <a href="javascript:;" className="delete-btn">
+                  <Link to="#" onClick={handleOpenremove} className="delete-btn">
                     Delete
-                  </a>
-                  <a href="javascript:;" className="cancel-btn">
+                  </Link>
+                  <Link to="#" onClick={handleCloseadd} className="cancel-btn">
                     Cancel
-                  </a>
-                  <a href="javascript:;" className="submit-btn">
+                  </Link>
+                  <Link to="#" onClick={handleCloseadd} className="submit-btn">
                     Submit
-                  </a>
+                  </Link>
                 </div>
               </Row>
             </div>
@@ -3272,7 +3273,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Date & Time</label>
+                        <label htmlFor="control-label">Date & Time</label>
                         <br />
                         <input
                           type="text"
@@ -3283,7 +3284,7 @@ const handleOpenremove=()=>setShowremove(true);
                     </Col>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Transaction Description
                         </label>
                         <br />
@@ -3298,7 +3299,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">From</label>
+                        <label htmlFor="control-label">From</label>
                         <div className="drvr_deta active">
                           <div className="drvrmain">
                             <img
@@ -3331,7 +3332,7 @@ const handleOpenremove=()=>setShowremove(true);
                             <span>+44 334 2345</span>
                           </div>
                           <div className="cstmr-view-deta-eye">
-                            <a href="javascript:;" className="uploaded-btn">
+                            <Link to="#" className="uploaded-btn">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -3355,13 +3356,13 @@ const handleOpenremove=()=>setShowremove(true);
                                 ></path>
                               </svg>
                               View
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
                     </Col>
                     <div className="form-group">
-                      <label for="control-label">To</label>
+                      <label htmlFor="control-label">To</label>
                       <div className="drvr_deta active">
                         <div className="drvrmain">
                           <img
@@ -3389,7 +3390,7 @@ const handleOpenremove=()=>setShowremove(true);
                           <span>+44 334 2345</span>
                         </div>
                         <div className="cstmr-view-deta-eye">
-                          <a href="javascript:;" className="uploaded-btn">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3413,7 +3414,7 @@ const handleOpenremove=()=>setShowremove(true);
                               ></path>
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -3421,7 +3422,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Amount</label>
+                        <label htmlFor="control-label">Amount</label>
                         <br />
                         <input
                           type="number"
@@ -3432,7 +3433,7 @@ const handleOpenremove=()=>setShowremove(true);
                     </Col>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Categories</label>
+                        <label htmlFor="control-label">Categories</label>
                         <input
                           type="text"
                           name="form-control"
@@ -3444,7 +3445,7 @@ const handleOpenremove=()=>setShowremove(true);
                   <Row>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Income/Expense</label>
+                        <label htmlFor="control-label">Income/Expense</label>
                         <input
                           type="text"
                           name="form-control"
@@ -3454,7 +3455,7 @@ const handleOpenremove=()=>setShowremove(true);
                     </Col>
                     <Col lg={6} md={6} >
                       <div className="form-group">
-                        <label for="control-label">Asset/Liability</label>
+                        <label htmlFor="control-label">Asset/Liability</label>
                         <input
                           type="text"
                           name="form-control"
@@ -3463,8 +3464,8 @@ const handleOpenremove=()=>setShowremove(true);
                       </div>
                     </Col>
                   </Row>
-                  <div className="row">
-                    <div className="col-md-6">
+                  <Row>
+                    <Col md={6}>
                       <div className="chngs-pdf-ppr">
                         <img
                           src="./admin_assets/images/paper-pdf.png"
@@ -3476,18 +3477,18 @@ const handleOpenremove=()=>setShowremove(true);
                           <p>3.6 MB</p>
                         </div>
                       </div>
-                    </div>
-                    <div className="col-md-6">
+                    </Col>
+                    <Col md={6}>
                       <div className="pdf-chng-btns">
-                        <a href="javascript:;" className="view-btn">
+                        <Link to="#" className="view-btn">
                           View
-                        </a>
-                        <a href="javascript:;" className="download-btn">
+                        </Link>
+                        <Link to="#" className="download-btn">
                           Download
-                        </a>
+                        </Link>
                       </div>
-                    </div>
-                  </div>
+                    </Col>
+                  </Row>
                 </form>
               </Row>
             </div>
@@ -3504,8 +3505,8 @@ const handleOpenremove=()=>setShowremove(true);
            <h6>Are sure to want to Remove?</h6>
            <p>Lorem ipsum dolor sit amet consectetur. Gravida sed sit nisl metus.</p>
            <div className="alrt-btns">
-               <a href="javascript:;" className="cancel-btn" onClick={handleCloseremove}>Cancel</a>
-               <a href="javascript:;" className="yes-btn" onClick={handleCloseremove}>Yes</a>
+               <Link to="#" className="cancel-btn" onClick={handleCloseremove}>Cancel</Link>
+               <Link to="#" className="yes-btn" onClick={handleCloseremove}>Yes</Link>
            </div>
        </div>
     </div>

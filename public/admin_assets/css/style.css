@@ -9155,6 +9155,7 @@ background-position: center;
 }
 .picker-col-2 .calender-txt-box {
   margin-bottom: 12px;
+  color: #fff;
 }
 .picker-col-2 {
   height: 492px;
@@ -9457,7 +9458,7 @@ background-position: center;
   padding: 42px 32px 42px 32px;
   margin-top: 40px;
   width: 771px;
-  height: 650px;
+  /* height: 650px; */
 }
 .Mot-certificate-body .chng-psd h4 {
   color: #FFF;
@@ -9570,7 +9571,7 @@ position: absolute;
 
 /********PRIVATE HIRE LICENSE POPUP CSS***********/
 .privte-hire {
-  height: 742px;
+  /* height: 742px; */
 }
 .privte-hire form .form-group input.num {
   background: #121418 !important;
@@ -10136,7 +10137,7 @@ section.user-dashboard .revenue-PP-two .form-group input {
   align-items: flex-start;
   gap: 12px;
 }
-.dots-content a.dot-brng-btn {
+.tb-btn2 .show.dropdown .dot-pp-btns a.dot-delete-btn {
   display: flex;
   padding: 6px 8px 6px 8px;
   align-items: center;
@@ -10150,7 +10151,57 @@ section.user-dashboard .revenue-PP-two .form-group input {
   font-weight: 500;
   line-height: 20px;
 }
-.dots-content  a.dot-delete-btn {
+td.tb-btn2 .dropdown-menu.show .dot-brng-btn {
+  display: flex;
+  padding: 6px 8px 6px 8px;
+  align-items: center;
+  border-radius: 6px;
+  background: #667085;
+  color: var(--Primary-Black, #191C20) !important;
+  font-family: Poppins !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+}
+td.tb-btn2 .dropdown-menu.show {
+  padding: 12px;
+}
+td.tb-btn2 .dropdown-menu.show a img {
+  margin-right: 5px;
+}
+
+td.tb-btn2 .dropdown-menu.show .dot-delete-btn {
+  color: #F41010 !important;
+  font-family: Poppins;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  margin-top: 6px !important;
+  padding: 6px 8px 6px 8px;
+}
+
+td.tb-btn2 .dropdown-basic {
+  background: none !important;
+  color: #fff !important;
+  font-size: 14px !important;
+}
+
+td.tb-btn2 .dropdown-basic::after {
+  display: none !important;
+  opacity: 0;
+}
+
+.tb-btn2 .show.dropdown .dot-pp-btns a.dot-delete-btn {
+  color: #F41010;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.tb-btn2 .show.dropdown  a.dot-delete-btn {
   color: #F41010;
   font-family: Poppins;
   font-size: 14px;
@@ -11311,7 +11362,7 @@ section.admin-dashboard-main .vehicle-tabs .nav-tabs .nav-item .nav-link {
 
 /***************MAIN DASHBOARD PCO POPUP CSS***********/
 .pco-pop-up {
-    width: 540px;
+    width: 60%;
     padding: 24px;
     border-radius: 10px;
     background: #000;
@@ -11565,3 +11616,281 @@ text-decoration: none;
   align-items: center;
   margin-bottom: 10px;
 }
+
+
+/**********************Admin SERVICING AND MAINTENANCE Screens CSS******************************/
+
+.servicing-and-maintenance .calender-txt-box .calendr-btn a {
+  display: flex;
+  padding: 5px 8px 5px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  border-radius: 16px;
+  text-decoration: none;
+  width: fit-content;
+}
+.servicing-and-maintenance .calender-txt-box .calendr-btn a.incoming-btn {
+  background-color: #FF9933;
+}
+.servicing-and-maintenance .calender-txt-box .calendr-btn a.document-btn {
+  background: #F41010;
+}
+.servicing-and-maintenance .calender-txt-box .calendr-btn  a.PHV-btn {
+  background: #138808;
+}
+.servicing-and-maintenance .calender-txt-box .calendr-btn a.pick-up-btn {
+  background: #138808;
+}
+.servicing-and-maintenance .maintenance-table td.status-tagbtns a.available-btn, .servicing-and-maintenance .maintenance-table td.status-tagbtns a.viewings-btn {
+  background: #138808;
+}
+.servicing-and-maintenance .maintenance-table td.status-tagbtns a.return-btn, .servicing-and-maintenance .maintenance-table td.status-tagbtns a.test-drive-btn {
+  background: #F93;
+}
+
+
+/**********************ADMIN RENTAL HISTORY Screens CSS******************************/
+
+.rental-history-card a.back-to {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.rental-history-card a.back-to .profile-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.profile-meta .profile-nm-d h4 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.profile-meta .profile-nm-d h6 {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.rental-history-card a.back-to .profile-meta img {
+  width: 44px;
+  height: 44px;
+}
+
+
+/**********************ADMIN USER BOOKING RENTAL APPLICATION Screens CSS******************************/
+
+.admin-user-application {
+  padding-top: 32px;
+}
+.admin-user-application .user-profile .form-group input {
+  padding-left: 0 !important;
+  height: 40px !important;
+  color: #FFF !important;
+  font-size: 16px !important;
+}
+.admin-user-application .user-profile .form-group input::placeholder {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.vehical-detail-box {
+  border-radius: 8px;
+  border: 1px solid #1F2329;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.vehical-detail-box .bx-row {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.vehical-detail-box .bx-row .box-deta h6 {
+  color: var(--Gray-500, #667085);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+.vehical-detail-box .bx-row .box-deta h5 {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #FFF;
+}
+.vehical-detail-box .bx-row .box-deta {
+  width: 100%;
+}
+.vehical-detail-box .bx-row .box-deta  a {
+  font-family: Archivo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  color: #9A75EC;
+  margin-left: 10px;
+}
+
+/***************MAIN DASHBOARD DRIVER LICENSE POPUP CSS******************/
+.Driver-pops .pco-txt {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.Driver-pops .pco-txt .driver-update-btn a.update-button {
+  color: #9A75EC !important;
+  text-overflow: ellipsis;
+  font-family: "poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  display: flex;
+  width: 133px;
+  height: 34px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Medium, 8px);
+  border-radius: 4px;
+  background: #1B1F24 !important;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid #000000 !important;
+}
+.driver a.Approved-btn {
+  position: relative;
+  bottom: 70px;
+  left: 85%;
+}
+.driver-main .driver {
+  display: block;
+}
+
+.driver-main .up-bx {
+  padding-top: 0 !important;
+}
+
+.driver  .approved-btnss {
+}
+
+.driver-main .driver  form {
+  padding-top: 0;
+}
+
+.driver-main .driver form .form-group input {
+  background: transparent;
+  padding: 12px 0;
+  border-bottom: 1px solid #1F2329 !important;
+  margin-bottom: 0;
+  border-radius: 0;
+  height: 36px !important;
+}
+
+.driver-main .driver form .form-group input:focus {
+  outline: none;
+}
+
+.driver-main .driver form .form-group .t-flag {
+position: relative;
+}
+
+.driver-main .driver form .t-flag input[type="tel"] {
+padding-left: 40px;
+}
+
+.driver-main .driver form .t-flag:after {
+content: "";
+width: 30px;
+height: 18px;
+background-image: url(../images/dashboard/Image653.png);
+position: absolute;
+top: 11px;
+left: 0;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position: center;
+}
+.driver-main .driver form input.mg0 {
+  padding-left: 40px;
+}
+.driver-main .dr-license-head h5 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+.driver-main .dr-license-head {
+  padding-top: 22px;
+}
+.driver-main .dr-license-head form .form-group input {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #1F2329 !important;
+  height: 32px !important;
+  padding-left: 0 !important;
+}
+.Driver-pops a.View-btn {
+  background: #000 !important;
+}
+.pco-pop-up ul.rental-files{
+  margin-bottom: 10px;
+}
+.Driver-pops .expired-date {
+  background: #1b1f24;
+  padding: 0 10px 3px 10px;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+  position: relative;
+  right: 0;
+  bottom: 50px;
+  left: auto;
+  margin-right: 0;
+  margin-left: auto;
+}
+.Driver-pops .expired-date a.yellow-expired-btn {
+  color: #F93;
+  font-family: Archivo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+.driver-main .dr-license-head form .form-group input:focus {
+  outline: none;
+}
+.driver-main ul.rental-files li {
+  margin-top: 0 !important;
+}
+

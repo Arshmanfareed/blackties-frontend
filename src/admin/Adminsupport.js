@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
 import { Link } from "react-router-dom";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Dropdown, Row } from "react-bootstrap";
 
 function Support() {
   return (
@@ -91,7 +91,7 @@ function Support() {
                                     +4.2% <i className="fas fa-arrow-up"></i>
                                   </h3>
                                 </div>
-                              </div>
+                              </div>  
                             </div>
                           </div>
                         </Col>
@@ -238,10 +238,18 @@ function Support() {
                                           <Link to="#">New</Link>
                                         </td>
                                         <td className="tb-btn2">
-                                          <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                                          </Link>
-                                        </td>
+
+                                            <Dropdown className="dots-content visible ">
+                                                <Dropdown.Toggle className="dropdown-toggle dropdown-basic" variant="" id="dropdown-basic">
+                                                <i className="fa-solid fa-ellipsis-vertical"></i>
+                                                </Dropdown.Toggle>
+                                            <Dropdown.Menu >
+                                                  <Dropdown.Item href="/admin-support-chat" className="dot-brng-btn"><img src="/admin_assets/images/Eye2.png" className="check-img" alt="check-img"/>View Action</Dropdown.Item>
+                                                  <Dropdown.Item href="#/action-2" className="dot-delete-btn"><img src="/admin_assets/images/trash-can.png" className="trash-can-img" alt="trash-can-img"/>Delete</Dropdown.Item>
+                                                </Dropdown.Menu>
+                                                </Dropdown>
+                                          </td>
+
                                       </tr>
                                       <tr>
                                         <td>ADA2142</td>
@@ -257,7 +265,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -285,7 +293,7 @@ function Support() {
                                                                     </td> */}
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -303,7 +311,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -321,7 +329,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -339,7 +347,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -357,7 +365,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -375,7 +383,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -393,7 +401,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -411,7 +419,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -466,7 +474,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -484,7 +492,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -502,7 +510,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -520,7 +528,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -538,7 +546,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -556,7 +564,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -574,7 +582,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -592,7 +600,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -610,7 +618,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -628,7 +636,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -682,7 +690,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -700,7 +708,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -718,7 +726,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -736,7 +744,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -754,7 +762,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -772,7 +780,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -790,7 +798,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -808,7 +816,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -826,7 +834,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -844,7 +852,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -899,7 +907,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -917,7 +925,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -935,7 +943,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -953,7 +961,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -971,7 +979,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -989,7 +997,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1007,7 +1015,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1025,7 +1033,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1043,7 +1051,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1061,7 +1069,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1116,7 +1124,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1134,7 +1142,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1152,7 +1160,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1170,7 +1178,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1188,7 +1196,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1206,7 +1214,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1224,7 +1232,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1242,7 +1250,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1260,7 +1268,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>
@@ -1278,7 +1286,7 @@ function Support() {
                                         </td>
                                         <td className="tb-btn2">
                                           <Link to="#">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <i className="fa-solid fa-ellipsis-vertical"></i>
                                           </Link>
                                         </td>
                                       </tr>

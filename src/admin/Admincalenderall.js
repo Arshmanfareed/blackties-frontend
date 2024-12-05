@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
 import { Link } from "react-router-dom";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, FormControl, Modal, ModalBody, Row } from "react-bootstrap";
 
 function Admincalenderall() {
+  // Mot Modal
+  const [showmot, setShowmot] = useState(false);
+  const handleClose = () => setShowmot(false);
+  const handleShowmot = () => setShowmot(true);
+
+  // Pvt Hire Lisence
+  const [showphl, setShowphl] = useState(false);
+  const handleClosephl = () => setShowphl(false);
+  const handleShowphl = () => setShowphl(true);
+
+  // Vehicle Liscence
+  const [showvl, setShowvl] = useState(false);
+  const handleClosevl = () => setShowvl(false);
+  const handleShowvl = () => setShowvl(true);
+
+  // Pickup Modal
+  const [showpickup, setShowpickup] = useState(false);
+  const handleClosepickup = () => setShowpickup(false);
+  const handleShowpickup = () => setShowpickup(true);
+
+    // Confirm Pickup Modal 
+  const [showpickupconfirm, setShowpickupconfirm] = useState(false);
+  const handleClosepickupconfirm = () => setShowpickupconfirm(false);
+  const handleShowpickupconfirm = () => setShowpickupconfirm(true);
   return (
     <>
       <section className="user-dashboard">
@@ -141,7 +165,10 @@ function Admincalenderall() {
                                     <div className="fleet-calender-txt">
                                       <h4>Fleet Calendar</h4>
                                     </div>
-                                    <div className="calender-txt-box">
+                                    <div
+                                      className="calender-txt-box"
+                                      onClick={handleShowmot}
+                                    >
                                       <div className="main-txt-img">
                                         <div className="calendr-txt-img">
                                           <img
@@ -167,7 +194,10 @@ function Admincalenderall() {
                                         </Link>
                                       </div>
                                     </div>
-                                    <div className="calender-txt-box">
+                                    <div
+                                      className="calender-txt-box"
+                                      onClick={handleShowphl}
+                                    >
                                       <div className="main-txt-img">
                                         <div className="calendr-txt-img">
                                           <img
@@ -190,7 +220,10 @@ function Admincalenderall() {
                                         </Link>
                                       </div>
                                     </div>
-                                    <div className="calender-txt-box">
+                                    <div
+                                      className="calender-txt-box"
+                                      onClick={handleShowvl}
+                                    >
                                       <div className="main-txt-img">
                                         <div className="calendr-txt-img">
                                           <img
@@ -216,7 +249,10 @@ function Admincalenderall() {
                                         </Link>
                                       </div>
                                     </div>
-                                    <div className="calender-txt-box">
+                                    <div
+                                      className="calender-txt-box"
+                                      onClick={handleShowpickup}
+                                    >
                                       <div className="main-txt-img">
                                         <div className="calendr-txt-img">
                                           <img
@@ -777,6 +813,526 @@ function Admincalenderall() {
             </Col>
           </Row>
         </Container>
+        {/* MOT Modal */}
+        <Modal className="password_modal" onHide={handleClose} show={showmot}>
+          <ModalBody>
+            <div className="Mot-certificate-body">
+              <div className="Mot-certificate-bx">
+                <div className="chng-psd">
+                  <h4>MOT Certificate Expiry Notice</h4>
+                  <Link
+                    to="javascript:;"
+                    className="cross-icon"
+                    onClick={handleClose}
+                  >
+                    <i className="fas fa-times"></i>
+                  </Link>
+                </div>
+                <div className="mot-pera">
+                  <p>
+                    The MOT certificate for vehicle KM19 VUG is expiring on 10
+                    December 2024
+                  </p>
+                </div>
+                <form action="">
+                  <Row>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Registration Number:</label>
+                        <br />
+                        <input
+                          type="number"
+                          id=""
+                          name="form-control"
+                         
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Make & Model</label>
+                        <br />
+                        <input type="text" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={12} md={12} >
+                      <div className="form-group">
+                        <label for="control-label">
+                          Current MOT Expiry Date
+                        </label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={12} md={12} className=" up-bx">
+                      <div className="form-group">
+                        <label for="control-label">
+                          Please upload Document
+                        </label>
+                        <br />
+                        <span className="file_cont">
+                          <input type="file" name="form-control" />
+                          <span>
+                            <b>Click to upload</b> or drag and drop Maximum file
+                            size 50 MB.
+                          </span>
+                        </span>
+                      </div>
+                    </Col>
+                  </Row>
+                </form>
+                <div className="change-pass-btn">
+                  <Link
+                    to="javascript:void(0);"
+                    onClick={handleClose}
+                    className="psd-cancel"
+
+                  >
+                    Cancel
+                  </Link>
+                  <Link to="javascript:;" onClick={handleClose} className="psd-change">
+                    Save
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+        <Modal
+          className="password_modal"
+          onHide={handleClosephl}
+          show={showphl}
+        >
+          <ModalBody>
+            <div className="Mot-certificate-body privte-hire">
+              <div className="Mot-certificate-bx">
+                <div className="chng-psd">
+                  <h4>Private Hire License</h4>
+                  <Link
+                    to="javascript:;"
+                    className="cross-icon"
+                    onClick={handleClosephl}
+                  >
+                    <i className="fas fa-times"></i>
+                  </Link>
+                </div>
+                <div className="mot-pera">
+                  <p>
+                    Private Hire License for 123123 is expiring on 10 December
+                    2024
+                  </p>
+                </div>
+                <form action="">
+                  <Row>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">License Number</label>
+                        <br />
+                        <input
+                          type="number"
+                          id=""
+                          name="form-control"
+                         
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Date of Issue</label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Start Date</label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Expire Date</label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">New Licence Number</label>
+                        <br />
+                        <input
+                          type="number"
+                          id=""
+                          name="form-control"
+                         
+                          className="num"
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">New Expiry date</label>
+                        <br />
+                        <input
+                          type="date"
+                          id=""
+                          name="form-control"
+                         
+                          className="num"
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={12} md={12} className=" up-bx">
+                      <div className="form-group">
+                        <label for="control-label">
+                          Please upload Document
+                        </label>
+                        <br />
+                        <span className="file_cont">
+                          / <input type="file" name="form-control" />
+                          <span>
+                            <b>Click to upload</b> or drag and drop Maximum file
+                            size 50 MB.
+                          </span>
+                        </span>
+                      </div>
+                    </Col>
+                  </Row>
+                </form>
+                <div className="change-pass-btn">
+                  <Link
+                    to="javascript:void(0);"
+                    onClick={handleClosephl}
+                    className="psd-cancel"
+                  >
+                    Cancel
+                  </Link>
+                  <Link
+                    to="javascript:;"
+                    onClick={handleClosephl}
+                    className="psd-change"
+                  >
+                    Save
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+        {/* Vehicle Liscence */}
+        <Modal className="password_modal" onHide={handleClosevl} show={showvl}>
+          <ModalBody>
+            <div className="Mot-certificate-body privte-hire Vehicle-License-pop">
+              <div className="Mot-certificate-bx">
+                <div className="chng-psd">
+                  <h4>Vehicle License</h4>
+                  <Link
+                    to="javascript:;"
+                    className="cross-icon"
+                    onClick={handleClosevl}
+                  >
+                    <i className="fas fa-times"></i>
+                  </Link>
+                </div>
+                <div className="mot-pera">
+                  <p>
+                    Private Hire License for 123123 is expiring on 10 December
+                    2024
+                  </p>
+                </div>
+                <form action="">
+                  <Row>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">License Number</label>
+                        <br />
+                        <input
+                          type="number"
+                          id=""
+                          name="form-control"
+                         
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Date of Issue</label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Start Date</label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Expire Date</label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">New Expiry date</label>
+                        <br />
+                        <input
+                          type="date"
+                          id=""
+                          name="form-control"
+                         
+                          className="num"
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={12} md={12} className=" up-bx">
+                      <div className="form-group">
+                        <label for="control-label">
+                          Please upload Document
+                        </label>
+                        <br />
+                        <span className="file_cont">
+                          <input type="file" name="form-control" />
+                          <span>
+                            <b>Click to upload</b> or drag and drop Maximum file
+                            size 50 MB.
+                          </span>
+                        </span>
+                      </div>
+                    </Col>
+                  </Row>
+                </form>
+                <div className="change-pass-btn">
+                  <Link
+                    to="javascript:void(0);"
+                    onClick={handleClosevl}
+                    className="psd-cancel"
+                  >
+                    Cancel
+                  </Link>
+                  <Link
+                    to="javascript:;"
+                    className="psd-change"
+                    onClick={handleClosevl}
+                  >
+                    Save
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+        {/* Pickup Modal */}
+        <Modal
+          className="password_modal"
+          onHide={handleClosepickup}
+          show={showpickup}
+        >
+          <ModalBody>
+            <div className="Mot-certificate-body privte-hire Vehicle-License-pop Vehicle-Pick-Up">
+              <div className="Mot-certificate-bx">
+                <div className="chng-psd">
+                  <h4>Vehicle Pick-Up Details</h4>
+                  <Link
+                    to="javascript:;"
+                    onClick={handleClosepickup}
+                    className="cross-icon"
+                  >
+                    <i className="fas fa-times"></i>
+                  </Link>
+                </div>
+                <form action="">
+                  <Row>
+                    <div className="pick-up-txt-one">
+                      <p>Date and Time:</p>
+                    </div>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">
+                          Scheduled Pick-Up Date
+                        </label>
+                        <br />
+                        <input type="date" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">
+                          Scheduled Pick-Up Time
+                        </label>
+                        <br />
+                        <input type="time" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <div className="pick-up-txt-one">
+                      <p>Vehicle Information:</p>
+                    </div>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Registration Number:</label>
+                        <br />
+                        <input
+                          type="number"
+                          id=""
+                          name="form-control"
+                         
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Make & Model</label>
+                        <br />
+                        <input type="text" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={12} md={12} >
+                      <div className="form-group">
+                        <label for="control-label">
+                          Vehicle Identification Number (VIN)
+                        </label>
+                        <br />
+                        <input type="text" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <div className="pick-up-txt-one">
+                      <p>Customer Information:</p>
+                    </div>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Full Name</label>
+                        <br />
+                        <input type="text" id="" name="form-control" />
+                      </div>
+                    </Col>
+                    <Col lg={6} md={6}>
+                      <div className="form-group">
+                        <label for="control-label">Phone Number</label>
+                        <br />
+                        <input
+                          type="number"
+                          id=""
+                          name="form-control"
+                         
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={12} md={12} >
+                      <div className="form-group">
+                        <label for="control-label">Email Address</label>
+                        <br />
+                        <FormControl
+                          type="email"
+                          id=""
+                          name="form-control"
+                         
+                        />
+                      </div>
+                    </Col>
+                    <div className="pick-up-txt-one">
+                      <p>Pick-Up Location:</p>
+                    </div>
+                    <span>155 Summerwood Road, TW7 7QP</span>
+                    <img
+                      src="admin_assets/images/Frame 2085661877.png"
+                      alt="map"
+                    />
+                  </Row>
+                </form>
+                <div className="change-pass-btn">
+                  <Link
+                    to="javascript:void(0);"
+                    onClick={handleClosepickup}
+                    className="psd-cancel"
+                  >
+                    Cancel
+                  </Link>
+                  <Link to="javascript:;" className="psd-change" onClick={handleShowpickupconfirm}>
+                    Save
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+        {/* Confirm Pickup Modal */}
+        <Modal
+         className="password_modal"
+         onHide={handleClosepickupconfirm}
+         show={showpickupconfirm}
+        >
+          <ModalBody>
+            
+          <div className="Mot-certificate-body privte-hire Vehicle-License-pop Vehicle-Pick-Up Confirm-Pick-Up">
+                                        <div className="Mot-certificate-bx">
+                                            <div className="chng-psd">
+                                                <h4>Confirm Pick-Up</h4>
+                                                 <Link to="javascript:;" onClick={handleClosepickupconfirm} className="cross-icon"><i className="fas fa-envelope"></i><i className="fas fa-phone-alt"></i><i className="fas fa-times"></i></Link>
+                                            </div>
+                                            <form action="">
+                                                <Row>
+                                                    <div className="pick-up-txt-one">
+                                                        <p>Date and Time:</p>
+                                                    </div>
+                                                    <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                            <label for="control-label">Scheduled Pick-Up Date</label><br/>
+                                                            <input type="date" id="" name="form-control"/>
+                                                        </div>
+                                                    </Col>
+                                                    <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                            <label for="control-label">Scheduled Pick-Up Time</label><br/>
+                                                            <input type="time" id="" name="form-control"/>
+                                                        </div>
+                                                    </Col>
+                                                     <div className="pick-up-txt-one">
+                                                        <p>Customer Information:</p>
+                                                    </div>
+                                                       <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                            <label for="control-label">Full Name</label><br/>
+                                                            <input type="text" id="" name="form-control"/>
+                                                        </div>
+                                                    </Col>
+                                                    <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                            <label for="control-label">Phone Number</label><br/>
+                                                            <input type="number" id="" name="form-control"/>
+                                                        </div>
+                                                    </Col>
+                                                    <Col lg={12} md={12} >
+                                                        <div className="form-group">
+                                                            <label for="control-label">Email Address</label><br/>
+                                                            <input type="email" id="" name="form-control"/>
+                                                        </div>
+                                                    </Col>
+                                                    <div className="pick-up-txt-one">
+                                                        <p>Pick-Up Location:</p>
+                                                    </div>
+                                                    <span>155 Summerwood Road, TW7 7QP</span>
+                                                    <img src="admin_assets/images/Frame 2085661877.png" alt="map"/>
+                                                    <Col lg={12} md={12} >
+                                                        <div className="form-group">
+                                                            <label for="control-label">Notes</label><br/>
+                                                            <input type="textarea" id="" name="form-control" placeholder="send notification X days before event"/>
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                            </form>
+                                            <div className="change-pass-btn">
+                                                <Link to="javascript:void(0);" onClick={handleClosepickupconfirm} onclick="popup_alrt(this)"  className="psd-cancel">Reschedule</Link>
+                                                <Link to="javascript:;" onClick={handleClosepickupconfirm} className="mark-complete">Mark as Completed</Link>
+                                                <Link to="javascript:;" onClick={handleClosepickupconfirm} className="psd-change">Confirmed</Link>
+                                            </div>
+                                        </div>  
+                                    </div>
+          </ModalBody>
+        </Modal>
       </section>
     </>
   );
