@@ -3,8 +3,11 @@ import DashboardSidebar from "../partials/dashboard-sidebar";
 import DashboardPanelTopbar from "../components/DashboardPanelTopbar";
 import { Button, Col, Modal, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Settingprofile() {
+  const token = localStorage.getItem('token');
+  const [user, updateUser] = useState(JSON.parse(localStorage.getItem('user')) || {});
   const [show, setShow] = useState(false);
   const closepasswordmodal = () => setShow(false);
   const showpasswordmodal = () => setShow(true);
@@ -49,8 +52,138 @@ function Settingprofile() {
     setShowdeleteaccount(false);
   }
   const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
-  const user = JSON.parse(localStorage.getItem('user')) || {};
-  const token = localStorage.getItem('token');
+  const [changePhoneLoader, setChangePhoneLoader] = useState(false);
+  const [changePhoneError, setChangePhoneError] = useState('');
+  const [changePhoneFormData, setChangePhoneFormData] = useState({
+    oldPhoneToChange: user.phoneNo,
+    newPhoneToChange: '',
+    passwordToChange: ''
+  });
+  const handleChangePhoneForm = (e) => {
+    setChangePhoneFormData({
+      ...changePhoneFormData,
+      [e.target.name]: e.target.value
+    });
+  };
+  const handleChangePhoneFormSubmit = async (e) => {
+    e.preventDefault();
+    setChangePhoneError('');
+    setChangePhoneLoader(true);
+    if (!changePhoneFormData.oldPhoneToChange.trim()) {
+      setChangePhoneError('Previous Phone No. is required');
+      setChangePhoneLoader(false);
+      return false;
+    }
+    if (!changePhoneFormData.newPhoneToChange.trim()) {
+      setChangePhoneError('Phone No. is required');
+      setChangePhoneLoader(false);
+      return false;
+    }
+    if (!changePhoneFormData.passwordToChange.trim()) {
+      setChangePhoneError('Password is required');
+      setChangePhoneLoader(false);
+      return false;
+    }
+    if (changePhoneFormData.oldPhoneToChange == changePhoneFormData.newPhoneToChange) {
+      setChangePhoneError('Both phone no.s must not be same');
+      setChangePhoneLoader(false);
+      return false;
+    }
+    try {
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL + `/user`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          "x-auth-token": token,
+        },
+        body: JSON.stringify({
+          password: changePhoneFormData.passwordToChange,
+          phoneNo: changePhoneFormData.newPhoneToChange,
+        }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setShowphone(false);
+        setChangePhoneOtpTimer(60);
+        setShowotp(true);
+      } else {
+        if (data.error?.message) {
+          setChangePhoneError(data.error.message);
+        } else {
+          setChangePhoneError("Something went wrong. Please try again.");
+        }
+      }
+    } catch (err) {
+      setChangePhoneError("Something went wrong. Please try again.");
+    } finally {
+      setChangePhoneLoader(false);
+    }
+  };
+  const [changePhoneOtp, setChangePhoneOtp] = useState(new Array(6).fill(""));
+  const [changePhoneOtpTimer, setChangePhoneOtpTimer] = useState(0);
+  useEffect(() => {
+    if (changePhoneOtpTimer > 0) {
+      const interval = setInterval(() => setChangePhoneOtpTimer(changePhoneOtpTimer - 1), 1000);
+      return () => clearInterval(interval);
+    }
+  }, [changePhoneOtpTimer]);
+  const handleChangePhoneOtp = (value, index) => {
+    if (/^[0-9]?$/.test(value)) {
+      const newOtp = [...changePhoneOtp];
+      newOtp[index] = value;
+      setChangePhoneOtp(newOtp);
+      if (value && index < changePhoneOtp.length - 1) {
+        document.getElementById(`otp-input-${index + 1}`).focus();
+      }
+    }
+  };
+  const handleChangePhoneBackspace = (e, index) => {
+    if (e.key === "Backspace" && changePhoneOtp[index] === "" && index > 0) {
+      document.getElementById(`otp-input-${index - 1}`).focus();
+    }
+  };
+  const [changePhoneOtpError, setChangePhoneOtpError] = useState('');
+  const [chnagePhoneOtpLoader, setChangePhoneOtpLoader] = useState(false);
+  const handleChangePhoneOtpSubmit = async (e) => {
+    e.preventDefault();
+    setChangePhoneOtpError('');
+    setChangePhoneOtpLoader(true);
+    if (changePhoneOtp.some((digit) => digit === "")) {
+      setChangePhoneOtpError('Otp is required');
+      setChangePhoneOtpLoader(false);
+      return false;
+    }
+    try {
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL + `/auth/verify-code`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userId: user.id,
+          code: changePhoneOtp.join(""),
+        }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        const updatedUser = { ...user, phoneNo: changePhoneFormData.newPhoneToChange };
+        updateUser(updatedUser);
+        localStorage.setItem("user", JSON.stringify(updatedUser));
+        setShowotp(false);
+        setShowphonesucess(true);
+      } else {
+        if (data.error?.message) {
+          setChangePhoneOtpError(data.error.message);
+        } else {
+          setChangePhoneOtpError("Something went wrong. Please try again.");
+        }
+      }
+    } catch (err) {
+      setChangePhoneOtpError("Something went wrong. Please try again.");
+    } finally {
+      setChangePhoneOtpLoader(false);
+    }
+  };
   const [changeEmailLoader, setChangeEmailLoader] = useState(false);
   const [changeEmailError, setChangeEmailError] = useState('');
   const [changeEmailFormData, setEmailFormData] = useState({
@@ -120,6 +253,12 @@ function Settingprofile() {
   };
   const [changeEmailOtp, setChangeEmailOtp] = useState(new Array(6).fill(""));
   const [changeEmailOtpTimer, setChangeEmailOtpTimer] = useState(0);
+  useEffect(() => {
+    if (changeEmailOtpTimer > 0) {
+      const interval = setInterval(() => setChangeEmailOtpTimer(changeEmailOtpTimer - 1), 1000);
+      return () => clearInterval(interval);
+    }
+  }, [changeEmailOtpTimer]);
   const handleChangeEmailOtp = (value, index) => {
     if (/^[0-9]?$/.test(value)) {
       const newOtp = [...changeEmailOtp];
@@ -159,6 +298,9 @@ function Settingprofile() {
       });
       const data = await response.json();
       if (response.ok) {
+        const updatedUser = { ...user, email: changeEmailFormData.newEmailToChange };
+        updateUser(updatedUser);
+        localStorage.setItem("user", JSON.stringify(updatedUser));
         setShowemailotp(false);
         setShowemailotpsucess(true);
       } else {
@@ -244,12 +386,88 @@ function Settingprofile() {
     const input = document.getElementById(id);
     input.type = input.type === "password" ? "text" : "password";
   };
-  useEffect(() => {
-    if (changeEmailOtpTimer > 0) {
-      const interval = setInterval(() => setChangeEmailOtpTimer(changeEmailOtpTimer - 1), 1000);
-      return () => clearInterval(interval);
+  const handleDeleteAccount = async (e) => {
+    try {
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL + `/admin/user/` + user.id + `/suspend`, {
+        method: "POST",
+        headers: {
+          "x-auth-token": token,
+        },
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setShowdeleteaccount(false);
+        setShowdeleteaccountsucess(true);
+      } else {
+        if (data.error?.message) {
+          setChangePasswordError(data.error.message);
+        } else {
+          setChangePasswordError("Something went wrong. Please try again.");
+        }
+      }
+    } catch (err) {
+      setChangePasswordError("Something went wrong. Please try again.");
+    } finally {
+      setChangePasswordLoader(false);
     }
-  }, [changeEmailOtpTimer]);
+  };
+  const [showimage_change, setShowimage_change] = useState(false);
+  const handleCloseimage_change = () => setShowimage_change(false);
+  const handleShowimage_change = () => setShowimage_change(true);
+  const [changeImageError, setChangeImageError] = useState('');
+  const [changeImageLoader, setChangeImageLoader] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentImage, setCurrentImage] = useState(
+    user?.image
+      ? 'https://blackties-backend.dev.internalstaging.com' + user.image
+      : './assets/images/Avatar.png'
+  );
+  const updateCurrentImage = (e) => {
+    const file = e.target.files[0];
+    setSelectedImage(file);
+    if (file) {
+      const fileURL = URL.createObjectURL(file);
+      setCurrentImage(fileURL);
+    }
+  };
+  const saveProfileImage = async (e) => {
+    e.preventDefault();
+    setChangeImageError('');
+    setChangeImageLoader(true);
+    if (!selectedImage) {
+      setChangeImageError("Please select an image first!");
+      setChangeImageLoader(false);
+      return false;
+    }
+    try {
+      const formData = new FormData();
+      formData.append("image", selectedImage);
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL + `/admin/update-user-image/` + user.id, {
+        method: "PUT",
+        headers: {
+          "x-auth-token": token,
+        },
+        body: formData
+      });
+      const data = await response.json();
+      if (response.ok) {
+        const updatedUser = { ...user, image: data.data };
+        updateUser(updatedUser);
+        localStorage.setItem("user", JSON.stringify(updatedUser));
+        handleCloseimage_change(true);
+      } else {
+        if (data.error?.message) {
+          setChangeImageError(data.error.message);
+        } else {
+          setChangeImageError("Something went wrong. Please try again.");
+        }
+      }
+    } catch (err) {
+      setChangeImageError("Something went wrong. Please try again.");
+    } finally {
+      setChangeImageLoader(false);
+    }
+  };
   return (
     <>
       <section className="user-dashboard">
@@ -316,10 +534,7 @@ function Settingprofile() {
                                       <Col lg={12} md={12}>
                                         <div className="profile-meta-wrapper">
                                           <div className="profile-meta setting-data">
-                                            <img
-                                              src={user.image || './assets/images/Avatar.png'}
-                                              alt="prfile"
-                                            />
+                                            <img src={'https://blackties-backend.dev.internalstaging.com' + user.image || './assets/images/Avatar.png'} alt="prfile" />
                                             <div>
                                               <h4 className="profile-name">
                                                 {user.username || 'No Name'}
@@ -335,6 +550,7 @@ function Settingprofile() {
                                           <Link
                                             href="javascript:;"
                                             className="change-img-btn"
+                                            onClick={handleShowimage_change}
                                           >
                                             Change Image
                                           </Link>
@@ -716,7 +932,7 @@ function Settingprofile() {
                                             </div>
                                             <div className="chng-otp-pera">
                                               <p>
-                                                A code was sent to email <span style={{ color: "rgb(167 80 255)", }}>{user.email}</span>
+                                                A code was sent to email <span style={{ color: "rgb(167 80 255)", }}>{changeEmailFormData.newEmailToChange}</span>
                                               </p>
                                             </div>
                                             <form action="">
@@ -764,17 +980,10 @@ function Settingprofile() {
                                               <Link
                                                 href="javascript:void(0);"
                                                 className={`eml-change ${changeEmailOtpLoader ? "disabled" : ""}`}
+                                                style={changeEmailOtpLoader ? { pointerEvents: "none", opacity: 0.5 } : {}}
                                                 onClick={handleChangeEmailOtpSubmit}
                                               >
-                                                Verification
-                                              </Link>
-                                              <Link
-                                                onClick={handleChangeEmailFormSubmit}
-                                                href="javascript:void(0);"
-                                                className={`eml-change ${changeEmailLoader ? "disabled" : ""}`}
-                                                style={changeEmailLoader ? { pointerEvents: "none", opacity: 0.5 } : {}}
-                                              >
-                                                {changeEmailLoader ? "Wait..." : "Verification"}
+                                                {changeEmailOtpLoader ? "Verifying..." : "Verification"}
                                               </Link>
                                             </div>
                                           </div>
@@ -840,13 +1049,15 @@ function Settingprofile() {
                                                     <div className="t-flag">
                                                       <input
                                                         type="tel"
-                                                        name="form-control"
-                                                        id=""
+                                                        name="oldPhoneToChange"
+                                                        id="oldPhoneToChange"
                                                         placeholder="+44"
                                                         className="mg0"
+                                                        value={user.phoneNo}
+                                                        onChange={handleChangePhoneForm}
+                                                        required
+                                                        readOnly
                                                       />
-                                                      {/* <Link 
-                                                  onClick={showpasswordmodal}><img src="./assets/images/ei_check.png"/></Link> */}
                                                     </div>
                                                   </div>
                                                 </Col>
@@ -859,15 +1070,40 @@ function Settingprofile() {
                                                     <div className="t-flag">
                                                       <input
                                                         type="tel"
-                                                        name="form-control"
-                                                        id=""
+                                                        name="newPhoneToChange"
+                                                        id="newPhoneToChange"
                                                         placeholder="+44"
+                                                        value={changePhoneFormData.newPhoneToChange}
+                                                        onChange={handleChangePhoneForm}
                                                         className="mg0"
+                                                        required
                                                       />
                                                     </div>
                                                   </div>
                                                 </Col>
+                                                <Col lg={12} md={12}>
+                                                  <div className="form-group">
+                                                    <label for="control-label">
+                                                      Password
+                                                    </label>
+                                                    <br />
+                                                    <input
+                                                      type="password"
+                                                      name="passwordToChange"
+                                                      id="passwordToChange"
+                                                      className="mg0"
+                                                      value={changePhoneFormData.passwordToChange}
+                                                      onChange={handleChangePhoneForm}
+                                                      required
+                                                    />
+                                                    <i
+                                                      className="fa-regular fa-eye toggle-password"
+                                                      onClick={() => togglePasswordVisibility("passwordToChange")}
+                                                    ></i>
+                                                  </div>
+                                                </Col>
                                               </Row>
+                                              {changePhoneError && <p className="text-danger">{changePhoneError}</p>}
                                             </form>
                                             <div className="change-phn-btn">
                                               <Link
@@ -878,11 +1114,93 @@ function Settingprofile() {
                                                 Cancel
                                               </Link>
                                               <Link
-                                                href="javascript:;"
-                                                onClick={handleShowphonesucess}
-                                                className="phn-change"
+                                                onClick={handleChangePhoneFormSubmit}
+                                                href="javascript:void(0);"
+                                                className={`phn-change ${changePhoneLoader ? "disabled" : ""}`}
+                                                style={changePhoneLoader ? { pointerEvents: "none", opacity: 0.5 } : {}}
                                               >
-                                                Save
+                                                {changePhoneLoader ? "Wait..." : "Save"}
+                                              </Link>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </Modal.Body>
+                                    </Modal>
+                                    <Modal
+                                      show={showotp}
+                                      onHide={handleCloseotp}
+                                      className="password_modal "
+                                    >
+                                      <Modal.Body>
+                                        <div className="chng-otp-body">
+                                          <div className="chng-otp-bx">
+                                            <div className="chng-chng-otp">
+                                              <h4 onClick={handleCloseotp}>
+                                                <i className="fas fa-chevron-left"></i>
+                                                Back to Phone
+                                              </h4>
+                                              <Link
+                                                onClick={handleCloseotp}
+                                                href="#"
+                                                className="cross-icon"
+                                              >
+                                                <i className="fas fa-times"></i>
+                                              </Link>
+                                            </div>
+                                            <div className="chng-otp-pera">
+                                              <p>
+                                                A code was sent to email <span style={{ color: "rgb(167 80 255)", }}>{user.email}</span>
+                                              </p>
+                                            </div>
+                                            <form action="">
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="form-group">
+                                                    {changePhoneOtp.map((digit, index) => (
+                                                      <input
+                                                        key={index}
+                                                        type="tel"
+                                                        maxLength="1"
+                                                        id={`otp-input-${index}`}
+                                                        value={digit}
+                                                        onChange={(e) => handleChangePhoneOtp(e.target.value, index)}
+                                                        onKeyDown={(e) => handleChangePhoneBackspace(e, index)}
+                                                        className="mg0"
+                                                      />
+                                                    ))}
+                                                  </div>
+                                                  {changePhoneOtpError && <p className="text-danger">{changePhoneOtpError}</p>}
+                                                  <div className="resend-timer">
+                                                    {changePhoneOtpTimer > 0 ? (
+                                                      <p>
+                                                        Resend code in <span>{`00:${changePhoneOtpTimer.toString().padStart(2, "0")}`}</span>
+                                                      </p>
+                                                    ) : (
+                                                      <p>
+                                                        <Link href="#" onClick={() => setChangeEmailOtpTimer(30)}>
+                                                          Resend code
+                                                        </Link>
+                                                      </p>
+                                                    )}
+                                                  </div>
+                                                </Col>
+                                              </Row>
+                                            </form>
+                                            <div className="chng-otp-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={handleCloseotp}
+                                                className="chng-otp-cancel"
+                                              >
+                                                Cancel
+                                              </Link>
+                                              <Link
+                                                href="javascript:void(0);"
+                                                className={`eml-change ${chnagePhoneOtpLoader ? "disabled" : ""}`}
+                                                style={chnagePhoneOtpLoader ? { pointerEvents: "none", opacity: 0.5 } : {}}
+                                                onClick={handleChangePhoneOtpSubmit}
+                                              >
+                                                {chnagePhoneOtpLoader ? "Verifying..." : "Verification"}
                                               </Link>
                                             </div>
                                           </div>
@@ -938,7 +1256,7 @@ function Settingprofile() {
                                             </div>
                                             <div class="succes-return-btn delete-alert-btn">
                                               <Link onClick={handleClosedeleteaccount} href="javascript:;" class="chng-otp-ver">RETURN</Link>
-                                              <Link href="javascript:void(0);" onClick={handleShowdeleteaccountsucess} onclick="popup_alrt(this)" class="succes-return">Delete Account</Link>
+                                              <Link href="javascript:void(0);" onClick={handleDeleteAccount} class="succes-return">Delete Account</Link>
                                             </div>
                                           </div>
                                         </div>
@@ -965,103 +1283,37 @@ function Settingprofile() {
                                       </Modal.Body>
                                     </Modal>
 
+                                    {/* Change Image */}
                                     <Modal
-                                      show={showotp}
-                                      onHide={handleCloseotp}
-                                      className="password_modal "
+                                      show={showimage_change}
+                                      onHide={handleCloseimage_change}
+                                      className="password_modal image_change_modal"
                                     >
                                       <Modal.Body>
-                                        <div className="chng-otp-body">
-                                          <div className="chng-otp-bx">
-                                            <div className="chng-chng-otp">
-                                              <h4 onClick={handleCloseotp}>
-                                                <i className="fas fa-chevron-left"></i>
-                                                Back to Change Password
-                                              </h4>
-                                              <Link
-                                                onClick={handleCloseotp}
-                                                href="#"
-                                                className="cross-icon"
-                                              >
-                                                <i className="fas fa-times"></i>
-                                              </Link>
+                                        <div className="succes-body resqt-body">
+                                          <div className="succes-alert">
+                                            <div className="prof_img">
+                                              <img
+                                                src={currentImage}
+                                                alt="Check"
+                                                style={{ borderRadius: "50%" }}
+                                              />
+                                              <i className="fa-solid fa-pencil"></i>
+                                              <input type="file" onChange={updateCurrentImage} />
                                             </div>
-                                            <div className="chng-otp-pera">
-                                              <p>
-                                                A code was sent to email
-                                                sample@gmail.com
-                                              </p>
+                                            <div>
+                                              <h6>Change Your Profile Image</h6>
+                                              <br></br>
                                             </div>
-                                            <form action="">
-                                              <Row>
-                                                <Col lg={12} md={12}>
-                                                  <div className="form-group">
-                                                    <input
-                                                      type="tel"
-                                                      name="form-control"
-                                                      id=""
-                                                      placeholder="2"
-                                                      className="mg0"
-                                                    />
-                                                    <input
-                                                      type="tel"
-                                                      name="form-control"
-                                                      id=""
-                                                      placeholder="2"
-                                                      className="mg0"
-                                                    />
-                                                    <input
-                                                      type="tel"
-                                                      name="form-control"
-                                                      id=""
-                                                      placeholder="2"
-                                                      className="mg0"
-                                                    />
-                                                    <input
-                                                      type="tel"
-                                                      name="form-control"
-                                                      id=""
-                                                      placeholder="2"
-                                                      className="mg0"
-                                                    />
-                                                    <input
-                                                      type="tel"
-                                                      name="form-control"
-                                                      id=""
-                                                      placeholder="2"
-                                                      className="mg0"
-                                                    />
-                                                    <input
-                                                      type="tel"
-                                                      name="form-control"
-                                                      id=""
-                                                      placeholder="2"
-                                                      className="mg0"
-                                                    />
-                                                  </div>
-                                                  <div className="resend-timer">
-                                                    <p>
-                                                      Resend code in{" "}
-                                                      <span>00:10</span>
-                                                    </p>
-                                                  </div>
-                                                </Col>
-                                              </Row>
-                                            </form>
-                                            <div className="chng-otp-btn">
+                                            {changeImageError && <p className="text-danger">{changeImageError}</p>}
+                                            <div className="succes-return-btn resqt-body-btn">
                                               <Link
                                                 href="javascript:void(0);"
-                                                onClick={handleCloseotp}
-                                                className="chng-otp-cancel"
+                                                onClick={saveProfileImage}
+                                                className={`succes-return ${changeImageLoader ? "disabled" : ""}`}
+                                                style={changeImageLoader ? { pointerEvents: "none", opacity: 0.5 } : {}}
                                               >
-                                                Cancel
-                                              </Link>
-                                              <Link
-                                                onClick={handleShowsucess}
-                                                href="javascript:;"
-                                                className="chng-otp-ver modal-opner"
-                                              >
-                                                Verification
+                                                {changeImageLoader ? "Saving..." : "Save Image"}
                                               </Link>
                                             </div>
                                           </div>

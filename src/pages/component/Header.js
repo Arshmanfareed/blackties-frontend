@@ -77,7 +77,7 @@ function Header() {
             <div className="profile-section">
               {/* User Profile Image and Name */}
               <img
-                src={user.image || '/assets/images/Avatar.png'}
+                src={'https://blackties-backend.dev.internalstaging.com' + user.image || '/assets/images/Avatar.png'}
                 alt="Profile"
                 className="profile-image"
                 style={{ width: '32px', height: '30px', borderRadius: '50%', marginRight: '12px', }}
@@ -102,7 +102,7 @@ function Header() {
                     {/* Profile Info in Dropdown */}
                     <div className='prof_info'>
                       <img
-                        src={user.image || '/assets/images/Avatar.png'}
+                        src={'https://blackties-backend.dev.internalstaging.com' + user.image || '/assets/images/Avatar.png'}
                         alt="Profile"
                         className="profile-image"
                         style={{ borderRadius: '50%', marginRight: '12px', }}

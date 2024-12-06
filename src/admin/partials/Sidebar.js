@@ -301,7 +301,11 @@ function Sidebar() {
         <h6>Profile</h6>
         <div className="sidebar-user-profile">
           <div>
-            <img src={user.image || './assets/images/Avatar.png'} alt="user" />
+            <img
+              src={'https://blackties-backend.dev.internalstaging.com' + user.image || './assets/images/Avatar.png'}
+              alt="Profile"
+              className="profile-image"
+              style={{ borderRadius: '50%', marginRight: '12px' }} />
           </div>
           <div className="user-meta">
             <h4>{user.username || 'No Name'}</h4>
