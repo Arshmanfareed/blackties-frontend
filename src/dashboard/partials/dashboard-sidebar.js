@@ -1,49 +1,52 @@
 import React, { useEffect, useState } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import useHandleLogout from '../../utils/handleLogout';
 
 function DashboardSidebar() {
-  const navigate = useNavigate();
+  // Custom hook to handle user logout functionality.
+  const handleLogout = useHandleLogout();
 
-  // Logout function
-  const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token from local storage
-    localStorage.removeItem('username'); // Remove token from local storage
-    navigate('/login'); // Redirect to login page
+  // Retrieve user details from localStorage or set to an empty object if not found.
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+
+  // State to manage the visibility of the dropdown menu.
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Toggles the visibility of the dropdown menu.
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
   };
 
-  const user_name = localStorage.getItem('user_name');
-
-
-
-  const[isVisible,setIsVisible]=useState(false);
-  
-const toggleVisibility=()=>{
-setIsVisible(!isVisible);
-};
   return (
     <>
+      {/* Sidebar Wrapper */}
       <div className="dashboard-sidebar">
+        {/* Brand and Navigation Links */}
         <div className="sidebar-routes-wrapper">
           <div className="dash-brand-wrapper">
+            {/* Branding Link */}
             <Link to="/">
               Blackties
               <br />
               <span>Rental</span>
             </Link>
           </div>
+
+          {/* Dropdown for vehicle menu */}
           <div className="dashboard-menu">
             <h6>Menu</h6>
             <div class="vehicles-menu">
-                <button class="dropdown-toggle" onClick={toggleVisibility}> <img src="./assets/images/dashboard/bk-car.svg" alt=""/>KM19 VTY</button>
-                <ul class="dropdown-menu" style={{ display: isVisible ? 'block' : 'none' }}>
-                    <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/welcome"><img src="./assets/images/dashboard/Category12.svg" alt=""/>Dashboard</Link></li>
-                    <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/vehicle-document"><img src="./assets/images/dashboard/dc.svg" alt=""/>Document</Link></li>
-                    <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/maintenance"><img src="./assets/images/dashboard/tools 1.svg" alt=""/>Maintenance</Link></li>
-                  
-                    <li><Link to="/driver-score"><img src="./assets/images/dashboard/driver-man 32423.svg" alt=""/>Driver Score</Link></li>
-                </ul>
+              <button class="dropdown-toggle" onClick={toggleVisibility}> <img src="./assets/images/dashboard/bk-car.svg" alt="" />KM19 VTY</button>
+              <ul class="dropdown-menu" style={{ display: isVisible ? 'block' : 'none' }}>
+                <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/welcome"><img src="./assets/images/dashboard/Category12.svg" alt="" />Dashboard</Link></li>
+                <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/vehicle-document"><img src="./assets/images/dashboard/dc.svg" alt="" />Document</Link></li>
+                <li><Link className={({ isActive }) => (isActive ? "active" : "")} to="/maintenance"><img src="./assets/images/dashboard/tools 1.svg" alt="" />Maintenance</Link></li>
+                <li><Link to="/driver-score"><img src="./assets/images/dashboard/driver-man 32423.svg" alt="" />Driver Score</Link></li>
+              </ul>
             </div>
+
+            {/* Static navigation links */}
             <ul>
               <li>
                 {/* <NavLink
@@ -56,7 +59,7 @@ setIsVisible(!isVisible);
               </li>
               <li>
                 <NavLink
-                  to="/rent-our-vehicle" 
+                  to="/rent-our-vehicle"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/booking.svg" alt="" />
@@ -65,7 +68,7 @@ setIsVisible(!isVisible);
               </li>
               <li>
                 <NavLink
-                  to="/invoice" 
+                  to="/invoice"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/Receipt.svg" alt="" />
@@ -74,7 +77,7 @@ setIsVisible(!isVisible);
               </li>
               <li>
                 <NavLink
-                  to="/support-ticket" 
+                  to="/support-ticket"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/mail.png" alt="" />
@@ -85,10 +88,10 @@ setIsVisible(!isVisible);
                 <NavLink to="/penalty-charge-notice"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                <img src="./assets/images/dashboard/expense 1.svg" alt=""/>
-                PCNs
+                  <img src="./assets/images/dashboard/expense 1.svg" alt="" />
+                  PCNs
                 </NavLink>
-                </li>
+              </li>
               {/* <li>
                 <NavLink
                   to="/#" 
@@ -100,17 +103,16 @@ setIsVisible(!isVisible);
               </li> */}
               <li>
                 <NavLink
-                  to="/calender-all" 
+                  to="/calender-all"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/calendar.png" alt="" />
                   Calendar
                 </NavLink>
               </li>
-
               <li>
                 <NavLink
-                  to="/notifications" 
+                  to="/notifications"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/Icon2.svg" alt="" />
@@ -120,7 +122,7 @@ setIsVisible(!isVisible);
               </li>
               <li>
                 <NavLink
-                  to="/setting-profile" 
+                  to="/setting-profile"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img src="./assets/images/dashboard/Icon3.svg" alt="" />
@@ -139,14 +141,16 @@ setIsVisible(!isVisible);
             </ul>
           </div>
         </div>
+
+        {/* User Profile Section */}
         <div className="sidebar-user-profile-wrapper">
           <h6>Profile</h6>
           <div className="sidebar-user-profile">
             <div>
-              <img src="./assets/images/dashboard/Avatar.png" alt="user" />
+              <img src={user.image || './assets/images/Avatar.png'} alt="user" />
             </div>
             <div className="user-meta">
-              <h4>{user_name}</h4>
+              <h4>{user.username || 'No Name'}</h4>
               <span className="user-status">
                 <ion-icon name="ellipse"></ion-icon>Not Completed
               </span>

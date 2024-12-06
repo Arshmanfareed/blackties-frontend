@@ -1,35 +1,44 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import useHandleLogout from '../../utils/handleLogout';
 
 function Header() {
+  // Custom hook for logout functionality
+  const handleLogout = useHandleLogout();
+
+  // Retrieve user authentication details from localStorage
   const token = localStorage.getItem('token');
-  const user_name = localStorage.getItem('user_name');
- // State to manage dropdown visibility
- const [dropdownVisible, setDropdownVisible] = useState(false);
+  const user = JSON.parse(localStorage.getItem('user')) || {};
 
- const toggleDropdown = () => {
-   setDropdownVisible(!dropdownVisible);
- };
+  // State to manage the visibility of the profile dropdown
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
- const handleLogout = () => {
-   // Clear the token on logout
-   localStorage.removeItem('token');
-   localStorage.removeItem('user_name');
-   // Redirect or handle after logout action
-   window.location.href = '/login'; // Redirect to login page after logout
- };
+  // State to manage the navbar toggle in mobile view
+  const [isActive, setIsActive] = useState(false);
 
- const [isActive, setIsActive] = useState(false);
+  /**
+   * Toggles the visibility of the profile dropdown.
+   */
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
 
- const toggleNavbar = () => {
-   setIsActive(!isActive);
- };
+  /**
+   * Toggles the navbar collapse for mobile view.
+   */
+  const toggleNavbar = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <nav className="container main-nav navbar navbar-expand-lg navbar-light bg-light">
+      {/* Logo Section */}
       <Link className="navbar-brand" to="/">
         Blackties<br />
         <span>Rental</span>
       </Link>
+
+      {/* Navbar toggle button for mobile view */}
       <button
         className="navbar-toggler"
         type="button"
@@ -40,11 +49,14 @@ function Header() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
+
+      {/* Main navigation links */}
       <div
         className={`main-nav-items collapse navbar-collapse ${isActive ? 'active' : ''}`}
         id="navbarNavAltMarkup"
       >
         <div className="navbar-nav">
+          {/* Navigation Links */}
           <NavLink exact className="nav-item nav-link" activeClassName="active" to="/">
             Home
           </NavLink>
@@ -58,67 +70,84 @@ function Header() {
             Driver Benefits
           </NavLink>
         </div>
+
+        {/* User Profile Section */}
         <div className="nav-btn-wrapper">
-      {token ? (
-  <div className="profile-section">
-    {/* Profile image and name */}
-    <img
-      src='/assets/images/Avatar.png' // Replace with actual image path
-      alt="Profile"
-      className="profile-image"
-      style={{ width: '32px',height:'30px', borderRadius: '50%',marginRight:'12px' }}
-    />
-    <span className="profile-name">{user_name}</span> {/* Replace with dynamic username */}
+          {token ? (
+            <div className="profile-section">
+              {/* User Profile Image and Name */}
+              <img
+                src={user.image || '/assets/images/Avatar.png'}
+                alt="Profile"
+                className="profile-image"
+                style={{ width: '32px', height: '30px', borderRadius: '50%', marginRight: '12px', }}
+              />
+              <span className="profile-name" style={{ color: '#fff' }}>
+                {user.username || 'No Name'}
+              </span>
 
-    <div className="dropdown">
-      <button
-        className="profile-btn"
-        onClick={toggleDropdown}
-        style={{ background: 'none', border: 'none', cursor: 'pointer', background: '#fff' }}
-      >
-        <i className="fa-solid fa-chevron-down"></i>
-      </button>
+              {/* Dropdown Button */}
+              <div className="dropdown">
+                <button
+                  className="profile-btn"
+                  onClick={toggleDropdown}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', background: '#fff', }}
+                >
+                  <i className="fa-solid fa-chevron-down"></i>
+                </button>
 
-      {/* Dropdown menu */}
-      {dropdownVisible && (
-        <div className="dropdown-menu" style={{ position: 'absolute', top: '40px', right: '0px', display:'block' }}>
-          <div className='prof_info'>
-          <img
-      src='/assets/images/Avatar.png' // Replace with actual image path
-      alt="Profile"
-      className="profile-image"
-      style={{  borderRadius: '50%',marginRight:'12px' }}
-    />
-    <span className="profile-name">{user_name}<div className='accept'>Accepted</div></span> {/* Replace with dynamic username */}
+                {/* Dropdown Menu */}
+                {dropdownVisible && (
+                  <div className="dropdown-menu" style={{ position: 'absolute', top: '40px', right: '0px', display: 'block' }}>
+                    {/* Profile Info in Dropdown */}
+                    <div className='prof_info'>
+                      <img
+                        src={user.image || '/assets/images/Avatar.png'}
+                        alt="Profile"
+                        className="profile-image"
+                        style={{ borderRadius: '50%', marginRight: '12px', }}
+                      />
+                      <span className="profile-name" style={{ color: '#fff', }}>
+                        {user.username || 'No Name'}
+                        <div className='accept'>Accepted</div>
+                      </span>
+                    </div>
+
+                    {/* Conditional Dashboard Link */}
+                    {user.role == "ADMIN" ? (
+                      <Link to="/admin-dashboard-main" className="dropdown-item">
+                        <img src='assets/images/Category.png' />
+                        Dashboard
+                      </Link>
+                    ) : (
+                      <Link to="/welcome" className="dropdown-item">
+                        <img src='assets/images/Category.png' />
+                        Dashboard
+                      </Link>
+                    )}
+
+                    {/* Logout Button */}
+                    <button onClick={handleLogout} className="dropdown-item">
+                      <img src='assets/images/logout.svg' />Logout
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
-          <Link to="/welcome" className="dropdown-item">
-          <img src='assets/images/Category.png'/>
-            Dashboard
-          </Link>
-          <button onClick={handleLogout} className="dropdown-item">
-          <img src='assets/images/logout.svg'/>Logout
-          </button>
+          ) : (
+            // Login/Register Buttons for unauthenticated users
+            <>
+              <Link to="/login" className="theme-btn1">
+                Login
+              </Link>
+              <Link to="/register" className="theme-btn2">
+                Register
+              </Link>
+            </>
+          )}
         </div>
-      )}
-    </div>
-  </div>
-) : (
-  <>
-    <Link to="/login" className="theme-btn1">
-      Login
-    </Link>
-    <Link to="/register" className="theme-btn2">
-      Register
-    </Link>
-  </>
-
-)}
-
       </div>
-      </div>
-      
     </nav>
-    
   );
 }
 

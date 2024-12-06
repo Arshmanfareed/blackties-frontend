@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import useHandleLogout from '../../utils/handleLogout';
 
 function Sidebar() {
+  // State to handle toggling of dropdown menus
   const [toggleUsers, setToggleUsers] = useState(false);
   const [toggleVehicles, setToggleVehicles] = useState(false);
   const [toggleCalendar, setToggleCalendar] = useState(false);
   const [toggleFinancials, setToggleFinancials] = useState(false);
 
+  // Custom hook to handle user logout functionality.
+  const handleLogout = useHandleLogout();
+
+  // Retrieve user details from localStorage or set to an empty object if not found.
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+
   return (
     <div className="dashboard-sidebar">
+      {/* Sidebar Header */}
       <div className="sidebar-routes-wrapper">
         <div className="dash-brand-wrapper">
           <Link to="#">
@@ -18,18 +27,21 @@ function Sidebar() {
             <br />
             <span>Rental</span>
           </Link>
+          {/* Button to close the sidebar */}
           <Button variant="link" className="dashNav-close-btn">
             <ion-icon name="close-outline"></ion-icon>
           </Button>
         </div>
 
+        {/* Sidebar Menu */}
         <div className="dashboard-menu">
           <h6>Menu</h6>
           <div className="vehicles-menu vehicles-menu-new">
+            {/* Dashboard Link */}
             <ul>
               <li>
                 <NavLink
-                 to="javascript:;"
+                  to="/admin-dashboard-main"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img
@@ -41,7 +53,7 @@ function Sidebar() {
               </li>
             </ul>
 
-            {/* Users Toggle */}
+            {/* Users Dropdown */}
             <div>
               <Button
                 variant="link"
@@ -67,7 +79,7 @@ function Sidebar() {
                   </li>
                   <li>
                     <NavLink
-                     to="javascript:;"
+                      to="javascript:;"
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
@@ -81,7 +93,7 @@ function Sidebar() {
               )}
             </div>
 
-            {/* Vehicles Toggle */}
+            {/* Vehicles Dropdown */}
             <div>
               <Button
                 variant="link"
@@ -124,13 +136,12 @@ function Sidebar() {
               )}
             </div>
 
-            {/* Calendar Toggle */}
+            {/* Calendar Dropdown */}
             <div>
               <Button
                 variant="link"
                 onClick={() => setToggleCalendar(!toggleCalendar)}
                 className="dropdown-toggle"
-                
               >
                 <img
                   src="./admin_assets/images/dashboard/Category.svg"
@@ -142,7 +153,7 @@ function Sidebar() {
                 <ul className="dropdown-menu">
                   <li>
                     <NavLink
-                     to="/admin-calendar-all"
+                      to="/admin-calendar-all"
                       className={({ isActive }) => (isActive ? "active" : "")}
                     >
                       <img
@@ -168,7 +179,7 @@ function Sidebar() {
               )}
             </div>
 
-            {/* Deposit */}
+            {/* Static Menu Items */}
             <ul>
               <li>
                 <NavLink
@@ -193,7 +204,7 @@ function Sidebar() {
               </li>
             </ul>
 
-            {/* Financials Toggle */}
+            {/* Financials Dropdown */}
             <div>
               <Button
                 variant="link"
@@ -248,7 +259,7 @@ function Sidebar() {
               )}
             </div>
 
-            {/* Settings */}
+            {/* Support, Notifications, and Settings */}
             <ul className="setting_ul">
               <li>
                 <NavLink
@@ -285,23 +296,25 @@ function Sidebar() {
         </div>
       </div>
 
+      {/* User Profile Section */}
       <div className="sidebar-user-profile-wrapper">
         <h6>Profile</h6>
         <div className="sidebar-user-profile">
           <div>
-            <img src="./admin_assets/images/dashboard/Avatar.png" alt="user" />
+            <img src={user.image || './assets/images/Avatar.png'} alt="user" />
           </div>
           <div className="user-meta">
-            <h4>Jenny Wilson</h4>
+            <h4>{user.username || 'No Name'}</h4>
             <span className="user-status">
               <ion-icon name="ellipse"></ion-icon> Not Completed
             </span>
           </div>
         </div>
-        <Link to="#" className="sidebar-log-btn">
-          <img src="./admin_assets/images/dashboard/logout.svg" alt="" />
+        {/* Logout Button */}
+        <button onClick={handleLogout} className="sidebar-log-btn">
+          <img src="./assets/images/dashboard/logout.svg" alt="" />
           Log out
-        </Link>
+        </button>
       </div>
     </div>
   );
