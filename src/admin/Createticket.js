@@ -51,7 +51,7 @@ function Createticket() {
                                 <Row>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Date & Time
                                       </label>
                                       <br />
@@ -64,7 +64,7 @@ function Createticket() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Vehicle Registration Number
                                       </label>
                                       <br />
@@ -77,7 +77,7 @@ function Createticket() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="categories">Categories</label>
+                                      <label htmlFor="categories">Categories</label>
                                       <br />
                                       <select name="categories" id="cars">
                                         <option value="Issue">Issue</option>
@@ -89,7 +89,7 @@ function Createticket() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">Send</label>
+                                      <label htmlFor="control-label">Send</label>
                                       <br />
                                       <Link to="#" className="serch-bar">
                                         <i className="fa-solid fa-magnifying-glass"></i>
@@ -344,7 +344,7 @@ function Createticket() {
                                   </div>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="Vehicle">Vehicle</label>
+                                      <label htmlFor="Vehicle">Vehicle</label>
                                       <br />
                                       <select name="Vehicle" id="cars">
                                         <option value="Vehicle">
@@ -364,7 +364,7 @@ function Createticket() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="Priority">Priority</label>
+                                      <label htmlFor="Priority">Priority</label>
                                       <br />
                                       <select name="Priority" id="cars">
                                         <option value="Priority">Issue</option>
@@ -376,7 +376,7 @@ function Createticket() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Company Notes
                                       </label>
                                       <br />
@@ -411,7 +411,7 @@ function Createticket() {
                                         <Row className=" frm-inner-row2">
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 First Name
                                               </label>
                                               <br />
@@ -424,7 +424,7 @@ function Createticket() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Last Name
                                               </label>
                                               <br />
@@ -439,7 +439,7 @@ function Createticket() {
                                         <Row>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Email Address
                                               </label>
                                               <br />
@@ -452,7 +452,7 @@ function Createticket() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Phone Number
                                               </label>
                                               <br />
@@ -478,7 +478,7 @@ function Createticket() {
                                         <Row className=" frm-inner-row2">
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Driving License Number
                                               </label>
                                               <br />
@@ -491,7 +491,7 @@ function Createticket() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Driver License Expiry Date
                                               </label>
                                               <br />
@@ -506,7 +506,7 @@ function Createticket() {
                                         <Row>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 PCO License Number
                                               </label>
                                               <br />
@@ -519,7 +519,7 @@ function Createticket() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Expiry Date
                                               </label>
                                               <br />
@@ -542,7 +542,7 @@ function Createticket() {
                                         <Row>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Card Number
                                               </label>
                                               <br />
@@ -555,7 +555,7 @@ function Createticket() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Expration Date
                                               </label>
                                               <br />

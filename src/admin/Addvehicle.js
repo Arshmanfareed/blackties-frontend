@@ -333,7 +333,7 @@ function Addvehicle() {
                                 <Row>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Car Make
                                       </label>
                                       <br />
@@ -349,7 +349,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Car Model
                                       </label>
                                       <br />
@@ -365,7 +365,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Vehicle Registration Number
                                       </label>
                                       <br />
@@ -383,7 +383,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Price per Week
                                       </label>
                                       <br />
@@ -399,7 +399,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12}>
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Car Description
                                       </label>
                                       <br />
@@ -421,7 +421,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Vehicle Type:
                                       </label>
                                       <br />
@@ -441,7 +441,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Transmission:
                                       </label>
                                       <br />
@@ -457,7 +457,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Fuel Type
                                       </label>
                                       <br />
@@ -473,7 +473,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Miles per Gallon (MPG)
                                       </label>
                                       <br />
@@ -489,7 +489,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">People</label>
+                                      <label htmlFor="control-label">People</label>
                                       <br />
                                       {/* <!-- <input type="text" name="form-control" id="" placeholder="" className="mg05"><i className="fas fa-chevron-down"></i> --> */}
                                       <select
@@ -512,7 +512,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Mileage Allowance:
                                       </label>
                                       <br />
@@ -528,7 +528,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Additional Mileage Cost:
                                       </label>
                                       <br />
@@ -544,7 +544,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Reset Period:
                                       </label>
                                       <br />
@@ -560,7 +560,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Holding Deposit:
                                       </label>
                                       <br />
@@ -576,7 +576,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Insurance Excess:
                                       </label>
                                       <br />
@@ -592,7 +592,7 @@ function Addvehicle() {
                                   </Col>
                                   <Col lg={12} md={12} className=" up-bx">
                                     <div className="form-group">
-                                      <label for="control-label">PCN Fee</label>
+                                      <label htmlFor="control-label">PCN Fee</label>
                                       <br />
                                       <input
                                         type="number"
@@ -704,7 +704,7 @@ function Addvehicle() {
                             </div>
                             {/* <div className="Canvassec add_vehicle_images">
                               <Col lg={12} md={12} >
-                                <label htmlFor="label-control"></label>
+                                <label htmlhtmlFor="label-control"></label>
                                 <div className="row file-upload-wrap">
                                   {fileInputs.map((enabled, index) => (
                                     <div

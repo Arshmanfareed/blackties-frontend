@@ -226,7 +226,7 @@ function Ammenduserapplication() {
                                                       <Row>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               First Name
                                                             </label>
                                                             <br />
@@ -238,7 +238,7 @@ function Ammenduserapplication() {
                                                         </Col>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Last Name
                                                             </label>
                                                             <br />
@@ -250,7 +250,7 @@ function Ammenduserapplication() {
                                                         </Col>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Email Address
                                                             </label>
                                                             <br />
@@ -272,7 +272,7 @@ function Ammenduserapplication() {
                                                         </Col>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Phone Number
                                                             </label>
                                                             <br />
@@ -317,7 +317,7 @@ function Ammenduserapplication() {
                                                       <Row>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Password
                                                             </label>
                                                             <br />
@@ -329,7 +329,7 @@ function Ammenduserapplication() {
                                                         </Col>
                                                         <div className="col-lg-6 col-md-6">
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Confirm Password
                                                             </label>
                                                             <br />
@@ -1085,7 +1085,7 @@ function Ammenduserapplication() {
                                                     <row>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             First Name
                                                           </label>
                                                           <br />
@@ -1097,7 +1097,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Last Name
                                                           </label>
                                                           <br />
@@ -1109,7 +1109,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Email Address
                                                           </label>
                                                           <input
@@ -1122,7 +1122,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Phone Number
                                                           </label>
                                                           <input
@@ -1155,7 +1155,7 @@ function Ammenduserapplication() {
                                                     <Row>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             PCO License Number
                                                           </label>
                                                           <br />
@@ -1167,7 +1167,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Expiry Date
                                                           </label>
                                                           <br />
@@ -1379,7 +1379,7 @@ function Ammenduserapplication() {
                                                     <Row>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Driving License
                                                             Number
                                                           </label>
@@ -1392,7 +1392,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Driver License
                                                             Expiry Date
                                                           </label>
@@ -1405,7 +1405,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             DVLA Check Code 1
                                                           </label>
                                                           <input
@@ -1418,7 +1418,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             DVLA Check Code 2
                                                           </label>
                                                           <input
@@ -1431,7 +1431,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             National Insurance
                                                             Number
                                                           </label>
@@ -1518,7 +1518,7 @@ function Ammenduserapplication() {
                                                         className="checkbox"
                                                       />
                                                       <label
-                                                        for="checkbox1"
+                                                        htmlFor="checkbox1"
                                                         className="switch"
                                                       >
                                                         <span className="switch__circle">
@@ -1551,7 +1551,7 @@ function Ammenduserapplication() {
                                                         className="checkbox"
                                                       />
                                                       <label
-                                                        for="checkbox2"
+                                                        htmlFor="checkbox2"
                                                         className="switch"
                                                       >
                                                         <span className="switch__circle">
@@ -1575,7 +1575,7 @@ function Ammenduserapplication() {
                                                     <Row>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Date of Accident
                                                           </label>
                                                           <br />
@@ -1587,7 +1587,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Fault/ Non Fault /
                                                             Pending
                                                           </label>
@@ -1600,7 +1600,7 @@ function Ammenduserapplication() {
                                                       </Col>
                                                       <Col lg={12} md={12}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Details
                                                           </label>
                                                           <br />

@@ -72,7 +72,7 @@ function Admincalenderall() {
                                   <Row>
                                     <Col lg={3} md={3}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Person
                                         </label>
                                         <br />
@@ -84,7 +84,7 @@ function Admincalenderall() {
                                     </Col>
                                     <Col lg={3} md={3}>
                                       <div className="form-group">
-                                        <label for="control-label">Date</label>
+                                        <label htmlFor="control-label">Date</label>
                                         <br />
                                         <input
                                           type="date"
@@ -94,7 +94,7 @@ function Admincalenderall() {
                                     </Col>
                                     <Col lg={3} md={3}>
                                       <div className="form-group">
-                                        <label for="control-label">Time</label>
+                                        <label htmlFor="control-label">Time</label>
                                         <input
                                           type="text"
                                           name="form-control"
@@ -105,7 +105,7 @@ function Admincalenderall() {
                                     </Col>
                                     <Col lg={3} md={3}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Reg Number
                                         </label>
                                         <input
@@ -118,7 +118,7 @@ function Admincalenderall() {
                                     </Col>
                                     <Col lg={3} md={3}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Status
                                         </label>
                                         <select
@@ -838,7 +838,7 @@ function Admincalenderall() {
                   <Row>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Registration Number:</label>
+                        <label htmlFor="control-label">Registration Number:</label>
                         <br />
                         <input
                           type="number"
@@ -850,14 +850,14 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Make & Model</label>
+                        <label htmlFor="control-label">Make & Model</label>
                         <br />
                         <input type="text" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Current MOT Expiry Date
                         </label>
                         <br />
@@ -866,7 +866,7 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Please upload Document
                         </label>
                         <br />
@@ -926,7 +926,7 @@ function Admincalenderall() {
                   <Row>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">License Number</label>
+                        <label htmlFor="control-label">License Number</label>
                         <br />
                         <input
                           type="number"
@@ -938,28 +938,28 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Date of Issue</label>
+                        <label htmlFor="control-label">Date of Issue</label>
                         <br />
                         <input type="date" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Start Date</label>
+                        <label htmlFor="control-label">Start Date</label>
                         <br />
                         <input type="date" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Expire Date</label>
+                        <label htmlFor="control-label">Expire Date</label>
                         <br />
                         <input type="date" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">New Licence Number</label>
+                        <label htmlFor="control-label">New Licence Number</label>
                         <br />
                         <input
                           type="number"
@@ -972,7 +972,7 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">New Expiry date</label>
+                        <label htmlFor="control-label">New Expiry date</label>
                         <br />
                         <input
                           type="date"
@@ -985,7 +985,7 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Please upload Document
                         </label>
                         <br />
@@ -1045,7 +1045,7 @@ function Admincalenderall() {
                   <Row>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">License Number</label>
+                        <label htmlFor="control-label">License Number</label>
                         <br />
                         <input
                           type="number"
@@ -1057,28 +1057,28 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Date of Issue</label>
+                        <label htmlFor="control-label">Date of Issue</label>
                         <br />
                         <input type="date" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Start Date</label>
+                        <label htmlFor="control-label">Start Date</label>
                         <br />
                         <input type="date" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Expire Date</label>
+                        <label htmlFor="control-label">Expire Date</label>
                         <br />
                         <input type="date" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">New Expiry date</label>
+                        <label htmlFor="control-label">New Expiry date</label>
                         <br />
                         <input
                           type="date"
@@ -1091,7 +1091,7 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Please upload Document
                         </label>
                         <br />
@@ -1152,7 +1152,7 @@ function Admincalenderall() {
                     </div>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Scheduled Pick-Up Date
                         </label>
                         <br />
@@ -1161,7 +1161,7 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Scheduled Pick-Up Time
                         </label>
                         <br />
@@ -1173,7 +1173,7 @@ function Admincalenderall() {
                     </div>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Registration Number:</label>
+                        <label htmlFor="control-label">Registration Number:</label>
                         <br />
                         <input
                           type="number"
@@ -1185,14 +1185,14 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Make & Model</label>
+                        <label htmlFor="control-label">Make & Model</label>
                         <br />
                         <input type="text" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Vehicle Identification Number (VIN)
                         </label>
                         <br />
@@ -1204,14 +1204,14 @@ function Admincalenderall() {
                     </div>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Full Name</label>
+                        <label htmlFor="control-label">Full Name</label>
                         <br />
                         <input type="text" id="" name="form-control" />
                       </div>
                     </Col>
                     <Col lg={6} md={6}>
                       <div className="form-group">
-                        <label for="control-label">Phone Number</label>
+                        <label htmlFor="control-label">Phone Number</label>
                         <br />
                         <input
                           type="number"
@@ -1223,7 +1223,7 @@ function Admincalenderall() {
                     </Col>
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">Email Address</label>
+                        <label htmlFor="control-label">Email Address</label>
                         <br />
                         <FormControl
                           type="email"
@@ -1280,13 +1280,13 @@ function Admincalenderall() {
                                                     </div>
                                                     <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                            <label for="control-label">Scheduled Pick-Up Date</label><br/>
+                                                            <label htmlFor="control-label">Scheduled Pick-Up Date</label><br/>
                                                             <input type="date" id="" name="form-control"/>
                                                         </div>
                                                     </Col>
                                                     <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                            <label for="control-label">Scheduled Pick-Up Time</label><br/>
+                                                            <label htmlFor="control-label">Scheduled Pick-Up Time</label><br/>
                                                             <input type="time" id="" name="form-control"/>
                                                         </div>
                                                     </Col>
@@ -1295,19 +1295,19 @@ function Admincalenderall() {
                                                     </div>
                                                        <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                            <label for="control-label">Full Name</label><br/>
+                                                            <label htmlFor="control-label">Full Name</label><br/>
                                                             <input type="text" id="" name="form-control"/>
                                                         </div>
                                                     </Col>
                                                     <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                            <label for="control-label">Phone Number</label><br/>
+                                                            <label htmlFor="control-label">Phone Number</label><br/>
                                                             <input type="number" id="" name="form-control"/>
                                                         </div>
                                                     </Col>
                                                     <Col lg={12} md={12} >
                                                         <div className="form-group">
-                                                            <label for="control-label">Email Address</label><br/>
+                                                            <label htmlFor="control-label">Email Address</label><br/>
                                                             <input type="email" id="" name="form-control"/>
                                                         </div>
                                                     </Col>
@@ -1318,7 +1318,7 @@ function Admincalenderall() {
                                                     <img src="admin_assets/images/Frame 2085661877.png" alt="map"/>
                                                     <Col lg={12} md={12} >
                                                         <div className="form-group">
-                                                            <label for="control-label">Notes</label><br/>
+                                                            <label htmlFor="control-label">Notes</label><br/>
                                                             <input type="textarea" id="" name="form-control" placeholder="send notification X days before event"/>
                                                         </div>
                                                     </Col>

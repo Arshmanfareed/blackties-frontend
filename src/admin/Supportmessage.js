@@ -192,7 +192,7 @@ function Supportmessage() {
                                   ></textarea>
                                   <div className="file-send-wrap">
                                     <span className="file-send-btn">
-                                      <label for="chat-docs">
+                                      <label htmlFor="chat-docs">
                                         <ion-icon name="add"></ion-icon>
                                       </label>
                                       <input

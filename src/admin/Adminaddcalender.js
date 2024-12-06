@@ -36,7 +36,7 @@ function Adminaddcalender() {
                                                 <Row>
                                                       <Col lg={12} md={12} >
                                                         <div className="form-group">
-                                                            <label for="control-label">Type Calendar</label>
+                                                            <label htmlFor="control-label">Type Calendar</label>
                                                             <select name="Oil-Changes" id="Oil-Changes-fld">
                                                                 <option value="volvo">MOT Document</option>
                                                                 <option value="saab">MOT Document</option>
@@ -47,31 +47,31 @@ function Adminaddcalender() {
                                                     </Col>
                                                     <Col lg={6} md={6} >
                                                         <div className="form-group">
-                                                            <label for="control-label">Document Type</label><br/>
+                                                            <label htmlFor="control-label">Document Type</label><br/>
                                                             <input type="text" id="" name="form-control" value=""/>
                                                         </div>
                                                     </Col>
                                                     <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                            <label for="control-label">Registration Number:</label><br/>
+                                                            <label htmlFor="control-label">Registration Number:</label><br/>
                                                             <input type="number" id="" name="form-control" value=""/>
                                                         </div>
                                                     </Col>
                                                    <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                            <label for="control-label">Make  & Model</label><br/>
+                                                            <label htmlFor="control-label">Make  & Model</label><br/>
                                                             <input type="text" id="" name="form-control" value=""/>
                                                         </div>
                                                     </Col>
                                                     <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                            <label for="control-label">Expiry Date</label><br/>
+                                                            <label htmlFor="control-label">Expiry Date</label><br/>
                                                             <input type="date" id="" name="form-control" value=""/>
                                                         </div>
                                                     </Col>
                                                     <Col lg={12} md={12} className="up-bx">
                                                         <div className="form-group">
-                                                            <label for="control-label">Please upload Document</label><br/>
+                                                            <label htmlFor="control-label">Please upload Document</label><br/>
                                                            <span className="file_cont">
                                                             <input type="file" name="form-control"/>
                                                                 <span>

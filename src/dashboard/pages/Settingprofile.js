@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import DashboardSidebar from "../partials/dashboard-sidebar";
 import DashboardPanelTopbar from "../components/DashboardPanelTopbar";
-import { Button, Col, Modal, Row } from "react-bootstrap";
+import { Button, Col, Container, Modal, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Settingprofile() {
-    // PAssowrd
+  // PAssowrd
   const [show, setShow] = useState(false);
   const closepasswordmodal = () => setShow(false);
   const showpasswordmodal = () => setShow(true);
@@ -14,64 +14,63 @@ function Settingprofile() {
   const handleCloseotp = () => setShowotp(false);
   const handleShowotp = () => setShowotp(true);
 
-
   const [showsucess, setShowsucess] = useState(false);
   const handleClosesucess = () => {
     setShowsucess(false);
     setShowotp(false);
     setShow(false);
-
-  }
+  };
   const handleShowsucess = () => setShowsucess(true);
-// Phone
-const [showphone, setShowphone] = useState(false);
-const handleClosephone = () => setShowphone(false);
-const handleShowphone = () => setShowphone(true);
+  // Phone
+  const [showphone, setShowphone] = useState(false);
+  const handleClosephone = () => setShowphone(false);
+  const handleShowphone = () => setShowphone(true);
 
-const [showphonesucess, setShowphonesucess] = useState(false);
-const handleClosephonesucess = () => {
+  const [showphonesucess, setShowphonesucess] = useState(false);
+  const handleClosephonesucess = () => {
     setShowphonesucess(false);
     setShowphone(false);
-}
-const handleShowphonesucess = () => setShowphonesucess(true);
+  };
+  const handleShowphonesucess = () => setShowphonesucess(true);
 
-// Email
-const [showemail, setShowemail] = useState(false);
-const handleCloseemail = () => setShowemail(false);
-const handleShowemail = () => setShowemail(true);
+  // Email
+  const [showemail, setShowemail] = useState(false);
+  const handleCloseemail = () => setShowemail(false);
+  const handleShowemail = () => setShowemail(true);
 
-const [showemailotp, setShowemailotp] = useState(false);
-const handleCloseemailotp = () => setShowemailotp(false);
-const handleShowemailotp = () => setShowemailotp(true);
+  const [showemailotp, setShowemailotp] = useState(false);
+  const handleCloseemailotp = () => setShowemailotp(false);
+  const handleShowemailotp = () => setShowemailotp(true);
 
-const [showemailotpsucess, setShowemailotpsucess] = useState(false);
-const handleCloseemailotpsucess = () =>{
-     setShowemailotpsucess(false);
-     setShowemailotp(false);
-     setShowemail(false);
-}
-const handleShowemailotpsucess = () => setShowemailotpsucess(true);
+  const [showemailotpsucess, setShowemailotpsucess] = useState(false);
+  const handleCloseemailotpsucess = () => {
+    setShowemailotpsucess(false);
+    setShowemailotp(false);
+    setShowemail(false);
+  };
+  const handleShowemailotpsucess = () => setShowemailotpsucess(true);
 
+  // Delete Account
+  const [showdeleteaccount, setShowdeleteaccount] = useState(false);
+  const handleClosedeleteaccount = () => setShowdeleteaccount(false);
+  const handleShowdeleteaccount = () => setShowdeleteaccount(true);
 
-// Delete Account
-const [showdeleteaccount, setShowdeleteaccount] = useState(false);
-const handleClosedeleteaccount = () => setShowdeleteaccount(false);
-const handleShowdeleteaccount = () => setShowdeleteaccount(true);
-
-
-const [showdeleteaccountsucess, setShowdeleteaccountsucess] = useState(false);
-const handleClosedeleteaccountsucess = () =>{ 
-  setShowdeleteaccountsucess(false);
-  setShowdeleteaccount(false);
-
-}
-const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
+  const [showdeleteaccountsucess, setShowdeleteaccountsucess] = useState(false);
+  const handleClosedeleteaccountsucess = () => {
+    setShowdeleteaccountsucess(false);
+    setShowdeleteaccount(false);
+  };
+  const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
 
 
+// Change Image Modal
+const [showimage_change, setShowimage_change] = useState(false);
+const handleCloseimage_change = () => setShowimage_change(false);
+const handleShowimage_change = () => setShowimage_change(true);
   return (
     <>
       <section className="user-dashboard">
-        <div className="container-fluid">
+        <Container fluid>
           <Row className="g-0">
             <Col lg={3} md={3} className=" sidebar-col">
               <DashboardSidebar />
@@ -153,6 +152,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                           <Link
                                             href="javascript:;"
                                             className="change-img-btn"
+                                            onClick={handleShowimage_change}
                                           >
                                             Change Image
                                           </Link>
@@ -197,7 +197,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                                     Email Address
                                                   </label>
                                                   <img
-                                                  onClick={handleShowemail}
+                                                    onClick={handleShowemail}
                                                     src="./assets/images/pen.png"
                                                     alt="Check"
                                                   />
@@ -215,7 +215,8 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                                   <label for="control-label">
                                                     Phone Number
                                                   </label>
-                                                  <img  onClick={handleShowphone}
+                                                  <img
+                                                    onClick={handleShowphone}
                                                     src="./assets/images/pen.png"
                                                     alt="Check"
                                                   />
@@ -309,7 +310,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                                       name="form-control"
                                                       value="Current Password"
                                                     />
-                                                    <i class="fa-regular fa-eye toggle-password"></i>
+                                                    <i className="fa-regular fa-eye toggle-password"></i>
                                                   </div>
                                                 </Col>
                                                 <Col lg={12} md={12}>
@@ -324,7 +325,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                                       name="form-control"
                                                       value="New Password"
                                                     />
-                                                    <i class="fa-regular fa-eye toggle-password"></i>
+                                                    <i className="fa-regular fa-eye toggle-password"></i>
                                                   </div>
                                                 </Col>
                                                 <Col lg={12} md={12}>
@@ -339,7 +340,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                                       name="form-control"
                                                       value="Confirm Password"
                                                     />
-                                                    <i class="fa-regular fa-eye toggle-password"></i>
+                                                    <i className="fa-regular fa-eye toggle-password"></i>
                                                   </div>
                                                 </Col>
                                               </Row>
@@ -365,7 +366,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                         </div>
                                       </Modal.Body>
                                     </Modal>
-                                    
+
                                     <Modal
                                       show={showotp}
                                       onHide={handleCloseotp}
@@ -380,7 +381,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                                 Back to Change Password
                                               </h4>
                                               <Link
-                                              onClick={handleCloseotp}
+                                                onClick={handleCloseotp}
                                                 href="#"
                                                 className="cross-icon"
                                               >
@@ -458,7 +459,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                                 Cancel
                                               </Link>
                                               <Link
-                                              onClick={handleShowsucess}
+                                                onClick={handleShowsucess}
                                                 href="javascript:;"
                                                 className="chng-otp-ver modal-opner"
                                               >
@@ -476,343 +477,356 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                       className="password_modal "
                                     >
                                       <Modal.Body>
-                                      <div className="succes-body">
-                                      <div className="succes-alert">
-                                        <img
-                                          src="./assets/images/ei_check.png"
-                                          alt="Check"
-                                        />
-                                        <div>
-                                          <h6>Success to Change</h6>
-                                          <p>
-                                            your success to change your password
-                                          </p>
+                                        <div className="succes-body">
+                                          <div className="succes-alert">
+                                            <img
+                                              src="./assets/images/ei_check.png"
+                                              alt="Check"
+                                            />
+                                            <div>
+                                              <h6>Success to Change</h6>
+                                              <p>
+                                                your success to change your
+                                                password
+                                              </p>
+                                            </div>
+                                            <div className="succes-return-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={handleClosesucess}
+                                                className="succes-return"
+                                              >
+                                                Return to Profile
+                                              </Link>
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div className="succes-return-btn">
-                                          <Link
-                                            href="javascript:void(0);"
-                                            onClick={handleClosesucess}
-                                            className="succes-return"
-                                          >
-                                            Return to Profile
-                                          </Link>
-                                        </div>
-                                      </div>
-                                    </div>
                                       </Modal.Body>
-                                      </Modal>
+                                    </Modal>
 
-                                        <Modal
+                                    <Modal
                                       show={showphone}
                                       onHide={handleClosephone}
                                       className="password_modal "
                                     >
                                       <Modal.Body>
-                                      <div className="change-phn-body">
-                                      <div className="phn-bx">
-                                        <div className="chng-phn">
-                                          <h4>Edit Phone Number</h4>
-                                          <Link href="#" className="cross-icon"  onClick={handleClosephone}>
-                                            <i className="fas fa-times"></i>
-                                          </Link>
-                                        </div>
-                                        <form action="">
-                                          <Row>
-                                            <Col lg={12} md={12}>
-                                              <div className="form-group">
-                                                <label for="control-label">
-                                                  Phone Number
-                                                </label>
-                                                <br />
-                                                <div className="t-flag">
-                                                  <input
-                                                    type="tel"
-                                                    name="form-control"
-                                                    id=""
-                                                    placeholder="+44"
-                                                    className="mg0"
-                                                  />
-                                                  {/* <Link 
+                                        <div className="change-phn-body">
+                                          <div className="phn-bx">
+                                            <div className="chng-phn">
+                                              <h4>Edit Phone Number</h4>
+                                              <Link
+                                                href="#"
+                                                className="cross-icon"
+                                                onClick={handleClosephone}
+                                              >
+                                                <i className="fas fa-times"></i>
+                                              </Link>
+                                            </div>
+                                            <form action="">
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="form-group">
+                                                    <label for="control-label">
+                                                      Phone Number
+                                                    </label>
+                                                    <br />
+                                                    <div className="t-flag">
+                                                      <input
+                                                        type="tel"
+                                                        name="form-control"
+                                                        id=""
+                                                        placeholder="+44"
+                                                        className="mg0"
+                                                      />
+                                                      {/* <Link 
                                                   onClick={showpasswordmodal}><img src="./assets/images/ei_check.png"/></Link> */}
-                                                </div>
-                                              </div>
-                                            </Col>
-                                            <Col lg={12} md={12}>
-                                              <div className="form-group">
-                                                <label for="control-label">
-                                                  New Phone Number
-                                                </label>
-                                                <br />
-                                                <div className="t-flag">
-                                                  <input
-                                                    type="tel"
-                                                    name="form-control"
-                                                    id=""
-                                                    placeholder="+44"
-                                                    className="mg0"
-                                                  />
-                                                </div>
-                                              </div>
-                                            </Col>
-                                          </Row>
-                                        </form>
-                                        <div className="change-phn-btn">
-                                          <Link
-                                            href="javascript:void(0);"
-                                            onClick={handleClosephone}
-                                            className="phn-cancel"
-                                          >
-                                            Cancel
-                                          </Link>
-                                          <Link
-                                            href="javascript:;"
-                                            onClick={handleShowphonesucess}
-                                            className="phn-change"
-                                          >
-                                            Save
-                                          </Link>
+                                                    </div>
+                                                  </div>
+                                                </Col>
+                                                <Col lg={12} md={12}>
+                                                  <div className="form-group">
+                                                    <label for="control-label">
+                                                      New Phone Number
+                                                    </label>
+                                                    <br />
+                                                    <div className="t-flag">
+                                                      <input
+                                                        type="tel"
+                                                        name="form-control"
+                                                        id=""
+                                                        placeholder="+44"
+                                                        className="mg0"
+                                                      />
+                                                    </div>
+                                                  </div>
+                                                </Col>
+                                              </Row>
+                                            </form>
+                                            <div className="change-phn-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={handleClosephone}
+                                                className="phn-cancel"
+                                              >
+                                                Cancel
+                                              </Link>
+                                              <Link
+                                                href="javascript:;"
+                                                onClick={handleShowphonesucess}
+                                                className="phn-change"
+                                              >
+                                                Save
+                                              </Link>
+                                            </div>
+                                          </div>
                                         </div>
-                                      </div>
-                                    </div>
                                       </Modal.Body>
-                                      </Modal>
+                                    </Modal>
 
-                                     <Modal
+                                    <Modal
                                       show={showphonesucess}
                                       onHide={handleClosephonesucess}
                                       className="password_modal "
                                     >
                                       <Modal.Body>
-                                      <div className="succes-body">
-                                      <div className="succes-alert">
-                                        <img
-                                          src="./assets/images/ei_check.png"
-                                          alt="Check"
-                                        />
-                                        <div>
-                                          <h6>Success to Change</h6>
-                                          <p>
-                                          your success to change your phone number
-                                          
-                                          </p>
+                                        <div className="succes-body">
+                                          <div className="succes-alert">
+                                            <img
+                                              src="./assets/images/ei_check.png"
+                                              alt="Check"
+                                            />
+                                            <div>
+                                              <h6>Success to Change</h6>
+                                              <p>
+                                                your success to change your
+                                                phone number
+                                              </p>
+                                            </div>
+                                            <div className="succes-return-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={handleClosephonesucess}
+                                                className="succes-return"
+                                              >
+                                                Return to Profile
+                                              </Link>
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div className="succes-return-btn">
-                                          <Link
-                                            href="javascript:void(0);"
-                                            onClick={handleClosephonesucess}
-                                            className="succes-return"
-                                          >
-                                            Return to Profile
-                                          </Link>
-                                        </div>
-                                      </div>
-                                    </div>
                                       </Modal.Body>
-                                      </Modal>
+                                    </Modal>
 
-                                      <Modal
+                                    <Modal
                                       show={showemail}
                                       onHide={handleCloseemail}
                                       className="password_modal "
                                     >
                                       <Modal.Body>
-                                      <div className="change-eml-body">
-                                      <div className="eml-bx">
-                                        <div className="chng-eml">
-                                          <h4>Edit Email Address</h4>
-                                          <Link href="#" className="cross-icon" onClick={handleCloseemail}>
-                                            <i className="fas fa-times"></i>
-                                          </Link>
+                                        <div className="change-eml-body">
+                                          <div className="eml-bx">
+                                            <div className="chng-eml">
+                                              <h4>Edit Email Address</h4>
+                                              <Link
+                                                href="#"
+                                                className="cross-icon"
+                                                onClick={handleCloseemail}
+                                              >
+                                                <i className="fas fa-times"></i>
+                                              </Link>
+                                            </div>
+                                            <form action="">
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="form-group">
+                                                    <label for="control-label">
+                                                      Email Address
+                                                    </label>
+                                                    <br />
+                                                    <input
+                                                      type="email"
+                                                      name="form-control"
+                                                      id=""
+                                                      className="mg0"
+                                                    />
+                                                  </div>
+                                                </Col>
+                                                <Col lg={12} md={12}>
+                                                  <div className="form-group">
+                                                    <label for="control-label">
+                                                      New Email Address
+                                                    </label>
+                                                    <br />
+                                                    <input
+                                                      type="email"
+                                                      name="form-control"
+                                                      id=""
+                                                      className="mg0"
+                                                    />
+                                                  </div>
+                                                </Col>
+                                              </Row>
+                                            </form>
+                                            <div className="change-eml-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={handleCloseemail}
+                                                className="eml-cancel"
+                                              >
+                                                Cancel
+                                              </Link>
+                                              <Link
+                                                href="javascript:;"
+                                                className="eml-change"
+                                                onClick={handleShowemailotp}
+                                              >
+                                                Verification
+                                              </Link>
+                                            </div>
+                                          </div>
                                         </div>
-                                        <form action="">
-                                          <Row>
-                                            <Col lg={12} md={12}>
-                                              <div className="form-group">
-                                                <label for="control-label">
-                                                  Email Address
-                                                </label>
-                                                <br />
-                                                <input
-                                                  type="email"
-                                                  name="form-control"
-                                                  id=""
-                                                  className="mg0"
-                                                />
-                                              </div>
-                                            </Col>
-                                            <Col lg={12} md={12}>
-                                              <div className="form-group">
-                                                <label for="control-label">
-                                                  New Email Address
-                                                </label>
-                                                <br />
-                                                <input
-                                                  type="email"
-                                                  name="form-control"
-                                                  id=""
-                                                  className="mg0"
-                                                />
-                                              </div>
-                                            </Col>
-                                          </Row>
-                                        </form>
-                                        <div className="change-eml-btn">
-                                          <Link
-                                            href="javascript:void(0);"
-                                            onClick={handleCloseemail}
-                                            className="eml-cancel"
-                                          >
-                                            Cancel
-                                          </Link>
-                                          <Link
-                                            href="javascript:;"
-                                            className="eml-change"
-                                            onClick={handleShowemailotp}
-                                          >
-                                            Verification
-                                          </Link>
-                                        </div>
-                                      </div>
-                                    </div>
                                       </Modal.Body>
-                                      </Modal>
-                                    
-                                      <Modal
+                                    </Modal>
+
+                                    <Modal
                                       show={showemailotp}
                                       onHide={handleCloseemailotp}
                                       className="password_modal "
                                     >
                                       <Modal.Body>
+                                        <div className="chng-otp-body modal-box">
+                                          <div className="chng-otp-bx">
+                                            <div className="chng-chng-otp">
+                                              <h4 onClick={handleCloseemailotp}>
+                                                <i className="fas fa-chevron-left"></i>
+                                                Back to Email
+                                              </h4>
+                                              <Link
+                                                href="#"
+                                                className="cross-icon"
+                                                onClick={handleCloseemailotp}
+                                              >
+                                                <i className="fas fa-times"></i>
+                                              </Link>
+                                            </div>
+                                            <div className="chng-otp-pera">
+                                              <p>
+                                                A code was sent to email
+                                                sample@gmail.com
+                                              </p>
+                                            </div>
+                                            <form action="">
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="form-group">
+                                                    <input
+                                                      type="tel"
+                                                      name="form-control"
+                                                      id=""
+                                                      placeholder="2"
+                                                      className="mg0"
+                                                    />
+                                                    <input
+                                                      type="tel"
+                                                      name="form-control"
+                                                      id=""
+                                                      placeholder="2"
+                                                      className="mg0"
+                                                    />
+                                                    <input
+                                                      type="tel"
+                                                      name="form-control"
+                                                      id=""
+                                                      placeholder="2"
+                                                      className="mg0"
+                                                    />
+                                                    <input
+                                                      type="tel"
+                                                      name="form-control"
+                                                      id=""
+                                                      placeholder="2"
+                                                      className="mg0"
+                                                    />
+                                                    <input
+                                                      type="tel"
+                                                      name="form-control"
+                                                      id=""
+                                                      placeholder="2"
+                                                      className="mg0"
+                                                    />
+                                                    <input
+                                                      type="tel"
+                                                      name="form-control"
+                                                      id=""
+                                                      placeholder="2"
+                                                      className="mg0"
+                                                    />
+                                                  </div>
+                                                  <div className="resend-timer">
+                                                    <p>
+                                                      Resend code in{" "}
+                                                      <span>00:10</span>
+                                                    </p>
+                                                  </div>
+                                                </Col>
+                                              </Row>
+                                            </form>
+                                            <div className="chng-otp-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={handleCloseemailotp}
+                                                className="chng-otp-cancel"
+                                              >
+                                                Cancel
+                                              </Link>
+                                              <Link
+                                                href="javascript:;"
+                                                className="chng-otp-ver"
+                                                onClick={
+                                                  handleShowemailotpsucess
+                                                }
+                                              >
+                                                Verification
+                                              </Link>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </Modal.Body>
+                                    </Modal>
 
-                                      <div className="chng-otp-body modal-box">
-                                      <div className="chng-otp-bx">
-                                        <div className="chng-chng-otp">
-                                          <h4 onClick={handleCloseemailotp}>
-                                            <i className="fas fa-chevron-left"></i>
-                                            Back to Email
-                                          </h4>
-                                          <Link href="#" className="cross-icon" onClick={handleCloseemailotp}>
-                                            <i className="fas fa-times"></i>
-                                          </Link>
-                                        </div>
-                                        <div className="chng-otp-pera">
-                                          <p>
-                                            A code was sent to email
-                                            sample@gmail.com
-                                          </p>
-                                        </div>
-                                        <form action="">
-                                          <Row>
-                                            <Col lg={12} md={12}>
-                                              <div className="form-group">
-                                                <input
-                                                  type="tel"
-                                                  name="form-control"
-                                                  id=""
-                                                  placeholder="2"
-                                                  className="mg0"
-                                                />
-                                                <input
-                                                  type="tel"
-                                                  name="form-control"
-                                                  id=""
-                                                  placeholder="2"
-                                                  className="mg0"
-                                                />
-                                                <input
-                                                  type="tel"
-                                                  name="form-control"
-                                                  id=""
-                                                  placeholder="2"
-                                                  className="mg0"
-                                                />
-                                                <input
-                                                  type="tel"
-                                                  name="form-control"
-                                                  id=""
-                                                  placeholder="2"
-                                                  className="mg0"
-                                                />
-                                                <input
-                                                  type="tel"
-                                                  name="form-control"
-                                                  id=""
-                                                  placeholder="2"
-                                                  className="mg0"
-                                                />
-                                                <input
-                                                  type="tel"
-                                                  name="form-control"
-                                                  id=""
-                                                  placeholder="2"
-                                                  className="mg0"
-                                                />
-                                              </div>
-                                              <div className="resend-timer">
-                                                <p>
-                                                  Resend code in{" "}
-                                                  <span>00:10</span>
-                                                </p>
-                                              </div>
-                                            </Col>
-                                          </Row>
-                                        </form>
-                                        <div className="chng-otp-btn">
-                                          <Link
-                                            href="javascript:void(0);"
-                                            onClick={handleCloseemailotp}
-                                            className="chng-otp-cancel"
-                                          >
-                                            Cancel
-                                          </Link>
-                                          <Link
-                                            href="javascript:;"
-                                            className="chng-otp-ver"
-                                            onClick={handleShowemailotpsucess}
-                                          >
-                                            Verification
-                                          </Link>
-                                        </div>
-                                      </div>
-                                    </div>
-                                        </Modal.Body>
-                                        </Modal>
-                                   
-                                        <Modal
+                                    <Modal
                                       show={showemailotpsucess}
                                       onHide={handleCloseemailotpsucess}
                                       className="password_modal "
                                     >
                                       <Modal.Body>
-                                      <div className="succes-body">
-                                      <div className="succes-alert">
-                                        <img
-                                          src="./assets/images/ei_check.png"
-                                          alt="Check"
-                                        />
-                                        <div>
-                                          <h6>Success to Change</h6>
-                                          <p>
-                                            your success to change your phone
-                                            number
-                                          </p>
+                                        <div className="succes-body">
+                                          <div className="succes-alert">
+                                            <img
+                                              src="./assets/images/ei_check.png"
+                                              alt="Check"
+                                            />
+                                            <div>
+                                              <h6>Success to Change</h6>
+                                              <p>
+                                                your success to change your
+                                                phone number
+                                              </p>
+                                            </div>
+                                            <div className="succes-return-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={
+                                                  handleCloseemailotpsucess
+                                                }
+                                                className="succes-return"
+                                              >
+                                                Return to Profile
+                                              </Link>
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div className="succes-return-btn">
-                                          <Link
-                                            href="javascript:void(0);"
-                                            onClick={handleCloseemailotpsucess}
-                                            className="succes-return"
-                                          >
-                                            Return to Profile
-                                          </Link>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                        </Modal.Body>
-                                        </Modal>
-                                    
-
+                                      </Modal.Body>
+                                    </Modal>
 
                                     {/* Delete Profile */}
                                     <Modal
@@ -821,42 +835,132 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
                                       className="password_modal "
                                     >
                                       <Modal.Body>
-                                      <div class="succes-body delete-alert">
-                                          <div class="succes-alert">
-                                              <img src="./assets/images/dashboard/danger 1.png" alt="Check"/>
-                                              <div>
-                                                  <h6>Are you sure want to Delete?</h6>
-                                                  <p>your account will be remove from database. We will email all your data before your account is deleted.</p>
-                                              </div>
-                                              <div class="succes-return-btn delete-alert-btn"> 
-                                                  <Link onClick={handleClosedeleteaccount} href="javascript:;" class="chng-otp-ver">RETURN</Link>
-                                                  <Link href="javascript:void(0);" onClick={handleShowdeleteaccountsucess} onclick="popup_alrt(this)"  class="succes-return">Delete Account</Link>
-                                              </div>
+                                        <div className="succes-body delete-alert">
+                                          <div className="succes-alert">
+                                            <img
+                                              src="./assets/images/dashboard/danger 1.png"
+                                              alt="Check"
+                                            />
+                                            <div>
+                                              <h6>
+                                                Are you sure want to Delete?
+                                              </h6>
+                                              <p>
+                                                your account will be remove from
+                                                database. We will email all your
+                                                data before your account is
+                                                deleted.
+                                              </p>
+                                            </div>
+                                            <div className="succes-return-btn delete-alert-btn">
+                                              <Link
+                                                onClick={
+                                                  handleClosedeleteaccount
+                                                }
+                                                href="javascript:;"
+                                                className="chng-otp-ver"
+                                              >
+                                                RETURN
+                                              </Link>
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={
+                                                  handleShowdeleteaccountsucess
+                                                }
+                                                onclick="popup_alrt(this)"
+                                                className="succes-return"
+                                              >
+                                                Delete Account
+                                              </Link>
+                                            </div>
                                           </div>
-                                      </div>
-                                        </Modal.Body>
-                                        </Modal>
+                                        </div>
+                                      </Modal.Body>
+                                    </Modal>
 
-                                        <Modal
+                                    <Modal
                                       show={showdeleteaccountsucess}
                                       onHide={handleClosedeleteaccountsucess}
                                       className="password_modal "
                                     >
                                       <Modal.Body>
-                                      <div class="succes-body resqt-body">
-                                          <div class="succes-alert">
-                                              <img src="./assets/images/ei_check.png" alt="Check"/>
-                                              <div>
-                                                  <h6>Successful Request</h6>
-                                                  <p>Your account is in a queue to be deleted. You will receive an email confirmation with all of your data and to confirm the closure of your account. We hope to see you soon.</p>
-                                              </div>
-                                              <div class="succes-return-btn resqt-body-btn"> 
-                                                  <Link href="javascript:void(0);" onClick={handleClosedeleteaccountsucess}  class="succes-return">Return to Website</Link>
-                                              </div>
+                                        <div className="succes-body resqt-body">
+                                          <div className="succes-alert">
+                                            <img
+                                              src="./assets/images/ei_check.png"
+                                              alt="Check"
+                                            />
+                                            <div>
+                                              <h6>Successful Request</h6>
+                                              <p>
+                                                Your account is in a queue to be
+                                                deleted. You will receive an
+                                                email confirmation with all of
+                                                your data and to confirm the
+                                                closure of your account. We hope
+                                                to see you soon.
+                                              </p>
+                                            </div>
+                                            <div className="succes-return-btn resqt-body-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={
+                                                  handleClosedeleteaccountsucess
+                                                }
+                                                className="succes-return"
+                                              >
+                                                Return to Website
+                                              </Link>
+                                            </div>
                                           </div>
-                                      </div>
+                                        </div>
                                       </Modal.Body>
-                                        </Modal>
+                                    </Modal>
+
+                                    {/* Image Change Modal */}
+                                    <Modal
+                                      show={showimage_change}
+                                      onHide={handleCloseimage_change}
+                                      className="password_modal image_change_modal"
+                                    >
+                                      <Modal.Body>
+                                        <div className="succes-body resqt-body">
+                                          <div className="succes-alert">
+                                            <div className="prof_img">
+                                            <img
+                                              src="./assets/images/dashboard/Frame 81.png"
+                                              alt="Check"
+                                            />
+                                            <i className="fa-solid fa-pencil"></i>
+                                            <input type="file"/>
+                                            </div>
+                                            <div>
+                                              <h6>Change Your PRofile Image</h6>
+                                              {/* <p>
+                                                Your account is in a queue to be
+                                                deleted. You will receive an
+                                                email confirmation with all of
+                                                your data and to confirm the
+                                                closure of your account. We hope
+                                                to see you soon.
+                                              </p> */}
+                                              <br></br>
+                                            </div>
+                                            <div className="succes-return-btn resqt-body-btn">
+                                              <Link
+                                                href="javascript:void(0);"
+                                                onClick={
+                                                  handleCloseimage_change
+                                                }
+                                                className="succes-return"
+                                              >
+                                                Save Image
+                                              </Link>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </Modal.Body>
+                                    </Modal>
                                   </div>
                                 </div>
                               </div>
@@ -870,7 +974,7 @@ const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
               </div>
             </Col>
           </Row>
-        </div>
+        </Container>
       </section>
     </>
   );

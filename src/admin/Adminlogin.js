@@ -137,7 +137,7 @@ function Adminlogin() {
                             <Row>
                               <Col lg={12} md={12}>
                                 <div className="form-group">
-                                  <label for="control-label">Email</label>
+                                  <label htmlFor="control-label">Email</label>
                                   <br />
                                   <input
                                     type="email"
@@ -150,7 +150,7 @@ function Adminlogin() {
                               </Col>
                               <Col lg={12} md={12}>
                                 <div className="form-group">
-                                  <label for="control-label">Password</label>
+                                  <label htmlFor="control-label">Password</label>
                                   <br />
                                   <input
                                     type="password"

@@ -61,7 +61,7 @@ function Adminrolepermission() {
                                           <Row>
                                             <Col lg={12} md={12}>
                                               <div className="form-group">
-                                                <label for="control-label">
+                                                <label htmlFor="control-label">
                                                   Role
                                                 </label>
                                                 <br />

@@ -32,21 +32,21 @@ function Deposit() {
                             <Row>
                               <Col lg={3} md={3}>
                                 <div class="form-group">
-                                  <label for="control-label">Customer ID</label>
+                                  <label htmlFor="control-label">Customer ID</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
                               </Col>
                               <Col lg={3} md={3}>
                                 <div class="form-group">
-                                  <label for="control-label">First Name</label>
+                                  <label htmlFor="control-label">First Name</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
                               </Col>
                               <Col lg={3} md={3}>
                                 <div class="form-group">
-                                  <label for="control-label">Last Name</label>
+                                  <label htmlFor="control-label">Last Name</label>
                                   <input
                                     type="text"
                                     name="form-control"
@@ -57,7 +57,7 @@ function Deposit() {
                               </Col>
                               <Col lg={3} md={3}>
                                 <div class="form-group">
-                                  <label for="control-label">
+                                  <label htmlFor="control-label">
                                     Phone Number
                                   </label>
                                   <input
@@ -76,7 +76,7 @@ function Deposit() {
                             <Row>
                               <Col lg={4} md={4}>
                                 <div class="form-group">
-                                  <label for="control-label">
+                                  <label htmlFor="control-label">
                                     Applicant Date
                                   </label>
                                   <br />
@@ -85,14 +85,14 @@ function Deposit() {
                               </Col>
                               <Col lg={4} md={4}>
                                 <div class="form-group">
-                                  <label for="control-label">Email</label>
+                                  <label htmlFor="control-label">Email</label>
                                   <br />
                                   <input type="email" name="form-control" />
                                 </div>
                               </Col>
                               <Col lg={4} md={4}>
                                 <div class="form-group">
-                                  <label for="control-label">Status</label>
+                                  <label htmlFor="control-label">Status</label>
                                   <select name="Approved" id="Approved-fld">
                                     <option value="volvo">Approved</option>
                                     <option value="saab">Approved</option>

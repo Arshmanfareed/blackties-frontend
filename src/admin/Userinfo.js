@@ -221,7 +221,7 @@ function Userinfo() {
                                                       <Row>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               First Name
                                                             </label>
                                                             <br />
@@ -233,7 +233,7 @@ function Userinfo() {
                                                         </Col>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Last Name
                                                             </label>
                                                             <br />
@@ -245,7 +245,7 @@ function Userinfo() {
                                                         </Col>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Email Address
                                                             </label>
                                                             <br />
@@ -267,7 +267,7 @@ function Userinfo() {
                                                         </Col>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Phone Number
                                                             </label>
                                                             <br />
@@ -312,7 +312,7 @@ function Userinfo() {
                                                       <Row>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Password
                                                             </label>
                                                             <br />
@@ -324,7 +324,7 @@ function Userinfo() {
                                                         </Col>
                                                         <Col lg={6} md={6}>
                                                           <div className="form-group">
-                                                            <label for="control-label">
+                                                            <label htmlFor="control-label">
                                                               Confirm Password
                                                             </label>
                                                             <br />
@@ -1105,7 +1105,7 @@ function Userinfo() {
                                                     <Row>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             First Name
                                                           </label>
                                                           <br />
@@ -1117,7 +1117,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Last Name
                                                           </label>
                                                           <br />
@@ -1129,7 +1129,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Email Address
                                                           </label>
                                                           <input
@@ -1142,7 +1142,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Phone Number
                                                           </label>
                                                           <input
@@ -1175,7 +1175,7 @@ function Userinfo() {
                                                     <Row>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             PCO License Number
                                                           </label>
                                                           <br />
@@ -1187,7 +1187,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Expiry Date
                                                           </label>
                                                           <br />
@@ -1293,7 +1293,7 @@ function Userinfo() {
                                                     <Row>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Driving License
                                                             Number
                                                           </label>
@@ -1306,7 +1306,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Driver License
                                                             Expiry Date
                                                           </label>
@@ -1319,7 +1319,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             DVLA Check Code 1
                                                           </label>
                                                           <input
@@ -1332,7 +1332,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             DVLA Check Code 2
                                                           </label>
                                                           <input
@@ -1345,7 +1345,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             National Insurance
                                                             Number
                                                           </label>
@@ -1431,7 +1431,7 @@ function Userinfo() {
                                                     <Row>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Date of Accident
                                                           </label>
                                                           <br />
@@ -1443,7 +1443,7 @@ function Userinfo() {
                                                       </Col>
                                                       <Col lg={6} md={6}>
                                                         <div className="form-group">
-                                                          <label for="control-label">
+                                                          <label htmlFor="control-label">
                                                             Fault/ Non Fault /
                                                             Pending
                                                           </label>
@@ -1510,7 +1510,7 @@ function Userinfo() {
                       <Row>
                         <Col lg={12} md={12}>
                           <div className="form-group">
-                            <label for="control-label">Reason to Reject</label>
+                            <label htmlFor="control-label">Reason to Reject</label>
                             <br />
                             <input
                               type="textarea"
@@ -1521,7 +1521,7 @@ function Userinfo() {
                         </Col>
                         <Col lg={12} md={12}>
                           <div className="form-group">
-                            <label for="control-label">date to reapply</label>
+                            <label htmlFor="control-label">date to reapply</label>
                             <br />
                             <input type="date" name="form-control" />
                           </div>

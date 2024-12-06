@@ -104,27 +104,27 @@ function Financialpayments() {
                                                             <div className="row">
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Invoices Number</label>
+                                                                        <label htmlFor="control-label">Invoices Number</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">First Name</label>
+                                                                        <label htmlFor="control-label">First Name</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last Name</label>
+                                                                        <label htmlFor="control-label">Last Name</label>
                                                                         <input type="text" name="form-control" id="" className="mg0" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Vehicle Registration Number</label>
+                                                                        <label htmlFor="control-label">Vehicle Registration Number</label>
                                                                         <input type="number" name="form-control" id="" className="mg0" placeholder="Omar"/>
                                                                     </div>
                                                                 </div>
@@ -136,21 +136,21 @@ function Financialpayments() {
                                                             <div className="row">
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Applicant Date</label>
+                                                                        <label htmlFor="control-label">Applicant Date</label>
                                                                         <br/>
                                                                         <input type="date" name="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Amount</label>
+                                                                        <label htmlFor="control-label">Amount</label>
                                                                         <br/>
                                                                         <input type="number" name="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                  <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Status</label>
+                                                                        <label htmlFor="control-label">Status</label>
                                                                         <select name="payment" id="payment-fld">
                                                                             <option value="volvo">Payment</option>
                                                                             <option value="volvo">Incoming</option>
@@ -162,7 +162,7 @@ function Financialpayments() {
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last 4 digits of card details</label>
+                                                                        <label htmlFor="control-label">Last 4 digits of card details</label>
                                                                         <input type="number" name="form-control" id="" className="mg0" placeholder="1231"/>
                                                                     </div>
                                                                 </div>
@@ -415,27 +415,27 @@ function Financialpayments() {
                                                             <div className="row">
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Invoices Number</label>
+                                                                        <label htmlFor="control-label">Invoices Number</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">First Name</label>
+                                                                        <label htmlFor="control-label">First Name</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last Name</label>
+                                                                        <label htmlFor="control-label">Last Name</label>
                                                                         <input type="text" name="form-control" id="" className="mg0" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Vehicle Registration Number</label>
+                                                                        <label htmlFor="control-label">Vehicle Registration Number</label>
                                                                         <input type="number" name="form-control" id="" className="mg0" placeholder="Omar"/>
                                                                     </div>
                                                                 </div>
@@ -447,21 +447,21 @@ function Financialpayments() {
                                                             <div className="row">
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Applicant Date</label>
+                                                                        <label htmlFor="control-label">Applicant Date</label>
                                                                         <br/>
                                                                         <input type="date" name="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Amount</label>
+                                                                        <label htmlFor="control-label">Amount</label>
                                                                         <br/>
                                                                         <input type="number" name="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                  <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Status</label>
+                                                                        <label htmlFor="control-label">Status</label>
                                                                         <select name="payment" id="payment-fld">
                                                                             <option value="volvo">Payment</option>
                                                                             <option value="volvo">Incoming</option>
@@ -473,7 +473,7 @@ function Financialpayments() {
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last 4 digits of card details</label>
+                                                                        <label htmlFor="control-label">Last 4 digits of card details</label>
                                                                         <input type="number" name="form-control" id="" className="mg0" placeholder="1231"/>
                                                                     </div>
                                                                 </div>
@@ -595,27 +595,27 @@ function Financialpayments() {
                                                             <div className="row">
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Invoices Number</label>
+                                                                        <label htmlFor="control-label">Invoices Number</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">First Name</label>
+                                                                        <label htmlFor="control-label">First Name</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last Name</label>
+                                                                        <label htmlFor="control-label">Last Name</label>
                                                                         <input type="text" name="form-control" id="" className="mg0" placeholder="placeholder"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Vehicle Registration Number</label>
+                                                                        <label htmlFor="control-label">Vehicle Registration Number</label>
                                                                         <input type="number" name="form-control" id="" className="mg0" placeholder="Omar"/>
                                                                     </div>
                                                                 </div>
@@ -627,21 +627,21 @@ function Financialpayments() {
                                                             <div className="row">
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Applicant Date</label>
+                                                                        <label htmlFor="control-label">Applicant Date</label>
                                                                         <br/>
                                                                         <input type="date" name="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Amount</label>
+                                                                        <label htmlFor="control-label">Amount</label>
                                                                         <br/>
                                                                         <input type="number" name="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                  <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Status</label>
+                                                                        <label htmlFor="control-label">Status</label>
                                                                         <select name="payment" id="payment-fld">
                                                                             <option value="volvo">Payment</option>
                                                                             <option value="volvo">Incoming</option>
@@ -653,7 +653,7 @@ function Financialpayments() {
                                                                 </div>
                                                                 <div className="col-lg-3 col-md-3">
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last 4 digits of card details</label>
+                                                                        <label htmlFor="control-label">Last 4 digits of card details</label>
                                                                         <input type="number" name="form-control" id="" className="mg0" placeholder="1231"/>
                                                                     </div>
                                                                 </div>

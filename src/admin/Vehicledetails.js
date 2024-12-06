@@ -6,6 +6,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Componentchart from "./components/Componentchart";
 
 function Vehicledetails() {
   return (
@@ -83,7 +84,7 @@ function Vehicledetails() {
                                         <Row>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 First Name
                                               </label>
                                               <br />
@@ -97,7 +98,7 @@ function Vehicledetails() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Last Name
                                               </label>
                                               <br />
@@ -111,7 +112,7 @@ function Vehicledetails() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Email Address
                                               </label>
                                               <br />
@@ -125,7 +126,7 @@ function Vehicledetails() {
                                           </Col>
                                           <Col lg={6} md={6}>
                                             <div className="form-group">
-                                              <label for="control-label">
+                                              <label htmlFor="control-label">
                                                 Phone Number
                                               </label>
                                               <br />
@@ -295,7 +296,7 @@ function Vehicledetails() {
                                             <Row>
                                               <Col lg={6} md={6}>
                                                 <div className="form-group">
-                                                  <label for="control-label">
+                                                  <label htmlFor="control-label">
                                                     PCO License Number
                                                   </label>
                                                   <br />
@@ -309,7 +310,7 @@ function Vehicledetails() {
                                               </Col>
                                               <Col lg={6} md={6}>
                                                 <div className="form-group">
-                                                  <label for="control-label">
+                                                  <label htmlFor="control-label">
                                                     Expiry Date
                                                   </label>
                                                   <br />
@@ -603,7 +604,7 @@ function Vehicledetails() {
                                       <Row>
                                         <Col lg={12} md={12}>
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Car Make
                                             </label>
                                             <br />
@@ -617,7 +618,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col lg={12} md={12}>
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Car Model
                                             </label>
                                             <br />
@@ -631,7 +632,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col lg={12} md={12}>
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Vehicle Registration Number
                                             </label>
                                             <br />
@@ -645,7 +646,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col lg={12} md={12}>
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Price per Week
                                             </label>
                                             <br />
@@ -659,7 +660,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col lg={12} md={12}>
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Car Description
                                             </label>
                                             <br />
@@ -679,7 +680,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Vehicle Type:
                                             </label>
                                             <br />
@@ -705,7 +706,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Transmission:
                                             </label>
                                             <br />
@@ -719,7 +720,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Fuel Type
                                             </label>
                                             <br />
@@ -733,7 +734,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Miles per Gallon (MPG)
                                             </label>
                                             <br />
@@ -747,7 +748,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               People
                                             </label>
                                             <br />
@@ -775,7 +776,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Mileage Allowance:
                                             </label>
                                             <br />
@@ -789,7 +790,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Additional Mileage Cost:
                                             </label>
                                             <br />
@@ -803,7 +804,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Reset Period:
                                             </label>
                                             <br />
@@ -817,7 +818,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Holding Deposit:
                                             </label>
                                             <br />
@@ -831,7 +832,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               Insurance Excess:
                                             </label>
                                             <br />
@@ -845,7 +846,7 @@ function Vehicledetails() {
                                         </Col>
                                         <Col className=" up-bx">
                                           <div className="form-group">
-                                            <label for="control-label">
+                                            <label htmlFor="control-label">
                                               PCN Fee
                                             </label>
                                             <br />
@@ -1333,10 +1334,12 @@ function Vehicledetails() {
                                 </Row>
                                 <Row>
                                   <div className="overall-milleage-img">
+
                                     <img
                                       src="./admin_assets/images/Sales statistics.png"
                                       alt="mileage"
                                     />
+                                    <Componentchart/>
                                   </div>
                                   <table className="maintenance-table ds-table history-tble">
                                     <thead>

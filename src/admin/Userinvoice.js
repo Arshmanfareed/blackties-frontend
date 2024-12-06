@@ -98,7 +98,7 @@ function Userinvoice() {
                                   <Row>
                                     <Col lg={12} md={12}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Schedule Pay Date
                                         </label>
                                         <br />
@@ -116,7 +116,7 @@ function Userinvoice() {
                                     >
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label htmlFor="payment">
+                                          <label htmlhtmlFor="payment">
                                             Reason Payment
                                           </label>
                                           <select
@@ -144,7 +144,7 @@ function Userinvoice() {
                                       </Col>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label htmlFor="fee">Fee</label>
+                                          <label htmlhtmlFor="fee">Fee</label>
                                           <input
                                             type="number"
                                             name="fee"
@@ -156,7 +156,7 @@ function Userinvoice() {
                                       </Col>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label htmlFor="description">
+                                          <label htmlhtmlFor="description">
                                             Description
                                           </label>
                                           <textarea

@@ -58,7 +58,7 @@ function Adminaddcontrol() {
                                     <Row>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             User Name
                                           </label>
                                           <br />
@@ -71,7 +71,7 @@ function Adminaddcontrol() {
                                       </Col>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             Email
                                           </label>
                                           <br />
@@ -84,7 +84,7 @@ function Adminaddcontrol() {
                                       </Col>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             Password
                                           </label>
                                           <br />
@@ -97,7 +97,7 @@ function Adminaddcontrol() {
                                       </Col>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             Role
                                           </label>
                                           <br />

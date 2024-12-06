@@ -204,7 +204,7 @@ function Admindashboardmain() {
                                     <Row>
                                       <Col md={4} lg={6}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             Invoice
                                           </label>
                                           <br />
@@ -216,7 +216,7 @@ function Admindashboardmain() {
                                       </Col>
                                       <Col md={4} lg={6}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             Driver
                                           </label>
                                           <br />
@@ -228,7 +228,7 @@ function Admindashboardmain() {
                                       </Col>
                                       <Col md={4} lg={6}>
                                         <div className="form-group">
-                                          <label for="control-label">VRN</label>
+                                          <label htmlFor="control-label">VRN</label>
                                           <input
                                             type="text"
                                             name="form-control"
@@ -343,7 +343,7 @@ function Admindashboardmain() {
                                     <Row>
                                       <Col lg={6} md={6}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             Name
                                           </label>
                                           <br />
@@ -355,7 +355,7 @@ function Admindashboardmain() {
                                       </Col>
                                       <Col lg={6} md={6}>
                                         <div className="form-group">
-                                          <label for="control-label">
+                                          <label htmlFor="control-label">
                                             Phone Number
                                           </label>
                                           <input
@@ -1386,7 +1386,7 @@ function Admindashboardmain() {
                         <Row>
                           <Col lg={12} md={12}>
                             <div className="form-group">
-                              <label for="control-label">Customer ID</label>
+                              <label htmlFor="control-label">Customer ID</label>
                               <br />
                               <input
                                 type="text"
@@ -1397,7 +1397,7 @@ function Admindashboardmain() {
                           </Col>
                           <Col lg={12} md={12}>
                             <div className="form-group">
-                              <label for="control-label">Email Address</label>
+                              <label htmlFor="control-label">Email Address</label>
                               <br />
                               <input
                                 type="text"
@@ -1408,7 +1408,7 @@ function Admindashboardmain() {
                           </Col>
                           <Col lg={12} md={12}>
                             <div className="form-group">
-                              <label for="control-label">Phone Number</label>
+                              <label htmlFor="control-label">Phone Number</label>
                               <input
                                 type="number"
                                 name="form-control"
@@ -1624,7 +1624,7 @@ function Admindashboardmain() {
                         <Row>
                           <Col lg={12} md={12}>
                             <div className="form-group">
-                              <label for="control-label">Customer ID</label>
+                              <label htmlFor="control-label">Customer ID</label>
                               <br />
                               <input
                                 type="text"
@@ -1635,7 +1635,7 @@ function Admindashboardmain() {
                           </Col>
                           <Col lg={12} md={12}>
                             <div className="form-group">
-                              <label for="control-label">Email Address</label>
+                              <label htmlFor="control-label">Email Address</label>
                               <br />
                               <input
                                 type="text"
@@ -1646,7 +1646,7 @@ function Admindashboardmain() {
                           </Col>
                           <Col lg={12} md={12}>
                             <div className="form-group">
-                              <label for="control-label">Phone Number</label>
+                              <label htmlFor="control-label">Phone Number</label>
                               <input
                                 type="number"
                                 name="form-control"
@@ -2105,7 +2105,7 @@ function Admindashboardmain() {
                       <Row>
                         <Col lg={12} md={12}>
                           <div className="form-group">
-                            <label for="control-label">Card Number</label>
+                            <label htmlFor="control-label">Card Number</label>
                             <input
                               type="number"
                               name="form-control"
@@ -2115,13 +2115,13 @@ function Admindashboardmain() {
                         </Col>
                         <Col lg={12} md={12}>
                           <div className="form-group">
-                            <label for="control-label">Expration Date</label>
+                            <label htmlFor="control-label">Expration Date</label>
                             <input type="date" name="form-control" />
                           </div>
                         </Col>
                         <Col lg={12} md={12}>
                           <div className="form-group">
-                            <label for="control-label">Card Holder</label>
+                            <label htmlFor="control-label">Card Holder</label>
                             <input
                               type="text"
                               name="form-control"
@@ -2131,7 +2131,7 @@ function Admindashboardmain() {
                         </Col>
                         <Col lg={12} md={12}>
                           <div className="form-group">
-                            <label for="control-label">CVC</label>
+                            <label htmlFor="control-label">CVC</label>
                             <input
                               type="number"
                               name="form-control"
@@ -2459,14 +2459,14 @@ function Admindashboardmain() {
                   <Row>
                     <Col lg={12} md={12}>
                       <div className="form-group">
-                        <label for="control-label">New Expiry Date</label>
+                        <label htmlFor="control-label">New Expiry Date</label>
                         <br />
                         <input type="date" name="form-control" placeholder="" />
                       </div>
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Please upload Document
                         </label>
                         <br />
@@ -2651,7 +2651,7 @@ function Admindashboardmain() {
                   <Row>
                     <Col lg={12} md={12}>
                       <div className="form-group">
-                        <label for="control-label">New Expiry Date</label>
+                        <label htmlFor="control-label">New Expiry Date</label>
                         <br />
                         <input type="date" name="form-control" placeholder="" />
                         <span className="warning-pera">
@@ -2666,7 +2666,7 @@ function Admindashboardmain() {
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">Upload New MOT</label>
+                        <label htmlFor="control-label">Upload New MOT</label>
                         <br />
                         <span className="file_cont">
                           <input type="file" name="form-control" />
@@ -2746,7 +2746,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={6} md={6} >
                         <div className="form-group">
-                          <label for="control-label">Email Address</label>
+                          <label htmlFor="control-label">Email Address</label>
                           <br />
                           <input
                             type="email"
@@ -2757,7 +2757,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={6} md={6} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Phone Number</label>
+                          <label htmlFor="control-label">Phone Number</label>
                           <br />
                           <div className="t-flag">
                             <input
@@ -2778,7 +2778,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={12} md={12} >
                         <div className="form-group">
-                          <label for="control-label">Name</label>
+                          <label htmlFor="control-label">Name</label>
                           <br />
                           <input
                             type="text"
@@ -2789,7 +2789,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">License Number</label>
+                          <label htmlFor="control-label">License Number</label>
                           <br />
                           <input
                             type="number"
@@ -2800,7 +2800,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Expiry Date</label>
+                          <label htmlFor="control-label">Expiry Date</label>
                           <br />
                           <input
                             type="date"
@@ -2879,7 +2879,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={6} md={6} >
                         <div className="form-group">
-                          <label for="control-label">Email Address</label>
+                          <label htmlFor="control-label">Email Address</label>
                           <br />
                           <input
                             type="email"
@@ -2890,7 +2890,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={6} md={6} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Phone Number</label>
+                          <label htmlFor="control-label">Phone Number</label>
                           <br />
                           <div className="t-flag">
                             <input
@@ -2911,7 +2911,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={12} md={12} >
                         <div className="form-group">
-                          <label for="control-label">Name</label>
+                          <label htmlFor="control-label">Name</label>
                           <br />
                           <input
                             type="text"
@@ -2922,7 +2922,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">License Number</label>
+                          <label htmlFor="control-label">License Number</label>
                           <br />
                           <input
                             type="number"
@@ -2933,7 +2933,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Expiry Date</label>
+                          <label htmlFor="control-label">Expiry Date</label>
                           <br />
                           <input
                             type="date"
@@ -2977,14 +2977,14 @@ function Admindashboardmain() {
                   <Row>
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">New Expiry Date</label>
+                        <label htmlFor="control-label">New Expiry Date</label>
                         <br />
                         <input type="date" name="form-control" placeholder="" />
                       </div>
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Upload New Driver License
                         </label>
                         <br />
@@ -3062,7 +3062,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={6} md={6} >
                         <div className="form-group">
-                          <label for="control-label">Email Address</label>
+                          <label htmlFor="control-label">Email Address</label>
                           <br />
                           <input
                             type="email"
@@ -3073,7 +3073,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={6} md={6} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Phone Number</label>
+                          <label htmlFor="control-label">Phone Number</label>
                           <br />
                           <div className="t-flag">
                             <input
@@ -3094,7 +3094,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={12} md={12} >
                         <div className="form-group">
-                          <label for="control-label">Name</label>
+                          <label htmlFor="control-label">Name</label>
                           <br />
                           <input
                             type="text"
@@ -3105,7 +3105,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">PCO License Number</label>
+                          <label htmlFor="control-label">PCO License Number</label>
                           <br />
                           <input
                             type="number"
@@ -3116,7 +3116,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Expiry Date</label>
+                          <label htmlFor="control-label">Expiry Date</label>
                           <br />
                           <input
                             type="date"
@@ -3215,7 +3215,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={6} md={6} >
                         <div className="form-group">
-                          <label for="control-label">Email Address</label>
+                          <label htmlFor="control-label">Email Address</label>
                           <br />
                           <input
                             type="email"
@@ -3226,7 +3226,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={6} md={6} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Phone Number</label>
+                          <label htmlFor="control-label">Phone Number</label>
                           <br />
                           <div className="t-flag">
                             <input
@@ -3247,7 +3247,7 @@ function Admindashboardmain() {
                     <Row>
                       <Col lg={12} md={12} >
                         <div className="form-group">
-                          <label for="control-label">Name</label>
+                          <label htmlFor="control-label">Name</label>
                           <br />
                           <input
                             type="text"
@@ -3258,7 +3258,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">License Number</label>
+                          <label htmlFor="control-label">License Number</label>
                           <br />
                           <input
                             type="number"
@@ -3269,7 +3269,7 @@ function Admindashboardmain() {
                       </Col>
                       <Col lg={12} md={12} className=" up-bx">
                         <div className="form-group">
-                          <label for="control-label">Expiry Date</label>
+                          <label htmlFor="control-label">Expiry Date</label>
                           <br />
                           <input
                             type="date"
@@ -3333,14 +3333,14 @@ function Admindashboardmain() {
                   <Row>
                     <Col lg={12} md={12} >
                       <div className="form-group">
-                        <label for="control-label">New Expiry Date</label>
+                        <label htmlFor="control-label">New Expiry Date</label>
                         <br />
                         <input type="date" name="form-control" placeholder="" />
                       </div>
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Upload Drivers PCO License
                         </label>
                         <br />
@@ -3355,7 +3355,7 @@ function Admindashboardmain() {
                     </Col>
                     <Col lg={12} md={12} className=" up-bx">
                       <div className="form-group">
-                        <label for="control-label">
+                        <label htmlFor="control-label">
                           Upload Drivers PCO Badge
                         </label>
                         <br />

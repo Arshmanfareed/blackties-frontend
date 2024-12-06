@@ -177,7 +177,7 @@ return (
                                 <Row>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Date & Time
                                       </label>
                                       <br />
@@ -189,7 +189,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Transaction ID
                                       </label>
                                       <br />
@@ -202,7 +202,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Transaction Description
                                       </label>
                                       <input
@@ -216,7 +216,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">From</label>
+                                      <label htmlFor="control-label">From</label>
                                       <select name="payment" id="payment-fld">
                                         <option value="volvo">
                                           placeholder
@@ -231,7 +231,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">To</label>
+                                      <label htmlFor="control-label">To</label>
                                       <select name="payment" id="payment-fld">
                                         <option value="volvo">
                                           placeholder
@@ -253,7 +253,7 @@ return (
                                 <Row>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Amount
                                       </label>
                                       <br />
@@ -266,7 +266,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Categories
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -284,7 +284,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Income/Expense
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -299,7 +299,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Asset/Liability
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -313,7 +313,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         PDF Uploaded?
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -1079,7 +1079,7 @@ return (
                                 <Row>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Date & Time
                                       </label>
                                       <br />
@@ -1091,7 +1091,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Transaction ID
                                       </label>
                                       <br />
@@ -1104,7 +1104,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Transaction Description
                                       </label>
                                       <input
@@ -1118,7 +1118,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">From</label>
+                                      <label htmlFor="control-label">From</label>
                                       <select name="payment" id="payment-fld">
                                         <option value="volvo">
                                           placeholder
@@ -1133,7 +1133,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">To</label>
+                                      <label htmlFor="control-label">To</label>
                                       <select name="payment" id="payment-fld">
                                         <option value="volvo">
                                           placeholder
@@ -1155,7 +1155,7 @@ return (
                                 <Row >
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Amount
                                       </label>
                                       <br />
@@ -1168,7 +1168,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Categories
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -1186,7 +1186,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Income/Expense
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -1201,7 +1201,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         Asset/Liability
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -1215,7 +1215,7 @@ return (
                                   </Col>
                                   <Col lg={2} md={2} >
                                     <div className="form-group">
-                                      <label for="control-label">
+                                      <label htmlFor="control-label">
                                         PDF Uploaded?
                                       </label>
                                       <select name="payment" id="payment-fld">
@@ -2577,7 +2577,7 @@ return (
                 <Row>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Date & Time</label>
+                      <label htmlFor="control-label">Date & Time</label>
                       <br />
                       <input
                         type="date"
@@ -2588,7 +2588,7 @@ return (
                   </Col>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">
+                      <label htmlFor="control-label">
                         Transaction Description
                       </label>
                       <br />
@@ -2603,7 +2603,7 @@ return (
                 <Row >
                   <Col lg={12} md={12} >
                     <div className="form-group">
-                      <label for="control-label">From</label>
+                      <label htmlFor="control-label">From</label>
                       <select name="Council" id="Rented-fld">
                         <option value="volvo">Rohan</option>
                         <option value="saab">Rohan Shibu</option>
@@ -2890,7 +2890,7 @@ return (
                 <Row>
                   <Col lg={12} md={12} >
                     <div className="form-group">
-                      <label for="control-label">To</label>
+                      <label htmlFor="control-label">To</label>
                       <select name="Council" id="Rented-fld">
                         <option value="volvo">Rohan</option>
                         <option value="saab">Rohan Shibu</option>
@@ -3177,7 +3177,7 @@ return (
                 <Row>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Amount</label>
+                      <label htmlFor="control-label">Amount</label>
                       <br />
                       <input
                         type="number"
@@ -3188,7 +3188,7 @@ return (
                   </Col>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Categories</label>
+                      <label htmlFor="control-label">Categories</label>
                       <select name="Council" id="Rented-fld">
                         <option value="volvo">10 December, 2024</option>
                         <option value="saab">10 December, 2024</option>
@@ -3201,7 +3201,7 @@ return (
                 <Row>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Income/Expense</label>
+                      <label htmlFor="control-label">Income/Expense</label>
                       <select name="Council" id="Rented-fld">
                         <option value="volvo">Expense</option>
                         <option value="saab">Income</option>
@@ -3212,7 +3212,7 @@ return (
                   </Col>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Asset/Liability</label>
+                      <label htmlFor="control-label">Asset/Liability</label>
                       <select name="Council" id="Rented-fld">
                         <option value="volvo">Asset</option>
                         <option value="saab">Asset</option>
@@ -3273,7 +3273,7 @@ return (
                 <Row>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Date & Time</label>
+                      <label htmlFor="control-label">Date & Time</label>
                       <br />
                       <input
                         type="text"
@@ -3284,7 +3284,7 @@ return (
                   </Col>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">
+                      <label htmlFor="control-label">
                         Transaction Description
                       </label>
                       <br />
@@ -3299,7 +3299,7 @@ return (
                 <Row>
                   <Col lg={12} md={12} >
                     <div className="form-group">
-                      <label for="control-label">From</label>
+                      <label htmlFor="control-label">From</label>
                       <div className="drvr_deta active">
                         <div className="drvrmain">
                           <img
@@ -3362,7 +3362,7 @@ return (
                     </div>
                   </Col>
                   <div className="form-group">
-                    <label for="control-label">To</label>
+                    <label htmlFor="control-label">To</label>
                     <div className="drvr_deta active">
                       <div className="drvrmain">
                         <img
@@ -3422,7 +3422,7 @@ return (
                 <Row>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Amount</label>
+                      <label htmlFor="control-label">Amount</label>
                       <br />
                       <input
                         type="number"
@@ -3433,7 +3433,7 @@ return (
                   </Col>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Categories</label>
+                      <label htmlFor="control-label">Categories</label>
                       <input
                         type="text"
                         name="form-control"
@@ -3445,7 +3445,7 @@ return (
                 <Row>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Income/Expense</label>
+                      <label htmlFor="control-label">Income/Expense</label>
                       <input
                         type="text"
                         name="form-control"
@@ -3455,7 +3455,7 @@ return (
                   </Col>
                   <Col lg={6} md={6} >
                     <div className="form-group">
-                      <label for="control-label">Asset/Liability</label>
+                      <label htmlFor="control-label">Asset/Liability</label>
                       <input
                         type="text"
                         name="form-control"
