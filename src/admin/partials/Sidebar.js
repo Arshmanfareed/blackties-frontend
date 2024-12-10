@@ -41,7 +41,7 @@ function Sidebar() {
             <ul>
               <li>
                 <NavLink
-                  to="/admin-dashboard-main"
+                 to="/admin-dashboard-main"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   <img

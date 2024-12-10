@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
-import { Dropdown, Modal, ModalBody } from "react-bootstrap";
+import { Col, Container, Dropdown, Modal, ModalBody, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Financialinvoicerevenue() {
   // View Modal
@@ -27,72 +28,72 @@ const handleOpenremove=()=>setShowremove(true);
 
   return (
     <>
-      <section class="user-dashboard">
-        <div class="container-fluid">
-          <div class="row g-0">
-            <div class="col-lg-3 col-md-3 sidebar-col">
+      <section className="user-dashboard">
+        <Container fluid>
+          <Row className=" g-0">
+            <Col lg={3} md={3} className="sidebar-col">
               <Sidebar />
-            </div>
-            <div class="col-lg-9 col-md-9 panel-col">
-              <div class="dashboard-panel penalty-panel">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12">
-                    <div class="dashboard-panel-topbar">
+            </Col>
+            <Col lg={9} md={9} className=" panel-col">
+              <div className="dashboard-panel penalty-panel">
+                <Row>
+                  <Col lg={12} md={12} >
+                    <div className="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-12 col-md-12">
-                    <div class="penalty-sec db-default-sec">
-                      <div class="row main-payments">
-                        <div class="col-md-4">
-                          <div class="main-payments-bx">
-                            <div class="pmnt-name">
+                  </Col>
+                </Row>
+                <Row>
+                  <Col lg={12} md={12} >
+                    <div className="penalty-sec db-default-sec">
+                      <Row className=" main-payments">
+                        <Col md={4}>
+                          <div className="main-payments-bx">
+                            <div className="pmnt-name">
                               <p>Revenue</p>
                               <h4>£2.000</h4>
                             </div>
-                            <div class="pmnt-dt">
+                            <div className="pmnt-dt">
                               <span>Next Payment Date</span>
                               <span>27 June, 2024</span>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="main-payments-bx">
-                            <div class="pmnt-name">
+                        </Col>
+                        <Col md={4}>
+                          <div className="main-payments-bx">
+                            <div className="pmnt-name">
                               <p>Expenses</p>
                               <h4>£1.000</h4>
                             </div>
-                            <div class="pmnt-dt">
+                            <div className="pmnt-dt">
                               <span>Payment Expired Date</span>
                               <span>27 June, 2024</span>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="main-payments-bx">
-                            <div class="pmnt-name">
+                        </Col>
+                        <Col md={4}>
+                          <div className="main-payments-bx">
+                            <div className="pmnt-name">
                               <p>Total Revenue</p>
                               <h4>£1.000</h4>
                             </div>
-                            <div class="pmnt-dt">
+                            <div className="pmnt-dt">
                               <span>Next Payment Date</span>
                               <span>27 June, 2024</span>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="penalty-card db-default-wrapper admin-financial-revenue">
-                        <div class="row">
-                          <nav class="invoice-tabs">
+                        </Col>
+                      </Row>
+                      <div className="penalty-card db-default-wrapper admin-financial-revenue">
+                        <Row>
+                          <nav className="invoice-tabs">
                             <div
-                              class="nav nav-tabs"
+                              className="nav nav-tabs"
                               id="nav-tab"
                               role="tablist"
                             >
                               <button
-                                class="nav-link active"
+                                className="nav-link active"
                                 id="nav-revenue-tab"
                                 data-bs-toggle="tab"
                                 data-bs-target="#nav-revenue"
@@ -104,7 +105,7 @@ const handleOpenremove=()=>setShowremove(true);
                                 <h5>Revenue</h5>
                               </button>
                               <button
-                                class="nav-link"
+                                className="nav-link"
                                 id="nav-recently-delete-tab"
                                 data-bs-toggle="tab"
                                 data-bs-target="#nav-recently-delete"
@@ -118,31 +119,31 @@ const handleOpenremove=()=>setShowremove(true);
                             </div>
                           </nav>
                           <div
-                            class="invoice-tabs-content tab-content"
+                            className="invoice-tabs-content tab-content"
                             id="nav-tabContent"
                           >
                             <div
-                              class="tab-pane fade show active"
+                              className="tab-pane fade show active"
                               id="nav-revenue"
                               role="tabpanel"
                               aria-labelledby="nav-revenue-tab"
                             >
-                              <div class="support-issue-head">
+                              <div className="support-issue-head">
                                 <h4>Revenue</h4>
-                                <div class="viewbyd">
-                                  <a href="javascript:;" class="view-support">
+                                <div className="viewbyd">
+                                  <Link to="#" className="view-support">
                                     View
-                                  </a>
-                                  <div class="issue-btns">
-                                    <a href="javascript:;" class="active">
+                                  </Link>
+                                  <div className="issue-btns">
+                                    <Link to="#" className="active">
                                       Weekly
-                                    </a>
-                                    <a href="javascript:;">Monthly</a>
-                                    <a href="javascript:;">Yearly</a>
-                                    <a href="javascript:;">Custom</a>
+                                    </Link>
+                                    <Link to="#">Monthly</Link>
+                                    <Link to="#">Yearly</Link>
+                                    <Link to="#">Custom</Link>
                                   </div>
                                 </div>
-                                <div class="time-frame">
+                                <div className="time-frame">
                                   <span>
                                     Timeframe
                                     <input
@@ -152,31 +153,31 @@ const handleOpenremove=()=>setShowremove(true);
                                     />
                                   </span>
                                 </div>
-                                <div class="revenue-main-btns">
-                                  <div class="tivcket-btn">
-                                    <a
-                                      href="javascript:;"
+                                <div className="revenue-main-btns">
+                                  <div className="tivcket-btn">
+                                    <Link
+                                      to="#"
                                       onClick={handleOpenadd}
                                     >
-                                      Add Data <i class="fas fa-plus"></i>
-                                    </a>
+                                      Add Data <i className="fas fa-plus"></i>
+                                    </Link>
                                   </div>
-                                  <div class="file-dow-btn">
-                                    <a href="javascript:;">
+                                  <div className="file-dow-btn">
+                                    <Link to="#">
                                       <img
                                         src="./admin_assets/images/File-download.png"
                                         alt="file-download"
                                       />
-                                    </a>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>
-                              <div class="row frm-inner-row invoice-tab-frm revenue-tab-frm">
+                              <Row className=" frm-inner-row invoice-tab-frm revenue-tab-frm">
                                 <form action="" method="">
-                                  <div class="row">
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                  <Row>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Date & Time
                                         </label>
                                         <br />
@@ -185,10 +186,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           name="form-control"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Transaction ID
                                         </label>
                                         <br />
@@ -198,24 +199,24 @@ const handleOpenremove=()=>setShowremove(true);
                                           placeholder="placeholder"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Transaction Description
                                         </label>
                                         <input
                                           type="text"
                                           name="form-control"
                                           id=""
-                                          class="mg0"
+                                          className="mg0"
                                           placeholder="placeholder"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">From</label>
+                                    </Col>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">From</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -227,10 +228,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="audi">Omar</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">To</label>
+                                    </Col>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">To</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -242,17 +243,17 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="audi">Omar</option>
                                         </select>
                                       </div>
-                                    </div>
-                                  </div>
+                                    </Col>
+                                  </Row>
                                 </form>
-                              </div>
+                              </Row>
 
-                              <div class="row frm-inner-row invoice-tab-frm revenue-tab-frm2">
+                              <Row className=" frm-inner-row invoice-tab-frm revenue-tab-frm2">
                                 <form action="" method="">
-                                  <div class="row">
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                  <Row>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Amount
                                         </label>
                                         <br />
@@ -262,10 +263,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           placeholder="placeholder"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Categories
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -280,10 +281,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="opel">Expense</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2} >
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Income/Expense
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -295,10 +296,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="opel">Expense</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Asset/Liability
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -309,10 +310,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="audi">Asset</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           PDF Uploaded?
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -320,18 +321,18 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="volvo">No</option>
                                         </select>
                                       </div>
-                                    </div>
-                                  </div>
+                                    </Col>
+                                  </Row>
                                 </form>
-                              </div>
-                              <div class="row">
-                                <div class="col-lg-12 col-md-12">
+                              </Row>
+                              <Row>
+                                <Col lg={12} md={12} >
                                   <div style={{ overflowX: "auto" }}>
-                                    <table class="maintenance-table">
+                                    <table className="maintenance-table">
                                       <thead>
                                         <tr>
-                                          <th class="first-th">Date & Time</th>
-                                          <th class="first-th">
+                                          <th className="first-th">Date & Time</th>
+                                          <th className="first-th">
                                             Transaction ID
                                           </th>
                                           <th>Transaction Description</th>
@@ -349,14 +350,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -373,7 +374,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -385,13 +386,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -407,50 +408,50 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="v-pdf-btn"
+                                            <Link
+                                              to="#"
+                                              className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="view-btn"
+                                            <Link
+                                              to="#"
+                                              className="view-btn"
                                               onClick={handleOpenview}
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£4,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -467,7 +468,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -479,13 +480,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -501,50 +502,50 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="v-pdf-btn"
+                                            <Link
+                                              to="#"
+                                              className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
-                                              class="view-btn"
+                                              className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="liability-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="liability-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -561,7 +562,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Liability
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -573,13 +574,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -595,50 +596,50 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="v-pdf-btn"
+                                            <Link
+                                              to="#"
+                                              className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
-                                              class="view-btn"
+                                              className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="cat-asset-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="cat-asset-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -655,7 +656,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Asset
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -667,13 +668,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -689,50 +690,50 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="v-pdf-btn"
+                                            <Link
+                                              to="#"
+                                              className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
-                                              class="view-btn"
+                                              className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="expense-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="expense-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -749,7 +750,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Expense
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -761,13 +762,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -783,50 +784,50 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="v-pdf-btn"
+                                            <Link
+                                              to="#"
+                                              className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
-                                              class="view-btn"
+                                              className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -843,7 +844,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -855,13 +856,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -877,50 +878,50 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="v-pdf-btn"
+                                            <Link
+                                              to="#"
+                                              className="v-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
-                                              class="view-btn"
+                                              className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -937,7 +938,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -949,13 +950,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -971,88 +972,88 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
-                                              class="d-pdf-btn"
+                                            <Link
+                                              to="#"
+                                              className="d-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files2.png"
                                                 alt="filesr"
                                               />
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
-                                            <a
-                                              href="javascript:;"
+                                            <Link
+                                              to="#"
                                               onClick={handleOpenview}
-                                              class="view-btn"
+                                              className="view-btn"
                                             >
                                               View
-                                            </a>
+                                            </Link>
                                           </td>
                                         </tr>
                                       </tbody>
                                     </table>
                                   </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                  <div class="invoice-order-pagination">
-                                    <div class="pagination-indicator">
+                                </Col>
+                              </Row>
+                              <Row>
+                                <Col lg={12} md={12} >
+                                  <div className="invoice-order-pagination">
+                                    <div className="pagination-indicator">
                                       <h6>
-                                        page <span class="initail">1</span> to{" "}
-                                        <span class="total">10</span>
+                                        page <span className="initail">1</span> to{" "}
+                                        <span className="total">10</span>
                                       </h6>
                                     </div>
-                                    <div class="pagination-nav">
-                                      <a href="javascript:;" class="pg-prev">
+                                    <div className="pagination-nav">
+                                      <Link to="#" className="pg-prev">
                                         Previous
-                                      </a>
-                                      <a href="javascript:;" class="pg-next">
+                                      </Link>
+                                      <Link to="#" className="pg-next">
                                         Next
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
-                                </div>
-                              </div>
+                                </Col>
+                              </Row>
                             </div>
 
                             <div
-                              class="tab-pane fade show"
+                              className="tab-pane fade show"
                               id="nav-recently-delete"
                               role="tabpanel"
                               aria-labelledby="nav-recently-delete"
                             >
-                              <div class="support-issue-head">
+                              <div className="support-issue-head">
                                 <h4>Revenue</h4>
-                                <div class="viewbyd">
-                                  <a href="javascript:;" class="view-support">
+                                <div className="viewbyd">
+                                  <Link to="#" className="view-support">
                                     View
-                                  </a>
-                                  <div class="issue-btns">
-                                    <a href="javascript:;" class="active">
+                                  </Link>
+                                  <div className="issue-btns">
+                                    <Link to="#" className="active">
                                       Weekly
-                                    </a>
-                                    <a href="javascript:;">Monthly</a>
-                                    <a href="javascript:;">Yearly</a>
-                                    <a href="javascript:;">Custom</a>
+                                    </Link>
+                                    <Link to="#">Monthly</Link>
+                                    <Link to="#">Yearly</Link>
+                                    <Link to="#">Custom</Link>
                                   </div>
                                 </div>
-                                <div class="time-frame">
+                                <div className="time-frame">
                                   <span>
                                     Timeframe
                                     <input
@@ -1062,23 +1063,23 @@ const handleOpenremove=()=>setShowremove(true);
                                     />
                                   </span>
                                 </div>
-                                <div class="revenue-main-btns">
-                                  <div class="file-dow-btn">
-                                    <a href="javascript:;">
+                                <div className="revenue-main-btns">
+                                  <div className="file-dow-btn">
+                                    <Link to="#">
                                       <img
                                         src="./admin_assets/images/File-download.png"
                                         alt="file-download"
                                       />
-                                    </a>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>
-                              <div class="row frm-inner-row invoice-tab-frm revenue-tab-frm">
+                              <Row className=" frm-inner-row invoice-tab-frm revenue-tab-frm">
                                 <form action="" method="">
-                                  <div class="row">
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                  <Row>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Date & Time
                                         </label>
                                         <br />
@@ -1087,10 +1088,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           name="form-control"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Transaction ID
                                         </label>
                                         <br />
@@ -1100,24 +1101,24 @@ const handleOpenremove=()=>setShowremove(true);
                                           placeholder="placeholder"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Transaction Description
                                         </label>
                                         <input
                                           type="text"
                                           name="form-control"
                                           id=""
-                                          class="mg0"
+                                          className="mg0"
                                           placeholder="placeholder"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">From</label>
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">From</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -1129,10 +1130,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="audi">Omar</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">To</label>
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">To</label>
                                         <select name="payment" id="payment-fld">
                                           <option value="volvo">
                                             placeholder
@@ -1144,17 +1145,17 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="audi">Omar</option>
                                         </select>
                                       </div>
-                                    </div>
-                                  </div>
+                                    </Col>
+                                  </Row>
                                 </form>
-                              </div>
+                              </Row>
 
-                              <div class="row frm-inner-row invoice-tab-frm revenue-tab-frm2">
+                              <Row className="frm-inner-row invoice-tab-frm revenue-tab-frm2">
                                 <form action="" method="">
-                                  <div class="row">
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                  <Row>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Amount
                                         </label>
                                         <br />
@@ -1164,10 +1165,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           placeholder="placeholder"
                                         />
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Categories
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1182,10 +1183,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="opel">Expense</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Income/Expense
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1197,10 +1198,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="opel">Expense</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           Asset/Liability
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1211,10 +1212,10 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="audi">Asset</option>
                                         </select>
                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2">
-                                      <div class="form-group">
-                                        <label for="control-label">
+                                    </Col>
+                                    <Col lg={2} md={2}>
+                                      <div className="form-group">
+                                        <label htmlFor="control-label">
                                           PDF Uploaded?
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -1222,18 +1223,18 @@ const handleOpenremove=()=>setShowremove(true);
                                           <option value="volvo">No</option>
                                         </select>
                                       </div>
-                                    </div>
-                                  </div>
+                                    </Col>
+                                  </Row>
                                 </form>
-                              </div>
-                              <div class="row">
-                                <div class="col-lg-12 col-md-12">
+                              </Row>
+                              <Row>
+                                <Col lg={12} md={12} >
                                   <div style={{ overflowX: "auto" }}>
-                                    <table class="maintenance-table">
+                                    <table className="maintenance-table">
                                       <thead>
                                         <tr>
-                                          <th class="first-th">Date & Time</th>
-                                          <th class="first-th">
+                                          <th className="first-th">Date & Time</th>
+                                          <th className="first-th">
                                             Transaction ID
                                           </th>
                                           <th>Transaction Description</th>
@@ -1251,14 +1252,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -1275,7 +1276,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1287,13 +1288,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1309,74 +1310,74 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
-                                          <td class="pdfs-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-pdf-btn"
+                                          <td className="pdfs-td">
+                                            <Link
+                                              to="#"
+                                              className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
-                                            <div class="hidden-content pdf-content">
-                                              <div class="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-view-btn"
+                                            </Link>
+                                            <div className="hidden-content pdf-content">
+                                              <div className="pdfs-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-view-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Eye2.png"
-                                                    class="Eye2-img"
+                                                    className="Eye2-img"
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-change-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-change-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Edit 1.png"
-                                                    class="Edit 1-img"
+                                                    className="Edit 1-img"
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-upload-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-upload-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/file_upload.png"
-                                                    class="file_upload"
+                                                    className="file_upload"
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1399,7 +1400,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1414,7 +1415,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1434,14 +1435,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£4,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -1458,7 +1459,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1470,13 +1471,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1492,74 +1493,74 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
-                                          <td class="pdfs-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-pdf-btn"
+                                          <td className="pdfs-td">
+                                            <Link
+                                              to="#"
+                                              className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
-                                            <div class="hidden-content pdf-content">
-                                              <div class="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-view-btn"
+                                            </Link>
+                                            <div className="hidden-content pdf-content">
+                                              <div className="pdfs-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-view-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Eye2.png"
-                                                    class="Eye2-img"
+                                                    className="Eye2-img"
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-change-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-change-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Edit 1.png"
-                                                    class="Edit 1-img"
+                                                    className="Edit 1-img"
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-upload-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-upload-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/file_upload.png"
-                                                    class="file_upload"
+                                                    className="file_upload"
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1582,7 +1583,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1597,7 +1598,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1617,14 +1618,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="liability-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="liability-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -1641,7 +1642,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Liability
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1653,13 +1654,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1675,74 +1676,74 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
-                                          <td class="pdfs-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-pdf-btn"
+                                          <td className="pdfs-td">
+                                            <Link
+                                              to="#"
+                                              className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
-                                            <div class="hidden-content pdf-content">
-                                              <div class="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-view-btn"
+                                            </Link>
+                                            <div className="hidden-content pdf-content">
+                                              <div className="pdfs-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-view-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Eye2.png"
-                                                    class="Eye2-img"
+                                                    className="Eye2-img"
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-change-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-change-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Edit 1.png"
-                                                    class="Edit 1-img"
+                                                    className="Edit 1-img"
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-upload-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-upload-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/file_upload.png"
-                                                    class="file_upload"
+                                                    className="file_upload"
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1765,7 +1766,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1780,7 +1781,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1800,14 +1801,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="cat-asset-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="cat-asset-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -1824,7 +1825,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Asset
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -1836,13 +1837,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -1858,74 +1859,74 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
-                                          <td class="pdfs-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-pdf-btn"
+                                          <td className="pdfs-td">
+                                            <Link
+                                              to="#"
+                                              className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
-                                            <div class="hidden-content pdf-content">
-                                              <div class="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-view-btn"
+                                            </Link>
+                                            <div className="hidden-content pdf-content">
+                                              <div className="pdfs-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-view-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Eye2.png"
-                                                    class="Eye2-img"
+                                                    className="Eye2-img"
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-change-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-change-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Edit 1.png"
-                                                    class="Edit 1-img"
+                                                    className="Edit 1-img"
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-upload-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-upload-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/file_upload.png"
-                                                    class="file_upload"
+                                                    className="file_upload"
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -1948,7 +1949,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -1963,7 +1964,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -1983,14 +1984,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="expense-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="expense-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -2007,7 +2008,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Expense
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -2019,13 +2020,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -2041,74 +2042,74 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
-                                          <td class="pdfs-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-pdf-btn"
+                                          <td className="pdfs-td">
+                                            <Link
+                                              to="#"
+                                              className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
-                                            <div class="hidden-content pdf-content">
-                                              <div class="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-view-btn"
+                                            </Link>
+                                            <div className="hidden-content pdf-content">
+                                              <div className="pdfs-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-view-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Eye2.png"
-                                                    class="Eye2-img"
+                                                    className="Eye2-img"
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-change-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-change-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Edit 1.png"
-                                                    class="Edit 1-img"
+                                                    className="Edit 1-img"
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-upload-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-upload-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/file_upload.png"
-                                                    class="file_upload"
+                                                    className="file_upload"
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -2131,7 +2132,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -2146,7 +2147,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -2166,14 +2167,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -2190,7 +2191,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -2202,13 +2203,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -2224,74 +2225,74 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
-                                          <td class="pdfs-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-pdf-btn"
+                                          <td className="pdfs-td">
+                                            <Link
+                                              to="#"
+                                              className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files.png"
                                                 alt="filesg"
                                               />
-                                            </a>
-                                            <div class="hidden-content pdf-content">
-                                              <div class="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-view-btn"
+                                            </Link>
+                                            <div className="hidden-content pdf-content">
+                                              <div className="pdfs-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-view-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Eye2.png"
-                                                    class="Eye2-img"
+                                                    className="Eye2-img"
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-change-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-change-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Edit 1.png"
-                                                    class="Edit 1-img"
+                                                    className="Edit 1-img"
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-upload-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-upload-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/file_upload.png"
-                                                    class="file_upload"
+                                                    className="file_upload"
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -2314,7 +2315,7 @@ const handleOpenremove=()=>setShowremove(true);
 
                                               <Dropdown.Menu className="hidden-content dots-content ">
                                                 <Dropdown.Item
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-brng-btn"
                                                 >
                                                   <img
@@ -2329,7 +2330,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 </Dropdown.Item>
                                                 <Dropdown.Item
                                                 onClick={handleOpenremove}
-                                                  href="#"
+                                                  to="#"
                                                   className="dot-delete-btn"
                                                 >
                                                   <img
@@ -2349,14 +2350,14 @@ const handleOpenremove=()=>setShowremove(true);
                                         <tr>
                                           <td>27 June, 2024 10:00 AM</td>
                                           <td>TR124301</td>
-                                          <td class="first-td">Invoices A</td>
+                                          <td className="first-td">Invoices A</td>
                                           <td>Omar</td>
                                           <td>Rohan</td>
                                           <td>£5,00</td>
-                                          <td class="status-tagbtns">
-                                            <a
-                                              href="javascript:;"
-                                              class="incoming-btn"
+                                          <td className="status-tagbtns">
+                                            <Link
+                                              to="#"
+                                              className="incoming-btn"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -2373,7 +2374,7 @@ const handleOpenremove=()=>setShowremove(true);
                                                 ></circle>
                                               </svg>
                                               Incoming
-                                            </a>
+                                            </Link>
                                           </td>
                                           <td>
                                             <Dropdown>
@@ -2385,13 +2386,13 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
@@ -2407,115 +2408,115 @@ const handleOpenremove=()=>setShowremove(true);
                                               </Dropdown.Toggle>
 
                                               <Dropdown.Menu >
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Another action
                                                 </Dropdown.Item>
-                                                <Dropdown.Item href="#">
+                                                <Dropdown.Item to="#">
                                                   Something else here
                                                 </Dropdown.Item>
                                               </Dropdown.Menu>
                                             </Dropdown>
                                           </td>
-                                          <td class="pdfs-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-pdf-btn"
+                                          <td className="pdfs-td">
+                                            <Link
+                                              to="#"
+                                              className="view-pdf-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/files2.png"
                                                 alt="filesr"
                                               />
-                                            </a>
-                                            <div class="hidden-content pdf-content">
-                                              <div class="pdfs-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-view-btn"
+                                            </Link>
+                                            <div className="hidden-content pdf-content">
+                                              <div className="pdfs-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-view-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Eye2.png"
-                                                    class="Eye2-img"
+                                                    className="Eye2-img"
                                                     alt="Eye2-img"
                                                   />
                                                   View
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-change-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-change-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/Edit 1.png"
-                                                    class="Edit 1-img"
+                                                    className="Edit 1-img"
                                                     alt="Edit 1-img"
                                                   />
                                                   Change
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-upload-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-upload-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/file_upload.png"
-                                                    class="file_upload"
+                                                    className="file_upload"
                                                     alt="file_upload-img"
                                                   />
                                                   Upload PDF
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="pdf-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="pdf-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
-                                          <td class="dot-td">
-                                            <a
-                                              href="javascript:;"
-                                              class="view-dots-btn"
+                                          <td className="dot-td">
+                                            <Link
+                                              to="#"
+                                              className="view-dots-btn"
                                             >
                                               <img
                                                 src="./admin_assets/images/pepicons-pop_dots-y.png"
                                                 alt="dots"
                                               />
-                                            </a>
+                                            </Link>
                                             <div
-                                              class={`hidden-content dots-content ${
+                                              className={`hidden-content dots-content ${
                                                 isVisible ? "visible" : ""
                                               }`}
                                             >
-                                              <div class="dot-pp-btns">
-                                                <a
-                                                  href="javascript:;"
-                                                  class="dot-brng-btn"
+                                              <div className="dot-pp-btns">
+                                                <Link
+                                                  to="#"
+                                                  className="dot-brng-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/check.png"
-                                                    class="check-img"
+                                                    className="check-img"
                                                     alt="check-img"
                                                   />
                                                   Bring Back
-                                                </a>
-                                                <a
-                                                  href="javascript:;"
-                                                  class="dot-delete-btn"
+                                                </Link>
+                                                <Link
+                                                  to="#"
+                                                  className="dot-delete-btn"
                                                 >
                                                   <img
                                                     src="./admin_assets/images/trash-can.png"
-                                                    class="trash-can-img"
+                                                    className="trash-can-img"
                                                     alt="trash-can-img"
                                                   />
                                                   Delete
-                                                </a>
+                                                </Link>
                                               </div>
                                             </div>
                                           </td>
@@ -2523,39 +2524,39 @@ const handleOpenremove=()=>setShowremove(true);
                                       </tbody>
                                     </table>
                                   </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                  <div class="invoice-order-pagination">
-                                    <div class="pagination-indicator">
+                                </Col>
+                              </Row>
+                              <Row>
+                                <Col lg={12} md={12} >
+                                  <div className="invoice-order-pagination">
+                                    <div className="pagination-indicator">
                                       <h6>
-                                        page <span class="initail">1</span> to{" "}
-                                        <span class="total">10</span>
+                                        page <span className="initail">1</span> to{" "}
+                                        <span className="total">10</span>
                                       </h6>
                                     </div>
-                                    <div class="pagination-nav">
-                                      <a href="javascript:;" class="pg-prev">
+                                    <div className="pagination-nav">
+                                      <Link to="#" className="pg-prev">
                                         Previous
-                                      </a>
-                                      <a href="javascript:;" class="pg-next">
+                                      </Link>
+                                      <Link to="#" className="pg-next">
                                         Next
-                                      </a>
+                                      </Link>
                                     </div>
                                   </div>
-                                </div>
-                              </div>
+                                </Col>
+                              </Row>
                             </div>
                           </div>
-                        </div>
+                        </Row>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
         {/* <!----------------------------- Admin Financials Invoice Revenue ADD Popup  ------------------------------------> */}
 
         <Modal
@@ -2564,19 +2565,19 @@ const handleOpenremove=()=>setShowremove(true);
           className="password_modal"
         >
           <ModalBody>
-            <div class="revenue-PP-one">
-              <div class="pp-main-head">
+            <div className="revenue-PP-one">
+              <div className="pp-main-head">
                 <h2>Add Data</h2>
-                <button class="close-btn" onClick={handleCloseadd}>
+                <button className="close-btn" onClick={handleCloseadd}>
                   ×
                 </button>
               </div>
-              <div class="row frm-inner-row Popup-inner-row">
+              <Row className=" frm-inner-row Popup-inner-row">
                 <form action="" method="">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Date & Time</label>
+                  <Row>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Date & Time</label>
                         <br />
                         <input
                           type="date"
@@ -2584,10 +2585,10 @@ const handleOpenremove=()=>setShowremove(true);
                           placeholder="Omar"
                         />
                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">
+                    </Col>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">
                           Transaction Description
                         </label>
                         <br />
@@ -2597,12 +2598,12 @@ const handleOpenremove=()=>setShowremove(true);
                           placeholder="123123"
                         />
                       </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-group">
-                        <label for="control-label">From</label>
+                    </Col>
+                  </Row>
+                  <Row >
+                    <Col lg={12} md={12} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">From</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Rohan</option>
                           <option value="saab">Rohan Shibu</option>
@@ -2610,23 +2611,23 @@ const handleOpenremove=()=>setShowremove(true);
                           <option value="audi">Omar</option>
                         </select>
                       </div>
-                    </div>
-                  </div>
-                  <div class="cstmr-bx">
-                    <div class="cstmr-srchbox">
-                      <div class="drvr_deta active">
-                        <div class="drvrmain">
+                    </Col>
+                  </Row>
+                  <div className="cstmr-bx">
+                    <div className="cstmr-srchbox">
+                      <div className="drvr_deta active">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Rohan</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -2640,8 +2641,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2665,22 +2666,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Rohan Shibu</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -2694,8 +2695,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2719,22 +2720,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Rohan S</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -2748,8 +2749,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2773,22 +2774,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Omar</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -2802,8 +2803,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2827,22 +2828,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Omar A</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -2856,8 +2857,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2881,15 +2882,15 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-group">
-                        <label for="control-label">To</label>
+                  <Row>
+                    <Col lg={12} md={12} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">To</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Rohan</option>
                           <option value="saab">Rohan Shibu</option>
@@ -2897,23 +2898,23 @@ const handleOpenremove=()=>setShowremove(true);
                           <option value="audi">Omar</option>
                         </select>
                       </div>
-                    </div>
-                  </div>
-                  <div class="cstmr-bx">
-                    <div class="cstmr-srchbox">
-                      <div class="drvr_deta active">
-                        <div class="drvrmain">
+                    </Col>
+                  </Row>
+                  <div className="cstmr-bx">
+                    <div className="cstmr-srchbox">
+                      <div className="drvr_deta active">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Rohan</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -2927,8 +2928,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -2952,22 +2953,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Rohan Shibu</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -2981,8 +2982,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3006,22 +3007,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Rohan S</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -3035,8 +3036,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3060,22 +3061,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Omar</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -3089,8 +3090,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3114,22 +3115,22 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
-                      <div class="drvr_deta">
-                        <div class="drvrmain">
+                      <div className="drvr_deta">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Omar A</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -3143,8 +3144,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3168,15 +3169,15 @@ const handleOpenremove=()=>setShowremove(true);
                               />
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Amount</label>
+                  <Row>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Amount</label>
                         <br />
                         <input
                           type="number"
@@ -3184,10 +3185,10 @@ const handleOpenremove=()=>setShowremove(true);
                           placeholder="2024 Mersedes E220"
                         />
                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Categories</label>
+                    </Col>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Categories</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">10 December, 2024</option>
                           <option value="saab">10 December, 2024</option>
@@ -3195,12 +3196,12 @@ const handleOpenremove=()=>setShowremove(true);
                           <option value="audi">10 December, 2024</option>
                         </select>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Income/Expense</label>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Income/Expense</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Expense</option>
                           <option value="saab">Income</option>
@@ -3208,10 +3209,10 @@ const handleOpenremove=()=>setShowremove(true);
                           <option value="audi">Income</option>
                         </select>
                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Asset/Liability</label>
+                    </Col>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Asset/Liability</label>
                         <select name="Council" id="Rented-fld">
                           <option value="volvo">Asset</option>
                           <option value="saab">Asset</option>
@@ -3219,35 +3220,35 @@ const handleOpenremove=()=>setShowremove(true);
                           <option value="audi">Asset</option>
                         </select>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row rental-vehicle-docs-wrap">
+                    </Col>
+                  </Row>
+                  <Row className="rental-vehicle-docs-wrap">
                     <h5>Document Upload</h5>
-                    <div class="pdf_upl-bx">
+                    <div className="pdf_upl-bx">
                       <input type="file" name="" />
                       <img
                         src="./admin_assets/images/pdf-upload.png"
                         alt="pdf-upload"
                       />
-                      <div class="filedetails">
+                      <div className="filedetails">
                         <span>Click to upload</span>
                         <span>or drag and drop Maximum file size 50 MB.</span>
                       </div>
                     </div>
-                  </div>
+                  </Row>
                 </form>
-                <div class="revenue-add-action-btns">
-                  <a href="javascript:;" class="delete-btn">
+                <div className="revenue-add-action-btns">
+                  <Link to="#" onClick={handleOpenremove} className="delete-btn">
                     Delete
-                  </a>
-                  <a href="javascript:;" class="cancel-btn">
+                  </Link>
+                  <Link to="#" onClick={handleCloseadd} className="cancel-btn">
                     Cancel
-                  </a>
-                  <a href="javascript:;" class="submit-btn">
+                  </Link>
+                  <Link to="#" onClick={handleCloseadd} className="submit-btn">
                     Submit
-                  </a>
+                  </Link>
                 </div>
-              </div>
+              </Row>
             </div>
           </ModalBody>
         </Modal>
@@ -3260,19 +3261,19 @@ const handleOpenremove=()=>setShowremove(true);
           className="password_modal"
         >
           <ModalBody>
-            <div class="revenue-PP-two">
-              <div class="pp-main-head">
+            <div className="revenue-PP-two">
+              <div className="pp-main-head">
                 <h2>View Data</h2>
-                <button class="close-btn" onClick={handleCloseview}>
+                <button className="close-btn" onClick={handleCloseview}>
                   ×
                 </button>
               </div>
-              <div class="row frm-inner-row Popup-inner-row">
+              <Row className="frm-inner-row Popup-inner-row">
                 <form action="" method="">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Date & Time</label>
+                  <Row>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Date & Time</label>
                         <br />
                         <input
                           type="text"
@@ -3280,10 +3281,10 @@ const handleOpenremove=()=>setShowremove(true);
                           placeholder="27 June, 2024 10:00 AM"
                         />
                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">
+                    </Col>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">
                           Transaction Description
                         </label>
                         <br />
@@ -3293,25 +3294,25 @@ const handleOpenremove=()=>setShowremove(true);
                           placeholder="123123"
                         />
                       </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-group">
-                        <label for="control-label">From</label>
-                        <div class="drvr_deta active">
-                          <div class="drvrmain">
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={12} md={12} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">From</label>
+                        <div className="drvr_deta active">
+                          <div className="drvrmain">
                             <img
                               src="./admin_assets/images/new-customers-list.png"
-                              class="new-customers-img"
+                              className="new-customers-img"
                               alt="new-customers-img"
                             />
-                            <div class="drvrnam">
+                            <div className="drvrnam">
                               <h6>Rohan Shibu</h6>
                               <span>Customer ID: D0012</span>
                             </div>
                           </div>
-                          <div class="drvrcar">
+                          <div className="drvrcar">
                             <p>Mercedes-Benz E Class</p>
                             <span>example@gmail.com</span>
                             <svg
@@ -3330,8 +3331,8 @@ const handleOpenremove=()=>setShowremove(true);
                             </svg>
                             <span>+44 334 2345</span>
                           </div>
-                          <div class="cstmr-view-deta-eye">
-                            <a href="javascript:;" class="uploaded-btn">
+                          <div className="cstmr-view-deta-eye">
+                            <Link to="#" className="uploaded-btn">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -3355,26 +3356,26 @@ const handleOpenremove=()=>setShowremove(true);
                                 ></path>
                               </svg>
                               View
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="control-label">To</label>
-                      <div class="drvr_deta active">
-                        <div class="drvrmain">
+                    </Col>
+                    <div className="form-group">
+                      <label htmlFor="control-label">To</label>
+                      <div className="drvr_deta active">
+                        <div className="drvrmain">
                           <img
                             src="./admin_assets/images/new-customers-list.png"
-                            class="new-customers-img"
+                            className="new-customers-img"
                             alt="new-customers-img"
                           />
-                          <div class="drvrnam">
+                          <div className="drvrnam">
                             <h6>Rohan Shibu</h6>
                             <span>Customer ID: D0012</span>
                           </div>
                         </div>
-                        <div class="drvrcar">
+                        <div className="drvrcar">
                           <p>Mercedes-Benz E Class</p>
                           <span>example@gmail.com</span>
                           <svg
@@ -3388,8 +3389,8 @@ const handleOpenremove=()=>setShowremove(true);
                           </svg>
                           <span>+44 334 2345</span>
                         </div>
-                        <div class="cstmr-view-deta-eye">
-                          <a href="javascript:;" class="uploaded-btn">
+                        <div className="cstmr-view-deta-eye">
+                          <Link to="#" className="uploaded-btn">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -3413,15 +3414,15 @@ const handleOpenremove=()=>setShowremove(true);
                               ></path>
                             </svg>
                             View
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Amount</label>
+                  </Row>
+                  <Row>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Amount</label>
                         <br />
                         <input
                           type="number"
@@ -3429,67 +3430,67 @@ const handleOpenremove=()=>setShowremove(true);
                           placeholder="2024 Mersedes E220"
                         />
                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Categories</label>
+                    </Col>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Categories</label>
                         <input
                           type="text"
                           name="form-control"
                           placeholder="10 December, 2024"
                         />
                       </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Income/Expense</label>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Income/Expense</label>
                         <input
                           type="text"
                           name="form-control"
                           placeholder="Expense"
                         />
                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="form-group">
-                        <label for="control-label">Asset/Liability</label>
+                    </Col>
+                    <Col lg={6} md={6} >
+                      <div className="form-group">
+                        <label htmlFor="control-label">Asset/Liability</label>
                         <input
                           type="text"
                           name="form-control"
                           placeholder="Asset"
                         />
                       </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="chngs-pdf-ppr">
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={6}>
+                      <div className="chngs-pdf-ppr">
                         <img
                           src="./admin_assets/images/paper-pdf.png"
-                          class="paper-pdf-img"
+                          className="paper-pdf-img"
                           alt="paper-pdf-img"
                         />
-                        <div class="pdfdetail">
+                        <div className="pdfdetail">
                           <h6>Paper Copy</h6>
                           <p>3.6 MB</p>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="pdf-chng-btns">
-                        <a href="javascript:;" class="view-btn">
+                    </Col>
+                    <Col md={6}>
+                      <div className="pdf-chng-btns">
+                        <Link to="#" className="view-btn">
                           View
-                        </a>
-                        <a href="javascript:;" class="download-btn">
+                        </Link>
+                        <Link to="#" className="download-btn">
                           Download
-                        </a>
+                        </Link>
                       </div>
-                    </div>
-                  </div>
+                    </Col>
+                  </Row>
                 </form>
-              </div>
+              </Row>
             </div>
           </ModalBody>
         </Modal>
@@ -3498,14 +3499,14 @@ const handleOpenremove=()=>setShowremove(true);
 
 <Modal className="password_modal" show={showremove} onHide={handleCloseremove}>
     <ModalBody>
-    <div class="remove-alert-pop-up">
-       <img src="./admin_assets/images/Icon.png" class="Icon-img" alt="Icon-img"/>
-       <div class="alrt-deta">
+    <div className="remove-alert-pop-up">
+       <img src="./admin_assets/images/Icon.png" className="Icon-img" alt="Icon-img"/>
+       <div className="alrt-deta">
            <h6>Are sure to want to Remove?</h6>
            <p>Lorem ipsum dolor sit amet consectetur. Gravida sed sit nisl metus.</p>
-           <div class="alrt-btns">
-               <a href="javascript:;" class="cancel-btn" onClick={handleCloseremove}>Cancel</a>
-               <a href="javascript:;" class="yes-btn" onClick={handleCloseremove}>Yes</a>
+           <div className="alrt-btns">
+               <Link to="#" className="cancel-btn" onClick={handleCloseremove}>Cancel</Link>
+               <Link to="#" className="yes-btn" onClick={handleCloseremove}>Yes</Link>
            </div>
        </div>
     </div>

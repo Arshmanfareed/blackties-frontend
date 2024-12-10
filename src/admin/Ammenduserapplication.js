@@ -2,86 +2,63 @@ import React from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
 import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 
 function Ammenduserapplication() {
   return (
     <>
-      <section className
-      ="user-dashboard">
-        <div className
-        ="container-fluid">
-          <div className
-          ="row g-0">
-            <div className
-            ="col-lg-3 col-md-3 sidebar-col">
+      <section className="user-dashboard">
+        <Container fluid>
+          <Row className=" g-0">
+            <Col lg={3} md={3} className=" sidebar-col">
               <Sidebar />
-            </div>
-            <div className
-            ="col-lg-9 col-md-9 panel-col">
-              <div className
-              ="dashboard-panel vehicle-documents-panel">
-                <div className
-                ="row">
-                  <div className
-                  ="col-lg-12 col-md-12">
-                    <div className
-                    ="dashboard-panel-topbar">
+            </Col>
+            <Col lg={9} md={9} className=" panel-col">
+              <div className="dashboard-panel vehicle-documents-panel">
+                <Row className="">
+                  <Col lg={12} md={12}>
+                    <div className="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
-                  </div>
-                </div>
-                <div className
-                ="row">
-                  <div className
-                  ="col-lg-12 col-md-12">
-                    <div className
-                    ="vehicle-documents-sec db-default-sec pro-doc admin-user-pro-one ">
-                      <div className
-                      ="vehicle-documents-card db-default-wrapper">
-                        <div className
-                        ="view-app-btn">
-                          <div className
-                          ="back-hme">
+                  </Col>
+                </Row>
+                <Row>
+                  <Col lg={12} md={12}>
+                    <div className="vehicle-documents-sec db-default-sec pro-doc admin-user-pro-one ">
+                      <div className="vehicle-documents-card db-default-wrapper">
+                        <div className="view-app-btn">
+                          <div className="back-hme">
                             <h5>
-                              <i className
-                              ="fas fa-chevron-left"></i>
+                              <i className="fas fa-chevron-left"></i>
                               <Link to="#">Application</Link>
                             </h5>
                           </div>
-                          <div className
-                          ="profile-btn-wrap user-pro-one-btn view-app-buttons">
-                            <Link to="#" className
-                            ="Amend-cancel-btn">
+                          <div className="profile-btn-wrap user-pro-one-btn view-app-buttons">
+                            <Link to="#" className="Amend-cancel-btn">
                               Cancel
                             </Link>
-                            <Link to="#" className
-                            ="Save-cancel-btn">
+                            <Link to="#" className="Save-cancel-btn">
                               Save
                             </Link>
                           </div>
                         </div>
-                        <div className
-                        ="row">
-                          <div className
-                          ="col-lg-12 col-md-12">
-                            <div className
-                            ="admin-pro-main">
-                              <div className
-                              ="tabs-container ">
+                        <Row>
+                          <Col lg={12} md={12}>
+                            <div className="admin-pro-main">
+                              <div className="tabs-container ">
                                 {/* <!-- Tabs Header --> */}
-                                <div className
-                                ="vehicle-tabs">
+                                <div className="vehicle-tabs">
                                   <ul
-                                    className
-                                    ="nav nav-tabs"
+                                    className="nav nav-tabs"
                                     id="myTab"
                                     role="tablist"
                                   >
-                                    <li className
-                                    ="nav-item" role="presentation">
+                                    <li
+                                      className="nav-item"
+                                      role="presentation"
+                                    >
                                       <Link
-                                        className
-                                        ="nav-link "
+                                        className="nav-link "
                                         id="all-users-pro-tab"
                                         data-bs-toggle="tab"
                                         to="#all-users-pro"
@@ -92,11 +69,12 @@ function Ammenduserapplication() {
                                         User Profile
                                       </Link>
                                     </li>
-                                    <li className
-                                    ="nav-item" role="presentation">
+                                    <li
+                                      className="nav-item"
+                                      role="presentation"
+                                    >
                                       <Link
-                                        className
-                                        ="nav-link active"
+                                        className="nav-link active"
                                         id="user-pro-application-tab"
                                         data-bs-toggle="tab"
                                         to="#user-pro-application"
@@ -109,29 +87,23 @@ function Ammenduserapplication() {
                                     </li>
                                   </ul>
                                 </div>
-                                <div className
-                                ="tab-content" id="myTabContent">
+                                <div className="tab-content" id="myTabContent">
                                   <div
-                                    className
-                                    ="tab-pane fade"
+                                    className="tab-pane fade"
                                     id="all-users-pro"
                                     role="tabpanel"
                                     aria-labelledby="all-users-pro-tab"
                                   >
-                                    <div className
-                                    ="profile-tb-main">
-                                      <div className
-                                      ="vehicle-document-tabs-v1 d-flex align-items-start">
+                                    <div className="profile-tb-main">
+                                      <div className="vehicle-document-tabs-v1 d-flex align-items-start">
                                         <div
-                                          className
-                                          ="nav flex-column nav-pills me-3 Maintenance-bx admin-user-pro-bx"
+                                          className="nav flex-column nav-pills me-3 Maintenance-bx admin-user-pro-bx"
                                           id="v-pills-tab"
                                           role="tablist"
                                           aria-orientation="vertical"
                                         >
                                           <button
-                                            className
-                                            ="nav-link active"
+                                            className="nav-link active"
                                             id="v-pills-Profile-tab"
                                             data-bs-toggle="pill"
                                             data-bs-target="#v-pills-Profile"
@@ -143,8 +115,7 @@ function Ammenduserapplication() {
                                             Profile
                                           </button>
                                           <button
-                                            className
-                                            ="nav-link"
+                                            className="nav-link"
                                             id="v-pills-vehicle-history-tab"
                                             data-bs-toggle="pill"
                                             data-bs-target="#v-pills-vehicle-history"
@@ -156,8 +127,7 @@ function Ammenduserapplication() {
                                             vehicle-history
                                           </button>
                                           <button
-                                            className
-                                            ="nav-link"
+                                            className="nav-link"
                                             id="v-pills-Payment-tab"
                                             data-bs-toggle="pill"
                                             data-bs-target="#v-pills-Payment"
@@ -169,8 +139,7 @@ function Ammenduserapplication() {
                                             Payment & Invoice
                                           </button>
                                           <button
-                                            className
-                                            ="nav-link"
+                                            className="nav-link"
                                             id="v-pills-PCN-tab"
                                             data-bs-toggle="pill"
                                             data-bs-target="#v-pills-PCN"
@@ -183,65 +152,49 @@ function Ammenduserapplication() {
                                           </button>
                                         </div>
                                         <div
-                                          className
-                                          ="tab-content"
+                                          className="tab-content"
                                           id="v-pills-tabContent"
                                         >
                                           <div
-                                            className
-                                            ="tab-pane fade show active"
+                                            className="tab-pane fade show active"
                                             id="v-pills-Profile"
                                             role="tabpanel"
                                             aria-labelledby="v-pills-Profile-tab"
                                           >
-                                            <div className
-                                            ="profile-wrapper">
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="col-lg-12 col-md-12">
-                                                  <div className
-                                                  ="profile-top-bar">
+                                            <div className="profile-wrapper">
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="profile-top-bar">
                                                     <h5>Profile</h5>
-                                                    <div className
-                                                    ="profile-btn-wrap user-pro-one-btn">
+                                                    <div className="profile-btn-wrap user-pro-one-btn">
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="profile-cancel-btn"
+                                                        className="profile-cancel-btn"
                                                       >
                                                         Amend
                                                       </Link>
                                                     </div>
                                                   </div>
-                                                </div>
-                                              </div>
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="col-lg-12 col-md-12">
-                                                  <div className
-                                                  ="profile-meta-wrapper user-pro-one-wrapper">
-                                                    <div className
-                                                    ="profile-meta">
+                                                </Col>
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="profile-meta-wrapper user-pro-one-wrapper">
+                                                    <div className="profile-meta">
                                                       <img
                                                         src="./admin_assets/images/dashboard/Frame 81.png"
                                                         alt="prfile"
                                                       />
                                                       <div>
-                                                        <h4 className
-                                                        ="profile-name">
+                                                        <h4 className="profile-name">
                                                           Omar Benyoucef
                                                         </h4>
-                                                        <h6 className
-                                                        ="profile-date">
+                                                        <h6 className="profile-date">
                                                           Member Since: July 19,
                                                           2024
                                                         </h6>
-                                                        <div className
-                                                        ="name-bx ">
-                                                          <h6 className
-                                                          ="profile-active">
+                                                        <div className="name-bx ">
+                                                          <h6 className="profile-active">
                                                             Renting the
                                                           </h6>
                                                           <span>
@@ -254,34 +207,26 @@ function Ammenduserapplication() {
                                                     </div>
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="Approved-btn"
+                                                      className="Approved-btn"
                                                     >
                                                       Approved
                                                     </Link>
                                                   </div>
-                                                </div>
-                                              </div>
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="col-lg-12 col-md-12">
-                                                  <div className
-                                                  ="profile-info-form-wrap user-pro-one-form">
-                                                    <div className
-                                                    ="head-wrap">
+                                                </Col>
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="profile-info-form-wrap user-pro-one-form">
+                                                    <div className="head-wrap">
                                                       <h3>
                                                         Personal Information
                                                       </h3>
                                                     </div>
                                                     <form action="" method="">
-                                                      <div className
-                                                      ="row">
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="form-group">
-                                                            <label for="control-label">
+                                                      <Row>
+                                                        <Col lg={6} md={6}>
+                                                          <div className="form-group">
+                                                            <label htmlFor="control-label">
                                                               First Name
                                                             </label>
                                                             <br />
@@ -290,12 +235,10 @@ function Ammenduserapplication() {
                                                               name="form-control"
                                                             />
                                                           </div>
-                                                        </div>
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="form-group">
-                                                            <label for="control-label">
+                                                        </Col>
+                                                        <Col lg={6} md={6}>
+                                                          <div className="form-group">
+                                                            <label htmlFor="control-label">
                                                               Last Name
                                                             </label>
                                                             <br />
@@ -304,12 +247,10 @@ function Ammenduserapplication() {
                                                               name="form-control"
                                                             />
                                                           </div>
-                                                        </div>
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="form-group">
-                                                            <label for="control-label">
+                                                        </Col>
+                                                        <Col lg={6} md={6}>
+                                                          <div className="form-group">
+                                                            <label htmlFor="control-label">
                                                               Email Address
                                                             </label>
                                                             <br />
@@ -317,25 +258,21 @@ function Ammenduserapplication() {
                                                               type="email"
                                                               name="form-control"
                                                               id=""
-                                                              className
-                                                              ="mg0"
+                                                              className="mg0"
                                                             />
                                                             <h5>
                                                               <Link
                                                                 to="#"
-                                                                className
-                                                                ="Verified-btn"
+                                                                className="Verified-btn"
                                                               >
                                                                 Verified
                                                               </Link>
                                                             </h5>
                                                           </div>
-                                                        </div>
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="form-group">
-                                                            <label for="control-label">
+                                                        </Col>
+                                                        <Col lg={6} md={6}>
+                                                          <div className="form-group">
+                                                            <label htmlFor="control-label">
                                                               Phone Number
                                                             </label>
                                                             <br />
@@ -344,39 +281,31 @@ function Ammenduserapplication() {
                                                               name="form-control"
                                                               id=""
                                                               placeholder=""
-                                                              className
-                                                              ="mg0"
+                                                              className="mg0"
                                                             />
                                                             <h5>
                                                               <Link
                                                                 to="#"
-                                                                className
-                                                                ="Verified-btn"
+                                                                className="Verified-btn"
                                                               >
                                                                 Verified
                                                               </Link>
                                                             </h5>
                                                           </div>
-                                                        </div>
-                                                      </div>
+                                                        </Col>
+                                                      </Row>
                                                     </form>
                                                   </div>
-                                                </div>
-                                              </div>
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="col-lg-12 col-md-12">
-                                                  <div className
-                                                  ="profile-info-form-wrap user-pro-two-form">
-                                                    <div className
-                                                    ="pass-reset">
-                                                      <div className
-                                                      ="head-wrap">
+                                                </Col>
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="profile-info-form-wrap user-pro-two-form">
+                                                    <div className="pass-reset">
+                                                      <div className="head-wrap">
                                                         <h3>Password</h3>
                                                       </div>
-                                                      <div className
-                                                      ="Reset-Password-btn">
+                                                      <div className="Reset-Password-btn">
                                                         <h5>
                                                           <Link to="#">
                                                             Reset Password
@@ -385,13 +314,10 @@ function Ammenduserapplication() {
                                                       </div>
                                                     </div>
                                                     <form action="" method="">
-                                                      <div className
-                                                      ="row">
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="form-group">
-                                                            <label for="control-label">
+                                                      <Row>
+                                                        <Col lg={6} md={6}>
+                                                          <div className="form-group">
+                                                            <label htmlFor="control-label">
                                                               Password
                                                             </label>
                                                             <br />
@@ -400,12 +326,10 @@ function Ammenduserapplication() {
                                                               name="form-control"
                                                             />
                                                           </div>
-                                                        </div>
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="form-group">
-                                                            <label for="control-label">
+                                                        </Col>
+                                                        <div className="col-lg-6 col-md-6">
+                                                          <div className="form-group">
+                                                            <label htmlFor="control-label">
                                                               Confirm Password
                                                             </label>
                                                             <br />
@@ -415,41 +339,33 @@ function Ammenduserapplication() {
                                                             />
                                                           </div>
                                                         </div>
-                                                      </div>
+                                                      </Row>
                                                     </form>
                                                   </div>
-                                                </div>
-                                              </div>
+                                                </Col>
+                                              </Row>
                                             </div>
                                           </div>
                                           <div
-                                            className
-                                            ="tab-pane fade"
+                                            className="tab-pane fade"
                                             id="v-pills-vehicle-history"
                                             role="tabpanel"
                                             aria-labelledby="v-pills-vehicle-history-tab"
                                           >
-                                            <div className
-                                            ="profile-wrapper">
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="col-lg-12 col-md-12">
-                                                  <div className
-                                                  ="profile-meta-wrapper user-pro-one-wrapper user-vehicles">
-                                                    <div className
-                                                    ="profile-meta">
+                                            <div className="profile-wrapper">
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="profile-meta-wrapper user-pro-one-wrapper user-vehicles">
+                                                    <div className="profile-meta">
                                                       <img
                                                         src="./admin_assets/images/dashboard/Frame 81.png"
                                                         alt="prfile"
                                                       />
                                                       <div>
-                                                        <h4 className
-                                                        ="profile-name">
+                                                        <h4 className="profile-name">
                                                           Omar Benyoucef
                                                         </h4>
-                                                        <h6 className
-                                                        ="profile-date">
+                                                        <h6 className="profile-date">
                                                           <ion-icon name="checkmark-circle-outline"></ion-icon>
                                                           Active
                                                         </h6>
@@ -457,42 +373,31 @@ function Ammenduserapplication() {
                                                     </div>
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="change-img-btn"
+                                                      className="change-img-btn"
                                                     >
                                                       Member Since: July 19,
                                                       2024
                                                     </Link>
                                                   </div>
-                                                </div>
-                                              </div>
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="col-lg-12 col-md-12">
-                                                  <div className
-                                                  ="vehicle-rent-wrapper user-vehicle-app-wrapper">
-                                                    <div className
-                                                    ="veh-ren">
+                                                </Col>
+                                              </Row>
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="vehicle-rent-wrapper user-vehicle-app-wrapper">
+                                                    <div className="veh-ren">
                                                       <h5>Vehicle Rental</h5>
                                                     </div>
-                                                    <div className
-                                                    ="vehicle-rent-main">
-                                                      <div className
-                                                      ="row">
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="veh-rent-image">
+                                                    <div className="vehicle-rent-main">
+                                                      <Row>
+                                                        <Col lg={6} md={6}>
+                                                          <div className="veh-rent-image">
                                                             <img
                                                               src="./admin_assets/images/Frame 2085663709.png"
                                                               alt="car"
                                                             />
                                                           </div>
-                                                          <div className
-                                                          ="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                            <ul className
-                                                            ="rental-files contract-files">
+                                                          <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+                                                            <ul className="rental-files contract-files">
                                                               <span>
                                                                 Contract
                                                               </span>
@@ -511,24 +416,19 @@ function Ammenduserapplication() {
                                                                 </div>
                                                                 <Link
                                                                   to="#"
-                                                                  className
-                                                                  ="down-btn"
+                                                                  className="down-btn"
                                                                 >
                                                                   Download
                                                                 </Link>
                                                               </li>
                                                             </ul>
                                                           </div>
-                                                        </div>
-                                                        <div className
-                                                        ="col-lg-6 col-md-6">
-                                                          <div className
-                                                          ="detail-rent-wrapper adm-wrapper user-vehicle-app">
-                                                            <div className
-                                                            ="rental-vehicle-dt1">
+                                                        </Col>
+                                                        <Col lg={6} md={6}>
+                                                          <div className="detail-rent-wrapper adm-wrapper user-vehicle-app">
+                                                            <div className="rental-vehicle-dt1">
                                                               <div>
-                                                                <h5 className
-                                                                ="theme-h5">
+                                                                <h5 className="theme-h5">
                                                                   Mercedes-Benz
                                                                   E Class
                                                                 </h5>
@@ -538,8 +438,7 @@ function Ammenduserapplication() {
                                                               </div>
                                                               <p>KM19 VUG</p>
                                                             </div>
-                                                            <div className
-                                                            ="rental-vehicle-dt2">
+                                                            <div className="rental-vehicle-dt2">
                                                               <div>
                                                                 <h6>
                                                                   Distance
@@ -557,8 +456,7 @@ function Ammenduserapplication() {
                                                                 </h5>
                                                               </div>
                                                             </div>
-                                                            <div className
-                                                            ="rental-vehicle-dt3">
+                                                            <div className="rental-vehicle-dt3">
                                                               <div>
                                                                 <h6>Start</h6>
                                                                 <h5>
@@ -571,10 +469,8 @@ function Ammenduserapplication() {
                                                               </div>
                                                             </div>
                                                           </div>
-                                                          <div className
-                                                          ="rental-vehicle-docs-wrap contract-doc user-pro-doc ">
-                                                            <ul className
-                                                            ="rental-files contract-files">
+                                                          <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc ">
+                                                            <ul className="rental-files contract-files">
                                                               <span>
                                                                 Damage Report
                                                               </span>
@@ -594,38 +490,32 @@ function Ammenduserapplication() {
                                                                 </div>
                                                                 <Link
                                                                   to="#"
-                                                                  className
-                                                                  ="down-btn"
+                                                                  className="down-btn"
                                                                 >
                                                                   Download
                                                                 </Link>
                                                               </li>
                                                             </ul>
                                                           </div>
-                                                        </div>
-                                                      </div>
+                                                        </Col>
+                                                      </Row>
                                                     </div>
                                                   </div>
-                                                </div>
-                                              </div>
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="user-vehcle-tble">
-                                                  <div className
-                                                  ="veh-ren">
+                                                </Col>
+                                              </Row>
+                                              <Row>
+                                                <div className="user-vehcle-tble">
+                                                  <div className="veh-ren">
                                                     <h5>Vehicle History</h5>
                                                   </div>
 
-                                                  <table className
-                                                  ="maintenance-table ds-table veh-history-tble adm-user-tble">
+                                                  <table className="maintenance-table ds-table veh-history-tble adm-user-tble">
                                                     <thead>
                                                       <tr>
                                                         <th>Vehicle ID</th>
                                                         <th>
                                                           Car Model
-                                                          <i className
-                                                          ="fas fa-arrow-down"></i>
+                                                          <i className="fas fa-arrow-down"></i>
                                                         </th>
                                                         <th>
                                                           Vehicle Registration
@@ -640,15 +530,13 @@ function Ammenduserapplication() {
                                                     <tbody>
                                                       <tr>
                                                         <td>001</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Mercedes E220
                                                         </td>
                                                         <td>KM19 VUG</td>
                                                         <td>July 19, 2024</td>
                                                         <td>July 19, 2024</td>
-                                                        <td className
-                                                        ="file-img">
+                                                        <td className="file-img">
                                                           <Link to="#">
                                                             <img
                                                               src="./admin_assets/images/files.png"
@@ -656,8 +544,7 @@ function Ammenduserapplication() {
                                                             />
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="file-img">
+                                                        <td className="file-img">
                                                           <Link to="#">
                                                             <img
                                                               src="./admin_assets/images/files.png"
@@ -668,15 +555,13 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>002</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Mercedes E220
                                                         </td>
                                                         <td>KM19 VUG</td>
                                                         <td>July 19, 2024</td>
                                                         <td>July 19, 2024</td>
-                                                        <td className
-                                                        ="file-img">
+                                                        <td className="file-img">
                                                           <Link to="#">
                                                             <img
                                                               src="./admin_assets/images/files.png"
@@ -684,8 +569,7 @@ function Ammenduserapplication() {
                                                             />
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="file-img">
+                                                        <td className="file-img">
                                                           <Link to="#">
                                                             <img
                                                               src="./admin_assets/images/files.png"
@@ -696,15 +580,13 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>003</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Mercedes E220
                                                         </td>
                                                         <td>KM19 VUG</td>
                                                         <td>July 19, 2024</td>
                                                         <td>July 19, 2024</td>
-                                                        <td className
-                                                        ="file-img">
+                                                        <td className="file-img">
                                                           <Link to="#">
                                                             <img
                                                               src="./admin_assets/images/files.png"
@@ -712,8 +594,7 @@ function Ammenduserapplication() {
                                                             />
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="file-img">
+                                                        <td className="file-img">
                                                           <Link to="#">
                                                             <img
                                                               src="./admin_assets/images/files.png"
@@ -725,57 +606,43 @@ function Ammenduserapplication() {
                                                     </tbody>
                                                   </table>
                                                 </div>
-                                                <div className
-                                                ="show-paginaion adm-user-nxt-btn">
-                                                  <div className
-                                                  ="showing-txt">
+                                                <div className="show-paginaion adm-user-nxt-btn">
+                                                  <div className="showing-txt">
                                                     <h5>Page 1 of 10</h5>
                                                   </div>
-                                                  <div className
-                                                  ="showing-pagination-number">
+                                                  <div className="showing-pagination-number">
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="previous-btn"
+                                                      className="previous-btn"
                                                     >
                                                       Previous
                                                     </Link>
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="previous-btn"
+                                                      className="previous-btn"
                                                     >
                                                       Next
                                                     </Link>
                                                   </div>
                                                 </div>
-                                              </div>
+                                              </Row>
                                             </div>
                                           </div>
 
                                           <div
-                                            className
-                                            ="tab-pane fade"
+                                            className="tab-pane fade"
                                             id="v-pills-Payment"
                                             role="tabpanel"
                                             aria-labelledby="v-pills-Payment-tab"
                                           >
-                                            <div className
-                                            ="payments-wrapper">
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="col-lg-12 col-md-12">
-                                                  <div className
-                                                  ="payment-bx">
-                                                    <div className
-                                                    ="row">
-                                                      <div className
-                                                      ="col-lg-6 col-md-6">
-                                                        <div className
-                                                        ="outstanding-bx">
-                                                          <div className
-                                                          ="outstanding-txt">
+                                            <div className="payments-wrapper">
+                                              <Row>
+                                                <Col lg={12} md={12}>
+                                                  <div className="payment-bx">
+                                                    <Row>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="outstanding-bx">
+                                                          <div className="outstanding-txt">
                                                             <h4>
                                                               Outstanding
                                                               Balance
@@ -783,13 +650,10 @@ function Ammenduserapplication() {
                                                             <h3>£2.000</h3>
                                                           </div>
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-6 col-md-6">
-                                                        <div className
-                                                        ="outstanding-bx">
-                                                          <div className
-                                                          ="outstanding-txt">
+                                                      </Col>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="outstanding-bx">
+                                                          <div className="outstanding-txt">
                                                             <h4>
                                                               Total Payment
                                                               Amount
@@ -797,31 +661,26 @@ function Ammenduserapplication() {
                                                             <h3>£2.000</h3>
                                                           </div>
                                                         </div>
-                                                      </div>
-                                                    </div>
+                                                      </Col>
+                                                    </Row>
                                                   </div>
-                                                </div>
-                                              </div>
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="user-vehcle-tble payment-tble-main">
-                                                  <div className
-                                                  ="payment-tble-head">
+                                                </Col>
+                                              </Row>
+                                              <Row>
+                                                <div className="user-vehcle-tble payment-tble-main">
+                                                  <div className="payment-tble-head">
                                                     <h5>
                                                       Invoices Outstanding
                                                     </h5>
                                                   </div>
 
-                                                  <table className
-                                                  ="maintenance-table ds-table veh-history-tble adm-user-tble payment-tble">
+                                                  <table className="maintenance-table ds-table veh-history-tble adm-user-tble payment-tble">
                                                     <thead>
                                                       <tr>
                                                         <th>Invoice Number</th>
                                                         <th>
                                                           Invoice Name
-                                                          <i className
-                                                          ="fas fa-arrow-down"></i>
+                                                          <i className="fas fa-arrow-down"></i>
                                                         </th>
                                                         <th>Invoices Date</th>
                                                         <th>Reason Payment</th>
@@ -833,21 +692,18 @@ function Ammenduserapplication() {
                                                     <tbody>
                                                       <tr>
                                                         <td>001</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£5,00</td>
-                                                        <td className
-                                                        ="Failed-btn">
+                                                        <td className="Failed-btn">
                                                           <Link to="#">
                                                             Failed
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -855,21 +711,18 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>002</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£4,00</td>
-                                                        <td className
-                                                        ="Failed-btn">
+                                                        <td className="Failed-btn">
                                                           <Link to="#">
                                                             Failed
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -877,21 +730,18 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>003</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£5,00</td>
-                                                        <td className
-                                                        ="Failed-btn">
+                                                        <td className="Failed-btn">
                                                           <Link to="#">
                                                             Failed
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -900,22 +750,18 @@ function Ammenduserapplication() {
                                                     </tbody>
                                                   </table>
                                                 </div>
-                                                <div className
-                                                ="user-vehcle-tble payment-tble-main pay-history">
-                                                  <div className
-                                                  ="payment-tble-head">
+                                                <div className="user-vehcle-tble payment-tble-main pay-history">
+                                                  <div className="payment-tble-head">
                                                     <h5>Payment History</h5>
                                                   </div>
 
-                                                  <table className
-                                                  ="maintenance-table ds-table veh-history-tble adm-user-tble payment-tble">
+                                                  <table className="maintenance-table ds-table veh-history-tble adm-user-tble payment-tble">
                                                     <thead>
                                                       <tr>
                                                         <th>Invoice Number</th>
                                                         <th>
                                                           Invoice Name
-                                                          <i className
-                                                          ="fas fa-arrow-down"></i>
+                                                          <i className="fas fa-arrow-down"></i>
                                                         </th>
                                                         <th>Invoices Date</th>
                                                         <th>Reason Payment</th>
@@ -927,21 +773,18 @@ function Ammenduserapplication() {
                                                     <tbody>
                                                       <tr>
                                                         <td>001</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£5,00</td>
-                                                        <td className
-                                                        ="Incoming-btn">
+                                                        <td className="Incoming-btn">
                                                           <Link to="#">
                                                             Incoming
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -949,21 +792,18 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>002</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£4,00</td>
-                                                        <td className
-                                                        ="Hold-btn">
+                                                        <td className="Hold-btn">
                                                           <Link to="#">
                                                             Payment Hold
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -971,21 +811,18 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>003</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£5,00</td>
-                                                        <td className
-                                                        ="Failed-btn">
+                                                        <td className="Failed-btn">
                                                           <Link to="#">
                                                             Failed
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -993,21 +830,18 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>010</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£5,00</td>
-                                                        <td className
-                                                        ="Scheduled-btn">
+                                                        <td className="Scheduled-btn">
                                                           <Link to="#">
                                                             Scheduled
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -1015,21 +849,18 @@ function Ammenduserapplication() {
                                                       </tr>
                                                       <tr>
                                                         <td>003</td>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           Invoices A
                                                         </td>
                                                         <td>27 June, 2024</td>
                                                         <td>Damage a Car</td>
                                                         <td>£5,00</td>
-                                                        <td className
-                                                        ="Failed-btn">
+                                                        <td className="Failed-btn">
                                                           <Link to="#">
                                                             Failed
                                                           </Link>
                                                         </td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -1038,61 +869,47 @@ function Ammenduserapplication() {
                                                     </tbody>
                                                   </table>
                                                 </div>
-                                                <div className
-                                                ="show-paginaion adm-user-nxt-btn">
-                                                  <div className
-                                                  ="showing-txt">
+                                                <div className="show-paginaion adm-user-nxt-btn">
+                                                  <div className="showing-txt">
                                                     <h5>Page 1 of 10</h5>
                                                   </div>
-                                                  <div className
-                                                  ="showing-pagination-number">
+                                                  <div className="showing-pagination-number">
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="previous-btn"
+                                                      className="previous-btn"
                                                     >
                                                       Previous
                                                     </Link>
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="previous-btn"
+                                                      className="previous-btn"
                                                     >
                                                       Next
                                                     </Link>
                                                   </div>
                                                 </div>
-                                              </div>
+                                              </Row>
                                             </div>
                                           </div>
 
                                           <div
-                                            className
-                                            ="tab-pane fade"
+                                            className="tab-pane fade"
                                             id="v-pills-PCN"
                                             role="tabpanel"
                                             aria-labelledby="v-pills-PCN-tab"
                                           >
-                                            <div className
-                                            ="profile-wrapper">
-                                              <div className
-                                              ="vehicle-documnents-wrapper Maintenance-main pcns-main">
-                                                <div className
-                                                ="row">
-                                                  <div className
-                                                  ="col-lg-12 col-md-12">
-                                                    <div className
-                                                    ="search-bar-wrapper">
-                                                      <h5 className
-                                                      ="theme-h5">
+                                            <div className="profile-wrapper">
+                                              <div className="vehicle-documnents-wrapper Maintenance-main pcns-main">
+                                                <Row>
+                                                  <Col lg={12} md={12}>
+                                                    <div className="search-bar-wrapper">
+                                                      <h5 className="theme-h5">
                                                         Penalty Charge Notice
                                                       </h5>
                                                       <div>
-                                                        <div className
-                                                        ="search-bar-v1">
+                                                        <div className="search-bar-v1">
                                                           <button type="submit">
-                                                            <i className
-                                                            ="fa fa-search"></i>
+                                                            <i className="fa fa-search"></i>
                                                           </button>
                                                           <input
                                                             type="text"
@@ -1101,26 +918,21 @@ function Ammenduserapplication() {
                                                         </div>
                                                       </div>
                                                     </div>
-                                                  </div>
-                                                </div>
+                                                  </Col>
+                                                </Row>
                                               </div>
-                                              <div className
-                                              ="row">
-                                                <div className
-                                                ="user-vehcle-tble">
-                                                  <div className
-                                                  ="veh-ren">
+                                              <Row>
+                                                <div className="user-vehcle-tble">
+                                                  <div className="veh-ren">
                                                     <h5>Vehicle History</h5>
                                                   </div>
 
-                                                  <table className
-                                                  ="maintenance-table ds-table veh-history-tble adm-user-tble pcn-tble">
+                                                  <table className="maintenance-table ds-table veh-history-tble adm-user-tble pcn-tble">
                                                     <thead>
                                                       <tr>
                                                         <th>
                                                           Penalty Charge Notice
-                                                          <i className
-                                                          ="fas fa-arrow-down"></i>
+                                                          <i className="fas fa-arrow-down"></i>
                                                         </th>
                                                         <th>Date & Time</th>
                                                         <th>PCN Fee</th>
@@ -1129,112 +941,96 @@ function Ammenduserapplication() {
                                                     </thead>
                                                     <tbody>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0839
                                                         </td>
                                                         <td>July 31, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
                                                         </td>
                                                       </tr>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0838
                                                         </td>
                                                         <td>July 21, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
                                                         </td>
                                                       </tr>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0839
                                                         </td>
                                                         <td>July 31, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
                                                         </td>
                                                       </tr>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0838
                                                         </td>
                                                         <td>July 21, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
                                                         </td>
                                                       </tr>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0839
                                                         </td>
                                                         <td>July 31, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
                                                         </td>
                                                       </tr>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0838
                                                         </td>
                                                         <td>July 21, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
                                                         </td>
                                                       </tr>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0839
                                                         </td>
                                                         <td>July 31, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
                                                         </td>
                                                       </tr>
                                                       <tr>
-                                                        <td className
-                                                        ="td-clr">
+                                                        <td className="td-clr">
                                                           0838
                                                         </td>
                                                         <td>July 21, 2024</td>
                                                         <td>£10</td>
-                                                        <td className
-                                                        ="View-btn">
+                                                        <td className="View-btn">
                                                           <Link to="#">
                                                             View
                                                           </Link>
@@ -1243,374 +1039,53 @@ function Ammenduserapplication() {
                                                     </tbody>
                                                   </table>
                                                 </div>
-                                                <div className
-                                                ="show-paginaion adm-user-nxt-btn">
-                                                  <div className
-                                                  ="showing-txt">
+                                                <div className="show-paginaion adm-user-nxt-btn">
+                                                  <div className="showing-txt">
                                                     <h5>Page 1 of 10</h5>
                                                   </div>
-                                                  <div className
-                                                  ="showing-pagination-number">
+                                                  <div className="showing-pagination-number">
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="previous-btn"
+                                                      className="previous-btn"
                                                     >
                                                       Previous
                                                     </Link>
                                                     <Link
                                                       to="#"
-                                                      className
-                                                      ="previous-btn"
+                                                      className="previous-btn"
                                                     >
                                                       Next
                                                     </Link>
                                                   </div>
                                                 </div>
-                                              </div>
+                                              </Row>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-
-                                  {/* <!--       <div className
-                                  ="tab-pane fade active show" id="user-pro-application" role="tabpanel" aria-labelledby="user-pro-application-tab">
-                                                                <div className
-                                                                ="row">
-                                                                    <div className
-                                                                    ="col-lg-12 col-md-12">
-                                                                        <div className
-                                                                        ="app-col-1">
-                                                                            <div className
-                                                                            ="row">
-                                                                            <div className
-                                                                            ="col-lg-6 col-md-6">
-                                                                                <div className
-                                                                                ="app-col-2">
-                                                                                <div className
-                                                                                ="app-personal-head">
-                                                                                    <h5>Personal Information</h5>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="form-personal">
-                                                                                    <form action="" method="">
-                                                                                        <div className
-                                                                                        ="row">
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">First Name</label>
-                                                                                                    <br/>
-                                                                                                    <input type="text" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Last Name</label>
-                                                                                                    <br/>
-                                                                                                    <input type="text" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Email Address</label>
-                                                                                                    <input type="email" name="form-control" id="" className
-                                                                                                    ="mg0"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Phone Number</label>
-                                                                                                    <input type="number" name="form-control" id="" className
-                                                                                                    ="mg0"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="app-personal-head">
-                                                                                    <h5>PCO Licence</h5>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="pro-license-txt">
-                                                                                    <div className
-                                                                                    ="pro-pera">
-                                                                                        <p>How you had a PCO License for more than 12 Months</p>
-                                                                                    </div>
-                                                                                    <div className
-                                                                                    ="pro-yes">
-                                                                                        <span>Yes</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="form-personal">
-                                                                                    <form action="" method="">
-                                                                                        <div className
-                                                                                        ="row">
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">PCO License Number</label>
-                                                                                                    <br/>
-                                                                                                    <input type="number" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Expiry Date</label>
-                                                                                                    <br/>
-                                                                                                    <input type="date" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                                                    <ul className
-                                                                                    ="rental-files contract-files">
-                                                                                        <li>
-                                                                                            <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
-                                                                                            <div>
-                                                                                                <h6>Paper Copy</h6>
-                                                                                                <span>3.6 MB</span>
-                                                                                            </div>
-                                                                                            <Link to="#" className
-                                                                                            ="View-btn">View</Link>
-                                                                                             <Link to="#" className
-                                                                                             ="down-btn">Download</Link>
-                                                                                        </li>
-                                                                                         <li>
-                                                                                            <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
-                                                                                            <div>
-                                                                                                <h6>Badge</h6>
-                                                                                                <span>3.6 MB</span>
-                                                                                            </div>
-                                                                                            <Link to="#" className
-                                                                                            ="View-btn">View</Link>
-                                                                                             <Link to="#" className
-                                                                                             ="down-btn">Download</Link>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="app-personal-head">
-                                                                                    <h5>Proof of Address</h5>
-                                                                                </div>
-                                                                                 <div className
-                                                                                 ="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                                                    <ul className
-                                                                                    ="rental-files contract-files">
-                                                                                        <li>
-                                                                                            <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
-                                                                                            <div>
-                                                                                                <h6>Bank Statement fot last 3 Month</h6>
-                                                                                                <span>3.6 MB</span>
-                                                                                            </div>
-                                                                                            <Link to="#" className
-                                                                                            ="View-btn">View</Link>
-                                                                                             <Link to="#" className
-                                                                                             ="down-btn">Download</Link>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div> 
-                                                                        </div>
-                                                                                <div className
-                                                                                ="col-lg-6 col-md-6">
-                                                                            <div className
-                                                                            ="app-col-2">
-                                                                                   <div className
-                                                                                   ="app-personal-head">
-                                                                                    <h5>Driving Information</h5>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="form-personal">
-                                                                                    <form action="" method="">
-                                                                                        <div className
-                                                                                        ="row">
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Driving License Number</label>
-                                                                                                    <br/>
-                                                                                                    <input type="number" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Driver License Expiry Date</label>
-                                                                                                    <br/>
-                                                                                                    <input type="date" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">DVLA Check Code 1</label>
-                                                                                                    <input type="number" name="form-control" id="" className
-                                                                                                    ="mg0"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">DVLA Check Code 2</label>
-                                                                                                    <input type="number" name="form-control" id="" className
-                                                                                                    ="mg0"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                             <div className
-                                                                                             ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">National Insurance Number</label>
-                                                                                                    <input type="number" name="form-control" id="" className
-                                                                                                    ="mg0"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                </div> 
-                                                                                <div className
-                                                                                ="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                                                     <ul className
-                                                                                     ="rental-files contract-files">
-                                                                                         <li>
-                                                                                            <img src="./admin_assets/images/Frame 2085663522.png" alt="Docs"/>
-                                                                                            <div>
-                                                                                                <h6>Driving License Number</h6>
-                                                                                                <span>3.6 MB</span>
-                                                                                            </div>
-                                                                                            <Link to="#" className
-                                                                                            ="View-btn">View</Link>
-                                                                                            <Link to="#" className
-                                                                                            ="down-btn">Download</Link>
-                                                                                            <Link to="#" className
-                                                                                            ="delete-img"><img src="./admin_assets/images/Trash.png" alt="delete"></Link>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="app-personal-head">
-                                                                                    <h5>Driving History</h5>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="pro-license-txt">
-                                                                                    <div className
-                                                                                    ="pro-pera">
-                                                                                        <p>Have you got more than 6 Points on your License ?</p>
-                                                                                    </div>
-                                                                                    <div className
-                                                                                    ="pro-yes">
-                                                                                        <span>Yes</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="pro-license-txt">
-                                                                                    <div className
-                                                                                    ="pro-pera">
-                                                                                        <p>Have you been in any accidents in the last three years?</p>
-                                                                                    </div>
-                                                                                    <div className
-                                                                                    ="pro-yes">
-                                                                                        <span>Yes</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="app-accident-head">
-                                                                                    <h5>Accident</h5>
-                                                                                </div>
-                                                                                <div className
-                                                                                ="form-personal">
-                                                                                    <form action="" method="">
-                                                                                        <div className
-                                                                                        ="row">
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Date of Accident</label>
-                                                                                                    <br/>
-                                                                                                    <input type="date" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div className
-                                                                                            ="col-lg-6 col-md-6">
-                                                                                                <div className
-                                                                                                ="form-group">
-                                                                                                    <label for="control-label">Fault/ Non Fault / Pending</label>
-                                                                                                    <br/>
-                                                                                                    <input type="text" name="form-control"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                </div> 
-                                                                                <div className
-                                                                                ="deails-pera">
-                                                                                    <span>Details</span>
-                                                                                    <p>At Blackties, we believe in smart risk management to ensure a seamless rental experience for both our customers and our business partners.</p>
-                                                                                </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> --> */}
-
                                   <div
-                                    className
-                                    ="tab-pane fade active show"
+                                    className="tab-pane fade active show"
                                     id="user-pro-application"
                                     role="tabpanel"
                                     aria-labelledby="user-pro-application-tab"
                                   >
-                                    <div className
-                                    ="row">
-                                      <div className
-                                      ="col-lg-12 col-md-12">
-                                        <div className
-                                        ="app-col-1 amend-col ">
-                                          <div className
-                                          ="row">
-                                            <div className
-                                            ="col-lg-6 col-md-6">
-                                              <div className
-                                              ="app-col-2">
-                                                <div className
-                                                ="app-personal-head">
+                                    <Row>
+                                      <Col lg={12} md={12}>
+                                        <div className="app-col-1 amend-col ">
+                                          <Row>
+                                            <Col lg={6} md={6}>
+                                              <div className="app-col-2">
+                                                <div className="app-personal-head">
                                                   <h5>Personal Information</h5>
                                                 </div>
-                                                <div className
-                                                ="form-personal">
+                                                <div className="form-personal">
                                                   <form action="" method="">
-                                                    <div className
-                                                    ="row">
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                    <row>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             First Name
                                                           </label>
                                                           <br />
@@ -1619,12 +1094,10 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Last Name
                                                           </label>
                                                           <br />
@@ -1633,70 +1106,56 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Email Address
                                                           </label>
                                                           <input
                                                             type="email"
                                                             name="form-control"
                                                             id=""
-                                                            className
-                                                            ="mg0"
+                                                            className="mg0"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Phone Number
                                                           </label>
                                                           <input
                                                             type="number"
                                                             name="form-control"
                                                             id=""
-                                                            className
-                                                            ="mg0"
+                                                            className="mg0"
                                                           />
                                                         </div>
-                                                      </div>
-                                                    </div>
+                                                      </Col>
+                                                    </row>
                                                   </form>
                                                 </div>
-                                                <div className
-                                                ="app-personal-head">
+                                                <div className="app-personal-head">
                                                   <h5>PCO Licence</h5>
                                                 </div>
-                                                <div className
-                                                ="pro-license-txt">
-                                                  <div className
-                                                  ="pro-pera">
+                                                <div className="pro-license-txt">
+                                                  <div className="pro-pera">
                                                     <p>
                                                       How you had a PCO License
                                                       for more than 12 Months
                                                     </p>
                                                   </div>
-                                                  <div className
-                                                  ="pro-yes">
+                                                  <div className="pro-yes">
                                                     <span>Yes</span>
                                                   </div>
                                                 </div>
-                                                <div className
-                                                ="form-personal">
+                                                <div className="form-personal">
                                                   <form action="" method="">
-                                                    <div className
-                                                    ="row">
-                                                      <div className
-                                                      ="col-lg-6 col-md-6">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                    <Row>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             PCO License Number
                                                           </label>
                                                           <br />
@@ -1705,12 +1164,10 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-6 col-md-6">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={6} md={6}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Expiry Date
                                                           </label>
                                                           <br />
@@ -1719,14 +1176,12 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                    </div>
+                                                      </Col>
+                                                    </Row>
                                                   </form>
                                                 </div>
-                                                <div className
-                                                ="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                  <ul className
-                                                  ="rental-files contract-files">
+                                                <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+                                                  <ul className="rental-files contract-files">
                                                     <li>
                                                       <img
                                                         src="./admin_assets/images/Frame 2085663522.png"
@@ -1738,21 +1193,18 @@ function Ammenduserapplication() {
                                                       </div>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="View-btn"
+                                                        className="View-btn"
                                                       >
                                                         View
                                                       </Link>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="down-btn"
+                                                        className="down-btn"
                                                       >
                                                         Download
                                                       </Link>
                                                       <Link
-                                                        className
-                                                        ="delete-img"
+                                                        className="delete-img"
                                                         to="#"
                                                       >
                                                         <img
@@ -1772,21 +1224,18 @@ function Ammenduserapplication() {
                                                       </div>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="View-btn"
+                                                        className="View-btn"
                                                       >
                                                         View
                                                       </Link>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="down-btn"
+                                                        className="down-btn"
                                                       >
                                                         Download
                                                       </Link>
                                                       <Link
-                                                        className
-                                                        ="delete-img"
+                                                        className="delete-img"
                                                         to="#"
                                                       >
                                                         <img
@@ -1795,21 +1244,17 @@ function Ammenduserapplication() {
                                                         />
                                                       </Link>
                                                     </li>
-                                                    <div className
-                                                    ="upload-file">
+                                                    <div className="upload-file">
                                                       <form action="" method="">
-                                                        <div className
-                                                        ="row">
-                                                          <div className
-                                                          ="col-lg-12 col-md-12">
+                                                        <Row>
+                                                          <Col lg={12} md={12}>
                                                             <input
                                                               type="file"
                                                               name="form-control"
                                                             />
                                                             <Link
                                                               to="#"
-                                                              className
-                                                              ="upld-file"
+                                                              className="upld-file"
                                                             >
                                                               {" "}
                                                               <img
@@ -1818,20 +1263,17 @@ function Ammenduserapplication() {
                                                               />
                                                               Upload Document
                                                             </Link>
-                                                          </div>
-                                                        </div>
+                                                          </Col>
+                                                        </Row>
                                                       </form>
                                                     </div>
                                                   </ul>
                                                 </div>
-                                                <div className
-                                                ="app-personal-head">
+                                                <div className="app-personal-head">
                                                   <h5>Proof of Address</h5>
                                                 </div>
-                                                <div className
-                                                ="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                  <ul className
-                                                  ="rental-files contract-files">
+                                                <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+                                                  <ul className="rental-files contract-files">
                                                     <li>
                                                       <img
                                                         src="./admin_assets/images/Frame 2085663522.png"
@@ -1846,21 +1288,18 @@ function Ammenduserapplication() {
                                                       </div>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="View-btn"
+                                                        className="View-btn"
                                                       >
                                                         View
                                                       </Link>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="down-btn"
+                                                        className="down-btn"
                                                       >
                                                         Download
                                                       </Link>
                                                       <Link
-                                                        className
-                                                        ="delete-img"
+                                                        className="delete-img"
                                                         to="#"
                                                       >
                                                         <img
@@ -1883,21 +1322,18 @@ function Ammenduserapplication() {
                                                       </div>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="View-btn"
+                                                        className="View-btn"
                                                       >
                                                         View
                                                       </Link>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="down-btn"
+                                                        className="down-btn"
                                                       >
                                                         Download
                                                       </Link>
                                                       <Link
-                                                        className
-                                                        ="delete-img"
+                                                        className="delete-img"
                                                         to="#"
                                                       >
                                                         <img
@@ -1906,21 +1342,17 @@ function Ammenduserapplication() {
                                                         />
                                                       </Link>
                                                     </li>
-                                                    <div className
-                                                    ="upload-file">
+                                                    <div className="upload-file">
                                                       <form action="" method="">
-                                                        <div className
-                                                        ="row">
-                                                          <div className
-                                                          ="col-lg-12 col-md-12">
+                                                        <Row>
+                                                          <Col lg={12} md={12}>
                                                             <input
                                                               type="file"
                                                               name="form-control"
                                                             />
                                                             <Link
                                                               to="#"
-                                                              className
-                                                              ="upld-file"
+                                                              className="upld-file"
                                                             >
                                                               {" "}
                                                               <img
@@ -1929,32 +1361,25 @@ function Ammenduserapplication() {
                                                               />
                                                               Upload Document
                                                             </Link>
-                                                          </div>
-                                                        </div>
+                                                          </Col>
+                                                        </Row>
                                                       </form>
                                                     </div>
                                                   </ul>
                                                 </div>
                                               </div>
-                                            </div>
-                                            <div className
-                                            ="col-lg-6 col-md-6">
-                                              <div className
-                                              ="app-col-2 amend-col-2">
-                                                <div className
-                                                ="app-personal-head">
+                                            </Col>
+                                            <Col lg={6} md={6}>
+                                              <div className="app-col-2 amend-col-2">
+                                                <div className="app-personal-head">
                                                   <h5>Driving Information</h5>
                                                 </div>
-                                                <div className
-                                                ="form-personal">
+                                                <div className="form-personal">
                                                   <form action="" method="">
-                                                    <div className
-                                                    ="row">
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                    <Row>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Driving License
                                                             Number
                                                           </label>
@@ -1964,12 +1389,10 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Driver License
                                                             Expiry Date
                                                           </label>
@@ -1979,44 +1402,36 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             DVLA Check Code 1
                                                           </label>
                                                           <input
                                                             type="number"
                                                             name="form-control"
                                                             id=""
-                                                            className
-                                                            ="mg0"
+                                                            className="mg0"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             DVLA Check Code 2
                                                           </label>
                                                           <input
                                                             type="number"
                                                             name="form-control"
                                                             id=""
-                                                            className
-                                                            ="mg0"
+                                                            className="mg0"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             National Insurance
                                                             Number
                                                           </label>
@@ -2024,18 +1439,15 @@ function Ammenduserapplication() {
                                                             type="number"
                                                             name="form-control"
                                                             id=""
-                                                            className
-                                                            ="mg0"
+                                                            className="mg0"
                                                           />
                                                         </div>
-                                                      </div>
-                                                    </div>
+                                                      </Col>
+                                                    </Row>
                                                   </form>
                                                 </div>
-                                                <div className
-                                                ="rental-vehicle-docs-wrap contract-doc user-pro-doc">
-                                                  <ul className
-                                                  ="rental-files contract-files">
+                                                <div className="rental-vehicle-docs-wrap contract-doc user-pro-doc">
+                                                  <ul className="rental-files contract-files">
                                                     <li>
                                                       <img
                                                         src="./admin_assets/images/Frame 2085663522.png"
@@ -2049,36 +1461,30 @@ function Ammenduserapplication() {
                                                       </div>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="View-btn"
+                                                        className="View-btn"
                                                       >
                                                         View
                                                       </Link>
                                                       <Link
                                                         to="#"
-                                                        className
-                                                        ="down-btn"
+                                                        className="down-btn"
                                                       >
                                                         Download
                                                       </Link>
                                                       {/* <!-- <Link to="#" className
                                                       ="delete-img"><img src="./admin_assets/images/Trash.png" alt="delete"></Link> --> */}
                                                     </li>
-                                                    <div className
-                                                    ="upload-file">
+                                                    <div className="upload-file">
                                                       <form action="" method="">
-                                                        <div className
-                                                        ="row">
-                                                          <div className
-                                                          ="col-lg-12 col-md-12">
+                                                        <Row>
+                                                          <Col lg={12} md={12}>
                                                             <input
                                                               type="files"
                                                               name="form-control"
                                                             />
                                                             <Link
                                                               to="#"
-                                                              className
-                                                              ="upld-file"
+                                                              className="upld-file"
                                                             >
                                                               {" "}
                                                               <img
@@ -2087,115 +1493,89 @@ function Ammenduserapplication() {
                                                               />
                                                               Upload Document
                                                             </Link>
-                                                          </div>
-                                                        </div>
+                                                          </Col>
+                                                        </Row>
                                                       </form>
                                                     </div>
                                                   </ul>
                                                 </div>
-                                                <div className
-                                                ="app-personal-head">
+                                                <div className="app-personal-head">
                                                   <h5>Driving History</h5>
                                                 </div>
-                                                <div className
-                                                ="pro-license-txt">
-                                                  <div className
-                                                  ="pro-pera">
+                                                <div className="pro-license-txt">
+                                                  <div className="pro-pera">
                                                     <p>
                                                       Have you got more than 6
                                                       Points on your License ?
                                                     </p>
                                                   </div>
-                                                  <div className
-                                                  ="pro-yes">
+                                                  <div className="pro-yes">
                                                     <span>Yes</span>
-                                                    <div className
-                                                    ="on-off-button">
+                                                    <div className="on-off-button">
                                                       <input
                                                         id="checkbox1"
                                                         type="checkbox"
-                                                        className
-                                                        ="checkbox"
+                                                        className="checkbox"
                                                       />
                                                       <label
-                                                        for="checkbox1"
-                                                        className
-                                                        ="switch"
+                                                        htmlFor="checkbox1"
+                                                        className="switch"
                                                       >
-                                                        <span className
-                                                        ="switch__circle">
-                                                          <span className
-                                                          ="switch__circle-inner"></span>
+                                                        <span className="switch__circle">
+                                                          <span className="switch__circle-inner"></span>
                                                         </span>
-                                                        <span className
-                                                        ="switch__left">
+                                                        <span className="switch__left">
                                                           Off
                                                         </span>
-                                                        <span className
-                                                        ="switch__right">
+                                                        <span className="switch__right">
                                                           On
                                                         </span>
                                                       </label>
                                                     </div>
                                                   </div>
                                                 </div>
-                                                <div className
-                                                ="pro-license-txt">
-                                                  <div className
-                                                  ="pro-pera">
+                                                <div className="pro-license-txt">
+                                                  <div className="pro-pera">
                                                     <p>
                                                       Have you been in any
                                                       accidents in the last
                                                       three years?
                                                     </p>
                                                   </div>
-                                                  <div className
-                                                  ="pro-yes">
+                                                  <div className="pro-yes">
                                                     <span>Yes</span>
-                                                    <div className
-                                                    ="on-off-button">
+                                                    <div className="on-off-button">
                                                       <input
                                                         id="checkbox2"
                                                         type="checkbox"
-                                                        className
-                                                        ="checkbox"
+                                                        className="checkbox"
                                                       />
                                                       <label
-                                                        for="checkbox2"
-                                                        className
-                                                        ="switch"
+                                                        htmlFor="checkbox2"
+                                                        className="switch"
                                                       >
-                                                        <span className
-                                                        ="switch__circle">
-                                                          <span className
-                                                          ="switch__circle-inner"></span>
+                                                        <span className="switch__circle">
+                                                          <span className="switch__circle-inner"></span>
                                                         </span>
-                                                        <span className
-                                                        ="switch__left">
+                                                        <span className="switch__left">
                                                           Off
                                                         </span>
-                                                        <span className
-                                                        ="switch__right">
+                                                        <span className="switch__right">
                                                           On
                                                         </span>
                                                       </label>
                                                     </div>
                                                   </div>
                                                 </div>
-                                                <div className
-                                                ="app-accident-head">
+                                                <div className="app-accident-head">
                                                   <h5>Accident</h5>
                                                 </div>
-                                                <div className
-                                                ="form-personal">
+                                                <div className="form-personal">
                                                   <form action="" method="">
-                                                    <div className
-                                                    ="row">
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                    <Row>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Date of Accident
                                                           </label>
                                                           <br />
@@ -2204,12 +1584,10 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Fault/ Non Fault /
                                                             Pending
                                                           </label>
@@ -2219,46 +1597,43 @@ function Ammenduserapplication() {
                                                             name="form-control"
                                                           />
                                                         </div>
-                                                      </div>
-                                                      <div className
-                                                      ="col-lg-12 col-md-12">
-                                                        <div className
-                                                        ="form-group">
-                                                          <label for="control-label">
+                                                      </Col>
+                                                      <Col lg={12} md={12}>
+                                                        <div className="form-group">
+                                                          <label htmlFor="control-label">
                                                             Details
                                                           </label>
                                                           <br />
                                                           <input
                                                             type="textarea"
                                                             name="form-control"
-                                                            className
-                                                            ="message-area"
+                                                            className="message-area"
                                                           />
                                                         </div>
-                                                      </div>
-                                                    </div>
+                                                      </Col>
+                                                    </Row>
                                                   </form>
                                                 </div>
                                               </div>
-                                            </div>
-                                          </div>
+                                            </Col>
+                                          </Row>
                                         </div>
-                                      </div>
-                                    </div>
+                                      </Col>
+                                    </Row>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
+                          </Col>
+                        </Row>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
     </>
   );

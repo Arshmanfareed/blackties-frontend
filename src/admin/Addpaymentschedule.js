@@ -26,7 +26,7 @@ function Addpaymentschedule() {
       <section className="user-dashboard">
         <Container fluid className="container-fluid">
           <Row className=" g-0">
-            <Col lg={3} md={3} className="idebar-col">
+            <Col lg={3} md={3} className="sidebar-col">
               <Sidebar />
             </Col>
             <Col lg={9} md={9} className="panel-col">
@@ -72,7 +72,7 @@ function Addpaymentschedule() {
                                   <Row >
                                     <Col lg={12} md={12} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Schedule Pay Date
                                         </label>
                                         <br />
@@ -84,7 +84,7 @@ function Addpaymentschedule() {
                                     </Col>
                                     <Col lg={12} md={12} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Reason Payment
                                         </label>
                                         <select name="payment" id="payment-fld">
@@ -108,7 +108,7 @@ function Addpaymentschedule() {
                                     </Col>
                                     <Col lg={12} md={12} >
                                       <div className="form-group">
-                                        <label for="control-label">Fee</label>
+                                        <label htmlFor="control-label">Fee</label>
                                         <input
                                           type="number"
                                           name="form-control"
@@ -119,7 +119,7 @@ function Addpaymentschedule() {
                                     </Col>
                                     <Col lg={12} md={12} >
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Description
                                         </label>
                                         <textarea
@@ -302,7 +302,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">First Name</label>
+                            <label htmlFor="control-label">First Name</label>
                             <br />
                             <input
                               type="text"
@@ -313,7 +313,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Last Name</label>
+                            <label htmlFor="control-label">Last Name</label>
                             <br />
                             <input
                               type="text"
@@ -326,7 +326,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Have Vehicle</label>
+                            <label htmlFor="control-label">Have Vehicle</label>
                             <select name="Council" id="Rented-fld">
                               <option value="volvo">Yes</option>
                               <option value="saab">No</option>
@@ -337,7 +337,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Active User</label>
+                            <label htmlFor="control-label">Active User</label>
                             <select name="Council" id="Rented-fld">
                               <option value="volvo">Active</option>
                               <option value="saab">Non-active</option>
@@ -350,7 +350,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               PCO License Number
                             </label>
                             <br />
@@ -363,7 +363,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               Drivers License Number
                             </label>
                             <br />
@@ -378,7 +378,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Email</label>
+                            <label htmlFor="control-label">Email</label>
                             <br />
                             <input
                               type="email"
@@ -389,7 +389,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               Vehicle Registration Number
                             </label>
                             <br />
@@ -437,7 +437,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">First Name</label>
+                            <label htmlFor="control-label">First Name</label>
                             <br />
                             <input
                               type="text"
@@ -448,7 +448,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Last Name</label>
+                            <label htmlFor="control-label">Last Name</label>
                             <br />
                             <input
                               type="text"
@@ -461,7 +461,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Email</label>
+                            <label htmlFor="control-label">Email</label>
                             <br />
                             <input
                               type="email"
@@ -472,7 +472,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Phone Number</label>
+                            <label htmlFor="control-label">Phone Number</label>
                             <br />
                             <input
                               type="number"
@@ -485,7 +485,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Have Vehicle</label>
+                            <label htmlFor="control-label">Have Vehicle</label>
                             <select name="Council" id="Rented-fld">
                               <option value="volvo">Yes</option>
                               <option value="saab">No</option>
@@ -496,7 +496,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Active User</label>
+                            <label htmlFor="control-label">Active User</label>
                             <select name="Council" id="Rented-fld">
                               <option value="volvo">Active</option>
                               <option value="saab">Non-active</option>
@@ -509,7 +509,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               PCO License Number
                             </label>
                             <br />
@@ -522,7 +522,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               Drivers License Number
                             </label>
                             <br />
@@ -537,7 +537,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               Vehicle Registration Number
                             </label>
                             <br />
@@ -891,7 +891,7 @@ function Addpaymentschedule() {
                       <Row className=" frm-inner-row2">
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">First Name</label>
+                            <label htmlFor="control-label">First Name</label>
                             <br />
                             <input
                               type="text"
@@ -902,7 +902,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Last Name</label>
+                            <label htmlFor="control-label">Last Name</label>
                             <br />
                             <input
                               type="text"
@@ -915,7 +915,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Email Address</label>
+                            <label htmlFor="control-label">Email Address</label>
                             <br />
                             <input
                               type="email"
@@ -926,7 +926,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Phone Number</label>
+                            <label htmlFor="control-label">Phone Number</label>
                             <br />
                             <input
                               type="number"
@@ -947,7 +947,7 @@ function Addpaymentschedule() {
                       <Row className=" frm-inner-row2">
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               Driving License Number
                             </label>
                             <br />
@@ -960,7 +960,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               Driver License Expiry Date
                             </label>
                             <br />
@@ -975,7 +975,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">
+                            <label htmlFor="control-label">
                               PCO License Number
                             </label>
                             <br />
@@ -988,7 +988,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Expiry Date</label>
+                            <label htmlFor="control-label">Expiry Date</label>
                             <br />
                             <input
                               type="number"
@@ -1009,7 +1009,7 @@ function Addpaymentschedule() {
                       <Row >
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Card Number</label>
+                            <label htmlFor="control-label">Card Number</label>
                             <br />
                             <input
                               type="text"
@@ -1020,7 +1020,7 @@ function Addpaymentschedule() {
                         </Col>
                         <Col lg={6} md={6} >
                           <div className="form-group">
-                            <label for="control-label">Expration Date</label>
+                            <label htmlFor="control-label">Expration Date</label>
                             <br />
                             <input
                               type="datemin"

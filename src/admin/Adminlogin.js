@@ -91,4 +91,4 @@ function Adminlogin() {
     )
 }
 
-export default Adminlogin
+export default Adminlogin;

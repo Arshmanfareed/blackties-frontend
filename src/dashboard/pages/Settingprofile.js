@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DashboardSidebar from "../partials/dashboard-sidebar";
 import DashboardPanelTopbar from "../components/DashboardPanelTopbar";
-import { Button, Col, Modal, Row } from "react-bootstrap";
+import { Button, Col, Container, Modal, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import useHandleChangeImage from "../../utils/handleChangeImage";
@@ -135,10 +135,14 @@ function Settingprofile() {
     }
   };
 
+// Change Image Modal
+const [showimage_change, setShowimage_change] = useState(false);
+const handleCloseimage_change = () => setShowimage_change(false);
+const handleShowimage_change = () => setShowimage_change(true);
   return (
     <>
       <section className="user-dashboard">
-        <div className="container-fluid">
+        <Container fluid>
           <Row className="g-0">
             <Col lg={3} md={3} className=" sidebar-col">
               <DashboardSidebar />
@@ -1021,7 +1025,7 @@ function Settingprofile() {
               </div>
             </Col>
           </Row>
-        </div>
+        </Container>
       </section>
     </>
   );

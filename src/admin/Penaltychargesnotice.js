@@ -57,7 +57,7 @@ function Penaltychargesnotice() {
                             <Row className="">
                               <Col lg={3} md={3} className="">
                                 <div className="form-group">
-                                  <label for="control-label">
+                                  <label htmlFor="control-label">
                                     Internal Number
                                   </label>
                                   <br />
@@ -66,14 +66,14 @@ function Penaltychargesnotice() {
                               </Col>
                               <Col lg={3} md={3} className="">
                                 <div className="form-group">
-                                  <label for="control-label">Date & Time</label>
+                                  <label htmlFor="control-label">Date & Time</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
                               </Col>
                               <Col lg={3} md={3} className="">
                                 <div className="form-group">
-                                  <label for="control-label">Authority</label>
+                                  <label htmlFor="control-label">Authority</label>
                                   <input
                                     type="number"
                                     name="form-control"
@@ -84,7 +84,7 @@ function Penaltychargesnotice() {
                               </Col>
                               <Col lg={3} md={3} className="">
                                 <div className="form-group">
-                                  <label for="control-label">
+                                  <label htmlFor="control-label">
                                     Ticket Number
                                   </label>
                                   <input
@@ -103,14 +103,14 @@ function Penaltychargesnotice() {
                             <Row className="">
                               <Col lg={2} md={2} className="">
                                 <div className="form-group">
-                                  <label for="control-label">Vehicle</label>
+                                  <label htmlFor="control-label">Vehicle</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
                               </Col>
                               <Col lg={3} md={3} className="">
                                 <div className="form-group">
-                                  <label for="control-label">Renter</label>
+                                  <label htmlFor="control-label">Renter</label>
                                   <select name="Omar" id="Rented-fld">
                                     <option value="volvo">Omar</option>
                                     <option value="saab">Omar</option>
@@ -121,7 +121,7 @@ function Penaltychargesnotice() {
                               </Col>
                               <Col lg={2} md={2} className="">
                                 <div className="form-group">
-                                  <label for="control-label">Admin Fee</label>
+                                  <label htmlFor="control-label">Admin Fee</label>
                                   <input
                                     type="text"
                                     name="form-control"
@@ -132,7 +132,7 @@ function Penaltychargesnotice() {
                               </Col>
                               <Col lg={3} md={3} className="">
                                 <div className="form-group">
-                                  <label for="control-label">Status</label>
+                                  <label htmlFor="control-label">Status</label>
                                   <select name="Uploaded" id="Rented-fld">
                                     <option value="volvo">Uploaded</option>
                                     <option value="saab">Pending</option>
@@ -143,7 +143,7 @@ function Penaltychargesnotice() {
                               </Col>
                               <Col lg={3} md={3} className="">
                                 <div className="form-group">
-                                  <label for="control-label">Appealed</label>
+                                  <label htmlFor="control-label">Appealed</label>
                                   <select name="Yes" id="Rented-fld">
                                     <option value="volvo">Yes</option>
                                     <option value="saab">No</option>
@@ -635,14 +635,14 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Internal Number</label>
+                            <label htmlFor="control-label">Internal Number</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="Omar"/>
                         </div>
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Date & Time</label>
+                            <label htmlFor="control-label">Date & Time</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="placeholder"/>
                         </div>
@@ -651,7 +651,7 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Authority</label>
+                            <label htmlFor="control-label">Authority</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Council</option>
                                 <option value="saab">Council</option>
@@ -662,7 +662,7 @@ function Penaltychargesnotice() {
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Ticket Number</label>
+                            <label htmlFor="control-label">Ticket Number</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="placeholder"/>
                         </div>
@@ -671,14 +671,14 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Vehicle</label>
+                            <label htmlFor="control-label">Vehicle</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="KM19 VTY"/>
                         </div>
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Renter</label>
+                            <label htmlFor="control-label">Renter</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="placeholder"/>
                         </div>
@@ -687,14 +687,14 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Admin Fee</label>
+                            <label htmlFor="control-label">Admin Fee</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="£10"/>
                         </div>
                     </Col>
                     <Col lg={6} md={6} >
                          <div className="form-group">
-                            <label for="control-label">Appealed</label>
+                            <label htmlFor="control-label">Appealed</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Placeholder</option>
                                 <option value="saab">Placeholder</option>
@@ -707,7 +707,7 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                        <div className="form-group">
-                            <label for="control-label">Status</label>
+                            <label htmlFor="control-label">Status</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Placeholder</option>
                                 <option value="saab">Placeholder</option>
@@ -776,14 +776,14 @@ function Penaltychargesnotice() {
             <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Vehicle Registration Number</label>
+                            <label htmlFor="control-label">Vehicle Registration Number</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="KM19 VTY"/>
                         </div>
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Date of incident</label>
+                            <label htmlFor="control-label">Date of incident</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="10 December, 2024 10:32"/>
                         </div>
@@ -817,14 +817,14 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Internal Number</label>
+                            <label htmlFor="control-label">Internal Number</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="1231232412"/>
                         </div>
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Authority</label>
+                            <label htmlFor="control-label">Authority</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Council</option>
                                 <option value="saab">Council</option>
@@ -837,14 +837,14 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Ticket Number</label>
+                            <label htmlFor="control-label">Ticket Number</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="placeholder"/>
                         </div>
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Admin Fee</label>
+                            <label htmlFor="control-label">Admin Fee</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="£10"/>
                         </div>
@@ -853,7 +853,7 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Appealed</label>
+                            <label htmlFor="control-label">Appealed</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Yes</option>
                                 <option value="saab">No</option>
@@ -864,7 +864,7 @@ function Penaltychargesnotice() {
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Status</label>
+                            <label htmlFor="control-label">Status</label>
                             <select name="Council" id="Rented-fld">
                                 <option value="volvo">Placeholder</option>
                                 <option value="saab">Placeholder</option>
@@ -877,14 +877,14 @@ function Penaltychargesnotice() {
                 <Row >
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Renter</label>
+                            <label htmlFor="control-label">Renter</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="Placeholder"/>
                         </div>
                     </Col>
                     <Col lg={6} md={6} >
                         <div className="form-group">
-                            <label for="control-label">Date & Time</label>
+                            <label htmlFor="control-label">Date & Time</label>
                             <br/>
                             <input type="text" name="form-control" placeholder="Placeholder"/>
                         </div>

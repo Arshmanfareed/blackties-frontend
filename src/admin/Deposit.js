@@ -2,96 +2,97 @@ import React from "react";
 import Sidebar from "./partials/Sidebar";
 import Dashboardpaneltopbar from "./partials/Dashboardpaneltopbar";
 import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 
 function Deposit() {
   return (
     <>
-      <section class="user-dashboard">
-        <div class="container-fluid">
-          <div class="row g-0">
-            <div class="col-lg-3 col-md-3 sidebar-col">
+      <section className="user-dashboard">
+        <Container fluid>
+          <Row className=" g-0">
+            <Col lg={3} md={3} className=" sidebar-col">
               <Sidebar />
-            </div>
-            <div class="col-lg-9 col-md-9 panel-col">
-              <div class="dashboard-panel application-panel">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12">
-                    <div class="dashboard-panel-topbar">
+            </Col>
+            <Col lg={9} md={9} className=" panel-col">
+              <div className="dashboard-panel application-panel">
+                <Row>
+                  <Col lg={12} md={12}>
+                    <div className="dashboard-panel-topbar">
                       <Dashboardpaneltopbar />
                     </div>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
 
-                <div class="row">
-                  <div class="col-lg-12 col-md-12">
-                    <div class="main-veh-box deposit-main">
-                      <div class="vehicle-main-box">
-                        <div class="row frm-inner-row deposit-rw">
+                <Row>
+                  <Col lg={12} md={12}>
+                    <div className="main-veh-box deposit-main">
+                      <div className="vehicle-main-box">
+                        <Row className=" frm-inner-row deposit-rw">
                           <form action="" method="">
-                            <div class="row">
-                              <div class="col-lg-3 col-md-3">
-                                <div class="form-group">
-                                  <label for="control-label">Customer ID</label>
+                            <Row>
+                              <Col lg={3} md={3}>
+                                <div className="form-group">
+                                  <label htmlFor="control-label">Customer ID</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-3 col-md-3">
-                                <div class="form-group">
-                                  <label for="control-label">First Name</label>
+                              </Col>
+                              <Col lg={3} md={3}>
+                                <div className="form-group">
+                                  <label htmlFor="control-label">First Name</label>
                                   <br />
                                   <input type="text" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-3 col-md-3">
-                                <div class="form-group">
-                                  <label for="control-label">Last Name</label>
+                              </Col>
+                              <Col lg={3} md={3}>
+                                <div className="form-group">
+                                  <label htmlFor="control-label">Last Name</label>
                                   <input
                                     type="text"
                                     name="form-control"
                                     id=""
-                                    class="mg0"
+                                    className="mg0"
                                   />
                                 </div>
-                              </div>
-                              <div class="col-lg-3 col-md-3">
-                                <div class="form-group">
-                                  <label for="control-label">
+                              </Col>
+                              <Col lg={3} md={3}>
+                                <div className="form-group">
+                                  <label htmlFor="control-label">
                                     Phone Number
                                   </label>
                                   <input
                                     type="text"
                                     name="form-control"
                                     id=""
-                                    class="mg0"
+                                    className="mg0"
                                   />
                                 </div>
-                              </div>
-                            </div>
+                              </Col>
+                            </Row>
                           </form>
-                        </div>
-                        <div class="row frm-inner-row deposit-rw-two">
+                        </Row>
+                        <Row className=" frm-inner-row deposit-rw-two">
                           <form action="" method="">
-                            <div class="row">
-                              <div class="col-lg-4 col-md-4">
-                                <div class="form-group">
-                                  <label for="control-label">
+                            <Row>
+                              <Col lg={4} md={4}>
+                                <div className="form-group">
+                                  <label htmlFor="control-label">
                                     Applicant Date
                                   </label>
                                   <br />
                                   <input type="date" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-4 col-md-4">
-                                <div class="form-group">
-                                  <label for="control-label">Email</label>
+                              </Col>
+                              <Col lg={4} md={4}>
+                                <div className="form-group">
+                                  <label htmlFor="control-label">Email</label>
                                   <br />
                                   <input type="email" name="form-control" />
                                 </div>
-                              </div>
-                              <div class="col-lg-4 col-md-4">
-                                <div class="form-group">
-                                  <label for="control-label">Status</label>
+                              </Col>
+                              <Col lg={4} md={4}>
+                                <div className="form-group">
+                                  <label htmlFor="control-label">Status</label>
                                   <select name="Approved" id="Approved-fld">
                                     <option value="volvo">Approved</option>
                                     <option value="saab">Approved</option>
@@ -99,19 +100,19 @@ function Deposit() {
                                     <option value="audi">Approved</option>
                                   </select>
                                 </div>
-                              </div>
-                            </div>
+                              </Col>
+                            </Row>
                           </form>
-                          <div class="row inner-rw-register">
-                            <div class="col-lg-12 col-md-12">
-                              <div class="veh-registration-table rigistration-tabl deposit-table">
-                                <table class="maintenance-table ds-table">
+                          <Row className="inner-rw-register">
+                            <Col lg={12} md={12}>
+                              <div className="veh-registration-table rigistration-tabl deposit-table">
+                                <table className="maintenance-table ds-table">
                                   <thead>
                                     <tr>
                                       <th>Deposit ID</th>
                                       <th>
                                         First Name
-                                        <i class="fas fa-arrow-down"></i>
+                                        <i className="fas fa-arrow-down"></i>
                                       </th>
                                       <th>Last Name</th>
                                       <th>Vehicle</th>
@@ -125,220 +126,190 @@ function Deposit() {
                                   <tbody>
                                     <tr>
                                       <td>001</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" className="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>002</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" className="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>003</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" className="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>004</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" className="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>005</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" className="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>006</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" className="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>007</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" className="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>008</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" className="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>009</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Signed-btn"
-                                        >
+                                        <Link to="#" className="Signed-btn">
                                           Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>010</td>
-                                      <td class="td-clr">Omar</td>
-                                      <td class="td-clr">Benyoucef</td>
+                                      <td className="td-clr">Omar</td>
+                                      <td className="td-clr">Benyoucef</td>
                                       <td>Mercedes E220</td>
                                       <td>7493 231691</td>
                                       <td>1000 Miles</td>
                                       <td>1000 Miles</td>
                                       <td>
-                                        <Link
-                                          to="#"
-                                          class="Not-Signed-btn"
-                                        >
+                                        <Link to="#" className="Not-Signed-btn">
                                           Not Signed
                                         </Link>
                                       </td>
                                       <td>
-                                        <Link to="#" class="view-btn">
+                                        <Link to="#" className="view-btn">
                                           View
                                         </Link>
                                       </td>
@@ -346,35 +317,33 @@ function Deposit() {
                                   </tbody>
                                 </table>
                               </div>
-                            </div>
-                          </div>
-                          <div class="show-paginaion adm-user-nxt-btn">
-                            <div class="showing-txt">
+                            </Col>
+                          </Row>
+                          <div className="show-paginaion adm-user-nxt-btn">
+                            <div className="showing-txt">
                               <h5>Page 1 of 10</h5>
                             </div>
-                            <div class="showing-pagination-number">
-                              <Link to="#" class="previous-btn">
+                            <div className="showing-pagination-number">
+                              <Link to="#" className="previous-btn">
                                 Previous
                               </Link>
-                              <Link to="#" class="previous-btn">
+                              <Link to="#" className="previous-btn">
                                 Next
                               </Link>
                             </div>
                           </div>
-                        </div>
+                        </Row>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
     </>
   );
 }
 
 export default Deposit;
-
-

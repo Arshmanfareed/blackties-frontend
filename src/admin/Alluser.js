@@ -50,70 +50,70 @@ function Alluser() {
                                             </div>
                                             <div className="tab-content" id="v-pills-tabContent">
                                                 <div className="tab-pane fade show active" id="all-users" role="tabpanel" aria-labelledby="all-users-tab">
-                                                    <div className="row frm-inner-row user-app-frm">
+                                                    <Row className=" frm-inner-row user-app-frm">
                                                         <form action="" method="">
                                                             <Row >
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Customer ID</label>
+                                                                        <label htmlFor="control-label">Customer ID</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">First Name</label>
+                                                                        <label htmlFor="control-label">First Name</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last Name</label>
+                                                                        <label htmlFor="control-label">Last Name</label>
                                                                         <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Phone Number</label>
+                                                                        <label htmlFor="control-label">Phone Number</label>
                                                                         <input type="number" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                             </Row>
                                                         </form>
-                                                    </div>
+                                                    </Row>
                                                     <div className="row frm-inner-row user-app-frm-2">
                                                         <form action="" method="">
                                                             <Row >
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Applicant Date</label>
+                                                                        <label htmlFor="control-label">Applicant Date</label>
                                                                         <br/>
                                                                         <input type="date" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Driving License Number</label>
+                                                                        <label htmlFor="control-label">Driving License Number</label>
                                                                         <br/>
                                                                         <input type="number" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Email</label>
+                                                                        <label htmlFor="control-label">Email</label>
                                                                         <input type="email" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">VRN</label>
+                                                                        <label htmlFor="control-label">VRN</label>
                                                                         <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Status</label>
+                                                                        <label htmlFor="control-label">Status</label>
                                                                         <select name="Approved" id="Approved-fld">
                                                                             <option value="volvo">Approved</option>
                                                                             <option value="saab">Approved</option>
@@ -274,27 +274,27 @@ function Alluser() {
                                                             <Row >
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Customer ID</label>
+                                                                        <label htmlFor="control-label">Customer ID</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">First Name</label>
+                                                                        <label htmlFor="control-label">First Name</label>
                                                                         <br/>
                                                                         <input type="text" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Last Name</label>
+                                                                        <label htmlFor="control-label">Last Name</label>
                                                                         <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Phone Number</label>
+                                                                        <label htmlFor="control-label">Phone Number</label>
                                                                         <input type="number" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
@@ -306,33 +306,33 @@ function Alluser() {
                                                             <Row >
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Applicant Date</label>
+                                                                        <label htmlFor="control-label">Applicant Date</label>
                                                                         <br/>
                                                                         <input type="date" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Driving License Number</label>
+                                                                        <label htmlFor="control-label">Driving License Number</label>
                                                                         <br/>
                                                                         <input type="number" name="form-control"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Email</label>
+                                                                        <label htmlFor="control-label">Email</label>
                                                                         <input type="email" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">VRN</label>
+                                                                        <label htmlFor="control-label">VRN</label>
                                                                         <input type="text" name="form-control" id="" className="mg0"/>
                                                                     </div>
                                                                 </Col>
                                                                 <Col lg={3} md={3} >
                                                                     <div className="form-group">
-                                                                        <label for="control-label">Status</label>
+                                                                        <label htmlFor="control-label">Status</label>
                                                                         <select name="Approved" id="Approved-fld">
                                                                             <option value="volvo">Approved</option>
                                                                             <option value="saab">Approved</option>

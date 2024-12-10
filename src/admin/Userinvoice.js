@@ -54,9 +54,9 @@ function Userinvoice() {
                         ></ion-icon>{" "}
                         Back to Vehicle
                       </Link>
-                      <div className="col-md-12">
-                        <div className="row innr-row">
-                          <div className="col-md-6">
+                      <Col md={12}>
+                        <Row className="innr-row">
+                          <Col md={6}>
                             <div className="drvr_deta">
                               <div className="drvrmain">
                                 <img
@@ -98,7 +98,7 @@ function Userinvoice() {
                                   <Row>
                                     <Col lg={12} md={12}>
                                       <div className="form-group">
-                                        <label for="control-label">
+                                        <label htmlFor="control-label">
                                           Schedule Pay Date
                                         </label>
                                         <br />
@@ -116,7 +116,7 @@ function Userinvoice() {
                                     >
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label htmlFor="payment">
+                                          <label htmlhtmlFor="payment">
                                             Reason Payment
                                           </label>
                                           <select
@@ -144,7 +144,7 @@ function Userinvoice() {
                                       </Col>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label htmlFor="fee">Fee</label>
+                                          <label htmlhtmlFor="fee">Fee</label>
                                           <input
                                             type="number"
                                             name="fee"
@@ -156,7 +156,7 @@ function Userinvoice() {
                                       </Col>
                                       <Col lg={12} md={12}>
                                         <div className="form-group">
-                                          <label htmlFor="description">
+                                          <label htmlhtmlFor="description">
                                             Description
                                           </label>
                                           <textarea
@@ -182,8 +182,8 @@ function Userinvoice() {
                                 </Link>
                               </div>
                             </div>
-                          </div>
-                          <div className="col-md-6">
+                          </Col>
+                          <Col md={6}>
                             <div className="payment-schedule-card-main-head">
                               <h4>Invoice Preview</h4>
                               <div className="zoom-options">
@@ -266,7 +266,9 @@ function Userinvoice() {
                                     <table className="cancellation-disc-table">
                                       <thead>
                                         <tr>
-                                          <th className="first-th">Description</th>
+                                          <th className="first-th">
+                                            Description
+                                          </th>
                                           <th>Price</th>
                                           <th>Vat %</th>
                                           <th>Amount (GBP)</th>
@@ -274,7 +276,9 @@ function Userinvoice() {
                                       </thead>
                                       <tbody>
                                         <tr>
-                                          <td className="first-td">Damage Car</td>
+                                          <td className="first-td">
+                                            Damage Car
+                                          </td>
                                           <td>£360</td>
                                           <td>10 %</td>
                                           <td>£360</td>
@@ -311,9 +315,9 @@ function Userinvoice() {
                                 Send
                               </Link>
                             </div>
-                          </div>
-                        </div>
-                      </div>
+                          </Col>
+                        </Row>
+                      </Col>
                     </div>
                   </Col>
                 </Row>
