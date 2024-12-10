@@ -2153,3 +2153,24 @@ p.not_rcv_cd {
   right: 0px;
   color: #fff;
 }
+
+.change-phn-body  .PhoneInput {
+  background: #000;
+  border-radius: 12px;
+  border: 1px solid #000;
+  /* height: 60px; */
+  width: 100%;
+  margin-bottom: 20px !important;
+  color: #ffff !important;
+  padding-left: 20px;
+}
+
+.change-phn-body .PhoneInput input {
+  padding-left: 0;
+  margin-bottom: 0 !important;
+}
+
+.PhoneInputCountrySelect[disabled],
+.PhoneInputCountrySelect[readonly] {
+  display: none;
+}
