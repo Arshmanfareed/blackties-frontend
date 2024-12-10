@@ -8084,7 +8084,7 @@ margin-bottom: 30px;
   text-align: center;
   margin-top: 40px;
 }
-.succes-body .succes-return-btn a.succes-return {
+.succes-body .succes-return-btn .succes-return {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -8113,7 +8113,7 @@ margin-bottom: 30px;
   color: #fff;
 }
 
-.succes-body .succes-return-btn a.succes-return:hover {
+.succes-body .succes-return-btn .succes-return:hover {
   transition: all 0.5s ease-in-out;
   background: transparent;
   color: #fff;

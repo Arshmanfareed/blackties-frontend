@@ -398,12 +398,22 @@
     height: 125px;
 }
 
-
-
 .dashboard-menu ul.dropdown-menu {
   border-left: 1px solid #667085 !important;
   margin-left: 20px;
   border-top: 0;
   border-bottom: 0;
   margin-bottom: 5px;
+}
+
+.image_change_modal .cross-icon {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  color: #fff;
+  font-size: 22px;
+}
+
+.image_change_modal  .succes-body.resqt-body {
+  position: relative;
 }

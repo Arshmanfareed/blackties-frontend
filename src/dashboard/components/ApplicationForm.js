@@ -77,38 +77,38 @@ const ApplicationForm = () => {
                   </span>
                 </div>
                 <div className="col-lg-12 col-md-12">
-                    <div className="form-group">
-                        <label for="control-label">DVLA Check Code 1</label>
-                        <div className="DVLA-wrap">
-                            <div id="" className="verific-DVLA">
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                            </div>
-                            <div id="" className="verific-DVLA">
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                            </div>
-                            <div id="" className="verific-DVLA">
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                            </div>
-                        </div>
-                        <label for="control-label">DVLA Check Code 2</label>
-                        <div className="DVLA-wrap">
-                            <div id="" className="verific-DVLA">
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                            </div>
-                            <div id="" className="verific-DVLA">
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                            </div>
-                            <div id="" className="verific-DVLA">
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                                <input type="number" inputmode="numeric" maxlength="1" />
-                            </div>
-                        </div>
+                  <div className="form-group">
+                    <label for="control-label">DVLA Check Code 1</label>
+                    <div className="DVLA-wrap">
+                      <div id="" className="verific-DVLA">
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                      </div>
+                      <div id="" className="verific-DVLA">
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                      </div>
+                      <div id="" className="verific-DVLA">
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                      </div>
                     </div>
+                    <label for="control-label">DVLA Check Code 2</label>
+                    <div className="DVLA-wrap">
+                      <div id="" className="verific-DVLA">
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                      </div>
+                      <div id="" className="verific-DVLA">
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                      </div>
+                      <div id="" className="verific-DVLA">
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                        <input type="number" inputmode="numeric" maxlength="1" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="form-group">
                   <label>National Insurance Number</label>
@@ -127,7 +127,7 @@ const ApplicationForm = () => {
                   <label>Have you got more than 6 Points on your License?</label>
                   <div className="checkboxes__item">
                     <label className="checkbox style-e">
-                      <input type="checkbox"  />
+                      <input type="checkbox" />
                       <div className="checkbox__checkmark"></div>
                       <div className="checkbox__body label">Yes</div>
                     </label>
@@ -155,15 +155,15 @@ const ApplicationForm = () => {
                             <input type="date" className="form-control" />
                           </div>
                           <div className="col-lg-12 col-md-12">
-                                                                     <div className="form-group">
-                                                                         <label for="FNP">Fault/ Non Fault / Pending</label><br/>
-                                                                         <select id="FNP" className="options-field">
-                                                                             <option value="fault">Fault</option>
-                                                                             <option value="non_fault">Non Fault</option>
-                                                                             <option value="pending">Pending</option>
-                                                                         </select>
-                                                                     </div>
-                                                                 </div>
+                            <div className="form-group">
+                              <label for="FNP">Fault/ Non Fault / Pending</label><br />
+                              <select id="FNP" className="options-field">
+                                <option value="fault">Fault</option>
+                                <option value="non_fault">Non Fault</option>
+                                <option value="pending">Pending</option>
+                              </select>
+                            </div>
+                          </div>
                           <div className="form-group">
                             <label>Details</label>
                             <textarea className="form-control"></textarea>
@@ -172,9 +172,9 @@ const ApplicationForm = () => {
                         </div>
                       ))}
                       <div className='anotherInc-btn-wrap'>
-                      <button type="button" id="add_accident" onClick={addAccident}>
-                      <ion-icon name="add-outline"></ion-icon> Add another Incident
-                      </button>
+                        <button type="button" id="add_accident" onClick={addAccident}>
+                          <ion-icon name="add-outline"></ion-icon> Add another Incident
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -195,15 +195,15 @@ const ApplicationForm = () => {
                   <label className='d-block'>When did you first obtain a PCO licence?</label>
                   <div className='pco_get_date d-flex'>
                     <div className='pco_month d-flex'>
-<input type='number' placeholder='M'/>
-<input type='number' placeholder='M'/>
+                      <input type='number' placeholder='M' />
+                      <input type='number' placeholder='M' />
                     </div>
-<div className='pco_year d-flex'>
-<input type='number' placeholder='Y'/>
-<input type='number' placeholder='Y'/>
-<input type='number' placeholder='Y'/>
-<input type='number' placeholder='Y'/>
-</div>
+                    <div className='pco_year d-flex'>
+                      <input type='number' placeholder='Y' />
+                      <input type='number' placeholder='Y' />
+                      <input type='number' placeholder='Y' />
+                      <input type='number' placeholder='Y' />
+                    </div>
                   </div>
                   {/* <div className="checkboxes__item">
                     <label className="checkbox style-e">
@@ -262,8 +262,8 @@ const ApplicationForm = () => {
             </div>
           )}
 
-           {/* Step 4: Confirmation Step */}
-           {currentStep === 5 && (
+          {/* Step 4: Confirmation Step */}
+          {currentStep === 5 && (
             <div id="step-5" className="row setup-content form-container">
               <div className="col-lg-12 col-md-12">
                 <div className="application-approval-wrap">
@@ -284,7 +284,7 @@ const ApplicationForm = () => {
                 </div>
               </div>
               <div className="col-lg-12 col-md-12">
-              <button type="button" className="theme-btn6" onClick={() => alert('Form submitted!')}>Our Vehicle</button>
+                <button type="button" className="theme-btn6" onClick={() => alert('Form submitted!')}>Our Vehicle</button>
 
                 {/* <button type="submit" className="theme-btn6">Our Vehicles</button> */}
               </div>
