@@ -317,7 +317,7 @@ function Addvehicle() {
                               className="error-message"
                               style={{ color: "red", marginTop: "10px" }}
                             >
-                              <div class="alert alert-danger" role="alert">
+                              <div className="alert alert-danger" role="alert">
                                 {error}
                               </div>
                             </div>
@@ -683,7 +683,7 @@ function Addvehicle() {
                                               removeFileInput(index)
                                             }
                                           >
-                                            <i class="fa-solid fa-trash"></i>
+                                            <i className="fa-solid fa-trash"></i>
                                           </button>
                                         </div>
                                       )}
@@ -696,7 +696,7 @@ function Addvehicle() {
                                     className="btn btn-primary add_more_vehicle_gallery"
                                     onClick={addFileInput}
                                   >
-                                    <i class="fa-solid fa-plus"></i>
+                                    <i className="fa-solid fa-plus"></i>
                                     Add More
                                   </button>
                                 </Col>

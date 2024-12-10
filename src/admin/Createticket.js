@@ -30,7 +30,7 @@ function Createticket() {
                             <div className="ticket-main">
                               <div className="invoice-view-topbar">
                                 <Link to="#" className="back-to">
-                                  <i class="fas fa-chevron-left"></i> Back
+                                  <i className="fas fa-chevron-left"></i> Back
                                 </Link>
                               </div>
                               <div className="create-ticket-top-btns">

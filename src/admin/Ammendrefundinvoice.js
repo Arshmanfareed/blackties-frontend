@@ -30,7 +30,7 @@ function Ammendrefundinvoice() {
                                     <Row>
                                         <Col lg={12} md={12} >
                                             <div className="invoice-view-topbar ">
-                                                <Link to="#" className="back-to"><i class="fas fa-chevron-left"></i> Back to Invoice</Link>
+                                                <Link to="#" className="back-to"><i className="fas fa-chevron-left"></i> Back to Invoice</Link>
                                                 
                                             </div>
                                         </Col>

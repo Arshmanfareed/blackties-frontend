@@ -30,7 +30,7 @@ function Financialinvoice() {
                           <Col lg={12} md={12} >
                             <div className="invoice-view-topbar ">
                               <Link to="/admin-financialpayment" className="back-to">
-                              <i class="fa-solid fa-chevron-left"></i>{" "}
+                              <i className="fa-solid fa-chevron-left"></i>{" "}
                                 Back to Invoice
                               </Link>
                               <div className="admin-invoice-view-card-btns">

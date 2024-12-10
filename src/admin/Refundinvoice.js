@@ -29,7 +29,7 @@ function Refundinvoice() {
                                     <Row className="">
                                         <Col lg={12} md={12} className="">
                                             <div className="invoice-view-topbar ">
-                                                <Link to="/admin-financialpayment" className="back-to"><i class="fas fa-chevron-left"></i> Back to Invoice</Link>
+                                                <Link to="/admin-financialpayment" className="back-to"><i className="fas fa-chevron-left"></i> Back to Invoice</Link>
                                                     <div className="admin-invoice-view-card-btns">
                                                         <div className="admin-invoice-main-btn">
                                                             <Link to="#" className="cancel-btn">Cancel</Link>

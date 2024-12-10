@@ -30,7 +30,7 @@ function Failedpayinvoice() {
                           <Col lg={12} md={12}>
                             <div className="invoice-view-topbar ">
                               <Link to="#" className="back-to">
-                                <i class="fas fa-chevron-left"></i> Back to
+                                <i className="fas fa-chevron-left"></i> Back to
                                 Invoice
                               </Link>
                               <div className="admin-invoice-view-card-btns">
