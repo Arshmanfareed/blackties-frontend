@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useHandleLogin from '../utils/handleLogin';
 
 function Login() {
@@ -30,6 +30,9 @@ function Login() {
     e.preventDefault();
     await handleLogin(formData);
   };
+
+  const location = useLocation();
+  const loginFirstError = location.state?.loginFirstError;
 
   return (
     <>
@@ -99,7 +102,7 @@ function Login() {
                     {/* Submit Button and Error Message */}
                     <Col lg={12} md={12} className="sb-btn-col1">
                       {/* Display error message if any */}
-                      {error && <p className="text-danger">{error}</p>}
+                      {(error || loginFirstError) && <p className="text-danger">{error || loginFirstError}</p>}
 
                       {/* Submit Button */}
                       <Form.Control type="submit" className="theme-btn6 sb-btn" value={loading ? "Signing in..." : "Sign In"} disabled={loading} />

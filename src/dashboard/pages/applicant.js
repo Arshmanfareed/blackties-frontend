@@ -6,7 +6,7 @@ import ApplicationForm from '../components/ApplicationForm';
 
 function Applicant() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [totalSteps] = useState(3); // Set this to your total steps count
+  const [totalSteps] = useState(3);
   const [accidentForms, setAccidentForms] = useState([]);
   const accidentFormTemplate = useRef(null);
 

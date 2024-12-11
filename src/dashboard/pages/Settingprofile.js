@@ -11,22 +11,42 @@ import useHandleChangeEmail from "../../utils/handleChangeEmail";
 import useHandleLogout from "../../utils/handleLogout";
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import { useNavigate } from "react-router-dom";
 
 function Settingprofile() {
+  // Get the token from localStorage
   const token = localStorage.getItem('token');
+
+  // State to manage the user object, initialized from localStorage or an empty object
   const [user, updateUser] = useState(JSON.parse(localStorage.getItem('user')) || {});
+
+  // Import the `useNavigate` hook from React Router to handle navigation
+  const navigate = useNavigate();
+
+  // useEffect hook to check if the user is authenticated
+  useEffect(() => {
+    // If no token or no user is found in local storage, redirect the user to the login page
+    if (!token || !user) {
+      navigate('/login', { state: { loginFirstError: "Please login first to access that page" } });
+    }
+  }, [navigate]);
+
+  // Hook for handling logout functionality
   const handleLogout = useHandleLogout();
 
+  // States for delete account modal visibility
   const [showdeleteaccount, setShowdeleteaccount] = useState(false);
   const handleClosedeleteaccount = () => setShowdeleteaccount(false);
   const handleShowdeleteaccount = () => setShowdeleteaccount(true);
+
+  // States for delete account success modal visibility
   const [showdeleteaccountsucess, setShowdeleteaccountsucess] = useState(false);
   const handleClosedeleteaccountsucess = () => {
     setShowdeleteaccountsucess(false);
     setShowdeleteaccount(false);
   }
-  const handleShowdeleteaccountsucess = () => setShowdeleteaccountsucess(true);
 
+  // Import and destructure functions/variables for email change functionality
   const {
     openEmailModal,
     showEmailModal,
@@ -53,6 +73,7 @@ function Settingprofile() {
     backToEmailModal
   } = useHandleChangeEmail(user, token, updateUser);
 
+  // Import and destructure functions/variables for phone change functionality
   const {
     openPhoneModal,
     showPhoneModal,
@@ -79,6 +100,7 @@ function Settingprofile() {
     handleChangePhone
   } = useHandleChangePhone(user, token, updateUser);
 
+  // Import and destructure functions/variables for password change functionality
   const {
     showPasswordModal,
     setChangePasswordError,
@@ -93,6 +115,7 @@ function Settingprofile() {
     handleClosePasswordSucess,
   } = useHandleChangePassword(user, token);
 
+  // Import and destructure functions/variables for image change functionality
   const {
     handleShowImageChange,
     showImageChange,
@@ -104,24 +127,32 @@ function Settingprofile() {
     changeImageLoader,
   } = useHandleChangeImage(user, token, updateUser);
 
+  // Toggles the visibility of password input field
   const togglePasswordVisibility = (id) => {
     const input = document.getElementById(id);
     input.type = input.type === "password" ? "text" : "password";
   };
 
+  // Handles account deletion process
   const handleDeleteAccount = async (e) => {
     try {
+      // Send a POST request to delete the user account
       const response = await fetch(process.env.REACT_APP_BACKEND_URL + `/admin/user/` + user.id + `/suspend`, {
         method: "POST",
         headers: {
           "x-auth-token": token,
         },
       });
+
+      // Parse the response JSON
       const data = await response.json();
+
       if (response.ok) {
+        // Close the delete account modal and show the success modal
         setShowdeleteaccount(false);
         setShowdeleteaccountsucess(true);
       } else {
+        // Handle errors based on the response
         if (data.error?.message) {
           setChangePasswordError(data.error.message);
         } else {
@@ -129,16 +160,14 @@ function Settingprofile() {
         }
       }
     } catch (err) {
+      // Catch network or unexpected errors
       setChangePasswordError("Something went wrong. Please try again.");
     } finally {
+      // Stop the loader once the process is complete
       setChangePasswordLoader(false);
     }
   };
 
-// Change Image Modal
-const [showimage_change, setShowimage_change] = useState(false);
-const handleCloseimage_change = () => setShowimage_change(false);
-const handleShowimage_change = () => setShowimage_change(true);
   return (
     <>
       <section className="user-dashboard">
