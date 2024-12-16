@@ -90,8 +90,9 @@ root.render(
       <Route path="/create-password" element={<><Header /><Create_password /><Footer /></>} />
 
       {/* Dashboard Routes */}
-      <Route path="/applicant" element={<><Applicant /></>} />
       <Route path="/welcome" element={<><WelcomePage /></>} />
+      <Route path="/applicant" element={<><Applicant /></>} />
+      <Route path="/our-vehicle" element={<><Ourvehicle /></>} />
       <Route path="/rent-car" element={<><RentCar /></>} />
       <Route path="/overview" element={<><Overview /></>} />
       <Route path="/vehicle-document" element={<><Vehicledocument /></>} />
@@ -111,7 +112,6 @@ root.render(
       <Route path="/calender-all" element={<><Calenderall /></>} />
       <Route path="/failed-pay" element={<><Failedpay /></>} />
       <Route path="/support-ticket" element={<><Support /></>} />
-      <Route path="/rent-our-vehicle" element={<><Ourvehicle /></>} />
 
       {/* Admin Routes */}
       <Route path="/add-vehicle" element={<><Addvehicle /></>} />
@@ -126,7 +126,7 @@ root.render(
       <Route path="/admin-ammend-invoice" element={<><Ammendinvoice /></>} />
       <Route path="/admin-ammend-refund-invoice" element={<><Ammendrefundinvoice /></>} />
       <Route path="/admin-failed-pay-invoice" element={<><Failedpayinvoice /></>} />
-      <Route path="/admin-add-payment-schedule" element={<><Addpaymentschedule /></>} /> {/*issue hai*/}
+      <Route path="/admin-add-payment-schedule" element={<><Addpaymentschedule /></>} />
       <Route path="/admin-user-invoice" element={<><Userinvoice /></>} />
       <Route path="/admin-all-user" element={<><Alluser /></>} />
       <Route path="/admin-user-info" element={<><Userinfo /></>} />

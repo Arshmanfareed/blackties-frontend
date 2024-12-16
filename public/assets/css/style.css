@@ -2180,3 +2180,20 @@ p.not_rcv_cd {
   outline: 2px solid #fff;
   padding: 3px;
 }
+
+.application_rej h2 {
+  padding-bottom: 16px;
+  font-size: 40px;
+  font-weight: 600;
+  border-bottom: 1px solid #667085;
+  margin-bottom: 30px;
+  color: #fff !important;
+}
+
+.application_rej 
+p {
+  font-size: 14px;
+  color: #fff !important;
+  line-height: 2;
+  font-weight: 400;
+}
