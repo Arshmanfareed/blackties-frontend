@@ -2154,7 +2154,7 @@ p.not_rcv_cd {
   color: #fff;
 }
 
-.change-phn-body  .PhoneInput {
+.change-phn-body .PhoneInput {
   background: #000;
   border-radius: 12px;
   border: 1px solid #000;
@@ -2190,10 +2190,23 @@ p.not_rcv_cd {
   color: #fff !important;
 }
 
-.application_rej 
-p {
+.application_rej p {
   font-size: 14px;
   color: #fff !important;
   line-height: 2;
   font-weight: 400;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 992px) {
+  .main-nav a.nav-item.nav-link {
+    margin: 0 13px !important;
+  }
+
+  .main-nav .main-nav-items .nav-btn-wrapper {
+    margin-left: 8%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
